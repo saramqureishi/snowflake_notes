@@ -8,7 +8,7 @@
 > **First ~40 min = dbt** (macros, `config`, sources, lineage) — mostly **job skill, not exam**, continuing Classes 33–34.
 > **Last ~12 min = a genuinely useful Snowflake topic: INCREMENTAL loading** (max-date watermark + `MERGE`) — **cert + job relevant** and done as a real hands-on.
 >
-> **⭐ EXPLICIT EXAM SIGNAL (rare — he almost never does this):** at the end he said the **next class is on incremental models**, that there are **"three different types of incremental,"** and — his exact words — **"this is very important, at least you will find three to four questions from the same topic."** So **incremental / incremental loading is worth real study time** for the exam. Full detail comes in **Class 37**.
+> **⭐ Trainer flag (CORRECTED):** at the end he said there are **"three different types of incremental"** and **"this is very important, at least you will find three to four questions from the same topic."** ⚠️ *Correction: he did **not** say "exam" — the words exam/certification/SnowPro appear **nowhere** in Classes 33–40. In a dbt class this most likely means **interview questions**. The plain-Snowflake part (watermark + MERGE) still overlaps the exam; the dbt incremental part is interview material.* Also: Class 37 only demonstrated **one** strategy (merge); the standard dbt-on-Snowflake strategies are **merge** (default), **append**, **delete+insert** (+ newer **microbatch**) — ask the trainer which three he meant.
 >
 > **Also worth grabbing:** he offered to **share a complete SQL reference document** (joins, subqueries, set operators, aggregate / analytical / regex functions). **Ask him for it** — that's directly exam-useful. And **SOS is STILL not covered** (pending since Class 30).
 
@@ -92,7 +92,7 @@ While walking a `fact_claims_monthly` model, he listed the analytical functions 
 
 ## 5. Previewed for NEXT class (Class 37) — ⭐ flagged important
 
-- **Incremental materialization in dbt** + **"three different types of incremental."** ⭐ *He explicitly said ~3–4 exam questions come from this — prioritize it.*
+- **Incremental materialization in dbt** + **"three different types of incremental."** ⭐ *He said ~3–4 questions come from this (interview context — he never said "exam").*
 - Snapshots / SCD2 in dbt (he'll "come back to snapshot").
 - **SOS still owed** (not mentioned again).
 
@@ -106,7 +106,7 @@ While walking a `fact_claims_monthly` model, he listed the analytical functions 
 - **Window functions** (`RANK`, `DENSE_RANK`, `ROW_NUMBER`, `LAG`, `LEAD`, running totals/moving avgs) vs **aggregates** (`SUM`/`MIN`/`MAX`/`AVG`/`COUNT`) — exam-relevant; window fns don't collapse rows. ⭐
 - **CASE-masking** = concept behind dynamic data masking / secure views (no feature taught here).
 - **dbt macros/config/ref/source/lineage/packages.yml** = job skill, not exam.
-- **⭐ EXAM SIGNAL:** incremental = "3–4 questions," deep-dive next class. **Also: ask the instructor for his full SQL reference document.**
+- **⭐ Trainer flag:** incremental = "3–4 questions" (interview context, not stated as exam); deep-dive next class. **Also: ask the instructor for his full SQL reference document.**
 - **SOS still pending.**
 
-*End of Class 36 notes. Mixed class: dbt macros (non-exam) + a solid incremental-load hands-on in Snowflake (watermark + MERGE, cert-relevant). Instructor explicitly flagged incremental as heavily tested (~3–4 questions) for next class.*
+*End of Class 36 notes. Mixed class: dbt macros (non-exam) + a solid incremental-load hands-on in Snowflake (watermark + MERGE, cert-relevant). Instructor flagged incremental as "3–4 questions" (interview context — corrected; he never said exam).*

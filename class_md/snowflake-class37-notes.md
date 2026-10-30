@@ -3,9 +3,9 @@
 **Snowflake — Class 37 Notes**
 *Sara — SnowPro Core preparation*
 
-> 🟢 **This is a GOOD class — the one the trainer flagged as exam-heavy, delivered.**
+> 🟢 **This is a GOOD class — the incremental deep-dive the trainer flagged as "3–4 questions" (interview context — he never said exam).**
 >
-> It covers **incremental loading in dbt** (the full mechanics — `is_incremental()`, `{{ this }}`, the auto-generated MERGE), the **`on_schema_change`** config, and **dbt tests** (`not_null`/`unique`/`accepted_values`/`relationships`). The incremental part is the **~3–4 exam questions** he warned about in Class 36. You also built this hands-on yourself, so it should feel familiar.
+> It covers **incremental loading in dbt** (the full mechanics — `is_incremental()`, `{{ this }}`, the auto-generated MERGE), the **`on_schema_change`** config, and **dbt tests** (`not_null`/`unique`/`accepted_values`/`relationships`). The incremental part is the **"3–4 questions"** topic he flagged in Class 36 (interview, not stated as exam; the watermark+MERGE logic underneath does overlap the exam). You also built this hands-on yourself, so it should feel familiar.
 >
 > **Two things he mentioned beyond the lesson (you asked me to always flag these):**
 > - He'll do a **Snowflake Cortex + Copilot workshop** session (likely a Saturday) — Snowflake is running an **event/conference** (8:30–5:30, in-person) he encouraged people to register for with a work email. *Cortex = Snowflake's built-in AI/LLM features — increasingly relevant for jobs, not core SnowPro Core exam yet.*
@@ -19,7 +19,7 @@ Continues Class 36. Recap of the **manual Snowflake incremental** (watermark + M
 
 ---
 
-## 1. ⭐⭐⭐ Incremental models in dbt (the exam-flagged topic)
+## 1. ⭐⭐⭐ Incremental models in dbt (trainer-flagged topic — interview; MERGE logic overlaps exam)
 
 ### The mental model (know this cold)
 - A **normal model** (`table`) **rebuilds every row every run**. Fine for small data, wasteful for huge tables.
@@ -132,4 +132,4 @@ dbt test --select t_customer_info
 - **Lineage** = dependency graph for build order + debugging.
 - **(Career note, not exam):** Snowflake **Cortex** = built-in AI/LLM; workshop/event mentioned.
 
-*End of Class 37 notes. Strong class: delivered the exam-flagged incremental deep-dive (is_incremental/{{this}}/MERGE + on_schema_change) and dbt tests (not_null/unique/accepted_values/relationships). You built incremental hands-on yourself this session, so it should stick.*
+*End of Class 37 notes. Strong class: delivered the trainer-flagged (interview) incremental deep-dive (is_incremental/{{this}}/MERGE + on_schema_change) and dbt tests (not_null/unique/accepted_values/relationships). You built incremental hands-on yourself this session, so it should stick.*

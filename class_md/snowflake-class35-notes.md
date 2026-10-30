@@ -37,7 +37,7 @@ The dbt project layering the trainer uses (good interview structure to know):
 
 ---
 
-## 2. ⭐ `sources.yml` — dynamically resolve database/schema (trainer flagged as exam-ish)
+## 2. ⭐ `sources.yml` — dynamically resolve database/schema (trainer flagged as a likely interview question)
 
 **The problem:** if 50 models hardcode `DEV_DB.BRONZE.customers`, and the source schema later changes, you'd edit all 50 files. **Hardcoding = bad.**
 
@@ -113,4 +113,4 @@ Loaded dbt's public demo data (`customers`, `orders`, `payments` from public S3,
 - **Surrogate key** = artificial unique key (for no-PK tables / SCD2). dbt: `dbt_utils.generate_surrogate_key([...])` → **uses `MD5`** → same as your SCD2 **hash_key**. ⭐
 - `config(materialized='table')` overrides default view (recap).
 
-*End of Class 35 notes. Third dbt class: intermediate/mart layers, sources.yml (dynamic db/schema — trainer flagged as exam-ish), packages.yml + dbt_utils, and surrogate keys (= MD5 hash_key, ties to SCD2). Mostly job skill; the YAML files + surrogate-key/hash connection are the cert-adjacent bits.*
+*End of Class 35 notes. Third dbt class: intermediate/mart layers, sources.yml (dynamic db/schema — trainer flagged as a likely interview question), packages.yml + dbt_utils, and surrogate keys (= MD5 hash_key, ties to SCD2). Mostly job skill; the YAML files + surrogate-key/hash connection are the cert-adjacent bits.*

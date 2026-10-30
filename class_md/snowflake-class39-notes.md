@@ -52,7 +52,7 @@ Run it:
 dbt snapshot
 ```
 
-### The two snapshot strategies ⭐ (exam-ish / interview)
+### The two snapshot strategies ⭐ (interview)
 | Strategy | How it detects a change |
 |---|---|
 | **`check`** | compares the **`check_cols`** you list — if any changed value differs, it's a new version. (Used in the demo: `check_cols=['status']`, or in the healthcare project `['plan_id','termination_date','is_active']`.) |

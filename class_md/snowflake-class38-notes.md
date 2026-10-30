@@ -63,7 +63,7 @@ dbt test --select <model>
 
 ---
 
-## 2. ⭐⭐ The validation SQL dbt generates (trainer flagged as EXAM-askable)
+## 2. ⭐⭐ The validation SQL dbt generates (trainer flagged: "they will ask… write a query to validate a FK / check constraint" — interview; also overlaps the exam's constraint-enforcement topic)
 
 The trainer stressed: **know the query behind each test** — *"they may ask you to write a query to validate a FK or check constraint."* The pattern for all of them: **a test passes if its query returns ZERO rows** (it selects the *offending* rows).
 
@@ -127,10 +127,10 @@ Beyond the 4 generics, you can write **custom tests** as SQL that returns offend
 
 - **4 generic dbt tests → constraints:** `not_null`=NOT NULL, `unique`=UNIQUE, `accepted_values`=CHECK, `relationships`=FK. **not_null+unique = PK.** ⭐
 - **A test passes iff its query returns 0 rows** (the query selects the *bad* rows).
-- **Know the validation SQL** (trainer flagged as exam-askable): NULL check (`WHERE col IS NULL`), dup check (`GROUP BY … HAVING COUNT(*)>1`), accepted (`WHERE col NOT IN (...)`), **FK = LEFT JOIN parent WHERE parent.id IS NULL**. ⭐⭐
+- **Know the validation SQL** (trainer flagged as askable — interview; constraint enforcement itself is exam material): NULL check (`WHERE col IS NULL`), dup check (`GROUP BY … HAVING COUNT(*)>1`), accepted (`WHERE col NOT IN (...)`), **FK = LEFT JOIN parent WHERE parent.id IS NULL**. ⭐⭐
 - **Custom tests** = your own SQL for business rules (e.g. paid ≤ allowed). ⭐
 - **Fix failures at the SOURCE data**, not in dbt (dbt = transform only).
 - `dbt test --select <model>` runs tests; `dbt build` runs seeds+models+tests together.
 - **(Event note, not exam):** Snowflake AI-features event attended by trainer; session to come.
 
-*End of Class 38 notes. dbt tests deep-dive: the 4 generic tests (=constraints), custom business tests, and the underlying validation queries (trainer flagged the FK/CHECK validation SQL as exam-askable). This also covers the dbt-tests hands-on we had parked.*
+*End of Class 38 notes. dbt tests deep-dive: the 4 generic tests (=constraints), custom business tests, and the underlying validation queries (trainer flagged the FK/CHECK validation SQL as interview-askable; constraint enforcement overlaps the exam). This also covers the dbt-tests hands-on we had parked.*
