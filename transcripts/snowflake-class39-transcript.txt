@@ -1,0 +1,711 @@
+[04:47] Good morning everyone. Can you hear me?
+[04:51] I just want to go on.
+[04:53] Yeah, we are listening to it.
+[04:54] Let me share my screen.
+[05:08] I hope you are able to see the screen.
+[05:13] Please.
+[07:28] Something forgot the email one minute.
+[07:30] Did you remember the email that we used to create this at home?
+[07:38] Debate a phone.
+[07:48] So, we have used a temporary email.
+[07:53] So, temp underscore email.
+[07:55] We have used this email.
+[07:57] I am installing one more software here.
+[09:57] It's unaccountable.
+[09:58] Click on this.
+[09:59] Click on this installers.
+[10:12] Click on it.
+[10:19] Get started.
+[10:20] You can download this.
+[11:12] There is an option to download.
+[11:14] Let's click on next.
+[13:12] I mean, once you are familiar.
+[13:17] But it's the first time you won't find this folder.
+[13:20] I think we don't have any folder here.
+[13:36] Click on next.
+[13:40] Click on install.
+[13:41] It will take some time to install.
+[13:48] So, meanwhile I will create one more DVD account.
+[13:53] So, to get DVD.com.
+[13:55] So, you get one verification event.
+[15:40] I think this is the new account.
+[16:07] Right?
+[16:08] Let me do it.
+[16:09] You don't have an account.
+[16:14] Let me create a free account.
+[17:52] I am using the same password.
+[18:19] Let me activate this.
+[18:20] From adding a new connection.
+[21:31] So, I think you need to verify this actually.
+[21:38] So, that is working or not.
+[22:03] So, your trial length will need this.
+[22:04] Okay.
+[22:05] You can use this.
+[22:06] This is the small click account name.
+[22:11] So, let me select the database.
+[22:22] It's the schema.
+[22:23] Let's click on save.
+[22:29] Save.
+[22:30] Select the connection name.
+[22:34] Now click.
+[22:36] You need to provide the user name or password.
+[22:38] You can give the password.
+[22:47] See, the schema is silver.
+[23:23] It will be the clone.
+[23:25] We have the repository.
+[23:26] So, SSHNGPZKids.
+[24:13] That means new SSHKids.
+[24:20] We are ready.
+[24:38] It is still ready.
+[24:39] We will be very fast.
+[24:40] Okay.
+[24:41] We will be very fast.
+[26:25] Okay.
+[26:26] We will talk about snapshot.
+[26:27] So, did you remember what is snapshot?
+[26:30] Can you?
+[26:34] It's snapshot.
+[26:37] Yes.
+[26:38] So, I will add one snapshot here.
+[27:21] See, you have a snapshot folder.
+[27:37] Let me add this.
+[27:40] Okay.
+[27:46] So, before understanding this, let me give you one example.
+[27:49] So, I will create one sample snapshot.
+[27:54] Let me create a new file.
+[28:03] Let's add the, I will give the name as T underscore.
+[28:06] It gets status.
+[28:08] Dot us here.
+[28:09] Okay.
+[28:10] Let's click on create.
+[28:12] So, in the database, I will create a table.
+[28:43] The current database I'm using is DevDB and bronze keyword.
+[28:47] Yes.
+[28:49] DevDB and bronze keyword.
+[28:50] Let's create a table.
+[28:51] Save the time I gave.
+[28:58] Copy that.
+[28:59] So, I'll quickly create a table.
+[29:55] Database, I'll let me create a table.
+[30:11] This is a table.
+[30:12] It is having ID, status and updated it.
+[30:16] So, as of now, I don't have any records.
+[30:18] Let's say you are booking a ticket.
+[30:22] Okay.
+[30:23] So, let's say I'm initially your file node.
+[30:25] Let's assume three tickets.
+[30:27] Let's three people build the tickets.
+[30:29] The initial status is new.
+[30:31] Okay.
+[30:35] This is the initial status.
+[30:48] So, the initial status is new.
+[30:50] Let us say after a couple of days, the status got changed.
+[30:54] Okay.
+[30:57] So, let me give the status something like this.
+[30:59] So, initially, it is new.
+[31:00] Right.
+[31:01] Let's say the status got changed update.
+[31:03] Set.
+[31:04] Status equal to.
+[31:07] So, from new to its going to, let's say in progress.
+[31:14] So, in progress, where let's say ID equal to 1.
+[31:18] So, for the first ticket, for the first person, the status change to in progress.
+[31:23] For the second person, let's say the status change to pending.
+[31:27] Pending underscore info.
+[31:32] The third person, let's say it is, it is also in progress.
+[31:38] Let's say this is the updated status.
+[31:44] If you look at the table, you will find only the latest status right here.
+[31:48] Let's query that.
+[31:50] So, you can see the latest status.
+[31:51] But what about the previous status?
+[31:53] Okay.
+[31:56] So, let's say after sometime the status got changed.
+[32:12] Even I will change the date also.
+[32:14] Let me put the date.
+[32:15] Okay.
+[32:18] We can get this.
+[32:19] Let's say, after sometime it's in progress to, let's say complete.
+[32:24] So, pending in photo in progress and in progress to complete.
+[32:37] So, this is the next status.
+[32:46] Let's done.
+[32:47] We did.
+[32:48] To verify the table, you will find the latest status.
+[32:53] But my requirement is, I wanted to keep at track of all the status.
+[32:59] I can see only the latest status.
+[33:00] Let's say, sometime the status is changed.
+[33:03] So, complete to closed in progress to complete.
+[33:08] In complete to closed.
+[33:19] Finally, the status which is in complete, it got closed.
+[33:24] Let's say it is closed.
+[33:30] Let's verify the panel table.
+[33:35] See, I can see the latest status, which is the status is closed.
+[33:46] But I don't know what is the previous status.
+[33:49] So, in case if you want to maintain that, what you can do is,
+[33:53] so let's recreate the table.
+[34:00] So, the table is created.
+[34:02] So, as of now, I don't have any records.
+[34:05] Let me create a model for this.
+[34:11] Okay.
+[34:12] So, if I don't want to part what the name, what I can do?
+[34:14] I can go to the sources.yml file.
+[34:18] So, go to models.
+[34:27] You should see sources.yml file, right?
+[34:29] It's below.
+[34:40] Yeah, here it is.
+[34:41] What is the dot.yml file?
+[34:44] Let me paste the name.
+[34:46] This is the object name actually.
+[34:53] Save this one.
+[34:55] Let me query that underscore underscore source.
+[35:00] Yes, one is the source name.
+[35:02] And this is the object name.
+[35:08] With the object name.
+[35:11] Save this one.
+[35:13] First, let me run this model.
+[35:28] First, let's create this.
+[35:30] So, if I run this one, the DVDs are.
+[35:34] Pick the model name.
+[35:36] The model name is tns for ticket status.
+[35:38] So, if I run this, it creates a view rate.
+[35:47] It creates a view on the database.
+[35:50] Come back to the database.
+[35:55] Go to the sellers' command.
+[36:12] So, the view is created.
+[36:14] Do you see anything called tns for ticket status?
+[36:29] Why you are not in this event?
+[36:42] The nns for ticket status.
+[36:46] Okay.
+[36:47] So, the model name should be.
+[36:55] Okay.
+[36:56] It should be case since today.
+[37:01] We come back and to refresh.
+[37:03] Where do you find this?
+[37:25] Why it is saying it does not exist?
+[37:31] What is the issue here?
+[37:46] Tns.
+[37:52] I mean, this is available.
+[37:58] Right?
+[38:07] DVD runs.
+[38:17] Oh, sorry.
+[38:39] I have created this in the snapshot rate.
+[38:42] That is the reason.
+[38:44] Okay.
+[38:45] So, I have created this in the snapshot folder.
+[38:47] Okay.
+[38:48] That's fine.
+[38:49] So, I should have created in the models folder.
+[38:51] But we know it.
+[38:52] If I create it as a model, it creates a view.
+[38:55] Okay.
+[38:56] Now, I am using this in the view.
+[38:59] No, look at this.
+[39:01] I am using a keyword underscore underscore snapshot.
+[39:06] Right.
+[39:09] Now, here, what is your target schema?
+[39:13] What is your target database name?
+[39:15] DVD.
+[39:16] DVD.
+[39:17] What is your target schema?
+[39:20] Silver.
+[39:21] Unicolumn.
+[39:22] What is the unicolumn?
+[39:23] ID rate.
+[39:24] If you look at the table.
+[39:26] ID is a unicolumn rate.
+[39:31] So, the ticket ID is a unicolumn.
+[39:34] This is a unicolumn.
+[39:36] No.
+[39:38] So, here, I am giving the strategy as.
+[39:43] So, the strategy as check rate.
+[39:46] Okay.
+[39:47] The strategies, I am giving it as check strategy.
+[39:50] Because I am trying to verify a particular column value.
+[39:54] Okay.
+[39:55] So, what is that?
+[39:57] Okay.
+[39:58] So, to give this one as check rate.
+[40:01] Okay.
+[40:02] You need to use this column.
+[40:04] Check columns.
+[40:05] What are the columns that you wanted to check?
+[40:09] Okay.
+[40:10] So, I would like to take the status rates.
+[40:12] Which column is going to change?
+[40:19] So, ID is the primary key column.
+[40:22] And based on the ID, I need to verify whether the status got changed or not.
+[40:26] Okay.
+[40:27] So, I need to use the check columns as status.
+[40:31] Okay.
+[40:32] Now, here, I am referring the source name.
+[40:35] My source name is S1.
+[40:36] And what is the object name?
+[40:41] The object name is S1.
+[40:43] Okay.
+[40:46] Let's save this one.
+[40:49] Okay.
+[40:50] So, look at the syntax case.
+[40:51] Okay.
+[40:52] Okay.
+[40:53] Okay.
+[40:54] So, let me give a snapshot name as T underscore.
+[40:56] I will give the same name.
+[40:58] We can run a score status.
+[41:00] Snapshot.
+[41:07] Snapshot name.
+[41:08] And you have to give these parameters.
+[41:10] What is the primary key column?
+[41:11] Which column is going to change?
+[41:14] And what is the column?
+[41:16] Okay.
+[41:17] Check strategy.
+[41:18] What is the column that is going to change?
+[41:20] Okay.
+[41:21] Let me run the snapshot.
+[41:22] DBT.
+[41:23] Snapshot.
+[41:25] And the snapshot name.
+[41:27] Okay.
+[41:28] T underscore ticket status is the snapshot name.
+[41:30] Okay.
+[41:31] Let me run the snapshot.
+[41:50] Okay.
+[41:51] So, it is saying the snapshot is successfully creative.
+[41:54] Come back to the database and do a refresh.
+[41:57] As of now, you have 10 views.
+[41:59] And how many tables are there?
+[42:01] 18 tables are there.
+[42:02] Let's do a refresh.
+[42:04] Okay.
+[42:05] You have 19 tables here.
+[42:07] Okay.
+[42:08] Whatever the snapshot name that you have given,
+[42:10] with that, it creates a table.
+[42:12] T underscore ticket status.
+[42:14] You have to give it that.
+[42:17] Select start from T underscore ticket tickets.
+[42:27] Let's give it that.
+[42:29] See, you don't have any records here.
+[42:32] Okay.
+[42:33] Because in your base table also, you don't have any records.
+[42:36] This is your base.
+[42:37] Bronze.
+[42:39] You don't have any records.
+[42:42] And even in the snapshot also, you don't have any records.
+[42:48] Okay.
+[42:51] Let me insert these records.
+[42:54] So, three records got inserted.
+[42:59] There are three records.
+[43:01] Let me run this snapshot.
+[43:16] So, this snapshot is getting executed.
+[43:18] So, if you want to verify the underlying SQL statement,
+[43:23] you can go to the copy his student.
+[43:26] We can go to copy his student and we can verify that.
+[43:29] Okay.
+[43:30] So, look at the base table.
+[43:32] The base table is having exactly three columns.
+[43:35] ID status and updated.
+[43:37] What about the snapshot?
+[43:39] Your snapshot will have a different columns.
+[43:41] Along with the three columns, you have SCD ID, updated date,
+[43:49] valid from valid, valid from valid to.
+[43:53] So, these are all columns populated by snapshot.
+[44:00] SCD is nothing but the unique value of these three combinations.
+[44:11] You're getting it.
+[44:12] This is kind of a MD5 value and updated date, valid from and valid to.
+[44:22] If the valid to is null, that is the latest report.
+[44:25] Now, I'm making a change here.
+[44:27] I'm updating the status.
+[44:30] Let's update the status.
+[44:32] Now, my base table will have only the latest status.
+[44:39] I have only three records.
+[44:41] I don't know what is the previous status.
+[44:43] Let's execute a snapshot.
+[44:50] The snapshot is getting executed.
+[44:52] So, the important part is you need to verify the underlying query.
+[45:00] How it is generating the snapshot state.
+[45:04] And this.
+[45:05] Portable logs.
+[45:07] Copy the logs in the language.
+[45:15] So, it is creating a temporary table.
+[45:36] Krishna.
+[46:04] Yeah.
+[46:05] What are the types of strategies we have in this snapshot?
+[46:12] You have timestamp and check strategy.
+[46:22] So, we are seeing check strategy.
+[46:24] Let me come back to the original this thing.
+[46:27] So, here also we are using check strategy.
+[46:30] So, you are checking based on three columns here.
+[46:33] Plan ID, termination date, needs active.
+[46:36] So, in case if the combination.
+[46:39] If any of the values got changed.
+[46:41] So, you are going to create a snapshot.
+[46:48] First let me complete this.
+[46:51] So, the snapshot got executed.
+[46:53] Let's query the snapshot.
+[46:55] This is your snapshot.
+[46:58] So, but your base table will have only the latest status.
+[47:02] But your snapshot will have previous records as well.
+[47:07] So, this is the latest status.
+[47:09] This is the old status actually.
+[47:11] And this is the current status.
+[47:13] So, for the old record the end date will be populated.
+[47:18] If ended is populated, which means that is the old record.
+[47:21] If there is no end date, which means this is the latest record.
+[47:25] In case if I change the status.
+[47:30] Let's say I am just moving this to complete.
+[47:32] So, your snapshot will maintain all the changes.
+[47:46] So, your original table will have only the latest status.
+[47:53] But snapshot will have the.
+[47:55] I see it type to date.
+[47:57] So, let's query this.
+[48:07] So, you now have six records.
+[48:11] So, these are all the different changes.
+[48:14] So, for the latest record, it will be null.
+[48:16] For the old record, the value will be populated.
+[48:18] So, these two are very important.
+[48:20] Update it at varied from value.
+[48:23] Now, let's try to understand the existing one.
+[48:30] So, you are creating a snapshot.
+[48:33] They are creating a snapshot.
+[48:35] And the unique ID is member ID.
+[48:38] And the columns which they are verifying is plan ID, termination date and ease active.
+[48:42] So, based on these three columns, they wanted to track the changes.
+[48:47] And they are referring to the stage members.
+[48:52] So, in stage members.
+[48:54] So, they wanted to maintain the SEA type to date based on these three columns.
+[48:59] They are clearing it.
+[49:11] So, earlier I installed on a component.
+[49:13] Let me click on next.
+[49:16] Again, click on everything you want to download.
+[49:20] Click on next.
+[49:24] What is this?
+[49:47] 7GBS.
+[49:48] So, now what I am going to do is.
+[50:02] We talked about DVD clouded.
+[50:04] The one which you are seeing is DVD clouded.
+[50:08] Now, with the DVD core also, you can do the same thing.
+[50:11] Now, what I am going to do is.
+[50:29] I just installed on a component.
+[50:31] Let me search for on a component prompt.
+[50:35] You need a search for this.
+[50:36] Once you install it, search for this on a component prompt.
+[50:39] You need to open a command line.
+[50:42] So, whatever we did in DVD cloud,
+[50:48] we had to go into the same thing in DVD core case.
+[50:52] So, let me run one statement from the ENV list.
+[50:56] I am just trying to verify what are the environment we have.
+[51:00] Can you see that there is one thing called base right?
+[51:06] So, we have only one environment that is base.
+[51:09] Now, I would like to create my own environment.
+[51:12] Let's say I would like to create my environment name should be.
+[51:18] So, DVD, let's say core project.
+[51:23] That is the environment that I wanted to create.
+[51:26] I will give you the steps.
+[51:28] So, almost DVD cloud and DVD core both are same.
+[51:37] But the only thing is you have to install this.
+[51:40] So, that is the main difference.
+[51:42] So, these are all the steps that you need to follow.
+[52:03] So, the first step is I already installed on a component prompt.
+[52:07] And now, I am going to create a project.
+[52:09] Let's say I will name it as say look at this case.
+[52:12] I am giving it as Honda create.
+[52:16] I mean, in case if you don't have Python, just install Python as.
+[52:23] So, the first step is, let's close this one.
+[52:29] So, I just, I ran a command.
+[52:35] Honda ENV list.
+[52:36] I have only one environment that is base.
+[52:38] Now, I would like to create my own environment.
+[52:40] That is, let's say DVD project 7AM.
+[52:43] Recruiting notices.
+[53:12] Okay.
+[53:15] What it is saying is.
+[53:20] So, it is saying instead of packages.
+[53:31] Yeah, these are all the packages that are going to install.
+[53:34] Do you want to proceed?
+[53:35] Just click on yes.
+[53:37] So, the required packages are getting installed.
+[53:40] I have dropped it here.
+[53:42] Once you execute this statement, it will ask you to proceed.
+[53:45] Click on yes.
+[53:47] Okay.
+[53:48] Let me verify the environments.
+[53:50] It's almost 2GB.
+[54:08] Okay.
+[54:09] Now, let me run this command.
+[54:11] Honda ENV list.
+[54:14] So, earlier, I have only one environment that is base.
+[54:16] Now, I have this environment.
+[54:18] Okay.
+[54:19] So, now, I would like to use this environment.
+[54:21] If you want to use that, there is an option.
+[54:23] It's Honda activate and the project name.
+[54:28] Let me run this.
+[54:29] Now, the prompt is based.
+[54:31] Now, it will change to the new prompt.
+[54:34] Okay.
+[54:35] DVD project 7AM.
+[54:36] Can I see this?
+[54:37] Now, I would like to build everything in this particular project.
+[54:41] Now, the first step, what it is.
+[54:48] You need to verify the packages that are available.
+[54:51] It will list.
+[54:52] So, it will give you the packages that are available.
+[54:55] So, do you see anything called a DVD?
+[54:57] Yes.
+[54:58] Okay.
+[54:59] Anything related to DVD or smoke?
+[55:02] No.
+[55:03] We don't have any packages with respect to DVD or smoke.
+[55:06] Okay.
+[55:07] So, the first step is we need to install a package.
+[55:09] That is, DVD core.
+[55:12] So, DVD core is nothing but the CL, I guess.
+[55:18] So, I am installing DVD core.
+[55:20] Okay.
+[55:23] So, DVD cloud, you know need to install anything, is just a cloud thing.
+[55:27] Okay.
+[55:28] So, what you can do?
+[55:29] You can create a new account.
+[55:30] This is cloud actually.
+[55:32] Now, we are, you know, installing DVD core.
+[55:35] I need to verify these pages.
+[55:41] Most.
+[55:42] So, it will install the required packages with respect to DVD core.
+[56:04] Okay.
+[56:33] So, now let me verify people list.
+[56:37] So, I should see different packages with respect to DVD.
+[56:43] Yes.
+[56:44] I can see DVD core.
+[56:45] Yes.
+[56:46] DVD core is available.
+[56:48] Now tell me, yes.
+[56:49] From DVD, which database you wanted to connect?
+[56:52] Which database you wanted to connect?
+[56:57] Now, play, right?
+[56:59] So, I need to connect to smoke play, right?
+[57:02] So, I have DVD.
+[57:03] So, from DVD, I need to connect to snowflake, right?
+[57:08] So, can you see plugin here?
+[57:10] Plugins.
+[57:11] Plugins means, as of now, I don't have any plugins.
+[57:14] But I need a plugin with respect to snowflake.
+[57:17] Okay.
+[57:18] So, if you want to install that, you need to install one more package.
+[57:21] That is, DVD snowflake.
+[57:24] Replace DVD snowflake.
+[57:27] So, I have the DVD core.
+[57:32] And after that, I need to connect to snowflake.
+[57:35] So, you need to install a package with respect to snowflake.
+[57:38] The package name is DVD core snowflake.
+[57:41] DVD snowflake, okay.
+[57:43] DVD snowflake is the package name.
+[57:46] So, just to differentiate what I am going to do is,
+[57:50] I am going to create a new schema here.
+[57:52] So, here schema, I will name it as silver underscore core.
+[57:58] Okay.
+[57:59] The new schema which I have created is silver underscore core.
+[58:02] This is my new schema with respect to DVD core.
+[58:09] Okay.
+[58:10] It is done, guys.
+[58:11] Okay.
+[58:12] Now, let me verify the version, DVD version.
+[58:18] See, at least I don't have any plugins.
+[58:20] Now, I have a plugin.
+[58:21] So, let me switch to this.
+[58:31] Okay.
+[58:32] So, I am switching to, you know, one of the,
+[58:36] so let's create a new folder.
+[58:38] So, this is a, you know, project folder that I am using.
+[58:43] Let me create a new folder here.
+[58:48] So, I will name it as something like,
+[58:50] so I have given it as a DVD info.
+[59:06] This is the folder name that I am giving.
+[59:08] So, let me switch to this folder.
+[59:14] Okay.
+[59:17] I am running a statement here, guys.
+[59:22] DVD, I need it.
+[59:24] What is this DVD in it?
+[59:26] I think it will change it.
+[59:31] Yeah.
+[59:32] Can you see the folder name is?
+[59:34] Now, I am switching to this particular folder.
+[59:36] DVD info.
+[59:38] Do you see any folder space here inside this DVD info?
+[59:42] All right.
+[59:44] We don't have any file state.
+[59:47] Correct.
+[59:48] I am running a statement, DVD in it.
+[59:51] Which means it initializes the project.
+[59:55] When I say initialize,
+[59:58] it is asking you to provide the snowflake,
+[60:00] enter a name for your project.
+[60:02] Okay.
+[60:03] I will give the name as DVD7AM.
+[60:07] This is the project name.
+[60:09] Now, it is asking which database you would like to use.
+[60:12] There is only one database that is snowflake.
+[60:14] Give it as one.
+[60:17] Which snowflake I can do you want it to connect?
+[60:19] Okay.
+[60:20] So, I have the snowflake account name.
+[60:22] I would like to connect to this particular account.
+[60:24] Use the name is Krishna.
+[60:29] So, I need to give the password.
+[60:31] Let's give the password.
+[60:36] Roll.
+[60:37] Account.
+[60:38] Add.
+[60:39] Wearhouse.
+[60:40] Devonascore.
+[60:41] Wearhouse.
+[60:42] Database.
+[60:43] Devonascore.
+[60:44] TV.
+[60:45] Schema name.
+[60:46] See, I just created one schema.
+[60:48] That is silver underscore.
+[60:49] Correct.
+[60:50] Silver underscore.
+[60:51] Correct.
+[60:52] Silver underscore.
+[60:53] Correct.
+[60:54] Threads.
+[60:55] Anyways, you have only one thread.
+[60:58] Okay.
+[61:02] It is created.
+[61:04] Okay.
+[61:05] So, let me go back to the folder.
+[61:08] Add.
+[61:09] I don't have any files here.
+[61:10] Now, I have a folder.
+[61:11] Inside the folder, you have the complete folder structure.
+[61:14] You have models, macros.
+[61:16] See, it's snapshot.
+[61:17] Right.
+[61:18] So, what, what do you mean by, you know, code is?
+[61:22] You have to install everything to your local.
+[61:25] Right.
+[61:26] So, in my local, I have the complete folder structure.
+[61:29] Okay.
+[61:30] Now, I need to use this.
+[61:32] Let me switch to this folder, CD.
+[61:34] Right.
+[61:36] Now, I need to verify it.
+[61:38] Whatever the account name, schema name date, database name, schema name, role name, whatever
+[61:43] I have given, I need to verify that.
+[61:45] Okay.
+[61:46] So, if you want to verify.
+[61:47] Okay.
+[61:50] So, I think the still here, it is done.
+[61:52] Right.
+[61:53] And after that, you need to verify.
+[61:56] You need to run a command.
+[61:57] DVD.
+[61:58] Debug.
+[61:59] Debug.
+[62:00] Debug means whatever the details are given, it validates.
+[62:04] Okay.
+[62:05] And it will give you a message stating that all checks are passed.
+[62:07] Can you see the messages?
+[62:08] All checks are passed.
+[62:09] Which means?
+[62:10] All the details are turned.
+[62:11] Now, I am running a statement, code.
+[62:12] If you run this code.
+[62:13] It takes you to the visual studio in your own case.
+[62:16] The visual studio in your own case.
+[62:18] Right.
+[62:19] This is my visual studio environment.
+[62:20] Now, here, I can, you know, create the board.
+[62:23] So, whatever you have, it is, you know, cloud.
+[62:31] It will be the same thing.
+[62:34] And if you want to do any cloud, you will be.
+[62:37] Okay.
+[62:38] Okay.
+[62:39] As of now, I am running more on this.
+[62:42] Okay.
+[62:43] But it is, you want to create that.
+[62:44] So, whatever the focus is, you have right.
+[62:45] It's looking forward.
+[62:46] You know.
+[62:47] So, we have.
+[62:48] I have.
+[62:49] I have.
+[62:59] I have.
+[63:00] I have.
+[63:01] I have.
+[63:02] I have.
+[63:03] I have.
+[63:04] I have.
+[63:05] I have.
+[63:06] I have.
+[63:07] I have.
+[63:08] I have.
+[63:09] I have.
+[63:10] I have.
+[63:11] I have.
+[63:12] I have.
+[63:17] I have.
+[63:19] I have.
+[63:26] I have.
+[63:27] I have.
+[63:30] I have.
+[63:31] I have.
+[63:32] I have.
+[63:33] I have.
+[63:34] I have.
+[63:37] I have.
+[63:38] I have.
+[63:39] I have.
+[63:40] I have.
+[63:41] I have.
+[63:42] I have.
+[63:43] I have.
+[63:44] I have.
+[63:45] I have.
+[63:46] I have.
+[63:50] I have.
+[63:51] I have.
+[63:52] I have.
+[63:53] I have.
+[63:57] I have.
+[63:58] I have.
+[63:59] I have.
+[64:00] I have.
+[64:01] I have.
+[64:02] I have.
+[64:03] I have.
+[64:04] I have.
+[64:05] I have.
+[64:06] I have.
+[64:09] cylinder score core in this particular you know schema it creates the tables ok it is trying
+[64:27] to create see there is no difference is ok the only thing is in soft cloud you are not
+[64:35] going to install anything but in case of core you have to install the packages DVD core
+[64:43] and DVD you know snorke it see this it is creating the models right it is creating
+[64:50] the seats do you refer yes can you see the seats can you have 8 seats yes similarly
+[64:59] whatever you did in cloud you can do the same thing in core also ok let us say I wanted
+[65:06] to exhibit fewness ok so go back here so go to the models in models you have these
+[65:17] folders right let me copy these folders and come back here go to the models page here
+[65:27] and let let us let let me run these more staging models ok I will try to run these staging
+[65:35] models and before that you need to you want to copy all the other things like macros
+[65:40] and all you can copy that let me go back to the macros copy these two macros go back
+[65:54] here go to macros paste here and let us run the models how can I run all the models get
+[66:04] once DVD run right so this will help you to run all the models right anyways let it run
+[66:13] so come back to the database and as of now you have only 8 tables right this is do a
+[66:20] refresh now views will be created yes see how tables silver pole views will be created here
+[66:30] it is getting created can you see this two views got created right yeah three so whatever
+[66:43] you did in cloud you can do the same thing in core also ok let me commit the changes again
+[66:49] so I think I already have all the changes let us do commit from it so I am creating a new branch
+[67:12] okay seven aim on the screen here you can follow these steps they have given you the steps you
+[67:28] can follow this and you can easily create the DVD core I guess we will meet in tomorrow
+[67:57] session yeah yeah I like explain okay yeah just after DVD we we need to talk about
+[68:19] like the piece of one or two sessions on it yeah I like I'll explain that I think you think
+[68:27] some people go they think they have installed I guess yes you are getting some issue
+[68:37] that we need yeah okay fine fine I'll I'll I'll connect with you personally yeah we will do
+[68:44] that okay thank you we'll meet in tomorrow yeah fine we take code we can use the VS
+[69:05] VS code I'll use that VS code I'm sorry yeah you can use VS code a VS code or entity
+[69:09] VS code or which one is better this one or what is better or VS code no most other people they
+[69:16] will use you know yes could see that's what once we install we are opening it in VS code on
+[69:22] right the last command which is it is code not right so that will take you to visual studio environment
+[69:30] just time with this you'll find different I know comments okay we can clearly see that how we
+[69:37] are installing okay how the photo structure is getting generated you can see that

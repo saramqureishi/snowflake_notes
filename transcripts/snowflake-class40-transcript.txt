@@ -1,0 +1,406 @@
+[04:39] So the last session we have seen DVD code right, so let me close this window, so what we have done is we have created a new folder.
+[05:07] This is a new folder that we have created in your local machine and you have given the what is the DVD project in you have given the project name as DVDs of name and inside that you have you have the entire folder structure.
+[05:28] So I will just do one thing, I will quickly copy whatever we have discussed.
+[05:33] Whatever you have implemented in the code right, I am copying everything.
+[05:44] DVD test is a snapshot.
+[05:47] That is one snapshot which you have created.
+[05:57] See it and you see it, we already copied and script is modern.
+[06:02] Models we already copied.
+[06:06] This macros also we copied.
+[06:14] Analysis.
+[06:16] I will show you what is analysis.
+[06:18] Let me copy analysis.
+[06:24] So basically when I say analysis it.
+[06:29] So whatever is required you know for the business team right you will prepare those queries here.
+[06:37] So top five most expensive blinds by specialty.
+[06:44] So in network versus out of networks spend comparison.
+[06:54] Anyways you will you will place all the important queries in the analysis folder.
+[06:59] So we will not execute.
+[07:01] Even though if you execute this it will not create any object.
+[07:11] So let me switch to close this one.
+[07:16] I will show you one more time.
+[07:21] So by default you will get the prompt as base type.
+[07:34] The prompt you are showing us base.
+[07:36] We want to see what are the environment 30.
+[07:39] You need to run a command.
+[07:41] You can be a list.
+[07:42] So this will list all the environments.
+[07:47] So base is the default environment and we have created one more environment.
+[07:51] In case if I have to you know activate this environment.
+[07:55] Condo activate.
+[07:58] And the project name.
+[08:00] Now instead of base another project will change to the environment will change to.
+[08:06] The activity.
+[08:09] Seven.
+[08:10] Now I am switching to you know the folder wait.
+[08:14] Where I have the entire project structure.
+[08:17] This is the folder.
+[08:19] Copy this.
+[08:21] Switch to the directory.
+[08:23] And inside that you have DVD 7.
+[08:27] So inside you have the complete folder structure.
+[08:31] Now I am running one statement.
+[08:34] DBT debug.
+[08:37] What is DBT debug case?
+[08:40] It will verify the connection details.
+[08:44] What are the account user name password?
+[08:48] The database name schema name.
+[08:50] It will verify everything.
+[08:52] If everything is correct it will return your message stating that all checks are passed.
+[08:58] Now here there are two important files.
+[09:01] Can you see these two files?
+[09:08] Let me show you.
+[09:09] So the first file is profiles.yml file.
+[09:16] Profiles.yml file.
+[09:18] This profiles.yml file.
+[09:21] This is the most important file.
+[09:23] So the location is.
+[09:27] It will be by default in your C drive.
+[09:31] Let me switch to the drive.
+[09:33] Go to C drive.
+[09:35] Go to C drive.
+[09:46] Users.
+[09:47] Select the username.
+[09:49] You will find a folder called dot DBT.
+[09:51] Inside dot DBT you will find profiles basically.
+[09:54] Profiles.yml file.
+[09:59] So in profile.yml file.
+[10:02] So what is the database connection that you have given?
+[10:28] This is your snowflake account name.
+[10:32] Search for this.
+[10:34] You have the account name.
+[10:36] By default you will not have these things.
+[10:38] So these won't be available by default.
+[10:46] So this is your database name.
+[11:01] I mean snowflake account name database name password,
+[11:04] role and this key money.
+[11:08] So these are all the details.
+[11:11] So if anyone asks you what is profiles.yml file.
+[11:13] It will contain the database details.
+[11:16] So that is profiles.yml file.
+[11:19] And there is one more file called project.yml file.
+[11:23] Project.yml.
+[11:24] Let me open this file.
+[11:26] This is the location of the file.
+[11:28] You will find DBT project.yml.
+[11:39] So in this project.yml file.
+[11:43] You will find these.
+[11:46] These are all the default path.
+[11:49] Portal path, annuals path, best path, seeds path, macros, snapshots.
+[11:55] You will find the complete path.
+[11:59] And what is this?
+[12:01] What is this?
+[12:03] DBT is only here.
+[12:05] This is nothing but the project name.
+[12:07] Correct.
+[12:08] This is the project name that you have given.
+[12:10] And what is the default metalization?
+[12:12] By default, if you create a model, right?
+[12:22] If you execute a model, it creates a view like it.
+[12:25] So in your project.yml file, you will find the details.
+[12:31] What is the complete folder structure?
+[12:36] What is the project name?
+[12:38] You will find all these details.
+[12:41] Any question on these two files?
+[12:55] No.
+[12:56] Okay.
+[12:57] So just remember, when you execute a command DBT debugger, it internally verifies two files.
+[13:07] Profiles.yml file and project.yml file.
+[13:10] Okay.
+[13:25] Now all the connections are passed.
+[13:27] I am running a command code.
+[13:30] Code space.
+[13:32] So this will take you to the visual studio environment.
+[13:35] This visual studio environment.
+[13:39] Okay.
+[13:40] Here, let me open it.
+[13:41] Let me open it.
+[13:42] Let me open it.
+[13:43] Okay.
+[13:44] So here you can run these commands.
+[13:46] So I am running a command DBT.
+[13:48] DBT.
+[13:51] DBT.
+[13:52] DBT.
+[13:55] DBT.
+[13:58] Let me run this DBT.
+[13:59] DBT.
+[14:02] So what DBT build will you guys?
+[14:04] See, DBT build will execute, you know, all the dependent of this case.
+[14:30] Okay.
+[14:31] It executes models.
+[14:33] Snapshots, seeds.
+[14:35] Right.
+[14:36] And all the dependents.
+[14:37] So it has executed all the models.
+[14:38] Can you see this?
+[14:46] It is skipping few of the models.
+[14:48] Skip relation.
+[14:49] Okay.
+[14:58] So we will switch to the data.
+[14:59] To a refresh.
+[15:00] And verify this schema.
+[15:01] Silver underscore code.
+[15:02] And this is what I need to verify.
+[15:09] So there is one snapshot itself.
+[15:10] There is a snapshot.
+[15:11] Okay.
+[15:20] And you have close to eleven.
+[15:23] Okay.
+[15:24] Okay.
+[15:26] Okay.
+[15:27] Okay.
+[15:28] Okay.
+[15:29] Okay.
+[15:30] Okay.
+[15:31] Okay.
+[15:37] Okay.
+[15:38] Okay.
+[15:39] Okay.
+[15:40] Okay.
+[15:41] Okay.
+[15:42] I'm going to go close to eleven tables.
+[15:48] And there are close to seven views.
+[15:49] Okay.
+[15:50] These are all the seven views.
+[15:52] So what will happen if I run DBT run,
+[16:01] because DBT is.
+[16:02] Okay.
+[16:05] So we, we will verify why it got failed actually.
+[16:08] Okay.
+[16:09] Some of the models are skipped right?
+[16:13] So okay.
+[16:14] Test cases are skipped.
+[16:17] Skip.
+[16:18] Not on test.
+[16:19] Okay.
+[16:47] Anyway, you can ignore this.
+[16:48] Skip.
+[16:49] Once.
+[16:50] Saying.
+[16:51] Why.
+[16:52] This is a default model.
+[17:05] or maintain, I just want to understand the relation between these models. So, if you want
+[17:11] to understand this, right? So, there is a commandment. So, dbt docs, I am running dbt docs.
+[17:21] So, you can find the entire documentation. I think I showed you one dbt, right? So, do
+[17:53] you see anything called dbt docs over here? dbt docs. So, which will generate the documentation?
+[17:59] So, whatever the options that you have, based on that, it generates the complete documentation,
+[18:05] this is documentation. Now, I am running the same command, dbt docs, it is throwing one
+[18:21] over here. dbt docs generate. dbt docs generate. Okay, it is saying dbt utility is undefined.
+[19:03] Okay. So, I think I need to, you know, how you are going to enable is this dbt utility?
+[19:22] dbt tips. I think we need to create a file like dbt on this. We need to remember packages.yml file,
+[19:39] packages.yml file. So, in packages.yml file, you know,
+[19:55] we need to define, right? We need to, let me show it. So, the thing is, you need to have a
+[21:48] packages.yml file. Yes, this is the one. So, in packages.dbt project.yml file, this is project
+[22:06] format. Yeah. So, it is saying check whether this particular file is existing or not, okay?
+[22:18] So, copy is content and you can, so this is packages.yml file, this will be used to refer,
+[22:29] to dbt utility package. So, let me do this for more time. So, what it is saying,
+[22:50] run this command to install package dependencies. So, it will be pretty in-depth.
+[22:56] I am installing the dependencies. It is not, okay, 100. There is a problem. It install actually.
+[24:19] Now, I am running a command dbt docs generate. I am trying to generate a documentation. I just
+[25:26] exude a command dbt docs serve, okay? Now, this will open one UI, just try to see.
+[25:35] Can see the UI is, it will open one of one UI, okay. dbt docs serve. So, it will open one UI
+[26:34] gets where you can verify the complete documentation. So, this is the, you know, complete documentation.
+[26:45] This is your project. Click on analysis. So, these are all the analysis, okay? And just click on the
+[26:52] SQL. So, these, so these are all the SQLs you have dependent on. So, is it dependent on any other
+[27:04] model? Yes, it is dependent on fact claims models. So, this is fact claims model. Now, let us say,
+[27:12] you are, for the first time you are seeing one of the model. So, in models you have staging,
+[27:22] March intermediate. Now, let me go to March and go to the finance. Let me click on this
+[27:41] dem members. Now, I wanted to see what exactly this model does, okay? Click on this code. So,
+[27:50] it will give you the complete code. This will give you the complete code. So, it is joining with
+[27:57] the two tables, members, plans and states. It is referring to three models, right? One, two,
+[28:09] three models. There is an option dependent on, okay? So, this particular model is dependent on
+[28:15] three different models. Now, it is also referring to a macro. What are the macro? It is
+[28:22] referring to generate surrogate key macro, okay? So, these are all the three dependencies.
+[28:28] If I click on this particular model, it will switch to this. Again, this model is dependent on one
+[28:37] more model. Click on this model, okay? Dependent on. This model is dependent on four different models.
+[28:44] This particular model, what is, what is dependency? It is dependent on a sealed, right? You are getting
+[28:54] what I am trying to say. So, this documentation will help you to understand the complete project,
+[29:05] let us snap shot is there, okay? I wanted to understand what is the dependency. It is dependent on
+[29:10] stage members. This stage member is from raw members, which is a seed, okay? So, what are the
+[29:16] columns you have? So, you can verify the columns, okay? Now, you can verify, okay? So,
+[29:22] what are all the objects that are referring this seed? Referenced by, okay? It is
+[29:28] referenced by stage members, okay? Now, I wanted to understand, so what are all the other objects
+[29:35] that are referring to stage members? Referenced by, but there are two models which are referring to
+[29:39] this particular model. Click on demembers, dependent on. So, even you can verify what are the
+[29:50] macros that are getting referred. If I go to let say a fact claims with macros, okay? So,
+[29:58] dependent on. So, this particular model is dependent on the one more model and it is referring
+[30:04] four different macros. You are following the case and it will have the complete code also.
+[30:17] Whatever the logic that you have written, right? You will find the complete logic.
+[30:21] It is compiled also. There are no errors. So, once you do a component, you will get the complete
+[30:32] code. So, no, in case of any error set, this will help you. This documentation will help you.
+[30:41] So, you can request your admin to generate this documentation. So, you will get this URL.
+[30:48] You can build this on top of the latest changes, guys. But how to build this? You need to follow
+[30:55] a few commands to change. DVD docs are way. This is the order that you need to follow.
+[31:09] DVD docs generate. And if you want to run this, you need to have the dependent packages.
+[31:23] So, how you are going to get the dependent packages? So, you need to have a file called
+[31:29] packages.yml file. So, in this particular file, you need to paste this command, okay?
+[31:40] So, that you can build the dependencies. So, once you have the dependencies, you need to run
+[31:45] this depend DVD tips. So, that it will install the dependent packages, DVD tips.
+[31:56] So, the first step is install the dependencies. So, to install the dependencies, you need to have
+[32:08] packages to run. Once this is done, you need to generate the documentation and generate the
+[32:24] documentation. And once you run this, what will happen is, it opens the UI.
+[32:29] It will open the UI. And the UI, this is the default UI, you can use this.
+[32:37] This is the URL. This is the URL. Here, you can verify it, probably not. So, welcome to the
+[32:57] auto-generated documentation for your DVD project. Navigation project. Database tab.
+[33:03] Database tab means, what are the databases that you are referring to?
+[33:07] You are referring to two databases, Silvercore. In Silvercore, you have these models,
+[33:14] in snapshot. So, this is the snapshot that you are referring to.
+[33:20] And go back to the project. You have DVD utils, right? In DVD utils,
+[33:27] you are referring to, these are all the test cases. These are all the tests given by no DVD,
+[33:41] accepted values. Anyways, if you want to make use of these codes, these are all given by, you know,
+[33:53] DVD itself, for testing quality, testing quality. But you cannot download these things,
+[34:17] but you can refer to them. Let me go to SQL. So, in SQL, you will find,
+[34:23] we have used one macro, right? What is that macro name?
+[34:29] Generate target.
+[34:30] Generate target, right? Yeah. You can find that here. Generate target. Do you say anything
+[34:36] called generate target? Can you see that? Generate target, right? So, we have used this,
+[34:41] but we don't know what the code behind that, okay? So, this is the code base behind these.
+[34:49] So, it is referring to the, you know, generate target key, and you are passing the ID here.
+[34:56] So, based on this field, so it generates the code, okay? So, inside this, it automatically,
+[35:04] you know, uses the MD-5 function. This is a default code.
+[35:13] Can you share this document to someone?
+[35:16] I think you can generate, right? In your system, you can generate this,
+[35:21] but we cannot download this. I don't think it will work for you. Let me share this.
+[35:26] No, normally in real time, for multiple, we can use the constraints, right?
+[35:32] So, in that case, you know, from this, you cannot, you know, see, this is the, you know,
+[35:42] you are generated by DBT actually, okay? So, but you cannot upload this to a conference.
+[35:49] What you can do? You can, I mean, you have time, you can, you know, generate this, you can save,
+[35:55] but you, you cannot, you know, upload this as a conference.
+[36:00] But you can refer to this link, okay? Once you have this link, right?
+[36:04] The only thing is the dependency should be there, okay? Once you have all the dependencies,
+[36:09] yes, you can use that. But in your system, you can try this, okay? So, if you are using any
+[36:18] Databricks, right? Databricks or BigQuery. So, it will, it will support all the databases,
+[36:24] not only Smoklik, it supports, it supports most of the database, okay? SaveDivide, okay?
+[36:32] SaveDivide, okay? So, you are not supposed to, you know, divide with 0, right?
+[36:39] So, that is the problem, okay? Surrogate. Anyway, this is the internal, you know,
+[36:47] syntax, this is called ginger syntax, which, you know, DBT follows.
+[36:54] So, union, anyways. So, depending upon the requirement, you can use this,
+[37:05] no fluid bucket with the bucket, okay? So, anyways, these are all, no, not with white.
+[37:18] So, these are all internal to DBT. But you can verify this. So, everything you will get it from
+[37:24] DBT units. To get this DBT units, what we need to do? DBT units, DBT units. So, if you want to get
+[37:37] this, you can use DBT units. We need to have packages.py, inside that, you have to refer to the package,
+[37:42] DBT labs, and other this DBT units. So, once this is done, you need to run this command,
+[37:49] so that the dependent objects will be installed. If you want to generate the documentation,
+[37:54] DBT docs in general, DBT docs, sir. Now, we have executed the different models, right?
+[38:07] I don't know how many models I have executed, but my requirement is simple,
+[38:11] I wanted to understand how much time the models, each model is taking, okay? What is the starting
+[38:19] thing and ending thing? You understood it. I am running one state to just write them. So,
+[38:30] I will do one thing. I will, in silver, I will score, you will scheme on, silver, and sport.
+[38:40] So, in this schema, what I am trying to do is, I am trying to drop all the tables,
+[38:46] tables. So, my requirement is to drop all the tables, what I am saying,
+[39:25] base underscore tables, table underscore type, sorry, table underscore type before to base table.
+[39:41] Let me give the schema name also, table underscore schema in between, silver, and sport.
+[39:57] So, there are close to 11 tables. Now, I would like to drop all these tables, let's drop all the tables.
+[40:27] So, all the tables are dropped. Now, let me drop the views. How can you drop the views?
+[40:41] Show views, okay? So, there are seven views, okay? Let me copy the query ID, copy the query ID,
+[40:52] I am using the table function, table on, the results scan, provide the query ID.
+[40:59] So, this will give you the views information. So, there is a column called name,
+[41:04] let me drop them. So, of the view name. So, this will help you to prepare the drops.
+[41:21] I do not know if you know, run one by one, but I wanted to generalize it.
+[41:28] So, let's drop all the views. Now, in silver and sport code schema, we don't have any objects.
+[41:40] There are no views, okay? No updates on there, okay? Now, my requirement is,
+[42:48] my requirement is simple. Whatever the mode is that I am trying to create, I wanted to find out
+[42:54] what is the start time and intent, so that I can find out how much time each model is taking.
+[43:00] So, that is my requirements, okay? So, that is the case, right? So, what I am going to do is,
+[43:06] I am going to create a table, to drag the time and change, right? I will drop this,
+[43:13] okay? So, I am just creating one table. So, the table name is, so the table name is,
+[43:32] DNS4 audit log, well do I will create this table in the bronze gate. Look at the columns,
+[43:43] we have audit type, this is one column. Second column is model name,
+[43:49] and the third one is, okay? Time step. By default, I am operating it as current time step,
+[43:58] okay? So, audit type. So, when I say audit type, right? So, what I am going to do is,
+[44:07] in project.yml file, I am running one statement, just look at this statement. So, this is my project,
+[44:20] you know, DVD project.yml file. So, under the model, I am running one time.
+[44:28] So, whatever the table that I have created, so there are two columns, audit type and modeling,
+[44:35] audit type is I am just saying start, okay? Model name. How to get the model name? You need to
+[44:41] follow this syntax, this will give you the model name, okay? This dot d. So, this will give you
+[44:48] the model name. I hope you remember, we have used the same syntax in incremental model,
+[44:54] right? Did you remember that? In incremental model, if you object, right? What is the syntax?
+[45:15] This, this will give you the model name, okay? This, okay? This is nothing but the model name.
+[45:32] Now, what I am going to do is, I am going to use a command to pre-hook. Pre-hook means before
+[45:37] executing the model, post-hook means after executing the model, okay? Before executing the model,
+[45:44] and after executing them. Before executing the model, I am just saying it is a start time.
+[45:49] After executing the model, I am saying it is the end time. There are three columns, one is
+[45:54] the model, I mean the type actually audit type, audit type I am giving it as start-up the model,
+[46:01] model name. I can get the model name from this particular syntax. So, this is how I can get the
+[46:10] no model name. As of now, I don't have any records in this particular table. I don't have any
+[46:20] records. Let me copy this. So, we don't have any records. So, let me run a statement. So,
+[46:48] we will DVD build, DVD build. So, what will happen is, if we run this command, DVD build,
+[47:01] it executes all the models, tests, seeds, snapshots, and all the dependent objects, okay?
+[47:08] So, I can say this is nothing but end to end pipe and execution, okay? So, it is running all the
+[47:21] models, okay? So, what you need to observe is go back to the database and let's run this query.
+[47:36] You have 10 rows right now. Who inserted this? See, start out the model, end up the model.
+[47:42] In case if I can get the difference, yeah. In case if I can get the difference between these two,
+[47:47] I can get the, you know, model time, right? See, stage climbs. So, it took around,
+[47:56] anyways, you cannot observe this but stage members, start up the time, end up the time.
+[48:06] So, by using pre-hook and post hook, when I say pre-hook before running the model, post hook means
+[48:21] after executing the models, that is pre-hook and post. So, by using pre-hook and post hook,
+[48:29] you can track the execution time of the model, nothing yet, all the models are computing.
+[48:41] Even let me verify the objects. You have six views and 15 tables at this, yeah?
+[49:02] So, in project.wml file, yeah, in the dbtnx.project.wml file, you have defined the pre-hook and post hook.
+[49:11] So, any question like this on this? So, I will show you one more,
+[49:57] important thing. So, I am switching to one of the models,
+[50:02] important staging. So, you have these models, right?
+[50:16] Let me switch to the GitHub repository, where we have all the models stored.
+[50:23] So, go back to the repository, come to the repository, go back to the models.
+[50:41] So, these are all the different models that I have. Let me get, how can I download the entire report?
+[50:54] Request. Let me switch to the 7A, this is the new, it may be different, 7A.
+[52:07] So, this is the new branch that you have created, 7A, in the last session.
+[52:12] Now, I wanted to see whether I have all the models or not.
+[52:47] So, go to the main one and there is an option, you can download this.
+[52:53] You can see there is a one thing called download zip, right? You can download this.
+[52:57] Or else, so, this is manual one, you can download this. So, that you will have the entire
+[53:03] code here. Or else, what you can do is click on this. This is a, you know, URL,
+[53:11] GitHub repository, you want to copy this, and what you can do. So, you can do one. Let me go
+[53:22] back to that. So, I switch to DVD info. So, I am running it, I am going to get, get
+[53:34] clone, and the URL name, it's okay, it clone and the URL, you are in. So, this will help you to
+[53:43] clone the repository. Now, let me go back to DVD info, go back to DVD info, yeah, this is
+[53:52] the repository that is just clone, double click on this. And so, this is the, you know,
+[54:01] this is how you can clone the repository. So, you will find all the, let's see, you have all the
+[54:07] models, right? You have all the models. Now, I am just checking one of the models, let's say
+[54:23] customer information, customer orders information. So, this is the model case. So, you are referring
+[54:35] to the customers, and here you are referring to the orders. Again, you are referring to the orders.
+[54:42] So, the thing is, let us say, you are using the same logic in 100 models case, okay.
+[54:51] The select statement, you are repeating in all 100 models, okay. So, wherever you are referring
+[54:56] to customer stable, you need to refer to these column, customer ID, the same one last time, okay.
+[55:03] And similarly, wherever you are referring orders, you need to refer to order ID, customer ID,
+[55:08] order data status, you got the requirement, right. You are repeating the same select statement
+[55:15] in 100 models, okay. Now, what you need to do is, you have to repeat the code,
+[55:21] you have to repeat the same select statement, yes or no. You are getting my point.
+[55:33] It is, what if I have to know that if for the same logic in all 100 models,
+[55:39] I have to write this statement, yes or no. Yes, yes.
+[55:46] You can create me at your side. No, not macro, I will tell you.
+[55:51] So, pick the select statement. So, this is the select statement that you wanted to refer to,
+[55:57] you know, different models. So, if that is the case, what you can do is, you can create a,
+[56:06] so, I am going to create a new model, ready for this, create a new file. So, I am referring it as
+[56:27] EPH, underscore, custom, okay. I will tell you why I am giving EPH.
+[56:36] This is my customer, you know, model. I am creating one more model here.
+[56:44] You find EPH underscore orders, dot SQL. So, this is nothing but my orders,
+[56:53] this is the orders model. Save this one, okay. Now, so, I am using one macro, underscore, underscore,
+[57:31] let me switch to the UI. So, in UI, you will get the complete code, you may do a restart.
+[57:46] So, that is it. See, even though you know, if you have got expired, okay, once you have
+[57:52] the repository, so, you know need to worry about that. You can simply clone the repository and you can
+[57:57] work on it, okay. Let me directly click on this, create a new file. So, EPH and underscore,
+[58:04] custom, dot SQL, okay. I am running one statement here, underscore, underscore, underscore, underscore,
+[58:16] underscore, okay. So, here in the metallization equal to table right, I am just saying,
+[58:23] EPH, MD or FML, save this one. So, metallization equal to FML, okay. So, you have seen the metallization
+[58:49] equal to view, table, incremental, right. But what is FML, okay. So, basically, FML is nothing
+[58:57] but it will not create any object, okay. So, you can refer this as a, you know, with class,
+[59:04] like a select statement. Let me copy this. So, this is your order, right. This is my customer,
+[59:21] save this one. And if you, in case if you don't have a source,
+[59:28] directory for the, they have DPM, bronze, customers, okay. So, I am referring to the customers
+[59:40] given the, the metallization are different as HNR, okay. Similarly, I am going to the orders.
+[59:55] So, you are referring this, you know, they have DPM, bronze, schema, and orders, okay, save this
+[60:06] one, right. You have two models, these two are FML, okay. I am creating, I am running this model
+[60:12] straight up. So, DBT info, in which order you need to go with DBT info, DBT info, you need to switch
+[60:33] to DBT 7AM. Let me run this. I am running a statement, DBT is running, what are the model
+[60:47] elements, select, EPH and SQL customer. So, once you execute this model, remember guys,
+[60:57] if you define a model as a FML, it will not be at any order, okay. You are getting
+[61:08] right, if you define the, if the metallization as FML, it will not create any order, okay.
+[61:17] And similarly, let me run EPH and SQL orders, EPH and SQL orders, okay. Now, what is the
+[61:33] advantage of the safe neural model, okay. So, I told you, you are going to refer this same
+[61:39] select statement in all the 100 models. Instead of rewriting the select statement in all the 100
+[61:46] models, you are getting right. Instead of repeating the same logic in all the 100 models,
+[61:54] you are going to refer to this FML, okay. This is my final model. Let us say I want to refer to
+[62:07] the FML, okay. We will do one, we will count, it is already 8%, we will continue this
+[62:12] in tomorrow. I will share the class motion.

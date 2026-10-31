@@ -1,0 +1,374 @@
+[06:00] So, from the last session, we talked about different models, right.
+[06:18] So, this is the stage, lines model, which is referring to, what is this, which is referring
+[06:27] to seed, right?
+[06:28] If you look at seed, basically, seed is nothing but, it is a CSV, so it is referring to the
+[06:34] seed.
+[06:35] So, what is this ref place, what is the ref actually, it is a macro, ref is a macro,
+[06:48] so which will help you to call the other object.
+[06:50] So, in the currency area by using ref function, that means underscore underscore ref.
+[06:57] So, I am calling the seed edge, so raw underscore place, so this is raw underscore dead, so I am calling
+[07:07] the seed here, right?
+[07:09] Let me save this.
+[07:10] So, if I want to execute a model, the command is DBT is run, select and the respect to the
+[07:21] model.
+[07:22] So, basically, the model name is nothing but, the model name is nothing but the, this is
+[07:29] the file name, this is the model name.
+[07:33] So, let me log into the UI, so it is not linked, so go back to the databases, so I am
+[08:15] going to verify in the silver scheme, so in the silver, I have 4 close to 5 views and
+[08:23] there are close to 8 tables, so these 8 tables are nothing but seeds, so once we execute
+[08:29] the seed right, it creates a table in the target database, target scheme achieve and these
+[08:36] are all the views that I have built, these are the models that I have created as a view.
+[08:40] By default, the metallization is view, okay.
+[08:44] Now, I will just go to the other, you know, other models, go back to the other model, scroll
+[08:57] down.
+[08:58] So, these are all the staging models, these are all seeds and when it comes to models,
+[09:05] these are all the staging models, staging models are nothing but, you are referring to
+[09:09] the raw tables and you know, you are populating few additional columns, so you are converting
+[09:16] some of the columns as date and you are populating few columns, okay, so is it fade or not, is
+[09:26] it denied or is the impatient or outpatient, you are populating few additional columns.
+[09:31] Now, I am just going but the intermediate, so there is one thing called intermediate, so
+[09:37] in the intermediate we have few more models, let me go back to the intermediate, so go
+[09:56] to models, intermediate, so in the intermediate, I have two models guys here, so let me copy
+[10:06] these two models and put it into the intermediate, so in the intermediate, folder I have placed
+[10:24] two models, can you see this, intermediate line sandwiched, this is one model, now what
+[10:53] exactly you are doing inside the model, let me copy this, let's see in the language, so
+[11:07] you are referring to the stage clients, stage members, stage providers, stage plans, what
+[11:12] are these four guys, these four are nothing but models right, let's look at this, so in
+[11:23] the intermediate, you are referring to the staging models, yes or no, these are all the staging
+[11:29] models, stage client, stage member, stage plan, stage providers, okay, so you have created
+[11:34] one more model, where you are referring the staging models, you are referring all the staging
+[11:41] models, see you are referring four staging models and what are doing, you are joining, see, look at
+[11:46] here, you are joining all these models, you are joining claims, members, providers, plans,
+[11:52] you are joining based on the member ID, provider ID, plan ID, you know what is the member ID
+[11:57] right, yes, number means patient ID, provider means hospital ID, plan means the instance plan ID,
+[12:04] so you are joining these four tables and what exactly you are trying to represent here,
+[12:13] scroll up, so look at this guys, so these columns are from the claims, claims model and these are
+[12:23] all from members, members, you know model, these are all what, providers and these are all plan,
+[12:33] what is the plan that you are taking, what is the plan type and so you are just calculating
+[12:40] few values here, okay, so build amount minus, allow amount, that is the discount, okay, unpaid
+[12:46] amount, how you are going to calculate unpaid amount, okay, so allow amount of minus paid amount,
+[12:52] so that is unpaid amount, and also you are calculated in the discount percentage,
+[12:57] so what is the discount that you can give to the patient, okay, if the build amount is greater than
+[13:01] zero and allow amount by, divided by build amount, okay, so you are calculating the discount for the
+[13:08] perspective, you know, member, okay, and how much, you know, time he stayed, how many days he
+[13:19] stayed, okay, you are calculating the length of stay in days, okay, if he is an impatient
+[13:25] and if the discharge rate is not null, which means once he discharged, you are calculating the
+[13:31] difference, difference between two dates, admission date and discharge date, okay, so which means,
+[13:37] so this is the business logic that they will give to you, so based on that you have to, you know,
+[13:42] prepare the stay in that, okay, but observe the column that you are, you know, deriving, how many days he
+[13:47] stayed, okay, in which year he admitted, which month, which quarter, okay, so these are all the
+[13:57] fields that you are calculating, right, so these, these fields are not from one single table days,
+[14:03] these are from multiple tables, okay, so that is the reason you are joining all these four tables,
+[14:09] you are joining all these four tables and deriving the required information,
+[14:15] so you need to observe this, what is the refeshing, refeshing nothing, but we are referring to a
+[14:20] model, let me do a compile here, so do a compile, so do a compile, okay, see look at this,
+[14:44] that have DB, silver, and the respect to model here, so it is referring to the models,
+[14:49] and finally it is building the statement, okay, so let us execute this model, you have to run a model,
+[14:58] DBT run, select, let me give the model in, intermediate, climbs,
+[15:05] enriched, so I am executing this model, so we all know that the default metallization is a view,
+[15:20] it is saying the DBT run got succeeded, it is almost done, yeah, it got succeeded,
+[15:28] and look at the model in, INT climbs and reached, now let me go back to the UI,
+[15:34] go back to the database, do a refresh, so this time we will find another view, that is intermediate
+[15:42] climbs and reach, now let me query that, that is available in the sellers scheme of intermediate
+[15:57] climbs and reached, let us run this, in a very high column, see what is the climb ID member ID,
+[16:05] provider ID, claim type, service date, admission date, discharge date, diagnosis code, procedure code,
+[16:15] build amount, allowed amount, so these are all from different tables, that is the reason,
+[16:22] you are joining all these four tables and deriving the information, scroll to the right hand side,
+[16:28] see this one, so these are all the fields that you had derived, what is the discount that you are
+[16:32] giving to the patient, right, so that is a discount percentage, unpaid amount, discount percentage,
+[16:43] how many days he stayed, when he is updated, what is the month, what is the port,
+[16:53] so these are all the fields that you are giving, so these fields will help you to,
+[16:58] you know, build the final logic, we will talk about that, and there is one more model,
+[17:04] intermediate climbs, summary, there is one more thing called summary, now let us look at,
+[17:25] so in the summary what you are doing is, again you are referring the intermediate model, correct,
+[17:31] whatever the information that you got from this model, you are referring to that, and
+[17:35] some of you are building one model, see what, so from which means,
+[17:40] indirectly, so from this, you know, model from this model, you will still, you know,
+[17:47] applying few more business validation, so what is that you are trying to, you are trying to
+[17:51] numerally, number of names, flat, needle, and what you are trying to do here,
+[17:58] claim counts, how many claims are there, total claims, paid claims, denied claims,
+[18:04] so you are applying some, what are these case, count, min, max, aggregates, right,
+[18:09] you are applying some aggregates here, okay, so you are trying to calculate some average,
+[18:22] average paid, okay, minimum service state, maximum service state,
+[18:30] so you are deriving, you know, some aggregates here, okay, it is your following,
+[18:36] look at the dependency, initially you have built this, so basically this particular model will
+[18:46] refer to the staging models, and again you have built one more model, which will refer to the
+[18:52] intermediate model, on top of it, you are building the, you know, some aggregates, right,
+[18:59] so let us run this model, so DVD run, intermediate, member claim summary, so obviously,
+[19:15] the deformation is a view, so it will create, you create a view, do a refresh,
+[19:22] earlier I have six, now it is seven, so intermediate member claim summary,
+[19:38] you know, you have the member plan it, okay, you are trying to calculate the total claims,
+[19:46] okay, paid amount, denied, total build, total allowed, total paid, so you have some, I know,
+[19:59] financial values here, okay, they have calculated the aggregates, so this is about the intermediate,
+[20:07] this is the intermediate, now from this information, I would like to derive, you know, few more things,
+[20:13] actually, now I am just going to the mods, okay, there is a folder called mods,
+[20:20] inside the mods, I am creating few more folders, so go up to the mods,
+[20:27] in the mods I am creating four different folders, claims, finance, members and providers,
+[20:31] let us click on this, create a new, let us see whether I can create a new folder,
+[20:40] let us see two mods, yes, okay, so inside the mods I have created four different folders,
+[20:56] because we have four different entities, right, we have claims, members, providers and
+[21:01] financial information, so let us go to the claims, so in the claims information, we have
+[21:09] two models, let us click on the first model, fact claims, okay, fact claims, okay, so in the fact
+[21:19] claims, if you observe right here, can I say this one, okay, so to explain this, I will create a,
+[21:28] you know, model given, so I am creating a new model, click on create, so what I will do,
+[21:45] I will refer to the one of the model, so let me go back to the branch,
+[21:53] in the branch I have only one table, what is this, let me, where is the branch table,
+[21:59] I have one table, I am buying, so this is having only three columns, okay, so instead of that,
+[22:14] what I will do, okay, and I will execute few comments, so look at this, even you can execute
+[22:56] the same, so these statements you can execute directly, so I am creating a file format here,
+[23:13] so I just created one file format, that is CSV format, and after that, I am going to,
+[23:20] you know, create three tables, so I will create three different tables, one, the first table is
+[23:29] orders, so one is orders, let me create one more table, orders, custom or sees one more table,
+[23:46] look at this, customer's table, orders table, and I will create one more table,
+[23:51] so these, this script, I have taken it from DVD documentation,
+[23:57] customers, orders and payments, okay, so these are the three tables I am creating,
+[24:03] let's create the tables, so these three tables are created, so I am going to insert the data
+[24:11] into these tables, so for this, right, these are all, these buckets you can access publicly,
+[24:16] so you don't need any pollution for this, you can directly execute, no need to have any
+[24:20] integration object or something like that, you can directly execute these three statements,
+[24:24] okay, let's load the data, so let's verify the data, select start from customers,
+[24:48] so I have close to 100 customers, I will just pick one customer,
+[24:53] so update customers, set, let's say, say the first name, customer ID equal to one,
+[25:17] so I have deleted one customer's first name, let's pick one customer, they are
+[25:29] customer ID equal to one, okay, so the customer name is preferable, now I wanted to understand,
+[25:39] what are the, you know, what are the orders that he placed, let's say he is a customer,
+[25:45] he placed an order through Ziggy or the metro, okay, I wanted to understand, what are the orders
+[25:50] that he placed, okay, so I need to go to order stable, let's go back to the order stable,
+[25:57] go to order stable, where you can find the information with the customer information, okay,
+[26:03] in order stable also you have a column of customer, so I wanted to understand, what are the orders
+[26:11] that he placed, so this particular customer, customer one, place two orders, one is one,
+[26:16] the only is 37, okay, the first order is returned, second order is completed, okay, now the next
+[26:23] point is I wanted to understand how he made the payment, okay, so let's go to the payment table,
+[26:29] payment, go to payment table and filter with the order ID case, okay, where order ID equal to
+[26:37] order ID in one comma 37, okay, key place two orders, the first order he paid through credit,
+[26:50] even the second order also, both are success, he paid 1000 and 200, 300, okay, so my requirement is
+[27:00] I would like to join all these three tables and I wanted to find out, okay, so what are the orders
+[27:06] that the customer has placed, what is the minimum order, what is the first order and what is the last
+[27:12] order, I will give you one example, let me go to the payment table, go to payment stable,
+[27:27] so in the payment stable, you have the order ID and this is order ID case, okay, so
+[27:36] see one, two, three, four, see, there are two, two, five, which means this particular customer
+[27:42] placed two orders, correct, this customer placed two orders, okay, the order ID is same, okay, order
+[27:49] ID, let me go to payment, this is the ID payment rate for 400, let's go to the orders table,
+[28:05] I wanted to find out the customer who placed most orders, that is what I am trying to do,
+[28:11] go to the orders table, so this is the order ID and this is the customer ID,
+[28:17] let me sort with the customer ID, order by customer ID, by not this order, order by customer ID,
+[28:41] so look at this, so the fee, this customer placed two orders, it is called on, can you see this
+[29:15] case 54, look at this 54, how many orders he placed, guys, the customer, okay, customer 54
+[29:22] placed, 5 orders he placed, okay, now let me filter with 54, let's take customer ID as 54,
+[29:35] so let's say the customer ID, I am just updating it as, let's say a customer,
+[29:46] so the customer name is Christian and he placed, you know, five orders, okay, these are the five orders,
+[29:55] now I wanted to find out how he made the payment, okay, so I need to pick these order IDs,
+[30:01] so let's pick the order IDs, so this is two, you know, I identify the relation between these
+[30:07] fee tables, okay, so this customer placed orders through, you know, credit card, if you
+[30:18] got back transfer, so all are success, right, now I will show you the final query, what I am trying
+[30:24] to achieve, let me know this, the current database is, there was a score degree, and the schema is
+[30:50] branch, okay, let's run this query, now what you are getting is, you are getting 100 records,
+[31:12] paying 100 records, and what is the information you are getting, you are getting the first name
+[31:17] last name, and first order, when he plays the first order, most recent, what is the last order
+[31:25] that he placed, so in case if you want to filter this, right, with the customer ID 54,
+[31:31] let me read this, where customer ID equal to 54, okay, let's vary our one customer, look at this,
+[31:39] so we already discussed it, how many orders that this customer has placed, guys, 54,
+[31:47] so the customer name is Christian, how many orders he placed, he placed, five orders,
+[31:56] how he made the payment, this is how he made the payment, and if you look at the orders, right,
+[32:02] let's suppose the orders, but tell me what is the first, when he plays the first order case,
+[32:08] first order, and January 2018, it, 7th January 2018, this is the last order,
+[32:23] 26th February, he plays the last order, correct, what is the first order, last order,
+[32:28] go to the payment statement, in the payment, you have the payment information,
+[32:34] now the final query which you have, which I have written is written in the same match,
+[32:39] first name, last name, first order, okay, 7th of April, where is the last order, okay,
+[32:45] so this is the last order, how many orders he placed, total five orders, okay,
+[32:52] guess you are getting it, so you have three different tables,
+[32:58] you are joining all the three tables, and you are picking the required information, okay,
+[33:06] so let's say this is my final query, so copy this,
+[33:12] this is the final query, so I will name it as the customer orders info, okay,
+[33:27] let's say this is the model name that I am giving, create a file, so this is my final query,
+[33:37] okay, so what is this case, DVD, okay, customers, what is this, so I am referring to customer
+[33:44] table, this customer table is available in the bronze schema, okay, so database name, schema name,
+[33:53] so I am saving the model, now tell me guess, what will happen if I run this model,
+[34:00] it creates a view, right, it creates a view, now my requirement is, I don't want this to be
+[34:09] created as a view, I wanted to create this as a table, okay, so in that is the case, you need to
+[34:14] refer to one more macro that is underscore underscore config, okay, underscore underscore config,
+[34:21] so metallized equal to table which means I am saying that the metallization should be table,
+[34:30] so when you are creating a model, you are referring to a macro called config,
+[34:35] you are explicitly saying that create it as a table, okay, metallization equal to table,
+[34:41] now I save the model, it creates a run the model, select, so cross order info,
+[34:52] so I am executing the model, so the model is can execute it, it is saying succeeded,
+[35:07] okay, so let me go back to snowflake, and go to the schema, go to silver, in silver you have close
+[35:17] to 8 tables, do a reference, so this time you will find a new table that is cost order,
+[35:28] so the default metallization is a view, now you are bypassing that by referring to macro called
+[35:35] config, so let me refer to this table, silver dot cost orders, okay, so you are getting the
+[35:44] complete information, what is the first thing last thing, so when he plays the first order last
+[35:49] or how many orders he plays, okay, so here you are using a macro called config, so we will help
+[35:59] you to create a you know table, okay, instead of a view you are creating it as a table,
+[36:08] now tell me, one more requirement, let us say you are you are referring these tables,
+[36:14] okay, so this customer's table, okay, you have orders table, you are referring these tables
+[36:21] in 100 models, the requirements, you have customers orders, so these are the two tables,
+[36:47] which you are referring in let us say 50 models, 50 models, you are getting that,
+[36:56] so you are your your heart limit database name and schema limit, your heart coding, yes or no,
+[37:01] this is called heart coding, right, let us say you have 50 models which are referring to
+[37:09] these two tables, okay, so there are 50 models which are referring to these two tables,
+[37:18] now let us say later the requirement got changed, now they are saying that don't pick these tables
+[37:25] from broads schema, okay, don't refer to branch schema, instead you can refer these tables from,
+[37:36] let us say they are giving you one more schema, let us create the schema first, now there is
+[37:52] a new schema guys, let us check customer schema, create schema, customers, let us say customers
+[38:00] go schema, now let us create these objects, all right, now the requirement is in your in your
+[38:27] broads schema these objects are not there, okay, let me switch to broads schema, and let us drop
+[38:37] these tables, so drop table, customers orders and paid it, so these three tables are not available,
+[39:04] now tell me is what happens to these models, let us change them, there are 100 models,
+[39:09] there are 50 models which are referring to customers and orders, where the schema is branch,
+[39:16] now the requirement is, you are not supposed to refer these tables from broads schema, you have to
+[39:21] refer it from a new schema folder, customer scores schema, I have a new schema, you have to refer
+[39:28] these tables from the customer schema, not tell me is what you need to do, you have to change
+[39:37] all the 100 models, yes or no, so instead of broad you have to put what customer score schema,
+[39:43] correct, you have to change all the 50 models, which is a difficult task, right,
+[39:51] getting my point, now, so the solution is, let us say, let me say of this, what I am going to do
+[40:04] is, in the models folder only, I am creating a new file, create a new file, so I will name the file as
+[40:11] sources dot ymm, the name of the file is sources dot ymm, it can create, so you need to refer to
+[40:25] a map, underscore underscore source, underscore underscore source, so here you can give the source name,
+[40:34] I will name it as s1, so, okay, source name, and here you can define the
+[40:43] differ to the database, which database you want to refer, I would like to refer to devd,
+[40:51] which schema you wanted to refer, I wanted to refer customer scores schema, which table,
+[40:58] customers, orders and payment, let me say of this, okay, so I have created a file called sources dot
+[41:27] yml file, this sources dot yml file will have the source name, this source is nothing but,
+[41:36] it refers to the database called devd, the schema, customer orders,
+[41:41] coming, customer orders payment, okay, now, so go back to the, you know,
+[41:49] the model, where you are referring the, where you are hard coding the database,
+[41:55] so, instead of this, what I will do, I will simply say underscore underscore source, okay,
+[42:04] underscore underscore source, what is my source name, s1, I am referring to customers,
+[42:14] if this is the table that I have referring, again here also I am referring orders,
+[42:17] let's remove this underscore underscore source, my source name is s1, and the table name is
+[42:26] orders, scroll down, here also, I do not want to output the database, database,
+[42:34] nman schema name, I am referring to the source, okay, I already created a source, my source name is
+[42:40] s1, and inside that I am referring to the object called orders, okay, so let's save this file,
+[42:51] so the best practice is when you are creating a model, right, wherever you need to refer to
+[42:58] the database nman schema name, create a, you know, sources dot yml file, inside that just define
+[43:05] the source name, and database name schema name, okay, now let's see, what you are doing is here,
+[43:13] you are referring to the source, correct, let's do a compile, there is option to compile,
+[43:19] let's do a compile, and after the syntax case that it is generating, can you see this,
+[43:40] DVDB cache schema, okay, you have not hard coded it, DVD itself is referring to the respective database,
+[43:49] what is this source, what is the source name s1, okay, so which means it refers to the source file,
+[43:57] and what is the database that you are defined, you are defined the database name as DVDB cache schema,
+[44:03] so it automatically picks that, okay, you only need to specify the database name schema name explicitly,
+[44:10] just define the source name, that's it, it automatically picks the required information,
+[44:16] you got it right, you are compiling, you are defining the source case, okay, so it is automatically
+[44:30] referring to the respective database and schema, see, there is my database name schema name,
+[44:34] and the respective object, leave, let us say later they came back and say that they don't
+[44:46] refer to custom schema, go to bronze schema, okay, let us say you don't have these, you know,
+[45:01] let us say they dropped the schema, dropped schema,
+[45:06] custom source schema, they are saying that schema itself is not available,
+[45:12] you have the required information from the bronze schema itself, let me go back to bronze schema,
+[45:17] you can change schema here, let us go to bronze schema,
+[45:25] and create these objects, so I am creating these tables, so the requirement is changed,
+[45:34] now you have to refer these objects from that different schema, okay, so the point is
+[45:42] these tables are referring 50 models, okay, but in case if I use source, I need no need to change
+[45:49] all the 50 models, instead I can change at one place, that is sources dot yml file,
+[45:54] so if I go to sources dot yml file, directly modify the required schema, okay, let us name it as,
+[46:06] so I will change at one place, so that required models who are referring to the source will be
+[46:12] automatically affected, right, maybe if people who have already worked in Informatica,
+[46:20] they know it is you know parameters file, right, so I am changing here, I am not going to come back here,
+[46:32] so I, there is no, I have not hard coded anywhere, let us do a component, so it automatically
+[46:41] picks the database name schema name dynamically, so maybe you will get different questions,
+[46:48] so how you are going to you know derive the database name and schema name dynamically,
+[46:55] so the answer is something, you need to create a sources dot yml file in the sources dot yml file,
+[47:02] you have to define what is the database name schema name and what are all the objects that you are
+[47:06] referring, you have to define all these things, so that, so it automatically picks the required
+[47:13] database name and schema name, okay, and what is this case, config config is a macro instead of
+[47:24] creating a view, it will help you to create a table, now it refers to the drawn scheme,
+[47:32] so you are clear it is, so this is sources dot yml file, okay, now let me go back to the
+[47:46] marks, in, in the marks I am referring to the claims, say in the claims I am referring to fact
+[47:51] claims, okay, FCT claims, okay, so in fact claims what you are doing is what is this config
+[47:58] medallion equal to table, which means you are trying to create this as a table, okay,
+[48:09] which model you are referring intermediate claims and which, which means you are referring to
+[48:15] the intermediate model, the model name is intermediate claims and which, you are referring to this model
+[48:22] and you are, you are, you are delivering the final logic, okay, so what is this,
+[48:35] heavy heard about anything called surrogate key in it and surrogate, what is the surrogate key,
+[48:44] when a table doesn't have a primary key, it is something like this, okay, so so when you are,
+[49:00] you know, including the acid type 2 logic, right, you need to define this surrogate key
+[49:07] system, so I think I have given you one example, right, say the type 2, right, yeah, acid type 2,
+[49:25] yeah, I think look you can take this example, okay, so here, what is the primary key column,
+[49:30] in this example, so I am saying, Krishna initially he worked in a header from this date to this
+[49:38] later he moved to Delhi and the entity is done, which means this is the latest regard,
+[49:43] but what is the primary key column here, there is no primary key right, so I am generating a key here,
+[49:53] ES key, okay, what is this surrogate key I am generating, I am just saying this is
+[49:59] 10, let's say this is 11, this is called surrogate key, so when you need a surrogate key,
+[50:08] when you are maintaining the acid type 2 information, you need a surrogate key,
+[50:12] so which will differentiate between the current record versus the previous record,
+[50:18] you know, you want to try to use it, this is called surrogate, now we will try to see
+[50:28] how you are going to generate the surrogate key, so we know need to write any logic,
+[50:34] so DBT itself has given some packages, so surrogate key generation using DBT users,
+[50:41] this is the package even by DBT, this is the package and this is a function,
+[50:48] in this package you have a function, you are passing the client ID correct,
+[50:53] you are passing the ID here, so client ID, so that you will get the surrogate,
+[51:00] so I will explain what is this DBT users, in this scroll down, so you are picking the record information
+[51:07] and what you are doing is, you are just picking the, what is the service date, service,
+[51:11] month and service order, so that is what you are trying to do here, so we do not know what is this
+[51:20] DBT users right, correct, we have not seen this DBT users, now what I will do is,
+[51:34] if you run this you will get one error, this title is there,
+[51:37] so the name of the model is FCT blinds, so once you execute this model it will throw one error
+[51:51] actually, it is saying DBT run failed, okay, it got failed, it got failed, why it got failed,
+[52:05] expand this scroll down, what is the message is, DBT users is undefined,
+[52:17] DBT users is undefined, okay, so you have not defined this package, DBT users is undefined,
+[52:29] so this can happen when calling a macro that does not exist, okay, check for the typos or install
+[52:36] package dependence, okay, in case if you want to use this package you need to install the
+[52:44] dependencies, okay, so as of now we do not know what is DBT users, now let us try to install DBT
+[52:52] users, in case if you have any help right, this copy the settle and make use of
+[53:04] so you can say that I am using DBT cloud, so what you need to do is you need to install some
+[53:18] dependent packages, okay, so what you need to do is here you need to you need to create a
+[53:40] package.yml files, I don't know whether you observe it, there is a component,
+[53:45] yml file, okay, we have seen one yml file, what is it, sources.yml file, correct,
+[53:53] the main advantage of sources.yml file is, you can dynamically pick the database name and schema,
+[53:59] now we are going to talk about one more yml file that is packages.yml file, packages.yml file,
+[54:06] what is this package is.yml file, in case if you want to utilize the packages given by DBT,
+[54:12] so DBT has given one package that is DBT users, the package which I am trying to refer is
+[54:18] DBT users, okay, so if I want to use this, okay, I need a package is.yml file,
+[54:27] I need this particular yml file, okay, so inside this you need to write this code and generally
+[54:34] admins will take care of this, but just this is just for the information, so copy the
+[54:39] file name, this is packages.yml file, now do you see anything called packages.yml file
+[54:44] case here, you have project.yml file, but you don't have packages.yml file, okay,
+[54:54] now let's create a packages.yml file, let me create a new file,
+[55:03] so I will name it as packages.yml file, click on create, can you see this case,
+[55:12] packages.yml file, so right click on the repo, create a new file and name the file as packages.yml file,
+[55:21] okay, so inside this you need to paste this code, okay, so this is the duty of admins,
+[55:31] save this file, so they may ask you like what are the yml files that you came across,
+[55:41] one is sources.yml file, that will help you to dynamically pick the database name and scheme
+[55:48] on it, and one more is package.yml file, you can say that we are utilizing some of the,
+[55:59] you know, replacing some of the DVD packages, one is DVD, you know, you will,
+[56:05] so if I want to use that, I should have yml file called packages.yml file,
+[56:10] so inside that I need to define, okay, so which package I need to define, I need to delete this,
+[56:16] now one thing is what you need to remove, okay, you need to run this command, DVD depths,
+[56:25] DVD depths, you need to run this command, so come back here, you can close this,
+[56:39] let's run this command, DVD depths, so it will install the dependencies,
+[56:50] what is this, what is this, what is this, what is the system logs,
+[57:11] is not a valid semantic version, but maybe the version is incorrect, okay, let's pick the version
+[57:15] correct version, so if you copy this code, it can paste here, so this is the version issue with
+[57:33] the version actually, okay, let me use this, version 3, 1.3.3, click on the packages.yml file,
+[57:59] save this one, now let's run the command, DVD, Depends, DVD depths, succeed, okay, now you can
+[58:16] go back to the fact links, and let's execute this model, what is the name of the model,
+[58:32] let's say tick links, let's run this model, so once you execute the model, it creates a table,
+[58:39] okay, in the back it creates a table, because we have used a macro called config,
+[58:45] we had explicitly saying that you made it as a table, now, so the model is succeeded,
+[58:52] come back to small frame, and let's do a refresh, now I will find 10 tables, this is the fact
+[58:59] links, so let's refer to that, stop, silver, fact links, you look at this case, it has generated
+[59:14] a unique value, what is this, this is the surrogate key that you are generating, I hope you remember
+[59:21] hash key has data like this, when we are talking about full load, and implementing a CT type 2
+[59:28] in Snowflake, I hope you remember hash key, right, yes, I am, you are right, you are right,
+[59:41] you are right, you are right, in case if you want to see that, let's go back to the query
+[59:48] case, and let's see the latest statement that code is executed, this is the table, right,
+[59:59] so copy the syntax, paste here, can you see the function nice, what it is doing,
+[60:15] and if I validate, see this, I am different, I am defined, cast, right, the same function,
+[60:28] so DVD utils not generate surrogate key, which will internally use as a function called
+[60:34] MB file, which will generate the unique value, okay, so that's everything you see, let me commit all
+[60:45] the changes, close, let's close this one, yeah, packages.yml file, it's already there,
+[61:02] this is the code you need to use, and let me do a comment, comment, that's for different
+[61:16] you can give any, I have commented the changes, I guess you have the URL case, so you can use
+[61:24] the URL and you can get the latest code, so you can verify the latest changes, okay,
+[61:45] so the latest changes are, what are the mods, inside the mods, I have claims, inside this,
+[61:53] I have packed claims, yes, I have the latest changes, these are all the latest changes,
+[61:59] you can verify this, okay, so please complete the practice, if I am committing the changes to,
+[62:21] you know, the main also, now you can find the change in the main branch also,
+[62:38] it's like the main, so you'll find those changes,
+[62:42] photo mods, inside the mods, you have claims, yes, and now all the changes are available,
+[62:48] yes, you can, you know, refer to any of the report, signs, we'll meet in tomorrow's
+[63:01] I'll share the class notes as well, so I need to share this equality,
+[63:06] this is a statement that I need to send to you, this is a code you have, I'll share the
+[63:41] numbers within the five minutes, while we'll meet in tomorrow's issue.
