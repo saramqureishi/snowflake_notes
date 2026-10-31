@@ -1,0 +1,386 @@
+[01:03] Can you hear them?
+[01:11] Yes.
+[01:21] Let me look at the URL.
+[01:26] So in the last session, we have seen packages.YML file length.
+[01:58] So what is the main purpose of this packages.YML file length?
+[02:04] So in case if you want to use any of the packages given by DVD,
+[02:14] you need to use this one.
+[02:16] Packages.YML file.
+[02:17] In the packages.YML file.
+[02:19] So you need to define the package that you wanted to refer.
+[02:24] I'll show you one of the models.
+[02:28] So I'm just going to the models.
+[02:30] Under the models, we have,
+[02:32] we have marks.
+[02:34] In the marks, we are trying to talk about the CT lines.
+[02:39] Packed lines.
+[02:40] So if you look at this model,
+[02:42] so we are defining it as a table,
+[02:48] which means by default it creates a in-of-you.
+[02:51] So we are defining the macro conflict.
+[02:54] So to create it as a table.
+[03:00] And we are defining the logic.
+[03:01] So there, we are referring to the other model.
+[03:04] So Rafi is a macro,
+[03:05] which will be used to refer to the other macro.
+[03:07] So we are referring to intermediate client sandwiched.
+[03:10] So what is that model?
+[03:11] It's intermediate client sandwiched.
+[03:14] That is in the,
+[03:16] so we have marks.
+[03:20] Staging.
+[03:23] What is the other one?
+[03:25] Intermediate.
+[03:26] Which is the intermediate of one minute.
+[03:28] Let me talk about.
+[03:58] So under models,
+[03:59] we have,
+[04:00] so we have intermediate right.
+[04:02] Staging, intermediate and marks.
+[04:04] So in the intermediate model,
+[04:06] we have intermediate client sandwiched.
+[04:10] So we are,
+[04:11] we are referring to this model in,
+[04:13] in, in,
+[04:14] in,
+[04:15] in,
+[04:16] in,
+[04:17] in,
+[04:18] in,
+[04:19] in,
+[04:20] in,
+[04:21] in,
+[04:22] in,
+[04:23] in,
+[04:24] in,
+[04:25] in,
+[04:26] in,
+[04:27] in,
+[04:28] we have to,
+[04:29] to talk about this surrogate key,
+[04:30] surrogate key is nothing but inter знаем uses
+[04:33] the MDF function ok.
+[04:35] So that is nothing.
+[04:36] But the,
+[04:37] hash key of three.
+[04:38] Callum.
+[04:39] Line ID.
+[04:40] Hmm,
+[04:41] so that is anything.
+[04:43] But the, you know,
+[04:44] hash key like MDF function.
+[04:47] I know that we are corporate in the,
+[04:49] the other columns.
+[04:52] So,
+[04:53] once I execute This,
+[04:54] It creates a new table,
+[04:55] actually fact lens,
+[04:56] in the top.
+[04:57] layer, go back to the database, go to the silver layer, can you see this fact times?
+[05:04] This is the fact lines model, select star from silver dot fact times, so you are having
+[05:17] the surrogate key, it is climb ID, you have the record information, now there is one more
+[05:26] model, fact lines with macros, okay, macramids, what are the macros that you have seen
+[05:33] this, till now, what are the macros? So you have seen config, config is one macro,
+[05:46] rafi is another macro, rafi is a macro, source, if you remember sources dot yml file,
+[05:55] sources dot yml file, right, this is one more macro, okay, let me go back to the model,
+[06:16] so fact lines with macros, so I am saying that created as a table, I am using a macro
+[06:22] call config and it is crawled on, so I am using intermediate climb sandwich, so what is this
+[06:30] model list? Anyways, the previous model only, intermediate climbs enriched, I am referring to
+[06:37] this model and it is crawled on, so I am using couple of macros, can you see this case?
+[06:47] Classified diagnosis, okay, calculate discount percentage, saved by date label,
+[06:58] so what are these actually, these are all macros, okay, these are all the macros created by the
+[07:03] developer, these are not given by, you know, what to say, DBT, but these are all
+[07:12] created by the developer, so I will give you a simple example just to understand this,
+[07:21] so I am switching to macros folder, so as of now I do not have any macros, so macros are nothing
+[07:26] but these are all reusable functions, let us click on create, you find, so before that let me,
+[07:36] let me show you the example, the back test norm rate, so what are the different tables we have?
+[07:51] Let me verify the tables information, so I am switching to bronze schema, in the bronze schema,
+[07:59] I have customers, orders and payments table, let us switch to payment table,
+[08:17] because I am using bronze schema, I am verifying the, so look at the column, payment method rate,
+[08:36] so you are using different payment methods, trade card, coupon printing,
+[08:41] you have a bank password, they are different payment methods, payment methods, and so this is
+[08:55] nothing but the total amount, I will do one thing, I will take a different example, let me quickly
+[09:07] create a table, create a table, I will name it as customer, customer underscore info,
+[09:20] so I am utilizing the existing schema, it is not like sample data, and this we have schema called
+[09:28] TPSF1.Customer, so we have the existing table, and there is a column for, so look at this case,
+[09:48] you have the customer as key, customer name, address, and there is one thing called marketing segment,
+[09:56] right case, these are called marketing segment, now my requirement is, look at this case,
+[10:03] what are the distinct values you have in the marketing segment, do you have machinery building
+[10:34] household for nature, so these are all the different marketing segments, now the requirement is,
+[10:44] I do not want to disclose the actual name, but instead I wanted to,
+[10:52] show a different thing actually, so let me, the column in marketing segment,
+[11:21] this means, we can just go on marketing segment, next from this, so we have different category
+[11:45] skies, now what I am going to do, so I am going to write it, no statement here, let us say,
+[11:54] let us copy these terms, so the requirement is, wherever I am using this particular table
+[12:02] and this particular column, I am not supposed to disclose the actual name, machinery, household building,
+[12:08] not mobile furniture, I am not supposed to disclose the actual names, generally when you will stay
+[12:14] hospital, right, so for each diagnosis there is a code rate, so doctors will have a different
+[12:26] coding actually, for the, for the disease they will have a different code, now where they will
+[12:31] disclose the disease name, they will display the code actually, even procedure code,
+[12:37] so similarly, so I am, my requirement is, I am not supposed to disclose these names,
+[12:44] instead I would like to give a different name, okay, so let me just, you know, define that first,
+[12:50] C underscore, cast as key, so let me pick three columns, cast as key, customer name,
+[13:06] customer phone number, so that is, I just want to display only these columns and I along with that,
+[13:13] let me write a condition, case 1, marketing segment equal to, so let us say in case if it is,
+[13:22] you know, machinery, so let us say this is machinery, so then I would like to display a value,
+[13:32] let us say it is a rate to the industry, industry, so similarly let me write one more condition,
+[13:51] so what else you have, you have building right, machinery, building, so in case if it is building,
+[14:00] so you can say simply like construction, something like that, building is set and you have automobiles,
+[14:19] in case, in case if it is automobiles, just display like something like auto for it, any other
+[14:33] things, you know, how old is it, you have how old is it, so you can say like,
+[14:43] don't you work with it, so the thing is wherever you are referring this column, you have to
+[15:02] repeat the same logic, okay, let us say if it is furniture, then display it is a home bonus,
+[15:22] something like this, okay, let me end this and in case if it is other than this, let us put
+[15:30] other, that is it, other and you can give any name place here, okay, and as marketing said,
+[15:46] let us grant this, okay, so the thing is you are not disclosing the actual name,
+[15:53] instead you are displaying the business name, okay, this is the business name, okay,
+[16:00] this is my requirement, okay, so let us say the same logic, the same logic, the same case
+[16:06] when I had to repeat in let us say around 100 models, so are you going to write the same, you know,
+[16:15] logic for 100 times, so let me, let me modify this, so I am just creating a new model here,
+[16:28] let us go to the models, it will not create, we will find, so let us name it as,
+[16:37] what is, yeah, custom, it is a customer information, customer underscore information,
+[16:52] so I just created a model, so in this model I am defining this statement, okay, this is the table name,
+[16:58] so what I will do, I will go to sources.yml file, and the data, the schema is branch schema,
+[17:06] now I would like to, I don't want to hardcore the database name and schema name, so that is the
+[17:13] reason, I have defined the table name in the sources.yml file, okay, now what I am going to do is,
+[17:23] do you see this, why there is a M keyword, okay, this particular file is modified,
+[17:38] so you need to push this to GitHub, okay, the latest changes, you have to push, okay,
+[17:44] can you see changes here, this is, there is a change, okay, you have to move this change to GitHub,
+[17:51] so what I am going to do is, I am going to, you know, define the source, underscore, underscore,
+[17:57] source, my source name is s1, and the object which I am referring to is s1, okay,
+[18:03] all right, save this one, so the point is, point is, I have to repeat the same logic for
+[18:19] a hundred times, okay, so instead of that what I can do is, I will create a macro,
+[18:29] anyways, first let's, let's compile this, okay, you are getting the database names schema
+[18:41] name and automatic, so if I execute this customer information, so by default it creates a
+[18:58] view, okay, it creates a view, let's go back to the database, create fresh, verify the views,
+[19:10] scroll down, go to the views, you have customer information, right, this is a view, okay,
+[19:16] but I don't want to create it as a view, if that is the case, what you need to,
+[19:20] you can use a macro, what is that macro guys, underscore, underscore, conflict,
+[19:25] so, define it as a table, save this one, and execute some model, execute the model,
+[19:32] now tell me guys, what will happen, you know, if I run this, it will create a table,
+[19:40] first it drops the view, because with the same name we have view right, it will drop the view
+[19:46] and it creates a new table, okay, let's learn this, so the model is getting executed, in case
+[19:56] if you want to see what exactly is happening in behind the scenes, you can go back to the
+[20:01] information schema, yep, it is good, got succeeded, even you can verify the logs here,
+[20:08] scroll down, just enable the debug logs, scroll down, and the first step is try to see is,
+[20:18] it is trying to drop the view, right, can you see the message, right, it is trying to drop the
+[20:31] existing view, okay, it will drop the view, drop view, okay, it will drop the view,
+[20:37] then it will create a table, scroll down, yes, it is creating a table, can you see the
+[20:47] table creation, see create a replace table, table name, right, it drops the existing view
+[20:54] and it creates a new table, right, go back to snowflake, yeah, you literally have a view, now
+[21:03] you won't find that view, the views dropped on the table got created, now the requirement is,
+[21:10] I don't want to repeat this, repeat this logic, okay, I wanted to, you know,
+[21:17] I wanted to generate this, okay, if you want to generate this, what you can do is copy this code,
+[21:23] you will have a object called macro, go back to the macro, right click on this, create a new file,
+[21:30] you can say that, let's say, macro, macro, use it and underscore macro, but you can do the
+[21:44] same thing, I would like to do something like this, okay, see underscore mkpt segment,
+[21:52] see underscore mkpt segment dot SQL, so this is the macro name, this is the file name,
+[22:00] inside that, I'm using a macro underscore macro,
+[22:06] run this, so it is asking you to provide the name, okay, I'll name it as c underscore mkpt segment,
+[22:16] this is the macro name I'm giving, okay, and I'm here, I'm pasting this case statement, okay,
+[22:23] which means this logic should repeat, okay, so wherever I'm referring this macro,
+[22:28] automatically this logic should appear, okay, so if that is the case, what you can do is, so,
+[22:34] so the input parameter is the marketing segment, this is the input parameter, okay,
+[22:41] so you have to pass the, you know, the column name, okay,
+[22:47] let's say you can give any name, okay, let's say c1, okay, c1 is the, you know input that you are
+[22:53] passing and what I'm going to do is, I'm going to refer to that, if you want to refer to the
+[23:01] column write, you need to use this syntax, okay, c1, okay, if c1 is equal to this one,
+[23:07] machinery, then you need to display this, okay, that mean, so wherever this particular column is
+[23:16] there, I'm just no changement, okay, let me save this, so you have created a macro and the macro
+[23:32] name is c underscore mkpt segment, this is the macro name that you have created,
+[23:37] now when you're referring to that macro, what you need to do is, just remove everything,
+[23:41] this is not required, not required, and what you need to do is, you need to refer to that macro,
+[23:47] okay, how you can refer to the macro, additive use this syntax, okay, use this syntax
+[23:53] and search for the macro, c underscore, what is that macro name, c underscore mkpt segment,
+[24:07] let's give a space, so this is a macro that you need to do, and which parameter you need to pass,
+[24:21] Marigold means column name, right, so this is the column in the native password,
+[24:27] macro name also, I'll give you the same, save this, let's do a compile, okay, my code is in the top,
+[24:46] it's equal to, you're getting some error, okay, then you need to put it in the single code,
+[25:12] let me put it in the code, save this one, then do a compile, okay, now you got it, right,
+[25:27] so what you're trying to do is, you're trying to pass the column name, and it checks whether the
+[25:33] value is this one, it displaces, okay, so you're getting the entire logic, right,
+[25:41] so you're not rewriting the k statement, you're just referring to that statement, okay, you're
+[25:49] following it, you look at the logic, actually, what is that you're passing, you're passing the
+[25:55] column name, okay, so this is the, nothing but a column name that you're passing, if the column
+[26:00] name is equal to mesh name, you'll get this value, building this well, practice you're building
+[26:06] the logic, you got the statement, so the ultimate goal is to, you know, generate this automatically,
+[26:16] and you're passing this as the input, and from this you're getting the, the k statement,
+[26:22] so let's, you know, read this, let's run this model, dbt run, and execute this, okay,
+[26:39] so the macro, yeah, the macro is successfully created, and even the table is also
+[26:46] created, okay, go to debug logs, and you can verify the table's information, see this one,
+[26:52] create or replace table, table name, right, right, so yeah, and the complete statement is
+[26:58] building automatically, so that is nothing but in macro, so wherever you feel there is a repetitive
+[27:05] logic, you can create, you can put that in the macro board, okay, now let me go back to the
+[27:13] model, I'm closing this, let's close this, okay, now look at this, fact claims with macros,
+[27:22] so here I'm defining the macro, that is classified diagnosis, okay, and you're passing one input
+[27:27] parameter, okay, classified diagnosis as a, as a, it's a macro, you're passing diagnosis code as
+[27:35] a input, but in the macro's folder, you don't find any macro set, we just created one macro, okay,
+[27:42] now I'll show you these macros ways, let me go back to the macros folder, go to macros,
+[27:57] under the macros you have two macros here, so copy these macros, and yeah, one second, that is the
+[28:10] macros, okay, here I need to paste, paste here, okay, so I have two macros, right, yes, help
+[28:39] here macros, and yeah, there is one the called email macros, okay, now let me verify the macro,
+[28:46] so what is that matter that I'm referring is, classified diagnosis, okay, that's verified that
+[28:51] classified diagnosis, this is the first one, classified diagnosis, what is that I'm passing is,
+[28:58] diagnosis code I'm passing, okay, so if the diagnosis code is i, that is called cardiovascular,
+[29:05] behavioral health, report, what is it, respiratory, okay, yeah, so these are on the different
+[29:11] codes, okay, so what you will do, you'll pass the code and you'll get the abbreviation, okay,
+[29:17] they will use the codes only, okay, but you cannot, as I know, you cannot understand that, so
+[29:26] you'll get the proper name actually, okay, that is the classified diagnosis, this is one of the macro,
+[29:32] now what is the other macro that I'm referring here, calculate discount percent,
+[29:35] let's say they wanted to give the discount percentage, here I'm passing two parameters,
+[29:39] build amount and allowed amount, okay, let's see how they're calculated in the, you know,
+[29:44] percentage, calculate discount percentage, okay, so you're passing two parameters,
+[29:51] if the build amount is greater than zero, okay, now what you're doing, here calculating the
+[29:57] discount percentage, this is one macro, you're referring to saved divide, so which means you're
+[30:04] not supposed to divide anything with zero, right, so that is the saved divide, okay, this is saved
+[30:12] divide, okay, so the denominator is equal to zero, then it will throw a center, so you're,
+[30:21] you know, by passing that, oh, the other one is date later, okay, so date later, so these are the
+[30:34] macros that you have written, so what I will do, let me compile this, first let's compile this
+[30:41] background, I'm compiling this model, let's do a component, now observe the statement that
+[30:47] it is getting generated, here is one, so I'm using this macro classified diagnosis,
+[30:58] so this is classified diagnosis, so it is automatically building the case statement,
+[31:02] okay, what is this discount percentage, saved divide, okay, date label, what you're trying to,
+[31:11] you're trying to extract the year month, okay, you're combining year and month,
+[31:17] now let's run this model, then you'll understand, add claims with macros,
+[31:33] so go back to snowflake, it creates a table, as of now you have 11 tables, it creates a new table,
+[31:48] a fact claims with macros, let's query that, the other these columns, I'm going to ready forward
+[32:06] reading diagnosis code, okay, so this is the clinical category, so when I say clinical category,
+[32:18] go back to the macro, look at the earliest time, okay, so for this you have given a list of
+[32:24] clinical category, discount percentage, payment ratio, and I'm doing service months label,
+[32:35] okay, let me verify these four columns, can I see this case, you're combining year,
+[32:42] high fund month, okay, this is the payment ratio, discount percentage, so to derive these four
+[32:54] columns, you have used a manner, right, because you have to repeat the same logic in different models,
+[33:02] so whenever you feel there is a reusability, you know, use a macro so that you can, you know,
+[33:07] get the, no need to write the logic, it automatically builds the logic, so there's one,
+[33:13] one type called lineage, okay, if you click on the lineage, then you'll understand, okay,
+[33:17] so what I'm saying is, this particular model is referring to this model, and this model is
+[33:30] in term referring to these four models, okay, these are different models, so these are all the
+[34:05] claims macros, now let me go to the finance, so in the finance you have two more macros,
+[34:16] so let's, let's start with fact claims monthly, so you are referring to the fact claims,
+[34:28] okay, what is the fact claims, which is available in claims, okay, in claims folder you have a
+[34:34] macro called fact claims, you are referring to that macro, okay, and what you're trying to do here,
+[34:42] you're trying to, you know, operate some aggregates, okay, how many claims are there, what is the
+[34:49] total build amount, allowed amount, paid amount, how much of discount you have given, okay,
+[34:54] average paid amount, and also you are populating the, I hope you remember this one,
+[35:04] see some in max accounts, these are called what, aggregate functions, what you call these guys,
+[35:09] rank, dance, rank, lead, lag, what are these, these are all analytical functions, right,
+[35:21] these are all analytical functions, okay, so what you're trying to do here, you're trying to,
+[35:25] you know, populate the, so what is the previous month, what is the, the comparison between previous
+[35:33] month and versus current month, okay, current month versus next month, okay, these are all running
+[35:43] totals, okay, I'll execute and show you, three months average, from the past three months, okay,
+[35:51] what is the total amount of getting, how much is the billing amount, okay, if you want to know that,
+[35:56] you can use this average of, you know, let's scroll down, and finally, you're calculating the,
+[36:09] what is this, M1 change derived from lag, okay, anyways, so the thing is you're populating some,
+[36:15] you know, metrics here, so what is the amount that I'm getting, total amount, I would like to
+[36:21] compare with the previous month versus current month, okay, so you wanted to, you know,
+[36:26] perform some of the aggregates, okay, so that is the reason you're referring to this bad claims,
+[36:30] and on top of it, you're performing these options, so let's run this, so it is, it creates
+[36:37] as a table case, because you have used a macro conflict, let me run this, so the model image,
+[36:44] bad claims monthly, let's execute this, so come back to database, your refresh, it creates a table,
+[37:04] bad, this is the one, bad claims with monthly, let's query that data, bad claims monthly,
+[37:39] scroll down, how much is the total amount, okay, billed amount, total paid, total discount,
+[37:48] average, part line, how many are denied, paid rankings in state, three ways month,
+[38:09] and the next month, running total, from the past three months, what is the average,
+[38:24] I guess this is month, month, paid, percent, actually, okay, so yeah, these are all
+[38:32] calculations will be, I mean these calculations will be used by me, you know, the
+[38:39] financial team actually, whether reporting purpose,
+[38:44] but you should know how these, these will, these, you know, analytical function will work,
+[38:52] rank, and rank, you need lag, there is one, you are using the pro number, lag, lead, some,
+[39:02] no, what else, you are using, yeah, rank is there, average, sum total,
+[39:13] so I mean, in case if you want, I can share your document, which, which will have examples for
+[39:17] these things, yes, for all the, I mean, analytical functions, not only this, the complete sequel,
+[39:23] I have, okay, I will, I will share the document, maybe you can go through that, it will have everything,
+[39:28] for each and every function, like a joint, subqueries, set operators, okay, and all the functions,
+[39:36] starting from aggregates, analytical, you know, regular expression, I will share the document,
+[39:47] let's share this one, now I am switching to the other model,
+[40:03] fact times incremental, okay, so what is this incremental actually, I said it to,
+[40:14] incremental is not a CD2, I will tell you, I said it to add to implementation is different,
+[40:20] for that we will use snapshot, I will come, I will come back to snapshot, okay, this is
+[40:25] very important, guys, probably it will take a complete session to explain this incremental,
+[40:30] but I will just give you one idea, we won't, you know, use DBT here, we will see how you are
+[40:39] going to implement incremental in snowflake, okay, as well see that, then we will compare, okay,
+[40:45] how DBT is to do, okay, okay, okay, so just write up this way, okay, do one, okay,
+[41:01] you have these criteria, let me copy that, just to save the time, look at the examples,
+[42:05] so I am going to create a new table, you can see, look at the table, so this is the
+[42:22] employee table, it's having only employee number, okay, partner number, salient, there is a
+[42:28] column called updated date, let's create the table, the table is created, as far as I don't have
+[42:38] any records, I am inserting a couple of records, so let's query the table, okay,
+[42:48] so I have two records, but let me guess when I have inserted these two records,
+[42:55] on 19th of October, on 19th of October we have two records, so let us say I have a new table,
+[43:05] incremental changes, incremental changes, so this particular table,
+[43:14] as of now I don't have any records, my requirement is, whatever the changes that are
+[43:20] happening to this particular table, this is my source table, with whatever the changes, it may be
+[43:27] anyways, I think I guess deletes I can, I am not going to populate, only the changes, like insert
+[43:36] or updates, okay, I am going to push only those changes to my incremental date, okay, these are all
+[43:42] incremental changes, okay, getting ideas, so as of now this incremental table is empty, now tell me
+[43:57] if I am writing one query, okay, let's run this, okay, so for the first time, let's run this
+[44:13] date, you don't have any records, right, in your incremental table you don't have any records,
+[44:21] but in your source table you have two records, correct, yes or no, in your source table you have
+[44:28] two records, for the first time it is a full load server, for the first time if you want to
+[44:35] move the records from source to target, that becomes a full load, right, so let's do a cooling,
+[44:43] I am inserting all the records into my incremental date, okay, look at the incremental table I have
+[44:52] two records, now I can say my source and target are matching it, but how I am verifying that,
+[45:00] so just try to observe in your source table you have a column called a DNS for updated date, okay,
+[45:07] so on this particular date you have two records in your source table, so what about the incremental
+[45:12] table, in your incremental table you have moved those records, okay, yes, now I am writing one query,
+[45:20] can you see the squaring, the next star from source table where the updated date is greater than
+[45:29] the max date from the incremental date, okay, so first let me pick the maximum date from the
+[45:36] incremental table, so this is the maximum date, okay, now what I am trying to do is after this date
+[45:44] are there any changes in my source table, no right, after this date there are no changes
+[45:54] to my source table, are you getting the logic, it is Christian, right, no, so later I am inserting,
+[46:08] I am updating one record existing record, okay, so if you look at the source table, so in my source
+[46:17] table the current salary is 2000, so I am changing that to 35000, okay, let's update that, one record is
+[46:29] updated, so what is the maximum date in your incremental table that is 19th of, yeah, 19th of October,
+[46:41] now I am running this recording, after 19th of update are there any changes, yes, there is a change
+[46:47] on don't clear the October, the salary got updated, okay, now I am inserting a new record,
+[46:57] okay, so as of now in my source table, I have two records, one record is updated, I am inserting
+[47:05] a new record, okay, let's insert this data, one record is inside, here the important point is
+[47:12] the time stamp is very important, okay, the entire logic is driving through this time stamp,
+[47:20] okay, let's query this table, let's query, let's run this query, so after 19th of October,
+[47:27] I am trying to find out are there any changes to the target table, so the maximum date in your
+[47:35] incremental table is 19th, now I am trying to find out, after 19th are there any changes, yes,
+[47:42] there are two changes, we can say that the salary is updated and one new record is inserted,
+[47:49] okay, now my requirement is I have to move these two changes to my target table, okay,
+[47:59] okay, so after this I am creating a temporary view base, okay, temporary view,
+[48:08] you can create a temporary table or a temporary view, it's up to you, okay, what I am doing here,
+[48:14] so I am just picking the changes, what are the changes that are happening to your source table
+[48:22] and moving those changes into a temporary view, now my temporary view will contain the changes,
+[48:31] right, my requirement is I have to move these changes to my incremental table,
+[48:37] let's say this is a final table, let's say this is your final table, this is from source,
+[48:40] you need to move these changes to your final table, so this is the intermediate table,
+[48:47] so you are joining based on the employee number, in case if it is matched, you need to update,
+[48:54] if it is not matched, you have to insert, okay, so before that let's verify the
+[49:04] incremental table, this is your incremental table, this is your final table, in your final table,
+[49:11] you have the old salary and the new record is not yet inserted,
+[49:17] what about the new record, S underscore, E and P, right, this is your source table,
+[49:22] in your source table you have three records, one record is updated, one record is seen
+[49:27] now I am running this merge statement, so that the changes will go to the final table,
+[49:36] now let's verify the source table, the source table is having three records,
+[49:40] what about the target, even the target is also having the same records, right,
+[49:47] now I am running one more query, what is the maximum date in the target table,
+[49:54] so the maximum date is 20th of October, look at the logic, I am trying to find out
+[50:01] after 20th of October, are there any changes in your source table, no, there are no checks,
+[50:08] let's do an update, so for the existing employee, I am updating the salary to 5000,
+[50:16] I am setting a new record, what do you wish for, employee name is, what name is this,
+[50:37] employee name, let's start, now what the maximum date in the incremental,
+[50:51] I mean the final table is 20th of October, after 20th of October,
+[50:57] I am verifying the changes in my source, yes, there are two changes, let's create a
+[51:04] temporary view, so my temporary view will have the changes, let's run the merge statement,
+[51:18] so it is saying the one record is updated and one record is inserted,
+[51:26] so here the important part is, you need to find out how your capture in the changes,
+[51:35] so what we are doing is, we are creating a temporary view to find the changes,
+[51:44] how we are finding the changes based on the column called updated rate,
+[51:50] you are finding the changes based on the column called the update rate, which is a time step,
+[51:57] okay, so we know need to implement these steps guys, so everything will be taken care
+[52:05] by DBT, so simply what you need to do is, you have to define the materialization as incremental,
+[52:14] materialization as what, incremental, so what is the unique column, anyways,
+[52:20] we will, it is already done, we will discuss this in tomorrow sessions, okay,
+[52:26] you get the complete clarity in tomorrow sessions, so I will do a comment,
+[52:33] so what are the changes that I have made, everything will be updated to GitHub,
+[52:39] now you can use that same URL to access the changes based, let me copy the class ones,
+[53:04] these are all the changes, we will discuss the incremental, you know, metalization,
+[53:21] we have seen the metalization, by default it is a view, but you can create it as a table and you
+[53:27] can create it as a incremental also, okay, so I think tomorrow's session will be on incremental,
+[53:35] so there are different three different types of incremental, okay, this is very important,
+[53:41] at least you will find the three to four questions from the same topic, okay, we will discuss
+[53:45] in detail in the following sessions, thanks everyone, thank you very much.
