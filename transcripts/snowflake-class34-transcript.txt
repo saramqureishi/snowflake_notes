@@ -1,0 +1,368 @@
+[01:03] So, in the last session, we have seen the DVD part right. So, where exactly the DVD will
+[01:26] come center of the picture and what is the source for a DVD and what is the target.
+[01:32] So, can you be tell me what is the source for DVD guys? I am drawing it right. So,
+[01:41] the branch is a source for a DVD and what is the target. Target is silver. It may be sometimes
+[01:50] it may be silver. I mean, it can be a silver or it can be a gold layer also.
+[01:57] Now, we will connect to branch and we will load the data to silver. So, when I say load right,
+[02:06] we are going to create a you know, a different object sketch. We can create a view or we can create
+[02:13] a table or we can implement a CD type 2. So, what you what you call that? What is the naming
+[02:20] convention for that? The type of object that we are going to create in you know, silver layer.
+[02:26] What is that called as? Materialization right. So, I hope you remember right in the last session,
+[02:37] we discussed that earlier. So, what is the metallization? We can create a table view or a
+[02:46] CD type 2 larger. So, we are going to talk about, but just remember the type of object which we
+[02:52] are going to create in this silver layer is called as the metallization. What is the default
+[02:59] metallization? It is a view right. So, by default if you execute the model. So, before that what
+[03:09] is a model like say anyone? What is a model? It is a SQL statement. So, model is nothing,
+[03:17] but it is a SQL statement correct. So, this is my SQL statement sorry, this is the input actually.
+[03:24] So, what is my requirement? My requirement is I would I do not want to have I do not want to
+[03:28] maintain multiple columns here. So, instead I would like to you know, have one column which will
+[03:35] combine the first name and last name. And I will keep the rest of the fields as it is. So,
+[03:46] this is you know, this is the transformed logic actually. So, where you are going to put that
+[03:51] this logic? So, this is a model. Can you see the line number 32? So, here we are defining the
+[03:57] logic. So, look at line number 32. So, what we are defining? We are we are picking the columns
+[04:04] ID, first name, concatenation with we are combining with the underscore last name. So, this is the
+[04:10] transformed logic which you are defining inside the model. So, basically a model is nothing,
+[04:15] but it is a select statement which will have the logic. And what is the next component is
+[04:22] in the next component is macros. What are macros? Basically, basically you that it sets the
+[04:40] function actually given by DVD, you can make use of these functions. These are all the functions
+[04:46] given by you know, DVD, you can make use of. So, seed there is one thing called seed guys.
+[04:54] When I say seed right. So, it will be used to load the data from csv to table. So, let us say you
+[05:01] have a csv file. So, by using this csv, if you want to load it in the table, we can make use of
+[05:07] the object called seed guys. So, by using seed we can do that. And what is the snapshot?
+[05:16] Snapshot. So, look at this logic guys. So, there is a employee
+[05:22] system. Initially, he joined the base location is hadapak. He stayed in Baglu hadapak from this
+[05:30] particular January 1st to let us say December 31st. December 31st. And December 31st. And later
+[05:46] he switched to Delhi. So, he is working in Delhi from 2020. Let us say this is 2025.
+[05:58] And this is 2026. Zero one. So, initially he worked in hadapak location for one year.
+[06:08] Later he moved to Delhi. So, this is called as the you know the historical and this is called as
+[06:14] the current record. If you look at there is a flag called ease current. If ease current equal
+[06:20] to n that is the old record. If ease current equal to y that is the latest record. There is
+[06:25] other way to identify the you know new versus old. If the end date is now that is the latest record.
+[06:34] If you populate the end record, which means that is the old record. So, if you want to implement
+[06:40] this particular logic, acidity type to logic, he can go with the snapshot. So, snapshot will help
+[06:45] you to implement acidity type to logic guys. Analysis. Analysis means any kind of ad hoc queries.
+[06:53] Let us say if a business team wants to understand let us say the current bond.
+[06:59] What is the profit that I got from one of the business students.
+[07:04] So, any kind of ad hoc queries you can request and you can get this information through queries.
+[07:11] These are all ad hoc queries. Analysis in the assembly it will have the ad hoc queries.
+[07:16] I will show you the ad hoc. Tests are nothing but. So, these are the business validations.
+[07:24] So, when I say test drive, you can take an example of constraint. So, we have primary
+[07:29] key check unit, not null, foreign key rate. These are the different constraints you have. Apart from
+[07:33] that, you can have your own business validations. So, these are all test case. So, after that we
+[07:43] talked about medallation, which is nothing but the type of object that we are trying to create.
+[07:48] DVD docs means it will generate the complete documentation guys.
+[07:56] So, running a model. I will tell you how to run a model. Before that let me show you the UI.
+[08:06] So, this is the UI guys that we have open yesterday. Let it refresh.
+[08:27] So, once when you are opening for the first time, I think it is to save the email address.
+[08:35] Let me copy this. So, this is the email that we are going to use.
+[08:43] I forgot the password. So, we are currently making use of this particular branch.
+[09:52] So, this is the model is that we have created the last session. So, from the bronze layer,
+[09:59] we are referring a table called employee. We just combine these two. And once we execute the model.
+[10:07] How to execute a model? DBT is done. DBT is done. I from select and the model is. Select means
+[10:19] if you want to run a specific model, you can use select keyword. And this is the model name.
+[10:24] So, what are the model names that you are giving right? With this name, it creates a new
+[10:29] view in the silver layer. Can you see this guys? It is going to create a new view in the silver layer.
+[10:41] So, what are the components of DBT? We have models. We have models,
+[10:53] seeds, macros, analysis, tests. We have different models here.
+[11:08] Let me show you the folder structure. Just try to observe what I am going to do.
+[11:49] So, I am going to upload everything to the GitHub. So, even you can access this as well.
+[11:58] Let me switch to GitHub. First, I will show you the complete, you know, the high-level picture,
+[12:08] actually, how your real-time project will look like. We will try to understand, you know,
+[12:13] how they have implemented it. So, this is the repository that we have created in the last session.
+[12:20] The branch which I am currently using is the main branch. Let me switch to 70. This is the
+[12:26] project we have created. Let me switch to. First start with the, you know, let's start with
+[12:36] seeds. Let's click on the seeds folder. So, I am going to add a file here, add upload files to us
+[12:48] from your files. So, let me show, let me process the editor. We will start with seeds.
+[13:20] Okay. So, I have uploaded these files. Let's do a commit.
+[13:29] Can we upload JSON and Parkit as well?
+[13:33] For JSON Parkit, there is a different approach, you know. Seeds will support only CSOs.
+[13:44] Seeds. Let me switch to models, add files, upload files,
+[13:57] one, some switching to models. In models, we have three folders. They are staging folder,
+[14:06] March folder, intermediate folder. Let me just see if I can upload these files.
+[14:53] You have two models. Okay. I will do one thing. Let me create these folders,
+[15:06] intermediate, March and staging. So, let me go back to the repository. Go to the models.
+[15:27] They have found these models. I am using 7a and March. So, it's two models.
+[15:52] Okay. I will do one thing. So, look at this case. So, I am in this. So, we just uploaded a few
+[16:04] seeds, right? So, we have uploaded seeds here. Let me go back to seeds. Yeah. These are all the
+[16:26] different seeds. Seeds are nothing but CSOs files, right? So, I will show you the files in this
+[16:31] moment. So, this step is not required for you. Just to save the time I am using this.
+[16:45] So, total I have uploaded eight files case. These are all the eight files that I have uploaded.
+[17:42] So, come back to us. Just try to enjoy. Let me do a refresh. What is this? It's full from remote,
+[19:10] full from remote. So, full from remote means in the GitHub, you have uploaded few files.
+[19:17] So, do you want to, you know, pull those files? You can't pull it. Now, you will see the seeds.
+[19:28] Can you see this? Claims, right? Claims.csa, kelteplans, members, providers, roindes, roindes.
+[19:37] So, I will just show you these files. What exactly we have? Okay. Let us say you are,
+[19:43] let us say you are suffering with some disease and you went to hospital. You are the patient.
+[19:54] Generally, patient is called member, right? The hospital is called provider. Let us say you have
+[20:03] an insurance. You know, you can apply for a claim claim. What is member provider claim?
+[20:14] And in the hospital, right? You will get some facilities, right? You will get the consolation.
+[20:22] You will get the, you know, the scans and all that. That is one service. And you will get the
+[20:29] medicines. That is one more service. So, like this, in a hospital, you get different facilities,
+[20:35] correct? So, these are all the different things. You have claims,
+[20:46] kelteplans, okay, providers. So, you have different CSC files. See, I don't know
+[20:53] the information which I am getting. So, these are all the CSC files that we are receiving from
+[20:58] let us say one of the hospital, okay? So, we are receiving these files. Now, the requirement is,
+[21:03] I would like to see what exactly, you know, these these files contain. Let me open the files.
+[21:11] Or else, what you can do this? You can make use of one of the object writing. What is it?
+[21:16] Seeds, right? If we can make use of seeds, what it will do is, it converts the CSC into table
+[21:22] line. So, basically, the main purpose of the CD is to convert a CSC into tables. Now, I will
+[21:30] make use of this seed actually. So, in the seeds for right, I have placed all these CSC files.
+[21:39] Look at this. So, there is a folder called seeds. So, inside the seeds, I have placed around
+[21:47] 8 files. Now, I would like to convert this to table. So, the command is DBTCed. DBTCed.
+[21:59] I am not giving anything. Just DBTCed. What will happen is, if you give DBTCed, DBTCed, DBTCed,
+[22:09] DBTCed means it executes all the models, okay? If I say DBTCed, select and the file name,
+[22:18] it executes a specific model, right? So, in case if I want to execute a specific seed,
+[22:24] the command is let's lines dot CSC. I have wanted to execute one of these seed,
+[22:29] lines dot CSC. So, this is to execute a seed, okay? So, what will happen if I execute a seed?
+[22:40] So, let me go back to the UI, switch to UI for us. Go to the workspace.
+[23:18] So, try to observe the schema, you need to observe the silver schema, okay? So, if you look
+[23:24] at silver, right? You have only one view, right? Yes, basically. We have only one view, okay?
+[23:38] So, I am running one command, just try to observe. I am running a command called DBTCed, okay?
+[23:54] Let's run this. Success, right? Just try to observe what exactly has happened.
+[24:19] So, there are 8 seeds. All these 8 seeds has passed, okay?
+[24:24] When I say passed, go back to snowflake, just do a reflection, go to databases,
+[24:39] observe the silver layer. Earlier, you have only one view. Now, you can see 8 tables, right?
+[24:48] So, when I execute a seed, whatever the CSC file that you have, it will convert to a table
+[24:53] in the silver layer. Now, there is one more way to verify, okay? Go to the query history.
+[25:02] In the query history, you can find out what are all the statements that are executed in snowflake,
+[25:07] okay? And so, if you can observe, there are like different statements that you can see this one.
+[25:13] There are some insert statements, right? So, create table, it is creating a transient table.
+[25:18] Can you see the table type this? It is creating a transient table, okay?
+[25:23] Creating a transient table, it is inserting the data, okay? Let's observe one particular table.
+[25:34] Let's pick the create statement, copy the created statement, let's say in the language to
+[25:44] SQL. So, there it is creating a table called raw providers and it is automatically giving the
+[25:55] data type also, column M data, right? You can only do anything. So, it is automatically
+[26:00] creating a table, there it is. So, it is creating a table, it is creating a table.
+[26:19] And after that, it is inserting the, can you see the insert statement? This is the insert statement,
+[26:24] copy it. So, in the background, DBT itself is taking care of loading the data into a,
+[26:34] you know, interior table. It will create a table and it automatically inserts the data, okay?
+[26:39] This is how it is inserting the data, okay? So, everything you can verify in the
+[26:51] very history. So, now I have 8 tables. Now, what exactly these tables will contain?
+[26:56] So, select start form. Let's start with claims.
+[27:00] Let me start with members, okay? Members. So, this table is available in the silver scheme or
+[27:09] silver for members. What is this member actually? So, member ID. So, once you,
+[27:17] once you went to hospital, they will generate a unique ID for you, okay? That is the patient
+[27:22] ID or the member ID. This is the member ID, first name, last name, what is the data birth?
+[27:27] Gender, what is the plan, okay? Let's say you have an insurance plan. Let's say the plan is,
+[27:31] let's say generally in India, we have star help, okay? You have Apollo, you have all each
+[27:36] pillar, right? You have different, you know, insurance companies, which will give you different
+[27:40] plans. Let's say this is your plan, okay? And then when you started, when you have taken that
+[27:46] particular plan, okay? And when is the plan ended, okay? And you are from which state, okay?
+[27:54] You are from Texas or California, Florida, New York, okay? Which state?
+[28:00] Okay, zip code, okay? That's it. This is having the basic information of the, you know, patients.
+[28:08] This is some some dummy data, it's not the, you know, real data.
+[28:14] So, what it is, what you call this information? This is personal information, right?
+[28:26] This is highly sensitive information, okay? Personal information and P I and P H A.
+[28:32] Did I talk about this P I and P H A? Personal information, like if you are in US, right?
+[28:40] So, the SSN number, bank call number, okay? With which disease you are suffering, these are all
+[28:47] sensitive information, okay? We are not supposed to discuss with any other, you know, or another,
+[28:53] another response, okay? This is highly sensitive information.
+[28:58] Even when you are working with this data, right? You need to be very careful, P I and P H.
+[29:04] Now, I have the patient's information. Let me switch to the other table. You have members
+[29:11] providers. Providers means hospital's information, okay? Providers. So, providers. So, these are
+[29:18] the provider ready, okay? And this is some unique code, provider name, okay? There is a
+[29:28] general hospital, wellness clinic, okay? Sunrise pharmacy, provider means so, it can be a,
+[29:39] you know, laboratory, it can be a medical store, but it can be in a hospital, okay? They are giving
+[29:46] you some services, okay? So, he is a physician, he is giving some facility, okay? And speciality,
+[29:53] okay? So, this doctor is specializes in a cardiology, network status. What is this case?
+[30:03] In network and network, out of network, any area, in network and out of network, general
+[30:14] transmission, okay? So, let us say, hospital chain. Yeah. So, let us say, I will take one name,
+[30:26] let us say we have, I will just pick one of your name. This is just a normal terminal thing.
+[30:36] So, we will take street count, okay? Let us say we have street count. Let us just take
+[30:45] street count is in Pune, he is having an insurance plan, okay? Let us say star health. So, star health,
+[31:00] he is having, you know, an insurance plan with star health, okay? This is the one of the
+[31:06] insurance company which gives the different plans. So, in Pune, let us say, we have a different
+[31:13] hospital, let us say we have Apollo, yes you are right, okay? So, these are the hospitals, okay?
+[31:28] Let us say, you are suffering with some, some disease or let us say you, some disease some, you know,
+[31:39] let us say general health issues, okay? And let us say they suggested you for a surgery, okay?
+[31:47] So, this star health, right? So, you took the plan from star health. Let us say the star health
+[31:53] is not tied up with the, yes you are right, yes you are the hospital, okay? But it is tied up with
+[32:06] yes you are the Apollo and K, okay? The star health is tied up with Apollo and K and it is not tied
+[32:14] up with yes you are right. Let us say if you go to yes you are the, what will happen?
+[32:18] If you show the, you know, the insurance ID card, they say that this network is out of network,
+[32:29] out of network, which means star health is not partnered with the issue of that. So,
+[32:35] that is the reason you are calling it as out of network. So, which means you have to pay the
+[32:39] entire amount from, let us say, it costs you around 2 lakhs, okay? 2 lakhs. So, what you have to
+[32:47] do? You have to pay the entire amount from your pocket and later you can submit the bills to star
+[32:52] health, they will reimburse that. Let us say in case if you went to Apollo or K, so that is in
+[32:58] network, in network. In network means you know need to pay anything, you just show the ID card.
+[33:10] So, Apollo and star they will talk to each other, okay? And they will have to be your client,
+[33:16] you know need to pay anything from your pocket. So, what is the advantage with the in network and
+[33:21] out of network case? So, in case if it is out of network, you have to, you know, you have to pay
+[33:36] from your, that is the biggest challenge, right? You have to pay from your pocket, later you can
+[33:39] remember. And one more thing is, there is a cause difference also, let us say, so let us say,
+[33:48] you don't have an insurance, okay? Let us say, there is a surgery, let us say,
+[33:54] let us, let us take a laparoscopy, they wanted to some, some procedure with laparoscopy,
+[34:03] let us say they are charging around, let us say you don't have an insurance, okay? They will charge
+[34:07] you 75,000, okay? That is a standard price. Let us say if you have an insurance, okay? They'll charge,
+[34:15] you know, double their amount, 1.5 likes. Why they are charging? Because there are some, you know,
+[34:28] some, they need to get some benefits, right? So, because they are giving the, you have a
+[34:33] tied up with the star help, okay? Generally, if you have insurance, they will charge, the charge is
+[34:39] very high actually, okay? So, if it is, this is in network actually, this is in network,
+[34:46] in network means, the hospital is tied up with that company, okay? Let us say, if it is out
+[34:56] of network, more or less, it will be the same cost, okay? So, in network and out of network,
+[35:07] so this is in network, out of network and anyways, zip code and all of which city you are in.
+[35:14] So, these are all the different details, this is about the providers, okay? Providers, next,
+[35:22] they will start the plans. I am just switching to plans. Plan means, what is the insurance plan
+[35:41] you have? Humana, this is the just a plan ID. So, how much they will cover for you, for your family,
+[35:52] okay? There are some details are there, okay? These are all the details with respect to the
+[35:59] your plan. So, on a high level, what are the details you have? The members, plans,
+[36:14] plans, what is the plan? Yeah, let me switch to plans. Planes means, so this is your claim ID,
+[36:33] patient ID, provider ID, claim that, impatient, outpatient, okay? You know, right? What is
+[36:42] impatient or outpatient? If you admit, you will be impatient. If it is a normal consultation,
+[36:55] you will be the outpatient, right? That is impatient, in an, in an impatient, outpatient,
+[37:01] what is the right hand side? So, what is the diagnosis code, okay? Let's say you would
+[37:09] diagnose with some, some wishes, okay? I don't know to take the name or the disease,
+[37:15] this is the disease code, diagnosis code, okay? And procedure code, let's say you have this disease,
+[37:25] this disease and you, they, you need this procedure, this is the procedure code, okay? These are all
+[37:31] protected healthy information, right? So, they will show you with the code solely, they won't
+[37:36] disclose their actual name, okay? How much they have built, how much is the allowed amount, okay?
+[37:43] How much amount do you have paid? Okay, let's say from the, let's say this is the total amount
+[37:50] that you need to pay from the insurance company, you bought this reimbursement and still you need
+[37:55] to pay some amount from your pocket, okay? Generally, the procedure charges and all, they will not include,
+[38:01] some of the room charges, right? They will not include. So, you have to pay from your pocket,
+[38:05] whether you have paid or not, whether your claim has denied. So, some details here, okay? When you
+[38:13] started the process, when it is created, so you have some details, okay? You got this information
+[38:21] from your hospital. Now, you need to analyze this. Yes, I have the file study, I have the raw
+[38:30] information. So, I hope you are clear at this point. This is the starting point, okay? We will get
+[38:35] this raw information, okay? Yes, we have the raw information. Now, let's try to analyze this.
+[38:41] I want to understand what are these and what actually, you know, the higher management needs
+[38:48] action, okay? I am getting the patient, claims information, patient's information, provides
+[38:54] information, and the plan information, okay? From this, I need to analyze. No. So, what I have
+[39:01] to do is, I am switching to models case, I wanted to analyze this, okay? Let me switch to models.
+[39:08] So, in the models folder, right? In the models, I am creating three different four cases, okay?
+[39:12] Let me click on this creative folder and name it as staging. This is one of the folder I am creating
+[39:22] inside the models folder, staging folder, I will create one more folder, new folder, intermediate,
+[39:34] intermediate folder, staging, intermediate and mods, I am creating one more folder, mods,
+[39:45] mods, needs folder, mods, okay? So, let me start with the staging folder, okay? So, this is the
+[39:56] staging folder. So, inside the staging folder, I do not have any files. This is the staging folder,
+[40:04] I do not have any files, let me place these files, okay? Go to staging, there are four files,
+[40:11] files, I will place these files into my staging ok. So, let us see the folders, so I am switching
+[40:50] to models inside the models folder, there is a folder called staging folder, inside the
+[40:55] staging I have four files, can you see the files case, claims, members, plans, provider
+[41:03] ok, claims. Now, let me start with the members ok, stage members, what exactly this file
+[41:09] you contain, this contains this, what they are doing here, what is this ROM score members?
+[41:21] So, you have some logic, right, let me pick this, copy this, let us try to understand
+[41:33] the logic ok, with ok. So, there is in an REF keyword, ref keyword ok, ref keyword ok,
+[41:43] look at this, first I will go to ROM members, what is this ROM members? So, this is a, this
+[41:49] is a table base, this is a table that we have created from the seeds ok, silver dot
+[41:58] round score members, can you see this is round score members. So, this is a you know
+[42:04] input file, this is a seed actually, we converted that to a table by using seeds, this will
+[42:11] have the patients information, who is them, what is the patient ID, first name, last name
+[42:16] database some details ok, these are all the details of the patient. So, what exactly
+[42:23] I am being is here, I am picking the member ID, member ID, first name, last name, look
+[42:29] at this, first name, last name, along with that I am populating a full name also, I am
+[42:35] getting it. So, I am combining first name and last name with a space ok, data birth,
+[42:42] there is a column called data birth. So, this is a data, so I am using a cast operator,
+[42:48] I hope you know what is a cast operator, see what I am trying to do is, let me first
+[43:03] execute this table here, I will tell you what exactly is happening. So, this what is
+[43:10] this round score members, which is nothing but indirectly, we are referring this table,
+[43:14] let me remove this partition, just for the timing, forget about the partition ok, let
+[43:19] us quickly run this, I am running this, see I am getting some information at, what is
+[43:24] this information? So, whatever the raw file you have, you may not have all the columns
+[43:31] in the raw, in the raw table, my raw table is having this information, let me let me
+[43:39] let me export this to an excel, download a CSV, open this file, so this is the raw information
+[44:01] ok. So, from the raw information, I am deriving some other information, let us run this,
+[44:07] what you are getting, member ID first name last name will fully, you do not have fully
+[44:11] in here right, you are deriving that, after that you are data birth, you are saying that
+[44:16] it is a date, treat it as a date, so you are using a operator called cast operator, gender
+[44:24] enrollment date, you are you are you know treating it as a date ok, what else you have? Again
+[44:31] this is a created, you are treating it as a time stamp right, termination date, if termination
+[44:40] date is null, which means I am saying ease active, I am populating one column right is, if
+[44:45] the termination date is null, I am saying ok I am populating as a null value, so this
+[44:54] is raw, say this one ease active, ease active means see false, termination, look at the
+[45:03] termination date actually ok, where is the termination date? Here is the termination
+[45:08] date, which means if the termination date is null ok, what I am saying? It is active ok,
+[45:17] if if there is a termination date, which means it is false ok, so I am populating a
+[45:27] additional column here, look at this case, I am deriving a new column, and also I am deriving
+[45:35] yeah two columns I am deriving, full name and then is active ok, I hope you know this with class
+[45:44] right, this is the with class ok, with you can use any name, you can use any name here,
+[45:49] you are you are you are reading from the you know see, so I wanted to derive few columns,
+[45:57] that is the reason I am creating a new model, and if you look at the model object,
+[46:04] so what is this case, I am see let me remove this, I will show you that, so my requirement is
+[46:09] I would like to refer this table correct, I would like to refer this table ok, let me say
+[46:17] of this one, so this is what I need actually, silver dot ROM members, but this is a seed right,
+[46:27] guys you are getting my point, this is a seed as certain, so this is a CSC file ok,
+[46:38] you you wanted to refer to ROM members, ROM members ok, which means indirectly you are referring
+[46:45] to a seed yes or no correct, so if I want to refer a object inside a model my requirement is,
+[46:59] I would like to refer and see it inside my model, so what you need to do is, you need to make
+[47:07] use of a macro, this is a macro, what is that macro name underscore underscore ok, if you
+[47:17] if you just you know put underscore underscore underscore, you will get the list of macros,
+[47:22] what are these, these are all the macros given by the snowflake, sorry, DVD ok, so there is a macro
+[47:28] called ref ok, ref means, what is that you wanted to refer, I would like to refer as I would like
+[47:36] to refer a macro, sorry, I would like to refer a object, what is that, the ROM underscore
+[47:45] members ok, I am referring to this seed save this one, so there is an option here in the scene,
+[47:59] preview, you have preview, compile is there right, click on this compile, you can compile,
+[48:13] what exactly this one is internally, it is internally referring to the silver schema
+[48:20] right, DVD, silver schema inside the silver schema, it is referring to the members correct,
+[48:33] you are getting right, what is this ref keyword, ref keyword will be used to refer a
+[48:40] another object ok, so indirectly what we are doing, internally it is referring to the raw
+[48:50] members, so I hope you are clear on this, actually go to the lineage, there is a tab called
+[49:02] lineage, click on this lineage, what do you mean by lineage, so what is the source, this is the
+[49:10] source and this is your target, which means in your model you are referring to this seed
+[49:19] combined, this you are able to refer to the required table in the silver schema,
+[49:33] now I would like to run this model, I would like to run this model, how to run the model means,
+[49:42] DVD run, DVD run, select STG underscore members, so I would like to run this model, STG members,
+[49:53] what will happen is if I run this model, it creates a view right, by default it creates a view
+[49:59] in the silver schema correct, so let me go back to stop like, as of now there is only one
+[50:04] view right, that is EMP, there is only one view, now let us execute this model, DVD run,
+[50:12] select and then model link, let us run, so it is saying success right, success, let me go back
+[50:28] to snowflake, lower refresh, now I have a view right, there is a view, what is the view in STG
+[50:37] members, the view name is STG underscore members, silver STG underscore members, so from the seed I have
+[50:49] populated another view, because my raw table does not have the full name and also there is no
+[51:00] column called interactive and also I have casted the data type, so I am just making sure that
+[51:09] you know, DVD should treat this as a date, this is the character, this should treat as a date,
+[51:16] so this is one model that I have created, let me go back to the other model, I am switching to stage
+[51:24] client stage, stage members is done, let me go back to stage clients, so what is the stage
+[51:35] clients, stage underscore clients, so it is referring to a raw underscore client,
+[51:43] if you do a compile, just do a compile, we are using a keyword called RF, what is this,
+[51:48] Raffi is a macro, so which will help you to refer other model, okay, the other model,
+[51:59] just do a compile, see it is different to a silver schema, raw claims, let me copy this statement
+[52:15] and try to understand, so I am referring to a table, this particular table, so this
+[52:31] this particular table, we have claims, what is the claim ID member ID, provider ID, we have some
+[52:39] details, so along with these details, I am populating few more columns, of this claim ID member
+[52:44] ID, provider ID, amazing upper rate, upper, this is one transformation, okay, I am converting
+[52:50] everything to upper case, in case if I receive lower case, I am converting to upper case,
+[52:54] so I am converting all these three columns to date, okay and observe this case,
+[53:01] so since it is a you know building amount, so you need to consider the
+[53:09] precision scale also, okay, so you are converting this to a decimal and you are converting the
+[53:16] claim status to upper case, and if you observe I am delivering few flags, okay, if the claim status
+[53:25] equal to paid, I am delivering a flag, e-spade, if it is denied, I am saying e-spade,
+[53:32] if it is an impatient, I am saying impatient, but look at the columns, let us execute this
+[53:39] model, model is nothing but a SQL statement, I will scroll to the right hand side, see this one
+[53:44] gets e-spade, is the amount paid, yes paid, paid, false, not paid, e-spade, true, it is denied,
+[53:53] is impatient, true, it is an impatient, false means out of net, okay,
+[54:01] in network and out of it, or in patient out of it, in patient means, admitted, out patient means,
+[54:08] just normal stuff, so I have derived few more columns, okay, from the raw data,
+[54:18] I have derived few more columns for my business validations, even let me execute this model as well,
+[54:25] okay, let me execute this model, so DBT RAM select, SDG and the score, claims, claims, okay,
+[55:21] let us run this, go to plans, okay, if you go to plans, even plans also, I am referring to the
+[55:35] seed list, okay, I am referring to the seed, so what you are doing, you are just, I am doing
+[55:43] you know, upper off for plan type, and you are converting them to numbers, integers, dates,
+[55:51] that so it is a simple model, I will just quickly execute this, DBT RAM and SDG and the score
+[55:57] plans, okay, let me switch to providers, provider means hospitals, okay, so what you are doing here,
+[56:10] we are just converting this to uppercase, and uppercase, this is a start date, this is also
+[56:21] contract end date, okay, you are writing a business validation, okay, if network type equal to
+[56:27] in network, okay, I am saying it as true, okay, if it is a hospital, I am just saying it as false, okay,
+[56:36] is it a hospital or is it a in network, okay, so I am populating two additional columns,
+[56:44] that is providers, SDG and the score providers, so I have created around eight seeds,
+[56:54] and out of that I have created four models, okay, by referring to the seeds, okay,
+[57:03] let me make, commit these changes, there is an option to commit this, if only it is commit,
+[57:11] committing seeds, and staging models, go commit, guys, I hope you have that URL,
+[57:25] okay, if not I will send you to the service provider, so this is to, you know, it is good
+[57:33] a model and a seed, properties, I think you have that sort, let me copy this, DVDC,
+[57:49] this is what it is supposed to do, so rest everything you will get it from this one man,
+[57:58] I will show you that link actually, you can switch to this link, guys,
+[58:04] to copy this link, okay, maybe I will use, sorry, PDF, this is for DVD, you can access the code
+[58:15] from here, can you please check this, you will have the latest changes, I am switching to GitHub,
+[58:24] go back to GitHub, okay, so what is the branch, 7A, right, this is the branch, come back to seeds,
+[58:39] so I have all the CSEs, come back to models, photo staging, in staging you have
+[58:50] four different models, correct, you have staging folder, that is the only folder, you know,
+[58:58] okay, you have the only one folder, okay, staging, this is what we discussed, right,
+[59:07] the URL is available in the class rooms, you can refer to that, so please try to create the
+[59:13] code and start practices, you will get the relation between these things actually, so we will see,
+[59:21] you know, what, why we have different folders, why we have, you know, staging folder,
+[59:28] mart folder, intimate, in mart also you will find four different folders, okay, you will get the
+[59:34] clarity, probably tomorrow you will get the complete picture, so why these models are there,
+[59:39] what is the advantage of TBT, you will get to know slowly, following, so tomorrow we don't have
+[59:49] a session, so tomorrow is a holiday, you know, happy the studies. Thank you, thank you,

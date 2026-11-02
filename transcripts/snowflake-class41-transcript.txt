@@ -1,0 +1,263 @@
+[06:48] Can you hear me?
+[06:49] Yes, Krishna.
+[06:53] Yes.
+[07:32] So, we are talking about a who can post a grant in that session.
+[08:48] So, in case if I want to capture the client, let's say how much time each board is taking.
+[08:59] So, we can go with this, pre-who can post it.
+[09:02] So, we have to find that we will pre-who can post it.
+[09:05] It is done yesterday.
+[10:01] So, I am switching to project.yml file.
+[10:08] So, this is the project.yml file.
+[10:13] So, basically this project.yml file will have all the configurations.
+[10:18] We go to Android.
+[10:19] You will find an installation.
+[10:24] So, you can define the metalization here.
+[10:33] To be able to define this, I think in the here, here we have defined.
+[10:38] Yeah.
+[10:39] So, the project.yml file, here you can find the, you know, pre-who can post it.
+[10:54] So, with respect to dbt, project.yml file, there is one more use case.
+[11:02] So, first let me log into the here.
+[11:36] We will have this table.
+[11:39] Now, what I am going to do is, I am creating a model based on this table.
+[12:36] No table.
+[12:38] That means, so this is a bronze scheme.
+[12:41] In the bronze scheme, I have this table.
+[12:43] So, you have created it for me to draw this table.
+[12:51] I have created this table in the bronze scheme.
+[13:01] Let's create this table.
+[13:09] So, me and let me create a model.
+[13:14] Right click on this.
+[13:16] Create a new file.
+[13:26] So, this is the name of the model.
+[13:33] So, the thing is, we are trying to understand how you are going to define the variables.
+[13:40] So, the variables means I will not, you know, I will not hard put the values,
+[13:47] but I will get the values through the variables.
+[13:51] So, let me define few variables here.
+[13:56] So, go back to the project.yml file.
+[14:04] So, if you want to define a variable, so you can, you know,
+[14:11] provide it here.
+[14:14] So, you need to use a statement called,
+[14:18] V, R, S, W, can you see this?
+[14:23] This is a variable used in the examples model to demonstrate.
+[14:29] So, this is the, this is how you can declare the variables.
+[14:34] So, example.
+[14:36] So, let's say, just for the timing, what I will do is,
+[14:39] I will just say, employing the model or let's say, let's take the part.
+[14:47] So, V underscore.
+[14:48] Generally, the notation is V underscore.
+[14:50] So, this is all, I will declare the variables.
+[14:53] Let's say, I will define it as 30.
+[14:55] Let's say, I will define V underscore job.
+[15:03] So, these are the two variables that I have defined.
+[15:12] Now, I would like to use these variables.
+[15:16] Save this file.
+[15:20] Save the project.yml file and come back to the model.
+[15:24] Now, I would like to refer those variables.
+[15:27] So, the name of the model is, yes, this is the name of the model,
+[15:33] the name of the table.
+[15:35] And let me use it filter commission.
+[15:37] Now, if I have to, you know, refer to the variables.
+[15:40] Let's say, I am defining it when you will get the syntax.
+[15:43] So, it is automatically coming up.
+[15:45] So, this is all you need to define.
+[15:47] So, V, R, you need to use a keyword called V, R and define that variable
+[15:52] and job equal to the variable.
+[15:57] So, it will be automatically, you will get the hint actually.
+[16:01] You can use that hint.
+[16:05] Now, let me say of this.
+[16:07] What if I wanted to execute this?
+[16:09] Before that, let's do a compile.
+[16:11] How you will compile that?
+[16:21] See, in V, in Vs code, you don't see the option, right?
+[16:25] Like compile something like that.
+[16:28] So, let me go to the UI list.
+[16:34] So, this is the UI, I am individual cloud.
+[16:37] So, here also, I will do the same thing.
+[16:46] Go back to project.wind file.
+[16:48] Let me pick this variable.
+[16:52] So, I have defined the variables.
+[17:08] Let's create a model, right click on the model, new file.
+[17:29] So, this is the modeling that I am creating.
+[17:32] Let's say, what are the elements?
+[17:34] Select stars from me.
+[17:36] So, DVD, branch.
+[17:39] And what is the model, I mean table in the carry frame?
+[17:46] No problem.
+[17:50] I am giving a condition here.
+[17:53] Job equal to, what is the syntax, guys?
+[17:55] underscore and underscore, where?
+[18:07] Where is the macro?
+[18:09] You can define the variable name.
+[18:12] What is the variable name?
+[18:14] V underscore, job.
+[18:17] I am writing one more condition, where?
+[18:19] Where if the apartment number equal to underscore, underscore last,
+[19:06] spot rare.
+[19:10] let me save this save let's do a compile so you are able to get this right but the point is
+[19:40] you need to get the codes right but how can you get the codes put a single code here okay
+[19:52] where are you required you need to put a single code save this one okay so the model is compiled
+[20:07] now how you're going to run this model tell me it's how to run this model
+[20:13] so the bit is on the bit error select and the model name but how to pass the variables
+[20:25] let's say I wanted to pass the variable okay so I don't want to use those variables I wanted to
+[20:30] give my own values okay so I'm using one more thing where here you can pass the values so whatever
+[21:05] the variables that you want to pass it and pass it so the first variable means job right you're
+[21:31] getting it you can pass directly job equal to you can send it but if you can get this you need to
+[21:54] pass it as a JSON okay so it is creating a table yeah you got right so it has a table let me go
+[22:55] back to the you want go back to the you want the word so you need to verify the
+[23:12] still limit in silver schema you need to verify what is the table name the word if this is the table
+[23:23] okay I'm trying to square information in case if you want to pass the variables you can pass this
+[23:45] you need to pass it as a JSON while running the model you can pass the this is a sequence you can
+[23:54] pass the way like a JSON you can pass and you modify the db2 project dot ym so this is a complete
+[24:16] five but you need to modify this and copy the records so that is the matter that you need is so
+[24:29] this should be in the and this is the modeling and this is how you can run the model okay then we
+[25:13] have one more table right you know orders table yes so this is orders table let's say I wanted to
+[25:27] create a model where the orders is completed okay where state is right state is equal to
+[25:41] complete it so I'll use a variable for this on this create and you find three endless orders
+[25:59] for me what not SQL so order status I would like to you know declare it as a variable
+[26:17] so where is the key work is or else you cannot you can do this underscore underscore where
+[26:24] so at the variable name it's okay variable name what are the variables name that you need to do
+[26:29] fun here you need to pass it as a JSON and let's say the variable name will be the status so status
+[27:03] it should be completed so if we need a code right you can use this to save this one let's do a
+[27:30] component you got it right if you when you are running the model in case if you want to pass any
+[27:55] variable how can you pass it what are the syntax no I let's say here it is I'm saying state is
+[28:09] completed but I wanted to pick the status where the status is let's say do you have anything
+[28:15] called me or you are written pending let me pick this written pending so when I am running the
+[28:24] model I wanted to take only the orders where it is pending okay so pick the model to underscore
+[28:32] orders underscore uniform okay where you need to pass the variable what is the variable name status
+[28:46] status and status it should be pending wait pending let's run this status
+[29:17] return pending what is the issue of the semicolon here the code is messy okay it is passed actually
+[30:00] you can verify the statement Krishna what is that one duplication we are getting
+[30:12] right I mean it duplication maybe this feature is deprecated but there is another way to do that
+[30:27] duplication maybe this is the old way of passing a variable but so when you are calling that
+[30:38] can you see this is this method is not required that's saying it is deprecated so you can
+[30:45] how you can pass the variable I'll show you one more one more way and we yeah you have already passed
+[31:04] the variables right here in the project dot vehement file you have played you are passing the variables
+[31:10] right okay so you can directly call those variables sorry I'm coming to you in the last session
+[32:07] we were talking about a female right you were talking about a female so we were created two different
+[32:29] models right so the model emits ephms for customer and orders are created two models
+[32:38] and for the first model so a different ventilation as a female when you define a more you know
+[32:47] ventilation as a female it will not create any object case remember it is just a you know select
+[32:54] statement so the advantage is when you are using the same select statement instead of you know
+[33:02] repeating the same logic in all the you know required models you can refer to this if you
+[33:07] mean a female model so I would like to use model refer to refer to this model okay so this is
+[33:19] the select statement that I need to repeat okay so instead of repeating this what I can do is
+[33:26] I can call the a female model let me refer to this model I don't want to reveal this logic okay
+[33:35] so I would like to call that since of this let's refer to the model okay how can you refer
+[33:46] select start from underscore and underscore and the model the model emits ephms for customers save
+[33:58] this one okay so once you call this right it internally you know refer to this select statement
+[34:08] okay similarly there is one more model that is orders so I'll create one more model here okay on
+[34:21] this create any of five so ephms for orders the ventilation I'm refining it as concrete I'm
+[34:36] defining it as a female so if we define it as a female it will not create any object I can
+[34:45] refer that so refer don't add same logic refer to the model let me save so I have refer to two
+[35:17] models where the model type is a female let's do a component can you see this so you are referring
+[35:37] to this model that this is a female so it is generating a width clause right we copy this let's
+[36:01] try to run this model see you're getting one in one zero three records now let's verify the
+[36:12] imperial models so the model which we have created is ephms for customers okay so it is automatically
+[36:21] building a cd actually width clause we'll we'll call it as a width clause or commentable expression
+[36:27] so this is one width clause and there is one more width clause it is building based on the
+[36:32] orders right so so this is customers this is orders and you are given aliasing as customers so it is
+[36:45] referring to this model and even orders also it is referring to this one so what is the advantage
+[36:54] of ephemeral models so let's say if you want to repeat the same logic right for different models
+[37:03] you can create that as a ephemeral and you can refer to that let me promise me so dpd run so what
+[37:31] are the different relation types we have have view table ephemeral and incremental so these are the
+[37:39] different relations you know it is saying succeeded so it creates a new object what is it more
+[38:06] than english verify yeah customer score orders info okay this is the one so in case if you
+[38:39] ought to see the statement that is grouped in generated you can go to the cori history and expand the
+[39:35] system box expand the logs copy the statement this is a state on dpd run so it is creating a table
+[40:39] list because you have to find the metallurization as table right so it creates a table you can verify
+[40:45] this index so this is ephemeral and you have one more thing called analysis right you have seen
+[41:02] analysis right let me explain this so in analysis folder let me place one file so I am creating
+[41:30] a file that is analysis so in the analysis folder I am placing the few I mean important statements
+[41:38] here go back to the project analysis so these are all the important queries that I wanted to
+[42:10] execute copies save this file what will happen if I run this one objects won't be created in this
+[42:44] it will not create any object case okay remember analysis right it will not create any object
+[42:52] so these are all the ad hoc queries okay so that you want to validate let's say if I want to
+[42:56] validate something you have executed the complete process let's say you wanted to verify whether
+[43:03] we are getting the proper results or not for that you need to validate some set of queries right
+[43:10] you have developed something and you wanted to test the functionality which I have implemented
+[43:15] let's assume these are all the queries that you wanted to test so if these queries are
+[43:19] retaining the you know correct results then you can say that okay so whatever you have done
+[43:23] of this correct or you can say that I mean as per the snowflake I mean DVD documentation what
+[43:29] they are saying is so these are all you know will be used to verify the ad hoc queries okay like
+[43:37] the validation okay so you know the business report okay in case if you try to then it will
+[43:44] not create any object so DVD as I don't think you can run this saying succeed but it will not
+[44:31] run actually okay so these are all for I know ad hoc queries if you want to validate something yes
+[44:37] you can use this let's do compile maybe I can do that what is this or let's do let's run this
+[45:10] so this is executed right success let's scroll down we did a compile right now let's try to
+[46:40] observe the difference yes we did a compile which mean when I say compile so look at the first
+[46:48] queries so here you have wdb dot silver right it is referring to the silver schema but what about
+[46:55] the yeah hospital it may go back in so here you're referring referring you're using a ref keyword
+[47:05] okay so once you compile okay so this is the compile query so it gives you the database name and schema
+[47:14] so if you want to see the compile audits there will be a there is a full list target in the target
+[47:22] so you'll find models here the models which got compiled these are all the models that got compiled
+[47:31] and the run means the models which got executed these are all the models which got executed
+[47:40] this is the analysis this is the analysis specific once you compile you can find that
+[47:46] in the analysis world anyways it will not create any out so that is the point I'm trying to say
+[48:05] use some idea right this analysis model is there right so this will be used by BN
+[48:18] or what is the purpose for this see the main purpose is once let's say generally once the
+[48:27] deployment is done right let's say you have completed the deployment to let's a Q&A
+[48:33] so there are some standard queries which needs to be validated okay so you can put the queries into
+[48:39] the analysis folder okay so they'll compare the results you understood right so mostly this will
+[48:54] be used by the business team business or Q&A not by the developers but they'll give you the
+[49:00] requirements okay so I need you know the top you know selling products or top five claims
+[49:08] so business needs mostly I can say you know the analytics team okay now there is one thing
+[49:18] right this is missing tags what is this tag edge when I say tag right so I don't know whether
+[49:28] whether you observed or not let me scroll up so while creating the models so I have used a keyword
+[49:36] here so let me go to the stage so in staging let's click on the stage stage claims okay this is a
+[49:48] straightforward model okay this is fine let me go to the marks in the mark okay do to intermediate
+[49:54] okay intermediate claims and it's so you are referring to these models intermediate claims
+[50:02] means you're referring to the main model let me come back to the marks go to the claims the fact
+[50:14] claims right here I've used a keyword called tag what is this tag actually so let's say these are
+[50:32] all the models related to I mean these are all the models related to claims okay so this is a
+[50:38] claim model so click on this so this is related to this particular model is related to claims and
+[50:46] finance okay let me go to the finance folder okay this is related to claims but this is an
+[50:59] incremental model okay this is incremental go to monthly so this is for I know this is finance
+[51:09] and this is related to reporting okay so this is a tag I have given go to the members click on
+[51:24] this members folder click on the members so this is related to members okay so let us say I
+[51:35] wanted to execute the models okay with respect to where the tag is members you're getting right I
+[51:45] wanted to execute only those models where the tag is member okay let me start with the you
+[52:07] know the finance fact like monthly it is saying finance right finance and reporting okay now my
+[52:15] requirement is I wanted to execute only those models where the tag is finance okay so when you
+[52:23] are executing it let's say I wanted to execute multiple models okay so you can you can run a
+[52:28] command DVD run select which model you need to run I need to run a model where that tag is
+[52:38] that's your finance where the tag is finance I'm not defining the models okay I wanted to run all
+[52:46] the models where the tag contains finance where the tag contains finance let's run this and see
+[52:58] how many models so then okay so two models got executed okay so there are two models one is fact
+[53:21] claims and the other one is fact claims monthly okay these are all the models where the tag is
+[53:27] finance now I wanted to execute the models where the tag is claim so where the tag is claim so
+[54:19] executed let's see how many models are there so there are three models okay so these three
+[54:25] models are having FAT claims, FAT claims, FAT claims with MAP rule. Now again I am okay,
+[54:34] let us see, look at this, we have, so we have intermediate, MAP transstaging, my requirement is
+[54:43] I wanted to execute all the models which are available in the staging, okay. All staging
+[54:49] models I wanted to execute, okay, so how can you present? So I am just switching to
+[54:57] DVD, project.yml file, okay, so here you know what I am going to do is, so I will define,
+[55:17] I will define one, let us say, so the models, the model name is staging, right, is the model
+[55:42] folder name is staging, okay, so let me define that here, staging, so what I am going to do is,
+[55:56] I am going to, I am adding a tag here, I am going to score, I am going to score, tags, okay,
+[56:02] tags, okay, let me define the tag name here, let us say the tag name I am giving it as a STG, okay,
+[56:09] so I am giving it as STG, that is the, you know, the tag name, okay, clearly, so I am just giving
+[56:23] a tag name here, save this one, that is throwing one other bit, maybe I should put in a double
+[56:30] four side, save this one, still there is an issue, I mean, say I can copy this and give it to
+[56:45] use it, it is fun, right, so you will have tools guys, that will help you, we can use different
+[57:13] models, you can definitely define here, okay, and this is project.yml, okay, so this is the,
+[57:39] name, I can define here, copy this, so this is the issue with the indentation, okay, not with
+[58:11] the syntax, right, so what you are done, you are given the staging and you are giving a tag here,
+[58:24] STG, okay, so all the models which are available in the staging or having a tag with STG,
+[58:33] similarly, marks, all the marks I would like to give it as, this is marks, the tag I am giving
+[58:50] as marks, okay, and for all the intermediate, I am giving it as IMP, save this one, the model is
+[59:05] saved, I mean, the YML file got is saved, now let me just check the syntax, this is just checking
+[60:38] the syntax, this will work, now my requirements to run only the models which are available in the
+[61:12] intermediate folder, okay, so DVD alone, we need to give the tag name, right, so tag, what is the
+[61:21] tag name, tag is INT, let's run this, I am running the models with the tag is INT, okay, so in the
+[61:46] intermediate you have two models, those two models got executed, right, intermediate you have two
+[61:58] models, okay, so let me go to staging, I want to run all the models which are in the staging,
+[62:04] okay, I need to give the stage, the staging, right, staging, right, so these are all tags days, okay,
+[62:15] now you got the purpose, like this, it's executing close to these four models,
+[62:25] similarly, similarly, what is the other one, it's marked, right, so it takes a good
+[62:55] it's a model sign, so this is the other way, okay, you can define a tags and based on the tags,
+[63:00] you can execute it, you're clear, right, so if you have any syntax error, just to
+[63:32] make use of Copanet or all I guess, so we'll meet in tomorrow, so I think we need to talk about
+[63:46] few topics in respect to Snowflake, and also, I totally read, I attended one event last Saturday,
+[63:54] so most probably I think this Saturday, I'll try to explain it, there are a few more people who
+[64:01] want to work in that session, okay, so I'll walk you through that session, okay, if you are
+[64:06] interested you can join that session, I'll let you know the timings, okay, thanks question, yeah thank you,

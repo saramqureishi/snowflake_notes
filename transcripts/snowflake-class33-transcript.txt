@@ -1,0 +1,1318 @@
+[13:12] So, we will try to see how we are going to establish the connection with the DBT in just
+[14:52] the concrete and part we will discuss.
+[14:54] So, if you look at DBT case, so this is the branch layer and from the branch layer
+[15:12] if you want to you know move the data to a cellular layer, so we are making use of DBT.
+[15:19] So, this is one of the option DBT.
+[15:21] So, or else there are different ways that we can implement, I mean that we can apply
+[15:27] the transformations.
+[15:28] You can use procedure to apply the transformations, but the advantage with DBT is you know, there
+[15:38] are different features which you can now you know they are readily available, so if you
+[15:42] can make use of that you know need to write any complex code actually, so DBT itself automatically
+[15:48] takes care of you know building the required logic.
+[15:51] So, you will get to know that, but just remember, so DBT is mostly for the transformations.
+[15:58] Let me open one of the documents, so if you look at DBT case, so we have different options
+[16:32] right here, so these are all the, let me the components basically, so if I ask you what
+[16:38] are the different components of or objects of snow bed, so we have tables, views, bed
+[16:44] procedures, functions, snow pipe, streams, task, right, these are all different objects.
+[16:51] When it comes to DBT, so these are all the different components, so you can see models
+[16:57] right, macros, seats, snapshots, you have analysis, tests, metalizations, DBT documentation,
+[17:10] you can run the models, okay, I will tell you what is a build, you have tags, variables,
+[17:18] the YML files, okay, so these are all the different components, so you already know all these
+[17:24] things, but the naming convention is different, okay, we will start with the you know model,
+[17:35] what is the model is, so basically a model is in this, but it is a select statement,
+[17:41] okay, so 180, this system, actually my system got restarted, so to apply the changes,
+[17:51] it took around 10 minutes actually, so in the last session we took an example, so let's
+[18:03] say we have ID, so first name, last name, this is a simple example, so but my requirement
+[18:17] is, so ID should be what, so the name I will have only one column, so I am just giving
+[18:27] something, something like this, so to get this information what you need to do is, so
+[18:33] you need to write a logic writing, okay, so I am just saying ID, first name, you need
+[18:39] to concatenate writing, I have written with the underscore, so last one, from whatever
+[18:47] the table, okay, DNS code, I am doing, okay, so this is how you need to write the logic,
+[18:54] so the logic which you are writing, I mean to say the transfer missions which you are
+[18:57] applying, so the transfer missions you are applying through a SQL statement, so this
+[19:04] SQL statement is called what, model basically, basically a model is nothing but it will
+[19:10] have the required transformation logic, you are following right guys, so this is called
+[19:24] as a model, on a high level I will explain, so macro means, what is a macro, you have
+[19:31] different functions, what are the different functions you have seen in this conflict,
+[19:38] current data, current data is a function, so data is a function, data is a function,
+[19:54] so these are all the functions given by Smoklet, what is the main purpose of the function,
+[20:02] reusable data, okay, so the, the required logic is already available in this function, so
+[20:11] if you want to reuse that you can go with the functions, okay, in DBT, we won't call
+[20:16] them as functions, we will call them as macros, so what is a macro, it is a function, okay,
+[20:23] it is a, the code is readily available in case if you want to reuse that, yes, you can
+[20:28] call this macros, okay, so functions are called macros, see, okay, let us say you have a,
+[20:47] you have a CSE file, okay, let us assume this is your CSE file, okay, now I would like
+[20:52] to load this data interval, let us say the name of the file is emb.csc, okay, now you want
+[20:59] to load this data into a table, okay, so how you are going to load the data into a table
+[21:05] days, in Snuffings, using coffee, yeah, using coffee into, right, okay, so you are going
+[21:17] to identify what are the different functions, what are the daily matter, so based on that
+[21:22] you will create a table and you will insert the data, okay, so you will only to do that
+[21:26] in DBT, you can simply use seed, what is the seed, seed will help you to load the data
+[21:32] from CSE to table, okay, so this is called seed, so the naming convention is different, but
+[21:42] the logic remains the same, okay, what is the snapshot, what is snapshot is, general
+[22:00] say, what is the snapshot, you, so what is the time travel, good data value, okay, so
+[22:25] which means in case if you want to, you know, if you want to see what is the history, let
+[22:32] us say, let us say today, the employee, let us assume you have a call, call, call, call
+[22:37] salary, 20,000, and you have one more thing called location, let us say initially his
+[22:45] location is had abandon, later he moved to room, so this is the current location, right,
+[22:57] so this is the current, he is current, this is the current record, yes, it is a current
+[23:03] record, later he moved to banjo, let us say daily, he moved to daily, right, this will
+[23:13] become Y and this will become EL, okay, so this is called as what snapshot, which what
+[23:19] is the main advantage of snapshot, it will help you to build the SCD type 2 logic, we
+[23:28] already discussed it, what is SCD type 2, we are going to maintain the current record
+[23:32] as well as the historical record, okay, you can have one more column also, one is the
+[23:37] start date and date, okay, start date means, so what is the duration, okay, let us say
+[23:46] he joined the company on 2025, 01, 01, okay, so from this date to this date, 2020, let
+[23:56] us say it is 6, 01, 01, 01, so from this date to this date, he is in had abandon, 2026, 01,
+[24:07] 01, 02, 01, let us say here I will put 31st, here, very 1st, 02, this date, okay, look
+[24:23] at this case, so if you populate the end date, which means that is the old record, the
+[24:31] end date is null, which means this is the latest record, so there are two ways in which
+[24:35] you can identify, what is the latest record, you can verify through his current equal
+[24:39] to Y or end date is null, so this is SCD type 2 logic, say in a simple terms, what is SCD
+[24:48] type 2, it will help you to implement SCD type 2 logic, snapshot, by using snapshot we
+[24:59] can implement SCD type 2 logic, okay, what is analysis, so basically analysis is nothing
+[25:09] but let us say you are running a hospital, okay, and every day you have branches across
+[25:16] different states, okay, and you wanted to, let us say on one day, let us say on every
+[25:23] month you wanted to understand, what is the profit that you are getting, okay, from one
+[25:28] of the branches, okay, or across all the branches, what is the profit that you are getting, okay,
+[25:34] and how many in it after such available, if you, let us say if you feel that in one particular
+[25:40] region, if there are no doctors, let us say related to heart surgery, okay, so you need
+[25:47] to do some analysis, right, so based on the data, you wanted to do some analysis, okay,
+[25:53] so in case if you want to do that, which means, so basically it will, it is just a you know
+[25:58] SQL statement, it will have bunch of SQL statements that you wanted to, you know, run
+[26:03] every month or on an ad hoc basis, okay, so if you have any important queries that you
+[26:09] wanted to give it to the higher management, you will use this analysis, it will contain
+[26:15] the SQL statements that are required to understand the current trends, what exactly is happening
+[26:22] with your business, okay, so on a high level what I can say is analysis is nothing but it
+[26:27] will have the queries, so which will help to understand the, you know, business needs for
+[26:43] business trends, okay, analysis, so this is all, these are also SQL statements only, okay,
+[26:51] this is called analysis, you will get, you will get, you will get to know the complete
+[26:55] understanding, okay, but I am just giving you on a high level, okay, so what is test,
+[27:00] do you know what is the primary key for and the unique check, not null, what are these
+[27:06] constraints, constraints, okay, so for the constraints they have given an aim for,
+[27:12] let us, okay, so test on what constraints, you can have, you know, the standard business
+[27:23] validations, when I say standard, so primary key unique check, not null, these are all, you
+[27:29] know, standard validations, okay, apart from that, you can have your custom validations, okay,
+[27:35] when I say custom, I will give you one example, let us say one patient join the hospital,
+[27:40] so the patient ID, okay, generally, do you know, what is PIA, data identification of PIA and PIA,
+[27:53] these are all universal terms actually, personal information, personal information means,
+[28:05] your first name, last name, okay, your other card, pound card, data birth, these are all
+[28:11] a personal information, you are not supposed to disclose this information to anyone,
+[28:16] unless the user is authorized user, then only you need to disclose, okay, what is PIA,
+[28:23] protected health information, let us say you join the hospital, you are suffering with
+[28:28] one disease, okay, so any other person, okay, let us say if I enquire, can you tell me
+[28:36] with which disease, let us say Ravi suffering, okay, so you are not supposed to disclose
+[28:43] any of these sensitive information, okay, if you, let us say if a bank, or let us say
+[28:49] if you take bank, your account balance, okay, you know, how much of, what is your credit card
+[28:57] amount, okay, or loan amount, these are all sensitive information, okay, if you fail to,
+[29:05] you know, fail to do this, there will be a, you know, there are lot of implications, okay,
+[29:13] so the important point is, you are not supposed to disclose any of these sensitive information,
+[29:18] so personal information, protected health information, okay, let us say the patient
+[29:31] join the hospital, so the patient ID is one, let us say he is, let us take Ravi,
+[29:48] so he joined the hospital and he is suffering with let us say some disease, let us say,
+[29:57] he considered you, you are all this, okay, and suggested one test actually,
+[30:04] and we will suggest that one surgery, okay, let us say the surgery code is, you know,
+[30:08] what will say, this is zero one, okay, this is the surgery code,
+[30:13] and he joined the hospital on the date, okay, let us say, 2026, zero one,
+[30:20] admission date, okay, the admission date, this is admission date, this is the admission date,
+[30:34] 2026, let us say, zero one, he discharged 15 days, okay,
+[30:41] this is the correct information date, remember, this is the admission date,
+[30:51] this is the discharge date, this is the valid admission, why you are saying it is a
+[31:04] valid information, is this the valid information, which one is valid, which is valid?
+[31:20] Our first one is valid, second one, okay, so how you are telling,
+[31:33] so the discharge date should not be less than the admission date, correct?
+[31:40] Yes, right, so that is the, that is a business foundation,
+[31:44] validation according to your requirement, okay, even if you want to have
+[31:49] custom business validations, okay, you can do that by using test,
+[31:52] not only primary key, you need check, not valid, all, you can have your own
+[31:56] business validations in the tests, metallization, so what is the metallization,
+[32:13] so when I say metallization, tell me, what are the objects that you can create in
+[32:17] some sense, you can create a template, you can create a view, right?
+[32:27] You can create the table with what, with acidity type 2 logic, correct?
+[32:34] You are getting my point, these are all the objects that you can create,
+[32:44] okay, you can create a table, you can create a view, you can create a table
+[32:48] with acidity type 2 logic, which means what is the type of object that you are
+[32:55] trying to create, what is the type of object that you are trying to create,
+[33:07] which means are you creating a table or a view, okay, or acidity type 2 logic,
+[33:15] table with acidity type 2 logic, these are all called materializations,
+[33:25] so metallization is nothing but in a simple term, the type of object that you are
+[33:30] trying to create in the silver layer, getting my point, type of object that you are
+[33:40] trying to create in the silver layer, so if you look at the diagram,
+[33:46] so I am connecting to, what is my source case, my source is branch,
+[33:51] what is my target, silver, okay, I will connect to branch,
+[33:57] I will apply the transformation and I will create a table,
+[34:02] or I will create a view in the silver layer, or I will create a table with acidity type 2 logic,
+[34:09] getting my point, you are connecting to branch and you are trying to create an
+[34:16] object in silver layer, the type of the object that you are trying to create,
+[34:21] it is called metallization, okay, any question is on this metallization,
+[34:34] documentation means, let us say you join the company,
+[34:37] so let us say you are a replacement for one person, so he is obviously,
+[34:44] let us say he is working from past let us say two years, okay,
+[34:48] so once you join the company as a replacement,
+[34:51] you need to get the KT from him right, okay,
+[34:54] so he will give you some of the documentations, okay,
+[34:57] instead, okay, so that is one way of getting the information about the current
+[35:02] project, other information is, DBT documentation,
+[35:06] which means, DBT itself will help you to generate the documentation,
+[35:10] let us say you have the existing project, now you want to get the knowledge out,
+[35:15] okay, so by using DBT docs, you can get the information, the complete information,
+[35:22] okay, what are the models that you are using,
+[35:25] what are the macros, c8s, snapshots, analysis,
+[35:28] so what are the tests that you are performing,
+[35:30] what are the metallization that you are using, okay,
+[35:32] you will get the complete information by using DBT docs,
+[35:36] what docs will do, so DBT documentation will help you to understand the existing,
+[36:04] DBT objects, it will give you the completed documentation,
+[36:15] it is kind of a knowledge, you know, book actually, okay,
+[36:19] I will show that practically, but I just want to, you know,
+[36:23] highlight what are the embedded objects,
+[36:26] I am just trying to make you familiar with the terminology,
+[36:29] the running model, which means, I have created a model,
+[36:33] I need to run that, why you need to run the model,
+[36:37] so what exactly you are trying to do,
+[36:46] so you are connecting to in the bronze layer,
+[36:49] you are applying the transformation,
+[36:51] and once you run the model, then only it creates an object in silver layer,
+[36:56] so that is the reason you are running the model,
+[37:00] your bronze layer will have the raw information,
+[37:03] your silver layer should have the transformer data, okay,
+[37:09] after applying the complete business validations,
+[37:12] you are loading the data into silver layer,
+[37:15] to load the data into silver layer, you need to run the model,
+[37:19] so basically running a model is nothing,
+[37:21] but what it will do, it creates either,
+[37:27] either a table or a view or a table or a victim,
+[37:35] as you did it like to logic, right,
+[37:39] so once you run a model, it creates these objects,
+[37:44] build, so DVD build also will do the same thing,
+[37:52] DVD build, so what it will do,
+[38:02] so when I say it running a model, once you run the model,
+[38:07] it creates these objects, right,
+[38:09] but one more important point is, it will not check the constraints,
+[38:12] it will not check the test case, okay,
+[38:14] when you run the model, it will not check the tests, okay,
+[38:17] whatever the data that I have in my source,
+[38:21] once you run the model, it just loads a data,
+[38:24] but in case if you want to apply the test cases,
+[38:27] let's say I wanted to verify whether the data
+[38:29] is having any null values or duplicate values,
+[38:32] any invalid information, I need to test that, okay,
+[38:36] so if you run DVD build, what it will do,
+[38:38] it will exhibit the tests,
+[38:41] models, both, okay,
+[38:43] if you want to run the other objects,
+[38:47] along with models, you will use DVD build,
+[38:50] so generally what is a tag list,
+[38:58] so once you went to any resort or any mallet,
+[39:06] so they will give you, you know, they will give a tag list,
+[39:10] let's say you are appearing for an event, okay,
+[39:13] so they will tag you one event list, right,
+[39:18] I will tell you what is a tag list,
+[39:20] but just remember it's, it's kind of a,
+[39:22] you know, identification variables,
+[39:27] what do you mean variable means,
+[39:31] you know the meaning of variable, okay,
+[39:33] if I don't want to hard put something,
+[39:35] okay, I can use my variables,
+[39:38] YML files, okay,
+[39:41] YML means there are different YML files,
+[39:46] I will show you the practical, okay,
+[39:49] now let me just give you the idea of these objects,
+[39:53] okay, yes, these are all the YML files,
+[39:58] so this is how you need to run the models,
+[40:04] DVD run, we will talk in detail later,
+[40:08] so can you see this case, what is a model,
+[40:15] model is nothing but a SQL statement, right,
+[40:18] so that's what I have written, right,
+[40:20] so model, model is nothing but it will have a SQL statement
+[40:24] with the logic, so macros,
+[40:29] macros are nothing but functions,
+[40:31] seeds, if you want to load the reader
+[40:33] from, you know, CSV2 table,
+[40:35] you can use seeds, what is a snapshot,
+[40:38] a CD type to logic, analysis,
+[40:42] if you wanted to run any kind of ad hoc SQL statements,
+[40:46] you will go with analysis, test,
+[40:48] you can perform different tests,
+[40:50] primary key, unique check,
+[40:51] or your own business test cases,
+[40:54] metallization, you can create a table,
+[40:57] you can create a view,
+[40:59] I will tell you what is the official incremental and all later,
+[41:02] documentation, okay,
+[41:04] so this will help you to generate the documentation,
+[41:07] it's kind of a null base,
+[41:09] running the model,
+[41:10] I can use different commands to run the models,
+[41:12] DVD build, okay,
+[41:14] if you run the model,
+[41:16] all the objects will not execute,
+[41:18] if you want to execute all the other objects,
+[41:21] along with the model,
+[41:22] you can use DVD build,
+[41:24] tags, okay, I will tell you what is the tags,
+[41:27] so I just want to show you the UI,
+[41:33] okay, so once you see the UI,
+[41:35] then you will understand
+[41:37] what are these objects, okay,
+[41:39] so let me just show you the UI,
+[41:41] so to this,
+[41:43] it's like snowflake,
+[41:45] in snowflake,
+[41:47] we have two things right,
+[41:49] one is the
+[41:50] snow site,
+[41:52] the other one is the
+[41:54] snow SQL,
+[41:57] what is snow SQL,
+[41:59] it is CLR,
+[42:01] it's similar,
+[42:03] what is snow site,
+[42:04] it's a UI, okay,
+[42:06] similarly,
+[42:07] DBT also have two things,
+[42:12] one is the DBT cloud,
+[42:15] that is the UI,
+[42:18] DBT code,
+[42:20] okay, DBT code,
+[42:24] this is CLR, okay,
+[42:28] this is free,
+[42:30] this is free,
+[42:32] licensed, okay,
+[42:37] so guys,
+[42:38] I am using in my project,
+[42:40] I am using DBT code, okay,
+[42:42] I have used like,
+[42:43] earlier we have this DBT cloud,
+[42:45] but the licensed cost is getting increased,
+[42:48] so that is the reason,
+[42:49] we are switching,
+[42:51] we already switched to DBT code,
+[42:53] but I will show you both, okay,
+[42:55] how DBT cloud and DBT code will work,
+[42:58] no,
+[43:00] but I don't know what this value is,
+[43:03] so DBT cloud and DBT code,
+[43:05] we will start with DBT cloud,
+[43:07] it is in,
+[43:09] as simple as creating a snowflake account,
+[43:12] okay, so what I need to do is,
+[43:14] just go back to,
+[43:16] just search for getdbt.com,
+[43:18] you need to search for this,
+[43:28] go to this particular site,
+[43:31] getdbt.com,
+[43:34] that is the right hand side,
+[43:36] you will find, you know,
+[43:39] create a free account,
+[43:40] click on this create free account,
+[43:45] close this one,
+[43:52] so to create a new,
+[43:58] stamp email, okay,
+[43:59] if you want to have any,
+[44:01] go to the main email,
+[44:02] so let me use this one,
+[44:03] okay,
+[44:04] stamp email,
+[44:05] but this is the,
+[44:07] scroll down,
+[44:08] okay, so if you see right,
+[44:10] the inbox is empty,
+[44:12] you don't have any emails,
+[44:14] so I will use this email,
+[44:16] it is,
+[44:19] go to the email address,
+[44:34] let me give you the password,
+[44:35] or if you have a DBT code,
+[44:59] click or employer,
+[45:00] select these two deck boxes,
+[45:02] you can't create,
+[45:10] password written,
+[45:12] that's it.
+[45:14] So I just created the account,
+[45:45] what it is saying,
+[45:47] the email is already taken,
+[45:49] please ask for the address,
+[45:55] and then the account,
+[45:57] password,
+[46:16] let me, you know,
+[46:17] let's try to log in,
+[46:18] let's go to getdbt.com,
+[46:21] click on log in,
+[46:27] select the email,
+[46:32] cut it in,
+[46:38] okay,
+[46:39] so,
+[46:40] when you get the password,
+[46:41] let's enter the password,
+[46:48] okay, click on this,
+[46:49] verify,
+[46:52] scroll down,
+[46:54] there's a very,
+[46:55] for 0600,
+[46:56] all right,
+[47:00] click on verify,
+[47:01] so again,
+[47:10] it is sending you one more verification board,
+[47:12] back to list,
+[47:39] this is what,
+[47:40] 71, right?
+[47:41] Can you see this case?
+[48:13] No, what,
+[48:14] what they are saying,
+[48:15] you will get,
+[48:16] 14 days,
+[48:17] 13 days, right?
+[48:18] 13 days of free track,
+[48:19] 13 days of free track,
+[48:22] 13 days of free track,
+[48:23] project mail,
+[48:24] project mail,
+[48:25] it is showing as analytics,
+[48:26] if you want,
+[48:27] you can use the analytics as it is,
+[48:28] or else, you can change the name, right?
+[48:30] So, let it be analytics, right?
+[48:35] Click on continue, right?
+[48:38] Okay, so,
+[48:39] by using dbt,
+[48:40] what is the goal is here?
+[48:42] My goal is by using dbt,
+[48:43] I will connect to branch layer,
+[48:45] okay?
+[48:46] And then I will connect to
+[48:47] silver layer, okay?
+[48:49] So, let's have a branch layer,
+[48:50] and silver layer.
+[48:51] So, I will switch to
+[48:53] snowflake layer,
+[48:54] copy the code,
+[49:03] okay?
+[49:33] So, you can assume like
+[49:34] your device is nothing
+[49:35] but your branch,
+[49:36] okay?
+[49:37] For else, you know,
+[49:39] what I can,
+[49:40] it will be,
+[49:41] I will create a
+[49:43] scheme,
+[49:44] I will create a
+[49:45] scheme on,
+[49:46] branch.
+[49:47] This is the
+[49:49] branch scheme on,
+[49:50] real deal,
+[49:53] scheme on,
+[49:54] silver.
+[49:55] So, basically,
+[49:58] silver,
+[49:59] branch is the
+[50:00] source,
+[50:01] silver is the target, right?
+[50:04] So, from branch
+[50:05] to silver,
+[50:06] if you want to move the data,
+[50:08] then we are making use
+[50:09] of dbt, right?
+[50:10] So, this is the source,
+[50:17] and this is what it is,
+[50:18] it is the source,
+[50:19] this is the target, right?
+[50:21] My source is branch,
+[50:23] my target is silver.
+[50:25] To move the data,
+[50:26] making use of dbt, right?
+[50:28] So, for dbt,
+[50:29] what is the source case?
+[50:33] branch, right?
+[50:34] Target,
+[50:35] silver.
+[50:36] Come back here.
+[50:41] So, first of all,
+[50:43] I should connect to snowflake
+[50:44] right.
+[50:45] So, if I want to connect
+[50:46] to snowflake,
+[50:48] I should know a few details,
+[50:49] right?
+[50:50] What is my snowflake account name,
+[50:51] correct?
+[50:52] Yes, sir.
+[50:53] This is the snowflake account name,
+[50:55] correct?
+[50:56] This is my snowflake account name.
+[51:01] And what is the username?
+[51:02] This is the
+[51:03] username and password.
+[51:04] So, my requirement is
+[51:07] to connect to
+[51:09] branch scheme on,
+[51:10] okay?
+[51:12] Yes, I will connect to branch
+[51:13] scheme,
+[51:14] but what is your target?
+[51:15] You need to define the target case.
+[51:16] So, my target scheme is silver.
+[51:18] Okay?
+[51:19] What is the database name?
+[51:20] The database name is
+[51:21] a div underscore dbt.
+[51:22] Okay?
+[51:23] So, this is my database name.
+[51:25] And, uh, silver is my target.
+[51:28] So, account name,
+[51:29] user name, password,
+[51:30] database name,
+[51:31] target scheme on it.
+[51:33] Okay?
+[51:34] So, these are all the details.
+[51:36] These are nothing but connection details.
+[51:41] These are all connection details.
+[51:43] So, come back to
+[51:45] the meeting.
+[51:46] Connections.
+[51:47] Okay?
+[51:48] So, as of now,
+[51:49] I have not established any connection.
+[51:50] Okay?
+[51:51] You don't have any connection.
+[51:52] Can you see?
+[51:53] No connection is found.
+[51:54] Okay?
+[51:55] There is an option to add a connection.
+[51:56] Click on this add connection.
+[51:58] Once you click on add connection.
+[52:00] See?
+[52:01] I just clicked on add connection.
+[52:02] It opens a new tab.
+[52:04] Go to that particular tab.
+[52:06] What are all the databases that you can connect
+[52:09] by using dbt?
+[52:10] Right?
+[52:11] So, with the help of dbt,
+[52:12] I can connect to post-release SQL.
+[52:14] You can use Snophlake,
+[52:16] Redshift BigQuery,
+[52:18] Athena, Teradata.
+[52:19] These are all the different databases that you can connect.
+[52:21] Okay?
+[52:22] Any of my requirement is,
+[52:23] the current requirement is,
+[52:24] I'm using Snophlake as my source.
+[52:26] Okay?
+[52:27] Click on Snophlake.
+[52:29] What is the connection name?
+[52:31] Anyways, let it be Snophlake.
+[52:32] Set.
+[52:33] If you go to the setting set,
+[52:34] it is asking you to enter the account name.
+[52:36] Okay?
+[52:37] So, I know the account name.
+[52:38] This is my.
+[52:42] That's right.
+[52:51] Here I have the account name.
+[52:57] Database name.
+[52:58] DevDB.
+[52:59] Warehouse name.
+[53:00] I'll use the dev warehouse.
+[53:02] Right?
+[53:05] Click on Save.
+[53:06] Click on Save.
+[53:07] Right?
+[53:08] So, I have established a connection with Snophlake.
+[53:11] I have defined the Snophlake account name.
+[53:14] Right?
+[53:15] And define the account name.
+[53:16] Database name.
+[53:17] Warehouse name.
+[53:18] Now, come back to the previous tab.
+[53:20] Select this.
+[53:21] So, I just established a connection called Snophlake.
+[53:23] Now, how you are going to connect to Snophlake?
+[53:26] Are you going to use an M1 password?
+[53:28] Yes.
+[53:29] I would like to go with the user name and password.
+[53:30] Click the user name and password.
+[53:31] So, do the user name and password?
+[53:32] Password.
+[53:39] Target schema.
+[53:40] Target schema is what?
+[53:41] Say you want it.
+[53:42] Okay?
+[53:43] Target is silver.
+[53:44] Okay?
+[53:45] I need this.
+[53:46] Don't change these options.
+[53:50] Since it is a trial account, it doesn't matter actually.
+[53:51] So, click on Test Connections.
+[53:54] I wanted to test whether the account name, user name, password are correct or not.
+[54:06] It is trying to cancel.
+[54:08] Can you see the message?
+[54:09] Yes.
+[54:10] Your test completed successfully.
+[54:11] You are good to go.
+[54:12] Okay?
+[54:13] Click on Save.
+[54:14] All right?
+[54:15] Click on Save.
+[54:18] Now, this is the important step.
+[54:20] Okay?
+[54:21] What it is asking is, well, we will come.
+[54:26] Let's set up your first project.
+[54:28] Okay?
+[54:29] So, it is asking you to set up a repository.
+[54:33] Repository means, when I say repository, I think I have most of you know what is a repository.
+[54:40] Okay?
+[54:45] So, when I say repository, let's say you are working on different projects.
+[54:57] Right?
+[54:58] Say people are working on a part of it.
+[55:01] Right?
+[55:02] So, write them in providing them.
+[55:04] Or small planes.
+[55:06] DBT.
+[55:07] Or any cost.
+[55:08] What are maybe the projects that you are working on?
+[55:14] So, once the development is completed, you need to move the code to a common place.
+[55:23] Right?
+[55:24] That is called as what?
+[55:25] The repository.
+[55:27] Repository.
+[55:28] So, what are the codes that you have developed?
+[55:31] You have to store it in a common repository.
+[55:36] So, I would like to build different objects in DBT, where I wanted to store those objects.
+[55:45] Okay?
+[55:46] What do you need?
+[55:47] Just click on this GitHub, right?
+[55:50] Can I see GitHub in here?
+[55:52] Okay?
+[55:53] GitHub are managed.
+[55:54] Okay?
+[55:56] What they are saying?
+[55:57] If you don't have a repository, you can set up the DBT-managed repository by selecting Managed.
+[56:05] Okay?
+[56:06] If you select this, you know need to create a repository.
+[56:12] Okay?
+[56:13] But in case if you wanted to create a repository and if you want to store the code, you can select
+[56:19] this git clone option.
+[56:20] Select this git clone.
+[56:22] Okay?
+[56:23] Here, you need to provide in GitHub.
+[56:25] Okay?
+[56:26] So, what I will do is I need to create a GitHub account.
+[56:37] That's probably I need to find an email to do that.
+[56:52] Give me a minute.
+[56:53] So, what I will do is I will use this email to create the GitHub account.
+[59:22] Okay?
+[59:33] So, just switch to GitHub.
+[59:36] Let me come back here.
+[59:38] So, I'm just switching to GitHub.com.
+[59:46] Click on this github.com.
+[59:49] There is an option, guys.
+[59:50] If you don't have a GitHub account, just click on this sign up.
+[60:04] So, click on the GitHub and you find an option.
+[61:01] Click on this github.com.
+[61:16] Click on sign in, guys.
+[61:17] If you don't have an account, you can create the account by using.
+[61:22] Let me try to continue with Google.
+[62:55] Okay?
+[62:56] So, what it is saying is, create your free account.
+[62:59] Okay?
+[63:02] So, you can use this email at age.
+[63:04] This is the username.
+[63:05] This is the username suggested by GitHub.
+[63:08] If you want, you can use this or else you can change.
+[63:12] Let it be seen.
+[63:15] So, if you want to receive an email, just click on this.
+[63:19] Create a account.
+[63:24] So, this is the GitHub account that I'm creating.
+[63:33] Now, just click on this menu.
+[63:37] Do you see anything called a repository here?
+[63:42] Click on this repository.
+[63:44] It is saying there's not have a public repository here.
+[63:50] So, as of now, I don't have any repository here.
+[63:53] There is an option is click on new.
+[63:55] Click on this new repository name.
+[64:00] Okay?
+[64:01] I'll just say dbt repository.
+[64:03] Okay?
+[64:04] The name is dbt repository description.
+[64:06] Okay?
+[64:07] So, this repo will be used to store the dbt code.
+[64:10] This is the description that I'm giving.
+[64:13] And visibility.
+[64:15] Public.
+[64:16] Public means if I share this link with you.
+[64:19] Okay?
+[64:20] You can open the code.
+[64:22] Okay?
+[64:23] I'll share that.
+[64:24] Just give me a minute.
+[64:26] Click on, you know, create a repository.
+[64:28] Just for the timing, if you are new to repository,
+[64:35] you can assume like it's a folder where you're storing all the files.
+[64:41] Okay?
+[64:42] All right.
+[64:43] This is my repository.
+[64:45] This is my repository.
+[64:52] Just scroll down.
+[64:54] Once you scroll down, you'll find SSH.
+[64:56] Can you see this?
+[64:57] HTTPS or SSH.
+[64:59] Click on this SSH.
+[65:01] And copy this code.
+[65:03] Copy this code.
+[65:05] Come back to the dbt tab.
+[65:10] Okay?
+[65:11] You're trying to set up the repository, right?
+[65:13] Yeah.
+[65:14] You need to provide the GitHub URL.
+[65:15] Okay?
+[65:16] This is the GitHub URL.
+[65:18] This is the GitHub URL.
+[65:19] So, which means you're trying to make a connection with the GitHub.
+[65:22] Okay?
+[65:23] This is dbt.
+[65:25] Whatever the code that you're trying to download,
+[65:27] ultimately, you're going to store that to this repository.
+[65:32] Yes?
+[65:33] Are you clear till this point?
+[65:41] Yes.
+[65:44] Right?
+[65:45] Let's click on import.
+[65:46] So, once you click on import,
+[65:48] it will give you one code, actually.
+[65:51] See, this code will be...
+[65:54] Copy this code.
+[65:56] Okay?
+[65:57] Let's say if you want to establish the relation
+[65:59] between snowflake and AWS.
+[66:01] What you're going to do next?
+[66:05] You're creating integration of the type.
+[66:07] So, that integration object will store the identity.
+[66:10] Okay?
+[66:11] So, which location...
+[66:12] What are the locations that you want to access?
+[66:14] What is the role name?
+[66:15] Correct?
+[66:16] It will have that information.
+[66:18] And similarly, from snowflake,
+[66:20] you need to configure external ID and IAM user URL.
+[66:24] Correct?
+[66:25] So, that is like...
+[66:26] You're trying to establish...
+[66:28] relation to two different entities.
+[66:30] Okay?
+[66:31] So, similarly...
+[66:33] So, copy this code.
+[66:35] Right?
+[66:36] Let's say you...
+[66:37] Just for the timing, this is your external ID.
+[66:39] I'm just giving an example, okay?
+[66:41] So, where I need to configure this?
+[66:43] GitHub, right?
+[66:52] Okay?
+[66:53] So...
+[66:54] So, this is your repository.
+[66:56] Now, put to the main menu.
+[66:58] So, do you see anything called...
+[67:00] Let me go...
+[67:13] So, do you see anything called...
+[67:16] So, you have repositories?
+[67:22] Click on the settings.
+[67:27] So, once you click on the set, is it?
+[67:30] So, do you see anything called SSH or GPG keys?
+[67:34] Correct?
+[67:35] Click on this SSH or GPG keys.
+[67:38] And click on this new SSH key.
+[67:41] It is saying there are no SSH keys associated with your account.
+[67:47] Okay?
+[67:48] So, click on this new SSH key.
+[67:52] And paste here.
+[67:53] The key, you need to copy.
+[67:55] You need to paste the code here.
+[67:56] What is the code that you got from DVD?
+[67:59] You have to paste it here, okay?
+[68:01] I'm just saying this is a DVD key.
+[68:05] Okay?
+[68:08] Click on add.
+[68:10] So, now you have established the relation between DVD and GitHub.
+[68:17] How you established?
+[68:20] So, I will compare with the storage integration.
+[68:23] Okay?
+[68:24] Storage integration.
+[68:25] So, that you will get some ideas, storage data.
+[68:28] So, how you are going to establish relation between Snowflake and AWS?
+[68:35] So, I should know the...
+[68:38] I should know few parameters.
+[68:40] What are the parameters that you require from AWS?
+[68:44] Storage?
+[68:45] Yes.
+[68:46] Hello locations, right?
+[68:47] Storage Hello locations.
+[68:48] And what is the other parameter?
+[68:50] Provider.
+[68:51] Provider.
+[68:53] ARMS.
+[68:54] I have to make sure that.
+[68:55] Roll.
+[68:56] Roll AR in it.
+[68:57] Okay?
+[68:58] So, roll.
+[68:59] ARM.
+[69:00] So, I am.
+[69:05] Roll.
+[69:06] ARM.
+[69:07] You need these parameters.
+[69:09] Similarly, if you want to, you know, configure a few parameters with respect to Snowflake.
+[69:19] You need.
+[69:20] I am.
+[69:21] User.
+[69:22] ARM.
+[69:23] I'm.
+[69:24] External ID card.
+[69:26] External ID card.
+[69:28] External ID card.
+[69:29] Yes sir.
+[69:30] These are the parameters that you need to configure between Snowflake and AWS.
+[69:36] So, similarly.
+[69:42] Similarly, let's say this is your DVD.
+[69:45] And this is the GitHub.
+[69:47] Now, what is the title I am trying to do?
+[69:52] So, from.
+[69:53] What is it?
+[69:55] SSH key, right?
+[69:56] So, from.
+[69:57] So, what is the first that I have done?
+[70:03] So, I have copied the.
+[70:07] Yeah.
+[70:08] I have taken the GitHub URL correctly.
+[70:12] So, from GitHub, I need.
+[70:17] I need the repository.
+[70:19] The repository where I wanted to store the code.
+[70:22] I need the repository.
+[70:25] So, for GitHub, what it needs?
+[70:28] It needs SSH, right?
+[70:30] SSH.
+[70:31] So, how you got the SSH?
+[70:33] This is the SSH key.
+[70:35] Okay.
+[70:38] So, where you need to configure this is SSH.
+[70:40] You need to configure this at the.
+[70:42] GitHub side.
+[70:46] You need to create a SSH key.
+[70:48] And you have to face it.
+[70:50] Okay.
+[70:51] Now, GitHub, you know, whatever the code that you are trying, you know.
+[70:55] What are the orders that you are creating?
+[70:57] Everything will be available in the GitHub.
+[70:59] Where it will be available in the repository.
+[71:01] Go to the repository.
+[71:03] This is the repository that you have created.
+[71:06] So, as of anyways, as of now, I don't see anything, right?
+[71:09] Nothing is available.
+[71:14] Click on next.
+[71:15] Right.
+[71:17] Okay.
+[71:18] Another connection is done.
+[71:20] There is an option, guys.
+[71:21] Start developing the studio.
+[71:23] Okay.
+[71:24] Or you can click on this option.
+[71:25] Or click on the studio.
+[71:27] Okay.
+[71:28] Click on the studio.
+[71:29] So, once you click on the studio.
+[71:33] Okay.
+[71:45] So, observe carefully.
+[71:48] You will see one thing called initialize dbt project.
+[71:51] Right?
+[71:52] Initialize dbt project.
+[71:53] What do you want by initialize?
+[71:55] Click on this.
+[71:59] Let me show you this.
+[72:00] Click on this initialize.
+[72:02] Once you click on this initialize.
+[72:04] Right?
+[72:05] Whatever the structure that you are seeing here.
+[72:09] It will appear here.
+[72:12] Okay.
+[72:13] I mean to say you can see models, macro, zeeds, snapshots, test, medallation.
+[72:18] You will see everything.
+[72:19] All these.
+[72:20] Most of the objects you will see here.
+[72:22] Click on this initialize dbt project.
+[72:26] Okay.
+[72:29] Now, you can see right?
+[72:30] Analysis, macros, models, zeeds, snapshots, tests, YML files.
+[72:35] Can you see YML file?
+[72:37] Right?
+[72:38] Dbt.
+[72:39] So, you are able to see all these components.
+[72:41] Right?
+[72:42] Models, macros, zeeds, snapshots, analysis.
+[72:44] Right?
+[72:45] Models, macros.
+[72:46] Right?
+[72:48] The following redness.
+[72:52] Right?
+[72:53] Now, what I am saying is, whatever the changes that I am making here.
+[72:57] These changes will be available in the very possible.
+[73:01] Because I have established the relation between my dbt versus GitHub.
+[73:08] There is an option to commit.
+[73:09] Click on this commit.
+[73:14] Once you click on this commit, what it is saying is, changes to 11 files will be committed.
+[73:20] Please enter a commit message.
+[73:22] Okay?
+[73:23] This I am just saying, first commit is click on this commit.
+[73:32] You are giving the commit.
+[73:33] Now, what it is saying, come back here.
+[73:42] Do a reflex.
+[73:43] Now, you are able to see all the components.
+[73:49] Analysis, macros, models, zeeds, snapshots.
+[73:52] Okay?
+[73:53] Whatever the objects that you are able to see here, everything will be available here.
+[73:58] Okay?
+[73:59] Okay, so I am sharing this URL.
+[74:01] Can you please open this?
+[74:02] I am sending this through chat.
+[74:05] Just try opening this.
+[74:08] Can you try this one?
+[74:16] Let's see whether you are able to series or not.
+[74:22] Can anyone confirm this?
+[74:31] Right?
+[74:32] Just click on that.
+[74:33] Let me know whether you are able to see all these objects.
+[74:41] Just click on that URL.
+[74:42] Let's see.
+[74:47] Can you be able to see that?
+[74:58] Anybody?
+[75:00] Just click on that URL.
+[75:13] Amongst anybody?
+[75:15] The activation.
+[75:17] You are able to see that right?
+[75:19] Truffle.
+[75:20] Yeah.
+[75:21] You are able to see all these components.
+[75:24] Okay.
+[75:25] Okay.
+[75:26] Okay.
+[75:27] Okay.
+[75:28] So now we will just take one simple example and I will close this session.
+[75:34] Okay.
+[75:35] So here, this is called main branch.
+[75:38] This is the main branch.
+[75:40] Right?
+[75:41] Main branch.
+[75:42] Let us say, let us say, let us assume I have four batches.
+[75:48] Okay?
+[75:49] Six, eight, seven, eight, nine, eight.
+[75:51] Okay?
+[75:52] Something like that.
+[75:53] Okay?
+[75:54] So now what I am going to do?
+[75:55] I am going to create a branch.
+[75:56] Click on this branch.
+[75:57] Okay?
+[75:58] Let us click on new branch.
+[76:01] Let us say, I have four branches.
+[76:04] Why I am creating the branches?
+[76:06] As per my requirement, right?
+[76:09] Because I am teaching four batches.
+[76:12] So I will create a four batch.
+[76:15] Six, eight, eight, six, eight.
+[76:18] Okay?
+[76:19] This is one branch.
+[76:21] Okay?
+[76:22] So I will share this folder with 6am students and I am creating one more branch.
+[76:28] Seven, eight, eight, seven, eight.
+[76:39] Okay?
+[76:40] What is the source?
+[76:42] Source is by main branch.
+[76:44] Okay?
+[76:45] So from this main branch, I am creating a new branch.
+[76:48] Okay?
+[76:49] Now, do you find any difference between the main branch versus the rest of the branches?
+[76:58] This is the main branch.
+[77:00] I have two other branches.
+[77:03] Okay?
+[77:04] What are those?
+[77:05] DVD, 7am and 8am.
+[77:06] Right?
+[77:07] So 6am and 7am.
+[77:08] Okay?
+[77:09] So the same code will be available, right?
+[77:14] Okay.
+[77:15] So I have not made any changes.
+[77:16] The same code will be available.
+[77:17] Okay?
+[77:19] This is a very important term.
+[77:20] No point actually.
+[77:21] So I have a main branch.
+[77:23] So from this main branch, I have created two branches.
+[77:26] One is 6am.
+[77:27] The other one is DVD, 7am.
+[77:36] So whatever the objects that I have in my main branch, everything will be available in 6am and 7am.
+[77:45] Yes or no?
+[77:46] Correct?
+[77:49] Yes, Chris.
+[77:50] Okay.
+[77:51] Now, go back to the cloud, DVD cloud, go back to cloud.
+[78:00] There is an option, change branch.
+[78:08] Click on this change branch.
+[78:12] You have 7am and 6am.
+[78:14] Two branches are there.
+[78:15] Okay?
+[78:16] So I will choose 6am and 7am branch.
+[78:19] Click check out.
+[78:20] What is this check out?
+[78:21] I am switching to that branch.
+[78:26] If you want to switch to a different branch, that is called check out.
+[78:30] The terminology is different.
+[78:31] Check out.
+[78:32] Click on this check out.
+[78:33] Okay?
+[78:36] Now, whatever the code that I am seeing is with respect to which branch?
+[78:43] 7am branch.
+[78:44] Okay?
+[78:45] So in the current scenario, you will not find any difference between the three branches main or 6am or 7am.
+[78:53] You don't find any difference.
+[78:55] Okay?
+[78:56] So I am in this branch.
+[78:57] Now, I am going to create the first object.
+[79:01] Let's say model.
+[79:03] I will take a simple, this very simple, basic example.
+[79:06] So, let's say I am the current schema that I am using is use schema branch.
+[79:15] Okay?
+[79:16] This is my current schema.
+[79:18] I am creating a table.
+[79:20] So I will create my chain name.
+[80:12] So I just, I am just creating a simple table.
+[80:25] So I am creating this in my branch layer.
+[80:43] Okay?
+[80:44] So let's connect to, I mean, let's frame the statement first.
+[80:48] Go back to debiting.
+[80:50] There is an option is model here.
+[80:53] Basically, whatever the logic that you wanted to write, right?
+[80:56] You wanted to implement.
+[80:57] You can make use of models.
+[80:59] Okay?
+[81:00] Right click on that.
+[81:01] Click on allow.
+[81:02] I will show you the navigation.
+[81:04] Right click on the models folder.
+[81:06] New file.
+[81:07] Okay?
+[81:09] So I just name the file as, so EMP underscore info dot secret.
+[81:19] Okay?
+[81:20] Observe the name base.
+[81:21] EMP underscore info dot secret.
+[81:23] Let me say happen.
+[81:26] You can't create it in your file.
+[81:35] MBM is code of code of code of secret.
+[81:39] You can't, you can't create it.
+[81:49] Okay?
+[81:50] So I just created a file with the name EMP underscore info.
+[81:53] What is this name?
+[81:54] This is the model name.
+[82:00] The model name is EMP underscore info.
+[82:03] This is the model name.
+[82:06] I'm running a statement, sell a name.
+[82:09] ID come on.
+[82:10] What is the table name for it?
+[82:25] We have ID first name last.
+[82:27] So my requirement is simple.
+[82:29] I don't want to have two columns for the name.
+[82:32] I'll pick ID.
+[82:34] I can use contact.
+[82:41] This name come on.
+[82:42] First name.
+[82:43] And you need to sub it with the underscore.
+[82:45] Classic.
+[82:49] Something like that.
+[82:50] So this is the logic that I wanted to have.
+[82:53] Okay?
+[82:54] So copy the logic.
+[82:56] It's here.
+[83:00] Say a wish file.
+[83:01] So what you have done here?
+[83:10] You have created a model.
+[83:12] And after that, what you're trying to do?
+[83:14] I'm trying to run the model.
+[83:16] Because once you run the model,
+[83:18] then only you can able to see a object.
+[83:24] In your silver schema.
+[83:26] So go back to databases.
+[83:28] I'm currently using dev database.
+[83:30] Inside that I have a schema called bronze schema.
+[83:33] In the bronze schema, I have one table that is employee.
+[83:36] Now, I would like to move the transform data into my silver layer.
+[83:40] As of now, I don't have any objects.
+[83:43] So once I run the model, what I'm trying to do?
+[83:46] I'm trying to run the model.
+[83:48] Once you run the model,
+[83:50] a new object will be created.
+[83:53] What is the type of object that we are going to create?
+[84:00] What is the term base?
+[84:01] What you call that?
+[84:02] That is metallization.
+[84:05] Okay?
+[84:06] Metallization is nothing but what is the type of object
+[84:09] that you're trying to create in your target?
+[84:12] Okay?
+[84:13] So by default.
+[84:14] Any guess case?
+[84:15] By default, how will it be created?
+[84:18] We will.
+[84:21] What is the metallization?
+[84:23] Okay?
+[84:24] What is the behavior?
+[84:26] The point is by default, the metallization is view.
+[84:31] Okay?
+[84:32] It creates a view.
+[84:34] The default metallization is view.
+[84:38] Metallization is nothing but the type of object
+[84:40] that you're trying to create in the target.
+[84:42] The default metallization is view.
+[84:45] Now, let's run the model.
+[84:47] But what is the command to run the model?
+[84:51] So can you see?
+[84:52] There is a, there is a, you know,
+[84:55] it's like a command from where you can try to command.
+[84:58] So I'm running a state.
+[84:59] Okay?
+[85:00] So DBT run.
+[85:02] Okay?
+[85:03] DBT run.
+[85:04] Okay?
+[85:05] Let's run this.
+[85:07] DBT run.
+[85:08] If you wanted to run a specific model.
+[85:10] Anyways, you have only one model.
+[85:12] What is the name of the model?
+[85:14] DBT run.
+[85:15] Cell run.
+[85:16] You can be underscore.
+[85:20] So this is nothing but the model name.
+[85:24] So why I'm using select?
+[85:26] I wanted to run a specific model.
+[85:28] So that is the reason I'm using this.
+[85:30] DBT run.
+[85:33] And the iPhone select.
+[85:35] What if I don't specify anything?
+[85:37] What will happen?
+[85:39] Let's say you have 100 models.
+[85:40] If I run this command, what will happen?
+[85:42] It executes all the 100 models.
+[85:44] If I want to execute a specific model.
+[85:47] If I want to select the model name.
+[85:50] What it is?
+[85:53] Click on enter.
+[85:56] Click on enter.
+[85:59] So once you click on enter.
+[86:08] It is failing.
+[86:09] What it is saying?
+[86:10] DBT run fail.
+[86:11] Okay?
+[86:15] Any idea why it got failed?
+[86:24] Now tell me.
+[86:25] From where I can find the select statement.
+[86:29] So the statement got failed.
+[86:33] Okay?
+[86:34] There are two ways.
+[86:35] You can verify the internal execute.
+[86:37] Click on this model.
+[86:40] Scroll down.
+[86:42] What it is saying?
+[86:47] DBT.
+[86:48] So it is by default.
+[86:50] It is trying to verify the object in the silver layer.
+[86:56] For a DBT.
+[86:57] What is the target silver?
+[87:00] By default, you know.
+[87:04] If you don't specify any schema name.
+[87:06] Any database name or schema name.
+[87:08] By default, it will verify the object in the silver layer.
+[87:12] Because during the configuration,
+[87:14] we have specified the schema name as silver.
+[87:17] So that is the reason.
+[87:19] It is trying to find the object in this particular schema.
+[87:24] But where exactly this object is available?
+[87:28] Brought.
+[87:29] So let's give the name.
+[87:32] Brought.
+[87:33] Let's give the name as Brought.
+[87:39] Save this object.
+[87:40] Now it's better to give an earlier statement.
+[87:43] Let's give it as Brought.
+[87:46] It's as e name.
+[87:48] That is the employee name.
+[87:50] Save this object.
+[87:52] This is the final statement.
+[87:53] Properties.
+[87:54] This is the model.
+[87:58] This is the sequence that you are using.
+[88:00] Save that one.
+[88:02] Now let's run it again.
+[88:04] DBT run.
+[88:08] Now it is running.
+[88:09] What it is saying?
+[88:16] It is saying DBT runs succeeded.
+[88:19] What will happen?
+[88:21] Now let's go back to the UI.
+[88:25] This is the Brought layer.
+[88:28] Let's do a refresh.
+[88:30] You will find one object in the silver layer.
+[88:32] What is that?
+[88:33] What is the name of the object is?
+[88:35] EMP underscore info.
+[88:37] Whatever the name that you are giving to your model,
+[88:40] it creates a new object in the silver layer.
+[88:44] What is this?
+[88:45] This is a view.
+[88:47] Now tell me, how can I verify the create statement?
+[88:53] From where I can verify the statement?
+[88:55] Can I go to information schema dot query history?
+[89:04] What are the statements that you are executing?
+[89:07] Or what are the statements that are getting executed in snowflake?
+[89:10] Everything you can verify in the table function.
+[89:13] That is query history.
+[89:16] Go back to the query history.
+[89:18] Let's run this.
+[89:19] Look at this case.
+[89:25] See this one.
+[89:27] It is creating a view.
+[89:30] What is the database name?
+[89:32] Schema name, right?
+[89:33] You copy the statement.
+[89:35] Let's verify that.
+[89:40] So it is creating a view.
+[89:43] And this is a select state.
+[89:45] All right?
+[89:47] You know need to do anything.
+[89:48] DBT itself will take care of creating the target by default.
+[89:52] The materialization is what?
+[89:54] Let's say a view.
+[89:59] Now I wanted to, I have created a model.
+[90:02] Now I wanted to save this.
+[90:04] I wanted to move this to repository.
+[90:06] There is an option where it is coming.
+[90:08] Click on this comment.
+[90:10] Come it.
+[90:13] What you have done?
+[90:15] Created a model.
+[90:17] Or you can say moving the changes to a remote.
+[90:26] Any meaningful comment.
+[90:28] Click on comment.
+[90:30] So once you comment where you are going to find the changes in this particular branch.
+[90:37] So go back to this particular branch.
+[90:40] Go back to the branch.
+[90:49] So select the branch here.
+[90:51] Now you will select 7a branch.
+[90:53] Click on this 7a branch.
+[90:56] What is this comment guys?
+[90:59] Moving the changes to repository.
+[91:01] Click on this model.
+[91:03] Inside the model, I have a file called EMP.C.
+[91:07] That is nothing but the model code.
+[91:11] Can you select that?
+[91:14] Click on that repository.
+[91:17] The link which I shared.
+[91:19] And even switch to the repository 7a.
+[91:24] And can you confirm that you are able to see this object?
+[91:30] We will take two minutes.
+[91:38] You are able to see that, right?
+[91:59] I don't see any link in the chat.
+[92:02] No, go to the chat.
+[92:05] I will be shared actually.
+[92:07] In zoom only, in the zoom chat.
+[92:14] You are able to see that object.
+[92:18] In this branch.
+[92:20] No, go to the chat, there is no link.
+[92:30] I can enable this.
+[92:32] I will set the link.
+[92:34] I will put it in the notes.
+[92:37] You can verify that.
+[92:39] Now, you tell me guys.
+[92:41] This is one point.
+[92:44] Now tell me where you can find the modified file.
+[92:48] In which branch you are going to find the modified file?
+[92:51] In the 7a monitor.
+[92:53] If you switch to 6a, you will not find that object.
+[92:57] So, what the important point is.
+[93:02] Just for the timing, I assume that you have only one branch.
+[93:05] There is only one branch.
+[93:07] So, the important point is.
+[93:09] What are the branches you have?
+[93:12] Let's say you have modified this.
+[93:15] Now, what I am going to do?
+[93:17] There is an option is, compare and put it.
+[93:20] So, let's say I am the, let's say Ravi is the developer.
+[93:24] He developed the code.
+[93:27] And Krishna, I am the, let's say architect.
+[93:32] I need to review his code.
+[93:34] What are the changes that he made?
+[93:38] In case if I wanted to give him any suggestion, I can give that.
+[93:42] So, that he can modify that.
+[93:44] So, as a architect, I need to review his code.
+[93:49] There will be an option.
+[93:51] Once you make any changes, you will find this option for request.
+[93:54] Click on this compare and pull request.
+[94:00] Compare and pull request.
+[94:02] Create a PR.
+[94:04] Create a pull request.
+[94:07] Now, this request will come to me.
+[94:11] It will come to me.
+[94:14] So, I need to review that.
+[94:17] So, this is the code that you have.
+[94:27] I need to submit a review.
+[94:29] I am verifying that.
+[94:31] So, if I feel that, so it is correct, then I will submit a review.
+[94:37] I will just say, I am just giving a comment here.
+[94:54] So, the code looks good.
+[95:02] So, please proceed.
+[95:04] So, push to main.
+[95:07] I am saying, I verify the code.
+[95:14] And I am going to approve his request.
+[95:16] Because there will be an option approved.
+[95:19] So, maybe I need to log in with a different tool.
+[95:22] That's fine.
+[95:24] Okay.
+[95:25] So, let's submit the review.
+[95:32] So, I have submitted the review.
+[95:34] There is an option called merge.
+[95:40] So, once you click on merge, we will find conformance.
+[95:47] Now, the thing is, whatever the changes that are available here,
+[95:58] these changes will move to main branch.
+[96:01] Now, whatever I am going to, whatever changes that I am going to made it,
+[96:05] I will make sure that those changes are available in the main branch.
+[96:09] So, that this is the main branch.
+[96:12] This is the reference for everyone.
+[96:15] Anyways, this step is not required for you.
+[96:17] This is just for your information.
+[96:20] Now, I think you can, I will let me pull that URL.
+[96:27] Okay.
+[96:34] So, this is the URL that you can verify.
+[96:42] You can select this URL.
+[96:47] So, select this URL and put it in the browser.
+[96:51] You will find the latest changes.
+[96:53] So, we will see the actual code case.
+[97:04] This is just a configuration part.
+[97:07] So, please try to complete this step.
+[97:11] So, Monday, Monday we will talk about the other pending things in snowflake.
+[97:20] Then we will search for this one.
+[97:22] I will give you two days of time to create this setup.
+[97:25] Create a new snowflake account.
+[97:27] Set up the repository and just complete this simple example.
+[97:30] So, Tuesday is a holiday case.
+[97:33] From Wednesday, we will work on that.
+[97:41] Tuesday is a holiday case.
+[97:42] Monday, we have a session.
+[97:48] Thank you very much.
+[97:49] We will meet on Monday.
+[97:50] Please, please complete the setup.
+[97:57] Okay.
+[97:58] So, that, apparently you can practice that.
+[98:02] So, you will get some hands on.
+[98:05] Thank you.
+[98:06] Oh, good.

@@ -1,0 +1,517 @@
+[08:16] So, in the last session, we were talking about the incremental changes right. So, it means
+[09:21] what are the changes that are happening to the source, we are moving that to the target
+[09:33] limit rate. This is my source table, S and S for you and this is the incremental table.
+[10:04] And how we are moving the changes to the incremental table time. So, we are identifying the change
+[10:18] based on individual and column rate based on the time stamp or we are identifying the changes.
+[10:22] And we are moving the rate right. So, if you look at the logic, just look at this logic.
+[10:30] So, we are creating a temporary view, this is the temporary view and we are you know capturing
+[10:36] the changes based on the date. So, first of all we are identifying the targetable maximum date,
+[10:42] what is the max state in the target table. And after this date, are there any changes in your
+[10:48] source table? So, where D updated greater than the max rate in the target table.
+[10:56] So, as of now, we do not have any changes. So, all the changes are updated. Let me run this for
+[11:10] about it. I am going to insert and update one more record. So, verify the changes.
+[11:26] This is very important. So, select start from source table where updated greater than the max of
+[11:35] max date from the target table. There are two changes. Now, what I am going to do? I am going to
+[11:41] create a temporary view to capture the changes. And finally, I am moving the changes. Look at the
+[11:50] changes table. So, there are two changes which you need to merge the target table. So,
+[11:56] execute the merge statement. So, two records are updated. So, this is what we are doing in
+[12:07] small plate case. So, with respect to DBT, let me switch to DBT. So, I will create a new model
+[12:40] which I take on the model, create a new file. So, the model name I am creating as incremental changes,
+[12:58] let us click on create. So, the model, I mean the new new file is created. So, I am going to write
+[13:06] a logic here. So, the logic is something else. So, we have a source table. So, this is the source
+[13:20] table. In a style, I will create this from the DBT, we drop this table, drop tables.
+[13:33] So, I have a table. As of now, I do not have any records. Let me refer to this table.
+[13:46] So, I am going to create a model that is conflict, incremental. Can you see these things?
+[13:52] Conflict increment. So, the logic what I am going to do is. So, what is the unique column base
+[14:06] in this table? So, look at the table. Tell me what is the unique column here?
+[14:31] Employee number. So, employee number is the unique column. So, employee number is the unique column
+[14:38] and put the employee number. So, the point is in case of any changes. So, I would like to capture
+[15:04] these changes into a, to me to say into this particular table. This is my source.
+[15:11] So, I need to handle full load, incremental load. So, here I am referring to this table.
+[15:25] Now, how you are going to capture the changes? So, that is the first part. Tell me how to capture
+[15:45] the changes. So, this is the this is the normal model. So, if you want to capture the changes,
+[16:00] you need to use one more macro. The macro image. So, do you see anything called
+[16:05] E is incremental. Metalization is incremental. And here I am writing one more thing here.
+[16:32] Just a minute guess, I am writing a column. So, unique is employee number.
+[17:05] Now, so, this is my source table. I am capturing the change. I mean, I am referring to this particular
+[17:13] model. So, let me go to the sources dot y ml file. So, in sources dot y ml file, I am referring
+[17:25] this model. So, here I do not want to output any you know any of the table names. I am good
+[17:39] database name and scheme on it. I am going to make use of. So, this is the macro.
+[17:45] Define the source name. My source is s1. So, if this is s1, s1 is the source name.
+[17:54] I am referring to the source. So, here I need to write a logic mix to capture the changes.
+[18:03] How you are going to capture the change? That is very important. So, for that I am going to you know
+[18:12] write a logic here. So, so, you are open a base right percentage, percentage. And here you
+[18:18] can try to one macro is in can you see this is incremental. So, is incremental. So, in case of any
+[18:28] incremental changes, how you are going to capture that? So, that is very important. So, I am writing
+[18:33] a logic here. What are the logic I have written right to capture the changes? This is the work,
+[18:39] so where this condition I try to copy this. So, this is to open and this is to end guys okay.
+[18:52] You can use end if it is incremental, then you will write the logic for else you will end here.
+[19:04] So, in between you need to write the logic. So, this is the logic I want to write.
+[19:08] Where d updated is greater than and the max date is greater than or equal to the max date.
+[19:29] Max date from what is this case? Incremental changes. What is this? This is the modal limit.
+[19:37] INCR changes is the modal limit correct. So, if you want to give the modal name. So,
+[19:42] there is a specific syntax. You need to use this syntax okay. So, two places.
+[19:49] And here you need to write keyword this. So, this will represent the modal name.
+[19:58] INCR changes. This represents the modal name. Let me say this. So, this is full load risk.
+[20:06] This is a normal full load, but in case of any changes okay. You need to capture those changes.
+[20:14] How you are going to capture that? You are using this condition to capture the changes.
+[20:31] So, let me execute this modal, dvd run, the modal name select.
+[20:39] INCR underscore, check this. Now tell me it is what will happen if I execute this modal?
+[20:56] So, generally if I execute the modal, it creates a view, right?
+[21:00] Okay. Yes sir. Let me go back to the database. Switch to the silver schema.
+[21:07] So, this is your silver schema. In your silver schema, as of now you have 13 tables,
+[21:11] right? 13 tables and 7 views. Let us execute this modal. So, it is saying in dvd run,
+[21:30] got succeeded, right? So, dvd run, got succeeded. Let me expand this.
+[21:40] In the blog, scroll down. So, if you want to copy everything, you can compute this.
+[21:54] There is an option to copy. This is the option to copy. Copy the logs is here.
+[22:05] Now look at this, what exactly it is doing? The first step is it is creating a table length.
+[22:12] Let me see the table length. It is creating a table. Watch it. Okay.
+[22:21] It is creating a table from the base table. Okay. This is a full load rate. For the first time,
+[22:29] it is a full load rate, right? Now you are going to find a new table in the silver schema.
+[22:38] This is the silver schema. Let us do a refresh. You will find 14 tables, 14 tables and the name of
+[22:44] the table is this one. I can see a run as what changes. Let us query the table.
+[22:49] So, whatever you had discussed yesterday, we will be doing the same later. In the silver schema,
+[22:54] our table called I can see a run as what changes. Let us run this. So, as of now, you do not have
+[22:59] any records, right? We do not have any records. Now what I am going to do is, okay, let me insert
+[23:12] the records. I am inserting few records into my main table. Let us insert these records.
+[23:25] The two records are inserted. Let us query the table. So, as of now, I have two records. Now,
+[23:31] let us execute the model. What it is saying, saying it got failed. The SQL compilation is semi-coloured.
+[24:06] Okay. Let us find some. See, you are not supposed to have the semi-coloured case here.
+[24:16] So, let us save this one. I will repeat this one more time. Let us recreate the table. I am
+[24:31] repeating the table. And let us drop the table in the silver schema. I am dropping this table.
+[24:42] So, let me insert a couple of records. So, these are the two records that I have in my table.
+[24:49] In my source table, I have two records. Now, I am executing this model. So, before executing,
+[24:57] verify the number of tables. So, as of now, you have only 13 tables.
+[25:03] I am executing the model. So, once you execute the model, for the first time,
+[25:09] it creates a table base. Expand this, go to debug logs, copy the logs, paste here.
+[25:23] What it has done. For the first time, it has created a table, right? Okay. Can you see this?
+[25:37] It is saying the language. So, what it has done is, it is trying to create a table. Can you see the
+[25:51] table sometimes? So, the table got created. Go back to small pick, refresh. So, you have a table
+[26:08] like increment and change. Now, let us query the table. So, as of now, you have two records. So,
+[26:14] you are both both source and target are matching, because this is a full load. For the first time,
+[26:18] it will, it is a full load. Now, later I am making some changes. Full load is done. Now, next step.
+[26:27] I am updating one record. Let me insert anyway for it. Let us execute the model.
+[27:20] Go to debug logs, copy all the logs. It is very nice. So, what it is doing this? It is creating a
+[27:34] temporary view. It is creating a temporary view. But what it is doing? It is applying this
+[27:41] wear condition, right? Whatever we have done manually, DBT itself is taking care of that, correct?
+[27:58] Next step is it is using a merge statement to move the records to your target table.
+[28:06] So, when matched, update, when not matched, insert. After that, it is dropping the view.
+[28:17] Finally, it is dropping the view. So, whatever the temporary view that you have created,
+[28:22] it is dropping that view. Yes, you are clear, right? We did the same way.
+[28:29] We have created a temporary view to capture the incremental changes. And finally, you are moving
+[28:34] that the changes to the target table. You are clear, right? See, we are not doing anything.
+[28:47] We are just configuring that. So, DBT itself is creating a temporary view. It is using a
+[28:51] merge statement and finally, it is dropping the temporary view. Now, if you go ahead and verify
+[28:56] the target table, you will find the latest changes. Let us verify the changes. It will be one
+[29:08] box, two different changes, right? So, I have three records. What about the source? Even my source
+[29:14] is also having three records, right? Again, if in case, if you, you know, if you perform any other
+[29:24] operations, now I am inserting, you know, three records and I am updating one report, right?
+[30:01] Now, what about the source and target? So, this is my source. My source is having
+[30:10] close to six records, but the target is having only three records. Now, what should happen?
+[30:17] If I execute the incremental model, let us execute the incremental model. So, it has to insert
+[30:25] and it has to update the records. So, how it is doing? First of all, it is creating a temporary view.
+[30:33] Let me expand this. You can't enable the book logs. Copy these logs.
+[30:43] So, look at the statements. So, the advantage with DBT is you just need to configure everything will
+[30:52] be taken get by the, you know, the DBT. So, it is creating a table temporary view.
+[31:00] In the temporary view, it is using this logic, the logic which we have used.
+[31:03] After that, it is using the merge statement. Here is the merge, here it is. The merge statement.
+[31:14] And later, it is dropping the view. It is dropping the view. I hope you are clear.
+[31:33] Any questions on this? So, the only thing you need to remember is this particular part.
+[31:44] So, what is the medallion? It is incremental. What is the unique column?
+[31:51] Now, so, this is the example. Now, look at this example. The fact is,
+[31:57] now you are seeing the actual column. The medallization, what they are doing? It is incremental.
+[32:02] What is the unique column? It is clay-marie. What is this? All scheme of change is equal to
+[32:08] Append new column. On scheme of change is equal to Append new column. This is one of the
+[32:12] interrogation plates. Even let me add this connection on scheme of change is equal to Append new columns.
+[32:18] So, the reason why I am adding this is, let us say, let us remove this. Save this one.
+[32:26] Let us say, there is a new column that got added to the particular toolkit. Let us say,
+[32:34] I am altering the table. So, alter table, s underscore, we will add.
+[32:47] So, I am adding a new column called, this is a new column that got added, alter table, s underscore,
+[33:01] e m p, draw column. So, I am dropping a column called, let us say, let us take employee name.
+[33:11] I am dropping the employee name. So, the new column is added and the existing column is dropped.
+[33:21] Now, let us execute this model. So, to help with the change, I am adding a new record.
+[33:36] Okay, let us add a new record here. I am adding a new record. So, I am showing what is
+[34:04] since I have dropped a column one. Employee name I have dropped. Let us remove this
+[34:11] and mobile number I have added. One code is itself. Now, let us execute this model. It is failing
+[34:37] by case. Correct. It is failing. What it is saying? Let us copy that. Let us verify.
+[35:08] There is an option to copy. Copy the logs. What is the derivative? SQL compilation error.
+[35:23] e name is invalid identifier. Correct. The column which you dropped is,
+[35:30] you have dropped this column. That is the reason it is saying SQL compilation error.
+[35:34] The employee name is invalid identifier. Now, the requirement is, what are the changes that
+[35:39] I am making to my source table? It has to automatically update. So, if that is the case,
+[35:44] what you need to, you can use this parameter on schema changeable to append new columns.
+[35:54] Append new columns. Save this one. And let us execute the model.
+[36:15] Now, the dbt run got succeeded. It got succeeded. Let me go back and verify the,
+[36:24] the target even incremental change. Let us run this. See, this is the mobile number column.
+[36:40] The new record which you have added is, what is that record? It is 7678.
+[36:54] It is not added. So, the thing is, it will add the new columns. Not the existing. If you drop,
+[37:15] I do not think it will reflect. If there are any new columns, it will add. It will append new columns.
+[37:23] Adds and new columns automatically. So, that is the meaning of append new columns.
+[37:31] Now, let us look at the existing model. Go back to the fact legs. So, it is an incremental model.
+[37:39] This is the primary key column. In case of any changes to your source table,
+[37:43] you are automatically capturing that to your target table. What is this? So, you are referring,
+[37:52] you are referring to the model. And can you see this? It is incremental. If there are,
+[38:04] if there are any new or change records, how you are capturing that based on the service state,
+[38:09] where service state is greater than the max of service state. This is how you are capturing the
+[38:15] changes. Anyways, finally, you are capturing these columns.
+[38:25] So, now, let us execute this model. The model name is fact claims incremental.
+[38:38] So, once you execute the model, what it has to do is, it has to create a table like,
+[38:47] you create a table in the target environment. Yes, the table. Let me wait if I just table.
+[38:53] Do or you press. Now, I will point 15 tables. Fact claims incremental.
+[39:01] Alex, what is the table? So, this is your incremental. Now, you have 15 records.
+[39:20] So, as of now, I have 15 records. So, I will just pick one record just to show you the changes.
+[39:25] How it is capturing the changes? Okay. So, where? Let me pick the claim rating.
+[39:34] I may be equal to, I will pick the first record of it. That is one record.
+[39:44] But how you are getting this record is, you need to verify the source table. What is the source
+[39:49] table for this? This is the source table. I am taking incremental and reached.
+[40:02] Alex start on endless. You see, here also you are getting 15 records.
+[40:15] And what is the source for this? Tell me. What is the source for this?
+[40:20] What is the source for this? INT claims enriched. What is the source for this?
+[40:38] You are getting at it. What I am trying to say.
+[40:40] Yeah, it is looking at the voltage.
+[40:45] Okay. So, let us go back to the INT incremental.
+[40:50] INT incremental enriched. This is the model here. What is the source for this?
+[40:56] There are four tables, right? These are the four tables, right?
+[41:01] The source is based on these four tables, correct? Yes sir.
+[41:08] So, you will get the climbs from this particular table. Climb stable, correct?
+[41:15] You will get it from climbs, correct? Yes. So, first, let me switch to.
+[41:21] So, this particular table is a combination of stage climbs, stage members, stage providers,
+[41:33] and stage at the table. Climb members, progress plans. Climb members.
+[41:49] Providers. Climb. So, you will get this from stage climbs. Let me define a stage climb.
+[41:58] Select star from serial dot stage members for climbs. You have 15 records.
+[42:06] What is the source for this? Tell me. What is the source for stage climbs? Stage climbs.
+[42:17] The source is seed right. Yes sir. The source is seed. Rock climbs, correct? This is the source.
+[42:25] So, for this, the source is problem. Now, what I would like to do is,
+[42:34] so, in this particular seed, let me go back to the seed, stage climbs.
+[42:44] This is the model, and for this, the source is a seed, go back to the seed, climbs.
+[42:53] This is the climb. This is the climb I read, and member I read, provider I read, and so,
+[43:01] what I would like to do is, I will change the claim status to deny it. I will change this
+[43:29] to deny it. Currently, it is paid. Now, I am changing this to deny it. Let me update my source,
+[43:37] update. I will do one. I will quickly go back here. I will quickly change here. Instead of paid,
+[43:51] I will say, deny it. Pending. Let us move to pending. Instead of that, let us move to pending.
+[43:58] What I have to, I have changed the seed, in the series stage. Now, tell me guys, what are all the
+[44:10] objects that I need to execute? First of all, I need to run the seed right. Run the seed,
+[44:17] next execute all the models, correct? Yes or no? So, first of all, I need to run the seed,
+[44:26] then run this model. After that, I need to execute this model, correct? So, these are all the
+[44:30] different models that I need to execute. What if I want to execute everything, I know, at once?
+[44:38] So, I am running a command. Can we create a task?
+[44:44] Sorry. I am creating a task.
+[44:49] No, I am just running one command. Let us see this one. DBT build. Let us run this DBT build.
+[45:44] That is fine. So, there are some system created models. You can ignore that.
+[45:51] Let me come back to this particular model. What is the current status? It is pending.
+[45:58] Earlier, it was made. Now, it should be built. Let us verify this.
+[46:09] Did it execute the model? I think I need to change one more thing. What is that column is?
+[46:15] Service data. Based on which column you are changing that, based on the service data.
+[46:28] So, you need to modify this service data. So, let us modify this. Let me go back to this
+[46:42] claims. Where is that service data? Do you see anything called service data? Yeah.
+[46:51] So, this is a claim ID, member ID, provider ID, service data. So, I will just change this to
+[46:57] today's state, 2020. 0, 2, L4, 0, let us say of this. Let me come. So, DBT build.
+[47:11] So, the point is the DBT will execute everything. It executes some seeds, models,
+[47:17] it calls the macros. So, once all the models got executed. So, you can see the change.
+[47:34] With this paid rent, now ID changed. It is done. Still it is able to. Yeah, it is done.
+[48:17] It is failed, ballon. No, no. The failure that we can ignore, failed once we can ignore.
+[48:28] So, it is saying it is passed right. So, let us verify the fact claims.
+[48:34] This is what I am talking about. So, let us go to the DBT class.
+[48:38] Copy this. That will be state greater than fact claims increased.
+[49:05] Maybe this condition is not satisfied, I guess.
+[49:09] That is the reason fact claims increased. What is the maximum rate here?
+[49:18] 2020, 4, 0, 5, 10. This is the maximum rate.
+[49:23] But what about the date in your service date?
+[49:29] We gave an update.
+[49:32] Yeah, this is the one I will give you.
+[49:35] Service date. Same, it is both the same.
+[50:00] 2020, 4, 0, 5, 10.
+[50:02] So, the thing is, I need to update the date after this.
+[50:08] And 24, yeah, I need to change 2020, 4, 0, 5.
+[50:18] Let us put 0, 6. Now, it will work.
+[50:21] Save this one. Let us run this DBT.
+[50:44] So, the point is, it should change to pending, that is what.
+[51:57] Divided claims increased. That may be reference.
+[52:07] What is not changed? Here it is not changed.
+[52:28] So, this is the seed only. Stage claims is seed, right?
+[52:33] But run is for claims.
+[52:36] So, let me verify the claim ID for this.
+[52:59] 2020, 3, 0, 2, 10. I already updated, right?
+[53:02] Here, raw claims.
+[53:08] Oh, which one I have updated?
+[53:13] Maybe I have updated in the wrong one, I guess.
+[53:18] No, that is not.
+[53:19] We have updated claim.
+[53:20] Yes, we have updated.
+[53:24] So, we have to update this one.
+[53:26] Raw claims.
+[53:28] I am changing the date to, what is the maximum date?
+[53:37] So, I will just change.
+[53:39] So, instead of paid, I am just changing this to pending, pending,
+[53:54] the maximum date I am changing.
+[53:57] I will put 6 here.
+[54:01] Save this one.
+[54:09] So, I have changed claims, not as, I am supposed to change this.
+[54:14] Ideally, I should change this one. Raw claims.
+[54:16] Not claims, okay?
+[54:18] Now, it will update.
+[54:23] Yes, can you see this case?
+[54:24] It got changed, right?
+[54:25] Pending, right?
+[54:27] Earlier, it is paid.
+[54:29] Now, it got changed to pending, right?
+[54:31] Because this is an incremental.
+[54:33] What are the changes that are happening to your source?
+[54:35] You are automatically capturing that.
+[54:37] How you are capturing that?
+[54:38] Distance on this?
+[54:40] Incremental.
+[54:45] This is an incremental strategy.
+[54:46] Now, you got the clarity, right?
+[54:48] What is incremental?
+[54:51] In case of any new or updated records,
+[54:54] you are going to capture that.
+[54:56] And you will merge to the target, that is incremental.
+[55:09] So, see, now it is difficult for me to identify the dependencies, right?
+[55:14] See, I am working on this, okay?
+[55:16] If I have to identify what are the dependencies,
+[55:19] it will take time, right?
+[55:22] See, what is the, what are the dependencies?
+[55:25] This is miles, you know, source.
+[55:27] How it is getting populated?
+[55:29] I have to debug, right?
+[55:32] So, can you see there is one thing for lineage?
+[55:35] So, this will also help you to verify the change.
+[55:38] I mean, the dependencies expands.
+[55:46] Can you see the lineage?
+[55:50] So, this is the current model.
+[55:52] It is referring to this.
+[55:54] This is the interned referring to this.
+[55:58] But, again, it is referring to the,
+[56:02] this is referring to the rock line, seeds, right?
+[56:05] So, if you want to get that information, right?
+[56:07] So, I will tell you in a minute,
+[56:09] not maybe not today, maybe we will discuss this,
+[56:14] you know, let us say on Monday session, okay?
+[56:25] So, I will tell you one more point.
+[56:28] Can you see, there is one thing called, you know, test case.
+[56:32] You can see the test here.
+[56:36] You have tests, right?
+[56:38] So, one is a test, right?
+[56:43] Just a minute.
+[57:00] Move, move, okay?
+[58:43] So, there is one thing called test rate case.
+[58:46] So, tests are nothing but, I hope you have one.
+[58:49] What are test case?
+[58:52] Validation, I guess.
+[58:55] So, you can, we can assume like,
+[58:59] primary key, unique, check, not normal, foreign key, right?
+[59:02] You can do those kind of validations by using tests.
+[59:07] So, we have a couple of tables, right?
+[59:11] I will just show you one simple example,
+[59:12] then you have only three little seconds.
+[59:15] So, I am pouring one of the tables.
+[59:19] So, the table name is customers, okay?
+[59:21] So, we have customer stable.
+[59:23] So, in customer stable,
+[59:25] so, I can say customer ID is the primary key comment.
+[59:28] I am not supposed to have any kind of duplicates or null values, okay?
+[59:35] So, let us say I am inserting one record,
+[59:37] inserting two,
+[59:39] customers, values, let us say, customary one,
+[59:45] I am giving it expression.
+[59:49] So, do you think it is a valid record?
+[59:54] No, right.
+[59:56] Because with the customer ID one,
+[59:57] we have already one more record, right?
+[60:00] Customary record to one.
+[60:03] So, this is invalidate.
+[60:05] This is the invalid record.
+[60:07] I am inserting one more record with an null value, right?
+[60:15] One record is inserted.
+[60:17] Now, can I have an null value for a customer ID?
+[60:24] So, these are all invalid records, right?
+[60:26] So, let us say I have created a model,
+[60:29] you know, based on this, okay?
+[60:33] I am creating a model.
+[60:35] Let us say, I will leave it as, you know,
+[60:38] T underscore, customer underscore important.
+[60:41] This is the customer information.
+[60:46] Let us create, hello,
+[60:52] then, which can have no,
+[60:57] I have no problem.
+[60:57] In some of the,
+[61:00] furniture, okay?
+[61:06] So, I am creating a model.
+[61:08] So, I don't want to hard code any other database name.
+[61:10] So, what I can do?
+[61:11] I can go to,
+[61:19] so, I can switch to sources.yml file.
+[61:22] Yes, I think I already have that one.
+[61:24] Simply, what I can do is,
+[61:32] so, where is that model?
+[61:33] Go back to the models.
+[61:35] I just created a model,
+[61:37] DNS code, custom, and sporting form.
+[61:41] And this is my model.
+[61:43] So, I am referring to the source, okay?
+[61:45] The source name is underscore, underscore, source.
+[61:50] My source name is this one.
+[61:55] The object I am referring to is customers.
+[61:57] Let us save this.
+[61:58] Save this one.
+[62:01] So, let's create a model.
+[62:02] Integrity, run,
+[62:07] and the model.
+[62:08] The model name is DNS code,
+[62:10] custom, and import.
+[62:11] This is my model name, okay?
+[62:15] So, before,
+[62:19] yeah, first, let's run this model.
+[62:23] So, we know, right?
+[62:24] We know, it's going to create a view.
+[62:27] It will create a view.
+[62:29] But, the information which I have is invalid, right?
+[62:42] So, start from silver dot,
+[62:46] DNS code, custom, and scoring.
+[62:49] So, if I verify the first record,
+[62:51] it will be that it will be having invalid records, right?
+[62:54] See?
+[62:54] So, let's say, where custom already equal to what?
+[63:01] So, this is invalid actually, okay?
+[63:04] And also, there is, if I verify,
+[63:06] he is not.
+[63:07] He is not.
+[63:08] So, there is one record.
+[63:09] So, these who are invalid, okay?
+[63:11] Now, what I'm going to do?
+[63:12] I'm going to create a test here.
+[63:15] Right click on this test folder,
+[63:17] click on create a new file, okay?
+[63:20] I'll limit as validation.
+[63:22] The name of the file is validation.yml file, okay?
+[63:25] Click on create.
+[63:27] Test will be in, it's a yml file, okay?
+[63:31] This is one more yml file,
+[63:32] that you're going to,
+[63:36] that you're going to see,
+[63:37] one more validation file, that is yml, okay?
+[63:40] So, here I'm writing a logic,
+[63:42] it's trying to understand, okay?
+[63:47] So, I'll just,
+[63:54] there is a, what is that model name list?
+[63:56] Tnscore, customer score info is the model name,
+[63:59] which column customer ready?
+[64:01] What are the tests that you want to perform?
+[64:03] Not null and unique.
+[64:09] So, in case if you want to, you know,
+[64:11] get this, right?
+[64:12] So, what you can do is simply,
+[64:14] you can say underscore underscore model.
+[64:21] So, there are different test cases, underscore underscore.
+[64:25] Not null is one test case.
+[64:28] Unique is one test case.
+[64:30] Accepted value is one test case.
+[64:35] And you will have underscore underscore
+[64:38] relationship.
+[64:40] So, the combination of these two is a primary key.
+[64:45] Not null, unique.
+[64:47] Accepted value is nothing but such a constraint.
+[64:49] Relationship is nothing but a foreign key, okay?
+[64:51] These are all the constraints that you can use.
+[64:55] Anyways, let's do it.
+[64:56] So, the model name is T customer info.
+[65:00] And the column is customer ready.
+[65:01] The customer ready should not have any null values or duplicate values.
+[65:06] Now, I'm going to test this.
+[65:08] So, I'm running a command dbt test,
+[65:12] dbt test and the model name.
+[65:15] Let's run this.
+[65:19] dbt test and the model name.
+[65:21] So, it will verify whether the data is correct or not, okay?
+[65:26] It is saying, it is fine, right?
+[65:28] Not null constraint fail.
+[65:31] Unique constraint fail, okay?
+[65:36] Anyways, it's already 8.3.
+[65:38] So, we'll discuss in detail.
+[65:39] Yes, okay?
+[65:40] So, we're going to see how dbt is, you know, validating this.
+[65:44] This is very important, okay?
+[65:46] I'll just show you the SQL, how it is generated.
+[65:50] Copy this.
+[65:56] Okay, this is the SQL.
+[65:58] With this, it is identified.
+[66:05] First of all, it is checking whether there is any null values or not.
+[66:07] In case if there is null value, it will fail.
+[66:12] Where the customer already is null.
+[66:15] Anyways, don't get confused.
+[66:16] We'll discuss this in the model session.
+[66:22] So, we'll see the other test cases also.
+[66:24] And also, we'll see the custom test cases.
+[66:27] How can you, you know, these are all the test cases given by dbt?
+[66:31] Apart from this, in case if you wanted to have your own business
+[66:34] validations, so we'll discuss that.
+[66:36] How you're going to implement that?
+[66:39] Let me do a comment.
+[66:43] So that these changes will be available.
+[66:48] All right, yes.
+[66:50] So, the changes are committed.
+[66:52] So, you can open that, you know,
+[66:56] GitHub case.
+[66:57] So, you can open a GitHub and you will find the latest change.
+[67:01] This is a reform.
+[67:03] Go over refresh.
+[67:10] You go back to the code.
+[67:14] Anyways, I'm pushing this to this.
+[67:20] I'm pushing this to the main branch also.
+[67:28] Done.
+[67:30] Now you can find these changes in your main branch as well as the subbratch.
+[67:34] That is 70 entries.
+[67:36] You'll find the changes.
+[67:37] So, the latest change which I have made is test, right?
+[67:40] So, if you click on the test, yes, you have validations.
+[67:44] Start via the test, right?
+[67:45] This is the test.
+[67:50] So, we'll make it in tomorrow's session.
+[67:56] Monday's standard.
+[67:58] Tomorrow we have a session.
+[68:00] Tomorrow it'll take about 40 minutes.
+[68:02] Tomorrow there is a snowflake.
+[68:04] Event case, I will show you the system minute.
+[68:18] Yes, let me open this.
+[68:26] So, snowflake itself, they are conducting one event.
+[68:30] So, this is the event case, okay?
+[68:37] So, they will explain about,
+[68:39] they're giving one workshop on snowflake cortex and cocoa, okay?
+[68:46] Anyways, so, I'll get you, I mean, I'll give you the complete information, okay?
+[68:51] So, I'll see what they are explaining.
+[68:53] And I'll take a session on this, okay?
+[68:55] Maybe any one Saturday, I'll take this session, okay?
+[68:58] What are they explaining?
+[68:59] I'll give you the data.
+[69:01] So, it will be like a four or five or session actually, okay?
+[69:06] Yeah, I'll get you the information.
+[69:08] So, this is a good call, okay?
+[69:27] This is happening in Burkha home.
+[69:30] So, I actually, I have received one more invite for tomorrow's.
+[69:33] It is happening in trident case.
+[69:35] If you want to see the snowflake events,
+[69:36] snowflake,
+[69:37] milling events,
+[69:41] even chiropractic events.
+[69:53] So, there is an event tomorrow,
+[69:55] not start conference, yes?
+[69:56] Tomorrow, it will be in the trident photo, okay?
+[69:59] Can I see this thing?
+[70:03] Okay?
+[70:03] So, 8.30 to 5.30, complete time.
+[70:10] So, you need to register with your official immediately.
+[70:12] If you are, if you are already working,
+[70:16] I think the event is already closed actually.
+[70:19] Okay?
+[70:21] I'll give you the details, probably on Monday session,
+[70:23] give you the details, but we'll have 45 minutes of session.
+[70:28] Tomorrow, 7 to 7.45, okay?
+[70:35] Fine, yes, we'll meet in tomorrow's.
+[70:38] Okay.
+[70:39] Okay.
+[70:39] Okay.
+[70:40] Yeah.
+[70:42] Thank you.
+[70:42] Thank you.
+[70:43] Thank you.

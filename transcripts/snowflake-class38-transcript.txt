@@ -1,0 +1,732 @@
+[10:56] We do not need any help.
+[11:01] Yes, yes, yes, ma'am.
+[11:03] Let me share with you.
+[11:13] Once you see with you.
+[12:22] So in the last session, we were talking about test rate.
+[12:26] Test are nothing but, you know, similar to constraints.
+[12:30] So it will help us to validate whether, you know,
+[12:34] for a particular column, whether we have the null values, duplicate values
+[12:39] or in case, no.
+[12:41] If you want to check the, you know,
+[12:43] which is a constraints like check constraint or for and key.
+[12:51] So we can go with the test.
+[12:53] Let me show you one of the simple test cases.
+[12:55] So if you look at the validations.yml file rate.
+[13:02] So this particular file is created under test case.
+[13:06] So under test, we have a file name or a validation.yml file.
+[13:10] So here we are defining the table name.
+[13:12] I mean, it is the model name.
+[13:14] What is the column name?
+[13:16] What are the constraints that you wanted to have on the particular column
+[13:20] called customer ID?
+[13:22] I wanted to have unique convertum, not on value.
+[13:24] Now I am testing that whether the data which is having in my, you know,
+[13:28] model is correct or not.
+[13:30] So let's run the test, DVD test case.
+[13:32] This is the command door on the test.
+[13:34] So once you run this, just observe the, you know, the test cases.
+[13:41] See, it is saying error, right case, error.
+[13:45] So there are two models.
+[13:47] I mean, we said there are two test cases that are got executed.
+[13:51] Both are failed, okay.
+[13:53] One is not and the other one is unique.
+[13:55] So if I have to get the sequel right here, let me expand this.
+[14:01] Or else from, you know, from snowflake itself, you can get the logs.
+[14:07] How can you get the logs?
+[14:12] We can go to the query history.
+[14:14] Go to the query history.
+[14:16] You can verify the underlying statement that got executed.
+[14:21] So what it has done?
+[14:23] This is the statement that they have executed.
+[14:30] It will first run out there.
+[14:42] Let me, let me take these two queries.
+[14:44] So look at the queries.
+[15:18] Look like in the charts.
+[15:39] So look at this case.
+[15:41] What exactly it is doing?
+[15:43] It is trying to verify the, so this is a unique case, okay.
+[15:51] If you want to verify the unique constant,
+[15:53] yeah, this is the same text that we had to follow.
+[15:55] So we know need to do anything.
+[15:58] You know, DBT itself is well valid.
+[16:00] It's that, okay.
+[16:02] Internally, it executes the statement
+[16:04] and it checks whether there are any duplicates or not.
+[16:08] For null values, look at the query.
+[16:10] The query is important.
+[16:12] So it is trying to check whether there is any customer ID,
+[16:14] which is having null value.
+[16:16] Here it is.
+[16:22] There is customer ID in that, okay.
+[16:24] In case if the count is, you know,
+[16:28] if there is a count right, it's a failure.
+[16:30] Even you can execute these statements, okay.
+[16:32] Copy these two statements
+[16:34] and try to execute in data.
+[16:36] Let's run this.
+[16:38] Are there any null values?
+[16:40] Yes, okay.
+[16:42] True, which means there is one failure.
+[16:44] Can you see this context?
+[16:46] One failure is there, okay.
+[16:48] Now, are there any duplicates?
+[16:50] Based on the customer ID,
+[16:52] you are checking the count.
+[16:54] So yes, there is a count, okay.
+[16:58] There is one failure.
+[16:59] Let me correct it.
+[17:04] The last session we have given the customer ID is null right.
+[17:08] So for one of the customers, I have given the name as null.
+[17:12] So let me update this.
+[17:14] So update the respective table.
+[17:20] Okay, let me correct the base table first.
+[17:24] What is the base table?
+[17:26] This is the base table.
+[17:28] So I would like to, you know,
+[17:33] let me update the base table.
+[17:35] So I will give the customer ID as, let's say,
+[17:45] 200.
+[17:48] The customer ID is null.
+[17:53] The customers who are having null value,
+[17:55] I'm updating this to 12, right.
+[17:57] Similarly,
+[17:59] I'm updating one more recording.
+[18:01] So for Krishna, right.
+[18:05] Let's say,
+[18:07] the first name, right.
+[18:09] What do they call them main things?
+[18:11] Yeah, first name.
+[18:15] First one was coordinated.
+[18:21] In case if the first name is Krishna,
+[18:23] I'm going to change the customer ID.
+[18:25] So customer ID will say,
+[18:29] 200.
+[18:31] Let's update it.
+[18:33] So one record is updated.
+[18:35] Now, if I run these two queries,
+[18:37] are there any null values?
+[18:39] No, zero.
+[18:41] Nothing. There are no failures.
+[18:43] There are no null values.
+[18:45] Only duplicates.
+[18:47] Zero. There are no duplicates.
+[18:49] Now, let me run the test case.
+[18:51] Come back here and let's run the test case.
+[18:55] Okay.
+[19:06] Can we see the message case?
+[19:14] What it is saying?
+[19:16] So these two test cases are fast, right.
+[19:18] Not only is fast,
+[19:20] but unique is fast.
+[19:30] Here is Krishna.
+[19:32] Can't we do this with the help of DBT?
+[19:36] That's what with DBT only,
+[19:38] no, no, no.
+[19:40] I'm editing the record from the table.
+[19:44] No, no, see based on the test case failure,
+[19:46] you have to take the actions, right.
+[19:48] Yes.
+[19:51] So instead of going to Snuff,
+[19:53] can't we do it from DBT itself?
+[19:55] No, no, we cannot do it.
+[19:57] So it's not advisable to do that from DBT.
+[20:01] This is to apply the transformations.
+[20:03] In case of any values,
+[20:05] so you have to correct it in the database.
+[20:07] You have to correct the source data itself.
+[20:09] Okay.
+[20:14] Okay, so we will see one more test case.
+[20:16] Let me go to the payment method.
+[20:18] Let's go to payment table.
+[20:20] So in payment table,
+[20:22] we have different payment methods.
+[20:24] Let's let's go to the distinct method.
+[20:30] The distinct payment method.
+[20:32] So these are all the payment methods allowed by the company.
+[20:37] Okay.
+[20:39] Credit card,
+[20:41] transfer, different card.
+[20:43] These are the valid ones case.
+[20:45] No.
+[20:49] So I'm not supposed to accept any other information.
+[20:53] These are the valid values.
+[20:55] Credit card.
+[20:57] So the thing is,
+[20:59] the table name is payment.
+[21:01] And the column name is
+[21:03] payment method.
+[21:05] Okay. It should accept only these four values.
+[21:09] Now, let us say I'm inserting one record.
+[21:11] So as per the, you know, requirement.
+[21:16] So as per the, you know, business,
+[21:18] these are all the valid payment methods.
+[21:22] Okay. So let us say I'll pick one order ID.
+[21:30] Okay.
+[21:32] Order ID equal to order ID equal to.
+[21:39] Let me pick not ID one.
+[21:41] Yeah.
+[21:43] There is one order ID.
+[21:45] This is through credit card.
+[21:47] Let us say.
+[21:49] Let us assume this.
+[21:51] The customer has made the payment through cash.
+[21:55] Update that.
+[21:57] Even in method equal to.
+[22:05] We're already equal to.
+[22:10] Let's assume.
+[22:14] So let's say the sales person is saying.
+[22:16] So the customer.
+[22:18] Let's say you have verified the amount.
+[22:20] And it's saying there is some.
+[22:22] There is some, you know,
+[22:24] now what he's saying is some customers.
+[22:26] I mean, few of the customers paid.
+[22:28] I want through cash, okay.
+[22:30] But as per your company policy,
+[22:32] you are not supposed to accept any payment methods.
+[22:36] I mean payment through cash.
+[22:38] Now, if I run this, what happened is.
+[22:40] Say, it is saying it is saying as cash.
+[22:42] Okay. Now, let me verify this first.
+[22:44] Go back to the.
+[22:46] Model and you need to pick that.
+[22:50] Okay. So let's say.
+[22:53] Specifying the.
+[22:55] Here I specify the model.
+[22:57] Okay. Let's say I'm creating a model.
+[22:59] I click on this, create a new one.
+[23:01] Let's say I'm naming it as.
+[23:03] T and score payment.
+[23:06] That's cute. This is the model in.
+[23:08] So here I'm referring to table.
+[23:10] Select start from.
+[23:14] underscore underscore source.
+[23:16] S1.
+[23:18] And what is the table in this.
+[23:20] Payment.
+[23:22] Okay.
+[23:24] So I'm referring to this.
+[23:26] Before that, you need to verify in sources.
+[23:28] A YML file.
+[23:30] You need to verify whether you have payment.
+[23:32] Yes, we have payment.
+[23:34] Right.
+[23:36] Now, let's, you know, perform a test.
+[23:38] My requirement is.
+[23:40] First, let me.
+[23:42] You know, define the value.
+[23:44] Okay. So the name of the model is.
+[23:46] T underscore payment.
+[23:49] Just for payment.
+[23:51] And what is the column payment method.
+[23:53] Payment method, right?
+[23:55] Yes.
+[23:57] The column naming payment method.
+[23:59] That's the payment method.
+[24:01] The payment method.
+[24:08] Payment.
+[24:10] Okay. So what is the test case that you need to perform?
+[24:12] Okay.
+[24:14] The test case which we need to perform is.
+[24:16] Okay.
+[24:18] Accepted values.
+[24:22] We'll find.
+[24:24] Accepted.
+[24:26] Accepted.
+[24:28] Okay.
+[24:30] So these are all the four accepted methods.
+[24:32] They're great.
+[24:34] Good.
+[24:36] Okay.
+[24:38] If any payment other than this.
+[24:40] It's an invalid record.
+[24:42] Okay.
+[24:44] So that like let me copy this.
+[24:46] And if you can pick this syntax.
+[24:48] So these are all the accept values.
+[25:05] Okay. Let me talk with accept values.
+[25:07] Very good.
+[25:20] Open.
+[25:31] These are all the valid payment methods.
+[25:33] Let me save this.
+[25:35] So once you save this seat.
+[25:37] You're not supposed to get any errors.
+[25:41] Okay. These are all accepted.
+[25:43] Okay.
+[25:45] It is showing.
+[25:47] It is showing some error.
+[25:53] Okay.
+[25:57] Let me copy this.
+[26:07] It's used.
+[26:09] Okay.
+[26:17] The syntax is.
+[26:19] You need to use this keyword.
+[26:24] Okay.
+[26:26] So this is the model name column name.
+[26:28] What are the tests that you need to perform?
+[26:30] Not on your.
+[26:32] On payment model.
+[26:34] The column name is.
+[26:36] Payment method.
+[26:38] What is the test that you're performing?
+[26:40] Accepted values.
+[26:42] What are the values that you're accepting?
+[26:44] I'm accepting only these four values.
+[26:46] So I just saved the model.
+[26:48] So let me execute the model.
+[26:50] Maybe T.
+[26:52] T underscore payment.
+[26:54] The model is executed.
+[26:57] Okay.
+[27:05] So obviously it creates a view.
+[27:07] Okay. Come back here.
+[27:09] Go to silver schema under the silver schema.
+[27:11] You can find a view actually.
+[27:13] It is with the T underscore payment.
+[27:15] Can I see this?
+[27:17] T underscore payment.
+[27:19] Okay. Now let's test this model.
+[27:21] Okay.
+[27:23] So what is the command?
+[27:25] DVD test T underscore payment.
+[27:29] So obviously the model will fail because there is a record.
+[27:33] We charge the payment method of cash.
+[27:37] So it will fail.
+[27:39] Okay. It got failed.
+[27:41] Now you need to understand why it got failed.
+[27:43] See.
+[27:45] It is saying that accepted values.
+[27:47] It got failed.
+[27:49] Okay. In case if you want to verify that.
+[27:51] Click on this.
+[27:55] Go to debug logs.
+[27:57] Copy the logs.
+[27:59] Okay. So these are the validations.
+[28:08] Can you see this?
+[28:10] What it is checking?
+[28:12] Just look at the statement first.
+[28:17] So you know to do anything.
+[28:19] Okay.
+[28:21] DBT itself will build the required statement.
+[28:23] It automatically builds the validations.
+[28:25] You just need to configure.
+[28:27] See this one.
+[28:29] Not in.
+[28:31] In case if any of the values,
+[28:33] which means that is payment method,
+[28:35] then you can fail this model.
+[28:37] Okay.
+[28:39] So let me correct that.
+[28:41] Well, let's say I am correcting the payment method.
+[28:45] Let's say I am making it a scoop.
+[28:47] Let's update that.
+[28:52] Come back here and run the test case.
+[28:54] See this one.
+[29:03] Now it got passed.
+[29:05] The test case got passed.
+[29:09] I will give you one more scenario.
+[29:11] So I am just coming.
+[29:13] I mean, do the.
+[29:15] Otters table is select star from orders.
+[29:21] In the order stable,
+[29:23] we have the customer.
+[29:25] Okay. So let's say I am giving.
+[29:27] I'm inserting one record.
+[29:29] Let me insert first.
+[29:31] Inserting to customers or orders.
+[29:36] I'm inserting a value.
+[29:38] Let's say the order.
+[29:40] I'm saying as.
+[29:42] 100.
+[29:44] Let's say the customer is 300.
+[29:46] And the order date.
+[29:50] Let's say I am giving it a storage state.
+[29:52] Current date.
+[29:54] And the order status is.
+[29:56] Let's say it's completed.
+[29:58] Okay.
+[30:03] Complete.
+[30:05] Let's insert this record.
+[30:07] So one record is inserted.
+[30:09] So now what is the customer ID?
+[30:11] Customer ID is equal to 300.
+[30:13] So in order stable,
+[30:15] I have the customer information.
+[30:17] There is a customer who plays the order.
+[30:19] Okay. But what is that customer name actually?
+[30:26] Let me go to customers.
+[30:28] Verify the customer ID.
+[30:30] The customer ID is 300.
+[30:32] Do we have any record with the customer ID 300?
+[30:39] No, right.
+[30:43] Is it a valid scenario without having a customer?
+[30:48] Can we have a order?
+[30:52] No, no, right.
+[30:54] So this is invalid.
+[30:56] This is the parent record.
+[30:58] This is the child record.
+[31:00] Which means,
+[31:02] without having a parent,
+[31:04] you are not supposed to have the child record.
+[31:06] Okay. So which means,
+[31:08] I have to verify the order stable for the customer ID.
+[31:12] What I need to verify?
+[31:14] I need to verify whether the customer ID is available in the customer table or not.
+[31:19] You got it.
+[31:21] This is called foreign key case.
+[31:23] Okay.
+[31:25] So whenever you are inserting a record into your child table,
+[31:27] make sure that that particular ID is available in your parent table.
+[31:31] Else,
+[31:33] you have to fail that record.
+[31:35] Okay. Now tell me.
+[31:37] Yes. What is the table name?
+[31:39] Order is the table name.
+[31:41] Which constant I need to apply?
+[31:43] I need to apply foreign key, right?
+[31:45] Or a differential constant.
+[31:47] So go back to the model.
+[31:49] Okay. Now let's copy the syntax.
+[31:53] You need to copy this from
+[31:57] here till here.
+[31:59] Okay.
+[32:03] Okay. Now what are you trying to do here?
+[32:05] So the name of the model is
+[32:09] let's say I create a model,
+[32:11] T underscore
+[32:13] create a new file
+[32:15] and T underscore orders
+[32:19] bought as T and
+[32:24] tell a start from underscore underscore source.
+[32:27] Source is S1.
+[32:31] I am referring to the table orders.
+[32:33] Save this one.
+[32:36] So the name of the model is orders.
+[32:38] Let's execute the model T underscore orders.
+[32:44] T underscore orders.
+[32:46] T underscore order.
+[32:50] Sorry. T underscore order.
+[32:52] One minute.
+[32:58] Need to run the model first.
+[33:01] Let's run the model.
+[33:05] So the model is executed.
+[33:09] So it creates a view.
+[33:11] In the database T underscore orders.
+[33:13] Let's verify the view.
+[33:15] You know how 10.
+[33:17] There is a table.
+[33:19] There is a view called T underscore orders.
+[33:21] Now I want it to verify that the data is correct or not.
+[33:25] So for that what I'm going to do is.
+[33:29] So go back to the validation.YM file.
+[33:33] And the name of the model is T underscore orders.
+[33:37] I'm going to verify for the customer ID.
+[33:39] What is the test that I need to perform?
+[33:41] I need to perform a test.
+[33:43] It's called the differential.
+[33:45] If you want to verify that.
+[33:47] And underscore underscore.
+[33:49] Relationship.
+[33:53] And underscore underscore relationship.
+[33:55] Okay.
+[33:59] So now tell me which model you have to refer.
+[34:01] You have to refer to the parent table.
+[34:03] What is the parent table?
+[34:05] Parent model in.
+[34:07] T underscore it.
+[34:09] T underscore is the parent.
+[34:11] And which column you need to refer.
+[34:13] Customer ID.
+[34:15] Save this model.
+[34:21] So you're not supposed to get any errors here.
+[34:23] In case of any errors.
+[34:25] It's a syntax issue.
+[34:27] Let's verify that.
+[34:39] Let me copy this.
+[34:41] Save this one.
+[34:48] So you're reading a test case on this particular model.
+[34:54] The column name is customer ID.
+[34:56] You're applying a relationship test.
+[34:58] You need to refer to the parent table.
+[35:00] And the column name is customer ID.
+[35:02] Okay.
+[35:04] Now let's transfer test case.
+[35:06] DVD test.
+[35:08] Test.
+[35:13] And the model name.
+[35:15] So this time it should fail.
+[35:17] Because you have an invalid customer in the order statement.
+[35:21] Can you see this?
+[35:23] The relationship check got failed.
+[35:25] Okay.
+[35:27] In case if you want to know the statement.
+[35:29] So the important point is you need to understand
+[35:31] how DVD is generating the sequel.
+[35:35] Copy this.
+[35:37] Come back here.
+[35:42] Yeah.
+[35:44] This is the statement that you may do.
+[35:46] This is for what is this is what check considered.
+[35:50] Okay.
+[35:52] Let me verify by the relationship.
+[35:56] For relationship it prepares a no merge statement.
+[35:58] It's not merge.
+[36:00] Yeah.
+[36:03] Look at this.
+[36:05] Just scroll down.
+[36:15] Look at this.
+[36:17] What is change?
+[36:19] Order sees the child.
+[36:21] What is parent?
+[36:23] Customers is the parent.
+[36:25] I'm using a left join is left join with parent.
+[36:27] Okay.
+[36:29] In case if you don't have a parent which means
+[36:31] if the ID is null.
+[36:33] Okay.
+[36:35] If the customer ID is null in the parent table,
+[36:37] then you are failing the test case.
+[36:41] So these two sequels are very important.
+[36:43] Along with this.
+[36:45] This is for unique.
+[36:47] This is for Norton.
+[36:49] And these two are for
+[36:53] accepted values and relationship check.
+[36:55] These four queries are very important.
+[37:04] So these are all test case.
+[37:06] Test queries.
+[37:10] In case there may be a chance you know
+[37:12] they will ask like can you write a query
+[37:14] or to validate a differential constraint.
+[37:19] Or check constraint.
+[37:21] Now let's correct the data.
+[37:23] The test case got failed.
+[37:25] So what I can do is.
+[37:27] I can insert a record into my parent table.
+[37:29] So how can you insert?
+[37:31] Let's insert a record into your parent.
+[37:33] Insert into.
+[37:35] Your customer sees the parent table.
+[37:39] So values.
+[37:41] Which I mean certain 300.
+[37:43] Let's say the customer name is let's say an average.
+[37:49] The last name is let's check it.
+[37:51] Okay.
+[37:52] So I have a record in the parent table.
+[37:56] Now it is a valid thing.
+[37:58] Okay.
+[38:00] I have a parent.
+[38:02] And I have a child.
+[38:04] Let's say you run the test case.
+[38:06] Earlier it got failed.
+[38:08] Now this time it should pass.
+[38:10] Because you don't have any records in the child table.
+[38:14] Where there is no parent.
+[38:16] Now the test case got passed right.
+[38:18] Yes.
+[38:20] So the test case got failed.
+[38:28] Now I'll show you one more test case.
+[38:32] Okay.
+[38:34] So let me go to the test.
+[38:36] In the test.
+[38:38] These are all the test cases that I'm performing.
+[38:40] So copy these and put here.
+[38:49] Let's understand the test cases that we are trying to perform.
+[38:54] Test claim amount.
+[38:56] Okay.
+[38:57] So these are all the custom test cases that I'm performing.
+[39:00] Okay.
+[39:01] So you can discuss what I'm trying to do here.
+[39:03] If the paid amount is greater than equal to allowed amount.
+[39:06] Is it a valid thing?
+[39:07] Let's say the billies are owned.
+[39:12] But you have paid three lakhs.
+[39:14] Is it valid?
+[39:18] No.
+[39:19] Right.
+[39:20] So this is the custom test case.
+[39:22] This is asked for the business requirement.
+[39:24] Okay.
+[39:25] So which model you are referring?
+[39:26] Stage climbs.
+[39:27] Okay.
+[39:28] This is the stage climbs.
+[39:29] So let me go back to stage climbs.
+[39:31] We'll start from silver and don't stage climbs.
+[39:39] Okay.
+[39:40] So this is the stage climbs.
+[39:43] Sorry.
+[39:44] Look at the amount ways.
+[39:45] Allowed amount and paid amount.
+[39:47] Right.
+[39:48] See.
+[39:49] Can you see this one?
+[39:50] This is the allowed amount.
+[39:51] This is the paid amount.
+[39:52] Okay.
+[39:53] Now what is the, you know, test case that I'm trying to perform?
+[39:56] In case if the allowed amount, if the paid amount,
+[39:59] paid amount is greater than the allowed amount, that is invalid.
+[40:02] Okay.
+[40:03] So what I will do for this part, first record.
+[40:06] Okay.
+[40:07] Let me pick this climb ID.
+[40:13] Okay.
+[40:14] So stage climbs.
+[40:16] Right.
+[40:17] From where it is populating is stage climbs.
+[40:23] Stage climbs.
+[40:24] How it will populate?
+[40:27] Through seeds, right?
+[40:29] Yes or no?
+[40:30] Correct?
+[40:34] Let me expand seeds.
+[40:40] It depends.
+[40:41] It is not explained.
+[40:42] Let's do a refresh.
+[40:43] Okay.
+[40:51] So go back to the seeds.
+[40:54] Let me, let me, let me, let me, let me, let me expand seeds.
+[41:38] So I'm talking about climbs.
+[41:40] Right.
+[41:41] So let's go to draw on a score climbs.
+[41:43] In draw on a score climbs.
+[41:45] So this is the discharge date diagnosis code.
+[41:50] And, yeah, build amount and allowed amount.
+[41:53] Okay.
+[41:54] So the build amount is 180.
+[41:55] The allowed amount.
+[41:56] Yeah.
+[41:57] The allowed amount is 180.
+[41:59] Build amount is 144.
+[42:01] Let's say I'm giving it as 200.
+[42:03] Let's say 200 dollars.
+[42:04] Okay.
+[42:05] Save this one.
+[42:06] So what I will do?
+[42:08] I'll execute the seed.
+[42:10] Okay.
+[42:11] How to execute the seed?
+[42:12] DVD seed.
+[42:13] Select.
+[42:14] And what is the seed name is?
+[42:16] Draw on a score climbs.
+[42:18] Okay.
+[42:19] The seed is executed.
+[42:21] So what is saying?
+[42:25] It's got friends.
+[42:26] DVD seed.
+[42:32] Select.
+[42:33] Draw on a score climbs.
+[42:34] CLG.
+[42:35] I am.
+[42:36] I am.
+[42:37] Okay.
+[42:38] Dot seed.
+[42:41] So in.
+[42:42] DVD seed.
+[42:51] Draw on a score.
+[42:52] Be like this.
+[42:55] Got use very wide word.
+[42:57] Know such command.
+[42:58] See.
+[42:59] Okay.
+[43:07] DVD seed.
+[43:08] It.
+[43:09] It.
+[43:10] It.
+[43:11] It.
+[43:12] It.
+[43:14] It.
+[43:15] Draw on the score.
+[43:20] Plays.
+[43:21] Right.
+[43:35] Now I've corrected that.
+[43:36] Now let me execute the model.
+[43:38] Now let's verify the test case.
+[43:42] I need to verify the test case.
+[43:44] DVD.
+[43:45] Test.
+[43:46] And the model.
+[43:47] Okay.
+[43:50] Let's run this.
+[43:51] Okay.
+[43:52] So it is executing three test cases.
+[43:57] I'm saying on the first.
+[43:59] Plays.
+[44:00] Plays.
+[44:01] Plays.
+[44:02] Plays.
+[44:05] Plays.
+[44:07] Plays.
+[44:08] Plays.
+[44:09] Plays.
+[44:16] Plays.
+[44:17] Plays.
+[44:18] Plays.
+[44:19] Plays.
+[44:23] Plays.
+[44:24] Plays.
+[44:27] Plays.
+[44:28] Plays.
+[44:29] Plays.
+[44:30] Plays.
+[44:31] Plays.
+[44:32] Plays.
+[44:33] Plays.
+[44:34] Plays.
+[44:35] Plays.
+[44:36] Plays.
+[44:37] Plays.
+[44:38] Plays.
+[44:39] Plays.
+[44:40] Plays.
+[44:41] Plays.
+[44:42] Plays.
+[44:43] Plays.
+[44:44] Plays.
+[44:45] Plays.
+[44:46] Plays.
+[44:47] Plays.
+[44:48] Plays.
+[44:49] Plays.
+[44:51] Plays.
+[44:54] Plays.
+[44:57] Plays.
+[44:58] Plays.
+[44:59] Plays.
+[45:00] Plays.
+[45:01] Plays.
+[45:12] and let me run this, DBT run, I am executing the model, once you execute the model, you
+[45:25] need to test that, I need to test whether the paid amount is greater than the load amount
+[45:31] or not.
+[45:33] Let's run the test case, DBT test, DBT test and the model length, to observe this case.
+[45:57] There is one model, which got failed, there are total three test cases out of which two
+[46:04] test cases are passed, one is failed, why it got failed?
+[46:09] We know the reason, it is for all of them, let's verify the query, this is the custom
+[46:19] query, which means this is as per your business requirement, you have written this logic,
+[46:26] not only the test case is given by DBT, you can have your own test cases also, this
+[46:32] is got failed, this got failed, the same thing, DBT is trying to verify whether the amount,
+[46:41] load amount, what is the amount that you have paid is greater than the load amount, then
+[46:46] it will fail.
+[46:47] We have got some value right on this, now can you see this, inpatient admission, whether
+[47:01] the patient is the inpatient means, the patient who admitted, inpatient is true, an admission
+[47:10] date is null, if the patient is admitted, you have to populate the admission date right,
+[47:16] in case if it is null, you will fail the test case, like this you can have your own test
+[47:22] case, okay, so I think, yeah, I have a, I have to go to one event, I will just give you
+[47:37] the information on the event, smoothly, start, one chance, I don't know, okay, so this
+[47:50] is happening today guys, I take 13, okay, okay, so I am attending this event, okay, so
+[48:00] I have been, whatever they are, you know, they are going to talk about it, maybe I will
+[48:05] take one session on, anyways, the registration is closed actually, okay, so the agent of
+[48:10] this meeting is, so they are going to talk about, you know, some of the AA features, okay,
+[48:18] I will have one session is, once I know I attend this session, right, so I will prepare
+[48:23] my own documentation and I will help you in whatever they have discussed it, I will help
+[48:28] you with that, this session is from morning 8.30 to evening 5.30, okay, yeah, it will be
+[48:34] done by 5.30, right, let me commit the code, commit, I think yes, the commit is, yeah,
+[48:55] the commit is done, you will, once I attend, let me push that to the main branch as well,
+[49:36] okay, so, now you can find the latest changes guys, let me come back here, so the reason
+[49:42] to change the remedies to the test cases, go to the test, here you should find these
+[49:47] test cases, right, so validation is not by ml5, okay, you will have all the test cases,
+[49:52] and these are all the test cases that we have created as per the business report, okay,
+[49:57] it fine, yes, so please try to complete the practices, we will meet on Monday, thanks
+[50:12] Thank you.

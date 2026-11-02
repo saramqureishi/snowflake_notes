@@ -1,0 +1,274 @@
+[08:06] Guys can you hear me?
+[08:13] Yes.
+[08:14] Oh, let me share.
+[08:21] Can you make me a present?
+[08:24] Present Rex.
+[08:25] Like now only that.
+[08:31] Like now you never learn, you never learn.
+[08:35] You should have heard.
+[10:06] But of course, that's what we call.
+[10:08] I call they had access for let me share.
+[10:54] Please, I hope you are able to see this screen.
+[10:56] Yes, please.
+[11:03] Yes, we need, we will talk about some of the performance improvements.
+[11:14] So, trust me.
+[11:16] Hopefully.
+[11:17] Yes, if you are.
+[11:26] Yes, if you are from side of it or maybe you can find.
+[13:58] It depends upon your region.
+[14:00] Yes.
+[14:01] Yes.
+[14:02] Yes, yes, yes.
+[14:03] So, who was not ready to use it?
+[14:09] Okay.
+[14:10] Let's say if you are in the morning, you can search for us.
+[14:13] No, please use it.
+[14:17] You get the community guides.
+[14:19] So, you can get to know people who are.
+[14:23] And this is the.
+[14:26] You will go snowpeg.com flash hideaway.
+[14:31] So, they will post the events.
+[14:37] Yeah, today there is a one event.
+[14:39] It is collected by.
+[14:40] And this.
+[14:41] Do you know.
+[14:42] And this case.
+[14:43] Any anywhere.
+[14:44] And this company.
+[14:45] Any good.
+[14:46] So, and let's.
+[14:52] It's a company.
+[14:53] It's a company guys.
+[14:54] And let's company.
+[14:55] We can search for this.
+[14:57] So, they're heavily using.
+[14:59] Snowflake.
+[15:00] Okay.
+[15:01] It's it's into completely.
+[15:03] Absolutely.
+[15:04] But they're using.
+[15:05] Snowflake.
+[15:06] So, they're in collaboration with the snowflake.
+[15:08] And they're connecting a event.
+[15:10] So, so in.
+[15:11] In Nagpur.
+[15:12] Okay.
+[15:13] There is one event which is happening today.
+[15:41] You can search for.
+[15:42] The.
+[15:43] The.
+[15:44] The.
+[15:45] Event.
+[15:46] So, this page.
+[15:47] I'll share you all these.
+[15:48] You are.
+[15:49] But today there is one event.
+[15:55] Snowflake.
+[15:56] The.
+[15:57] The.
+[15:58] The.
+[15:59] The.
+[16:00] The.
+[16:01] The.
+[16:02] So, if you want to be in the group.
+[16:03] Just register for this.
+[16:04] I'll share the links in the.
+[16:06] No.
+[16:07] All the events here.
+[16:21] And with respect to.
+[16:23] Specifically.
+[16:24] You know.
+[16:25] I invite you.
+[16:26] Let me.
+[16:27] Let me log in to the.
+[16:28] You want.
+[16:29] Let me.
+[16:36] Let me.
+[16:37] Let me.
+[16:39] Let me.
+[17:10] I have one URL.
+[17:12] Let me then that.
+[17:40] Virtual.
+[17:43] Is this.
+[17:44] Sorry.
+[17:45] This is a virtual event.
+[17:47] I don't know.
+[17:48] Afl an event.
+[17:49] This is not a virtual after.
+[17:51] Event.
+[17:52] Eh.
+[17:53] Today, one event is happening.
+[18:07] That is an offline event.
+[18:08] But, do you say anything called,
+[18:10] activate your snowflake account?
+[18:13] Any anything with that.
+[18:21] Go alone and go alone and set things up.
+[18:32] Let me come back to the work space, is this working?
+[19:06] Can you see this scope?
+[19:08] Is it working?
+[19:15] You are saying,業?
+[19:20] Can anyone try and confirm me?
+[19:41] Getting a little deeper.
+[19:43] Bixacoid is not anywhere.
+[19:46] Right.
+[19:50] So the entrantage with Cocoa is.
+[19:56] So you can prompt like any other tools like co-pilot or charge unit, so you can prompt
+[20:04] here and you can get the required information.
+[20:08] So here also you will find different models here, these are all the different models actually,
+[20:12] you know I hope you notice right, charge unit models, cloud, these are all different models
+[20:20] here, so by default it will be auto, if you prompt something like, let's say, if you
+[20:29] can please explain me about any topic, let's say, we talked about anything, let's say
+[20:41] I'm just asking about clustering keys, okay, or you can ask like, please give me an example
+[21:01] clustering key, so basically clustering key is nothing but I think people who already
+[21:13] worked in Oracle right, having got to go to index this, index, Oracle, Sequozo or any
+[21:20] other devices, there is a concept called index case, okay, so let me create this table,
+[21:40] that's our analysis, okay, what is it, any background analysis, okay, what about others,
+[21:50] let's find it, can you please go on in case, so I'm just creating one database, let's say
+[22:21] a database, so we're going to talk about some of the performance things, then we'll go
+[22:28] to the other one, we get database, let's say I'm creating a database called WD, let's
+[22:36] create a schema, that one is called schema, I just created one database and I'm creating
+[23:16] a table, so it's a sales table, can you see this, I have added a cluster by keyword here,
+[23:25] and the region, so I have added a clustering key here, okay, so first I'll show you
+[23:36] without clustering what will happen, so I'm creating a new table, table in the sales table,
+[23:47] let's create a table, okay, I'm running one statement, let's start from, select system
+[23:57] dollar, customer dollar, clustering information, so you are just trying to understand
+[24:06] whether this particular table is having any clustering key or not, okay, this is the table name,
+[24:13] so database names, schema name and the table name, and so you're just trying to verify
+[24:21] whether you have any clustering key on these columns, okay, or else what you can do is,
+[24:27] first let me verify whether I have the clustering key on this table or not, okay, it'll
+[24:34] throw us on it, can you see this message is, invalid clustering is, or the table is not
+[24:40] clustered, which means this table is not clustered, okay, let me insert a few records,
+[24:49] just getting some DMs, it'll give you the script actually to insert some millions of records,
+[25:16] so can you see the progress, it is in the, you know, nowadays completed, so it is going
+[25:28] to insert 15 million records, okay, let's copy this, it'll do this, so let me insert
+[25:49] the data, so this is the script to insert 15 million records, so let's say the table
+[26:15] says, look at the script, let's, so it is going to insert 15 million, so before inserting
+[26:32] let's verify the number of records, so I don't have any records in this table,
+[26:45] let me insert, so it is trying to insert close to 50 million records, yes,
+[26:55] let's verify the number of records, let's run a query, so I'm running this statement,
+[27:02] system dollar clustering information, so this will tell you whether the table is clustered
+[27:07] or not, as of now the table is not clustered, so I'm, no, I mean this is irrelevant
+[27:15] actually, once you have the cluster, you are checking whether these two columns are
+[27:20] clustered or not, anyways, you'll get the, this table is not having any clusters,
+[27:26] okay, now I'll do one thing, let me, you know, let me run one more statement,
+[27:34] I'm trying to one execute one simple select statement, let's make this statement,
+[28:01] so I'm trying to perform this operation on a table called sales, I'm trying to find
+[28:08] out the region-wise total amount between these two dates, between these two dates I'm
+[28:21] trying to find out the total amount, let me run this query, so here you're getting
+[28:29] close to 5 records and it is 265 milliseconds, not even a second, so I'll do one thing,
+[28:35] let me turn off the cache, so what are the columns that I'm using this here,
+[29:15] so I'm using the sale date, between these two dates I'm using, let me run one more query,
+[29:40] so I'll do one thing, I'll create another table, yes, with clustering keys,
+[29:44] my, my point is to verify the difference between what if we use clustering key,
+[29:50] okay, as of now this table is not clustered, I'm creating one more table,
+[30:01] let's name it as with clustered, this is the table with clustered,
+[30:12] and the clustering keys, I'm going to create our, you know, the two columns,
+[30:18] so you can use this statement to create the clustering keys, so sales with customers,
+[30:31] this is my table name, if you want to add a clustering key then,
+[30:41] this is all there, for the existing table in case if you want to add a clustering key,
+[30:46] you can use this statement, must let me create the table, so the table is created,
+[30:57] I'm running a statement, system down with clustering information with clustered,
+[31:07] okay, it is saying the table is not clustered, table is not clustered,
+[31:14] let me add the clustering key, yes, now let's run this statement,
+[31:20] now it says there is a clustering key, okay, now what is the advantage of the clustering key,
+[31:28] let me insert few records, so I've inserted close to 50 million records,
+[31:47] let me execute the statement, I'm executing the same state,
+[31:51] so this is the table which is having clustered with clustered, let me run this,
+[32:07] this is taking a way to find, we'll take some additional records,
+[32:27] let me verify the warehouse, that means it makes us small,
+[32:35] so the point is if you add a clustering key rate, okay,
+[32:42] so I think you are using a two-date function at class here,
+[32:46] you are using a two-date function, okay, so that is not the correct way,
+[33:06] I'll show you the difference, what if you use clustering key versus,
+[33:10] or without a clustering key, okay, so the clustering key will improve the query performance,
+[33:15] so when you are, you know, or entering the data based on a condition, you know,
+[33:22] a clustering key is the same like R kilonew, right, like in R kilonew,
+[33:31] yes, yes, similar to R kilonew, but I'll show you the way it works,
+[33:39] it is taking two, 67 seconds, I'll do one thing,
+[33:51] I need to check this, no, this, what is it,
+[33:55] keyword H query acceleration is enabled or not, so I'll check that,
+[33:59] but I'll give you the example, I'll show you the exact difference,
+[34:02] how much time it is taking before and after creating the clustering key, okay,
+[34:07] first let me list on the topics that we're going to talk about,
+[34:13] so we need to talk about search optimization service,
+[34:19] query accelerations, QAS, that is called query acceleration service,
+[34:24] and we'll talk about clustering keys, we'll talk about,
+[34:32] these are all, you know, completed data admin rates, admin topics,
+[34:39] these should have some idea on these topics,
+[34:43] R mn resource monitors, I hope we talked about cache rate,
+[34:55] no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no,
+[35:05] and we'll see how, you know, what will happen if you insert the data,
+[35:12] update and do you, you should know what exactly
+[35:16] is happening in the background once you perform this operations, okay,
+[35:21] Once you know, create a table and once you start inserting the data right, one minute is
+[35:28] stemming.
+[35:29] So, we have clustering keys and one more thing is, so we need to talk about horizontal
+[36:09] scaling and vertical scaling, horizontal scaling and vertical scaling is if you have
+[36:19] to show you that.
+[36:21] So, what you need to do is, so when it comes to horizontal and vertical scaling it, so
+[36:27] you will find warehouse plugins here and the compute you will find warehouses.
+[36:37] So, in the warehouses, I will create a new warehouse, let's say the warehouse name
+[36:44] is table underscore warehouse, scroll down.
+[36:49] So, this is all the warehouse sizes, extra small, small, medium, large, extra large,
+[36:55] so like in Windows, we have, Windows machine, we have RAM size, like 4 GB, GB 16, 32, 64
+[37:03] and similarly, so it is a, it is different actually, it is kind of a t-shirt size, if
+[37:09] you increase the RAM, the performance will improve, similarly if you increase the warehouse
+[37:13] size, the query performance will improve, let's say the query is taking, let's say it
+[37:19] is running from the past 10 minutes, in case if you want to input the performance, what
+[37:24] you can do is, you can increase the warehouse size, so that it will complete within seconds,
+[37:30] but there is a separate cost for this case, and when it comes to advanced options, so
+[37:37] the one which I just talked about, right, you know this, right, auto-region and auto-assessment,
+[37:43] auto-region and auto-assessment, and one more thing if you go to this, I think it is not
+[38:24] quite, if you, I think earlier you, there is an option to see this option, right, query
+[38:33] exhalation surveys, right, you are able to see that, did you even observe, let me open
+[38:41] the other, here is question, in this it is not so, yes, I am opening other, here, let me
+[38:58] go to compute the warehouses, you can create, you can create, advanced options, yes, see,
+[39:21] in the advanced options, you can see this, right, so in the advanced options, you will find
+[39:28] this one, query exhalation multiplier, max, then they have, they have changed these options,
+[39:40] the one which we have seen last week and this, there is a difference actually, I will
+[40:07] check this out, this is a new feature, I guess, this is a new option that is introduced,
+[40:13] but anyways, I will explain that, which, which, no, query exhalation I can, I am able
+[40:19] to see, you are able to see, right, but here I am unable to see that, actually, see,
+[40:23] let me edit the existing one, yeah, here it is, I can see now, okay, so when I am trying
+[40:29] to create a new warehouse, it is not, you know, it is, earlier you have seen a different
+[40:34] option, right, earlier you do not see this option, right, query exhalation survey is
+[40:38] multi cluster warehouse, right, yeah, yeah, so, yeah, so the one which I am trying to tell
+[40:45] you is, let me come back here, yes, what I am trying to tell you is, horizontal scaling
+[40:56] and vertical scaling, right, so, horizontal scaling and vertical scaling, so when I say
+[41:08] horizontal scaling, you can increase the number of clusters, let say, I am giving you, increasing
+[41:14] it to 6, I can increase it to 8, or I can increase to 10, this is called what, horizontal
+[41:20] scaling, I am just giving you a high level idea, we will discuss, what, how it will work,
+[41:25] when I say query exhalation survey is, that is nothing but the vertical scaling, you are
+[41:31] increasing the warehouse size, actually, so, the number of times, here you will have
+[41:36] this scale factor, so, we will see this practically, okay, so, probably on Monday session
+[41:45] is, we will talk about these things, okay, I will come up with the data, you know, to show
+[41:50] you the differences, okay, you have to see the difference, right, what if we use cluster,
+[41:55] okay, with cluster and without cluster, you have to see the, you know, difference, I
+[42:00] will come up with that, okay, and this one, okay, so, we will talk about these things,
+[42:08] okay, this, I need to attend one meeting, which is happening today, I think, I told you
+[42:19] that, so, there is an event happening here, at 9 o'clock, okay, so, if I find anything interesting,
+[42:27] I will let you know, okay, so, the agent of this meeting is, they have posted the
+[42:33] information, yeah, I will give you the, you know, details, okay, so, they are talking about
+[42:42] some of the new features, so, the main agent is, you know, the snowflake and the ambics both will
+[42:52] be benefited, because they are inverting, you know, the companies, different companies,
+[42:58] and, you know, the people who are already working, right, they are inverting those people,
+[43:02] so, that, you know, so, they want to talk about some of the features, okay, so, I will let you know
+[43:07] this, probably on Monday session, I will show you, what is the agent of this meeting, and I will tell you.
+[43:11] We will meet on that, yeah, Twister, last week, also, you know, during the conversation,
+[43:23] yeah, I have, yeah, I am, I am, I am, I am, I will add a WhatsApp group, okay, so, I mean,
+[43:31] it's, even the post is over, also, we can, we can, you can be on that group, whatever the event
+[43:37] that is happening, or whatever event that will happen, I will post that, even you can register that,
+[43:42] okay, so, yeah, mostly, I will, I will buy weekly, I will explain those things, okay,
+[43:50] the event related, okay. Sure, Krishna, whenever you got time, can you provide the details
+[43:56] on the certification and any material for the certification?
+[44:00] Yeah, yeah, I will, I will share that, I will upload one, you know, drive, one,
+[44:04] follow it on the drive, you will find everything about that, okay.
+[44:07] Sure, and the people that you are showing, yes, yes, yes, yeah.
+[44:10] By 5, 30 or 6 o'clock, I will do that, okay.
+[44:13] Yeah, thank you so much.
+[44:16] Fine, yes, okay, so, we will meet on Monday.
+[44:17] So, Krishna, see if it is submitted and you will be able to talk to this panel.
+[44:30] The DVD is done, there are a few topics pending, we will, we will cover that for our two sessions.
+[44:40] God, there is a DVD number.
+[44:43] No, not for you, there are a couple of other people are there, so, for them, not for you.
+[44:52] We will, we will meet on Monday, okay.

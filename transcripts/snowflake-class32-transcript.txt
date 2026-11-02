@@ -1,0 +1,527 @@
+[20:43] Can you hear me?
+[20:44] Can you hear me?
+[21:04] Can you hear me?
+[21:05] Yes.
+[21:08] Yes.
+[21:09] Sorry.
+[21:10] We talked about different caches.
+[21:12] In result caching, I read it like caching.
+[21:31] What is the other one?
+[21:36] The third caching.
+[21:38] Local caching or warehouse caches.
+[21:41] So these are the three caches.
+[21:43] So I am writing a schedule.
+[21:54] Show where.
+[21:56] So let's take this warehouse.
+[22:02] So the current state is suspended.
+[22:08] So look at these parameters.
+[22:10] So these current things.
+[22:11] What is the current warehouse that you are using?
+[22:18] Auto suspend means if you don't use this warehouse for like two minutes.
+[22:27] It suspends automatically.
+[22:29] What is auto regimen?
+[22:30] Auto regimen equal to true.
+[22:31] Which means you know need to you know.
+[22:33] Explicitly run the statement or order warehouse.
+[22:35] Auto regimen equal to true.
+[22:38] Which means you know need to you know.
+[22:41] Explicitly run the statement or order warehouse name.
+[22:45] So it's auto regimen equal to true.
+[22:57] You do need to run this statement.
+[23:00] It starts autoventilating.
+[23:02] And there is one more parameter.
+[23:06] Can you see this?
+[23:12] Enable per acceleration.
+[23:14] Enable per acceleration.
+[23:18] Currently it is showing as false rightness.
+[23:21] It is false current.
+[23:23] Enable query acceleration.
+[23:25] And there is one more parameter.
+[23:33] Query acceleration max scale factor.
+[23:36] Max scale factor.
+[23:44] So we will understand these two parameters.
+[23:50] So I am running a query guys.
+[23:54] So if you remember in the last session we exceeded one query rate.
+[24:02] That took around two minutes.
+[24:05] It's 42 seconds.
+[24:08] So I will take that query.
+[24:11] Let's run this.
+[24:22] So why you are getting this case within seconds?
+[24:40] Because it is reading from the result cache it is.
+[24:46] Because you already exceeded this query.
+[24:48] So let me disable the result cache.
+[24:50] So auto session set use cache result.
+[24:56] So this is the parameter name.
+[25:00] So make it as false.
+[25:01] Now I disable the result cache.
+[25:21] Let's say it's.
+[25:23] So it will take two minutes.
+[25:45] Now I am just trying to understand whether I can improve the performance of this query.
+[25:51] So what is the current warehouse size case?
+[26:00] So it is extra spawn.
+[26:02] The current warehouse size is extra spawn.
+[26:04] Now we are going to understand what is qah.
+[26:10] Query acceleration qah.
+[26:12] Query acceleration service.
+[26:14] So acceleration means whether I can improve the performance.
+[26:23] I mean I can increase the performance.
+[26:26] So let it execute.
+[26:30] So this is the current warehouse size case.
+[26:41] That is extra spawn.
+[26:47] So it has to read the data.
+[26:49] It has to be removed.
+[26:51] It has to bring the data.
+[26:53] So for that we are using a warehouse.
+[26:56] We are using the warehouse now.
+[27:11] So when I say acceleration, can we see this?
+[27:15] So this is the current warehouse size.
+[27:18] So 8 into the warehouse size.
+[27:22] So if I enable the query acceleration,
+[27:25] 8 times the warehouse size will increase.
+[27:31] We are getting it.
+[27:32] So let us say you have 8 GB RAM.
+[27:40] Or let us say 4 GB RAM.
+[27:43] You are increasing that by 8 times.
+[27:48] So it will become 32 GB RAM.
+[27:51] Similarly in case if you want to multiply the,
+[27:57] let us say this is the current warehouse size.
+[27:59] 8 times in case if you want to increase that.
+[28:02] So it is called query acceleration.
+[28:04] So 8 times your increasing.
+[28:05] See this is the single warehouse.
+[28:09] Can you see this?
+[28:10] How many times it is replicated?
+[28:13] 8 times right?
+[28:14] So which means the warehouse size is getting increased.
+[28:19] Obviously the performance will improve.
+[28:21] Now we will see that practically.
+[28:25] Here 8 represents the max scale factor.
+[28:30] This is the parameter.
+[28:32] Max scale factor.
+[28:34] I am defining it as 8.
+[28:36] So currently it is disabled.
+[28:39] So I will make it as true.
+[28:43] See this is the current execution time.
+[28:45] 2 minutes 37 seconds.
+[28:47] Let me copy the query 8.
+[28:49] So now I would like to understand whether I can input to the performance or not.
+[28:56] So that is the query case.
+[28:58] System.
+[29:06] Estimate query acceleration.
+[29:13] Then you need to provide it.
+[29:20] Variate.
+[29:21] Now you are getting one JSON output 8.
+[29:40] So it is a JSON right?
+[29:44] So I am using your function called pass underscore JSON.
+[29:53] So copy this.
+[29:54] So can you just see this case?
+[30:09] query 8.
+[30:12] What is the status case?
+[30:17] It is normal.
+[30:24] It is normal.
+[30:37] So the current status is eligible.
+[30:40] You can increase the acceleration.
+[30:43] How many times you can increase?
+[30:48] See if you can get by 8 times right?
+[30:51] The query will complete within 38 seconds.
+[30:54] If you increase it by 11 times,
+[30:56] the query will complete within 34 seconds.
+[30:59] So I will increase this by 11 times.
+[31:03] So this is the upper scale factor.
+[31:06] We are getting this.
+[31:12] Currently it is taking around 2 minutes 37 seconds.
+[31:16] So obviously this is a minimum number of seconds.
+[31:20] So I am increasing this to 11 times.
+[31:23] So this is a number.
+[31:27] You will get it from one table.
+[31:31] That is system dollar.
+[31:33] System dollar.
+[31:35] Estimate query acceleration.
+[31:37] You need to pass that query.
+[31:39] So that snowflake says that you need to go with the query acceleration or not.
+[31:50] So let me run this query.
+[31:51] Show where it houses.
+[31:58] So the current.
+[32:00] So the current parameters.
+[32:04] So it is 8k.
+[32:14] But it is false.
+[32:16] Now I have to make this as true.
+[32:19] And this should be 11.
+[32:26] So let me change these parameters.
+[32:28] All the warehouse.
+[32:34] The warehouse name that you wanted to change.
+[32:36] Set.
+[32:39] Enable query acceleration is equal to true.
+[32:46] Create acceleration max kill factor.
+[32:48] You are changing this to 11.
+[32:52] Let's run this query.
+[32:55] Make it as 11.
+[32:57] Show where houses.
+[33:03] Like.
+[33:04] Bebon as well.
+[33:06] I am just looking for only one warehouse.
+[33:09] Let's look at the parameters.
+[33:12] It is true.
+[33:13] Currently it is true.
+[33:14] It is 11.
+[33:17] Let's read on the query.
+[33:19] Okay.
+[33:20] So before running this query,
+[33:21] what I am going to do is.
+[33:22] I am going to suspend the warehouse.
+[33:27] So order warehouse.
+[33:29] Any area by I am suspending this case.
+[33:32] It is true.
+[33:40] It is available for the actual.
+[33:42] Not.
+[33:43] It is, you have to.
+[33:45] To clear the local discussion.
+[33:47] I got it right.
+[33:51] Let's run this.
+[34:00] Order warehouse.
+[34:02] The house.
+[34:03] Okay.
+[34:04] If it is already in the suspended is fine.
+[34:10] Let's execute it.
+[34:15] Visual cache is already disabled.
+[34:17] So I did it it should complete within you know.
+[34:25] 34 seconds.
+[34:26] So, in case of the query is taking lot of time, what you can do is, you can enable the
+[34:56] query acceleration, anyways just observe one point here, I am creating a warehouse, create
+[35:04] a warehouse, let us say a problems for warehouse, so this is a simple statement, now create
+[35:20] a warehouse, warehouse name, so the warehouse is created, now tell me, so do you think the
+[35:33] query acceleration will be automatically enabled, will it automatically enabled or not?
+[35:51] No, we have to, no, by default, the earlier, the recent enhancements, I guess you know
+[35:58] recent two or three months, I guess, from two to three months, I guess, they have made
+[36:04] it as enabled, by default, it will be enabled, so I cannot test in my, you know, real
+[36:23] time enrollment, it is ready to come in, so that is a warehouse type base, in gen2, it
+[37:07] will enable automatically, in gen2 single cluster, so when you are creating the warehouse,
+[37:17] let me go back here, go to compute warehouse, so on the right hand side, go to problem,
+[37:36] click on it, can you see, this is a, this is gen2 actually, you know, I am not sure what is
+[37:44] this, this is gen1, but I will get the information, so it is showing as gen2, so that is
+[37:51] the reason it is enabled, let us say in case, you know, when you are creating with gen1,
+[37:57] you are giving it as extra spawn, scroll down, let me disable this, I will, I will,
+[38:04] the one, let me create a new warehouse, create warehouse, which I will make it as UIT
+[38:11] and the score warehouse, I will make it as gen1, advanced options, so see, this is a query
+[38:23] acceleration, it is disabled, I guess, in case, if you want to enable, you have to click on this,
+[38:28] okay, by default, it is disabled, let us create, okay, now, let me click on warehouse,
+[38:35] I am creating one more warehouse, I will link as just dev, that is it, I am selecting
+[38:42] gen1, click on create, so come back to the workspace, click on show warehouses,
+[39:04] so this is the warehouse that you just created, okay, so it is, it is gen1, so it is disabled,
+[39:21] this is gen2, by default, it will be a data, so I will tell you what is gen2,
+[39:30] so what is, okay, now one more question, okay, so the current warehouse, which I am using,
+[39:39] is dev warehouse, I am running one more query, let us say simple query, so let us start
+[39:46] from, do you have any table, yes, I have a table called employee, now do you really
+[39:53] think, the query acceleration, you know, applicable to this particular query,
+[39:57] so the question is, if I enable a query acceleration, so will it applicable for
+[40:06] all the queries that you are running, or not, so copy the query already,
+[40:14] guys, it will not applicable for all the queries, snowflake itself will automatically
+[40:19] decides whether to go with the query acceleration or not, okay, if you enable this,
+[40:24] by default, it will not applicable for all the queries, so let us run this query,
+[40:29] select, so it will check whether the query is eligible or not, okay, in case if the
+[40:43] query acceleration is enabled, and if the query is taking lot of time, snowflake
+[40:48] automatically decides whether to go with the qa, qa or not, query acceleration
+[40:54] service, okay, copy this, very fine, so what is this, status, it is
+[41:01] ineligible, clear is, if you enable the query acceleration, it will not applicable
+[41:14] for all the queries, one more important point, so look at the same statement,
+[41:27] so there is a table called store sales, copy it, so I need one statement,
+[41:43] if I run this, it will take lot of time, let me run this, select,
+[42:01] where store ID I guess, okay, click on this address as key,
+[42:13] let me do a account of stuff, what is this account of starage,
+[42:27] this is matter data, it is a matter data, okay, so this is the matter data,
+[42:34] how many rows you have, plus to 2, see, 28k million,
+[42:49] these many number of records, now you tell me how many partitions are required
+[42:56] to store this information, many simple downs, to store this information,
+[43:09] to store these many number of records, how many partitions will require,
+[43:22] see when you know start creating the table, as soon as you insert the data,
+[43:29] like automatically creates the micropartitions, let me run this simple query,
+[43:37] limit, let's say, I will, so I am just trying to see the under track parts,
+[43:43] I am using a limit keyword, click on the query ID, just scroll to the right hand side,
+[44:00] can you see the partition, partitions total, you have these many number of partitions,
+[44:07] these are all the total number of partitions, so these many number of partitions required to store
+[44:17] 28k million records, you are getting it, so out of these many number of partitions,
+[44:33] what do you mean by partitions candidates, under partitions,
+[44:44] we check to get the value, I will give you a simple example,
+[44:50] so let's say in your kitchen, you have multiple shelves, you are just trying to find out one item,
+[44:58] so if you don't remember, first of all, it has to scan all the partitions,
+[45:03] you have to scan all the part, you have to open each and every shelf,
+[45:06] to see whether that particular item is available or not, correct,
+[45:10] so let's say you have around 10 shelves, you are trying to find out one particular item,
+[45:15] in case if you know, you know, the item is available in its third rack,
+[45:20] you will, you know, you will scan only that particular rack, correct,
+[45:24] so this is called partition pruning, what is the keyword,
+[45:33] the keyword that will determine is partition pruning,
+[45:37] so when you say partition pruning, let's say you have 100 partitions,
+[45:42] out of 100 partitions, how many partitions that you are reading,
+[45:46] let's say I am reading only two partitions, which means,
+[45:49] you know the required information, right,
+[45:56] you have the information of the exact data,
+[46:02] what are all the partitions that you need to read,
+[46:05] that is called partition pruning,
+[46:08] out of 100 when you are reading only two partitions,
+[46:12] with the required information, you can get it from two partitions,
+[46:16] let's say I am running a serve query, you know,
+[46:20] that query took around 98 partitions,
+[46:24] which means, out of 100 partitions,
+[46:26] it is almost reading each and every partitions, correct,
+[46:31] so here you are not getting the partition pruning right,
+[46:39] this partition pruning is simple,
+[46:41] instead of scanning all the partitions,
+[46:43] you are going to scan only the required partitions,
+[46:45] you wanted to do anything,
+[46:47] no click itself will automatically does that,
+[46:50] but okay, so there is a way, you know,
+[46:53] you can, you know,
+[46:55] just stick or you can, you know,
+[46:57] guides no effect to read only required partitions, right,
+[47:00] so I have any one simple query,
+[47:04] let me pick this ID,
+[47:08] around this, this is the running pet,
+[47:23] now tell me yes, how many partitions it is going to read,
+[47:27] you have close to 380,
+[47:30] 38K partitions are there,
+[47:33] out of these many number of partitions,
+[47:36] to read this information,
+[47:38] how many partitions, you know,
+[47:41] will be going to be scanned,
+[47:43] let's click on the query ID,
+[47:46] scroll to the right hand side,
+[47:54] okay, these are the total number of partitions,
+[48:08] out of this,
+[48:09] it has scanned these many number of partitions,
+[48:12] okay, so it has not scanned all the partitions,
+[48:28] it has scanned only the,
+[48:31] it is required partitions,
+[48:33] but how many records you are getting,
+[48:35] you are getting 762 rows,
+[48:37] correct,
+[48:38] 762 rows,
+[48:41] let me run one more,
+[48:43] let's start,
+[48:44] come on,
+[48:46] let's search with this address,
+[48:48] from this particular table,
+[48:53] group by this address,
+[48:59] so click on this,
+[50:04] anyways,
+[50:05] let's look at the number of records,
+[50:07] so you have close to,
+[50:11] around 32,
+[50:17] 32 million,
+[50:19] so which means each address,
+[50:22] yeah, this is the address as key,
+[50:24] so this address contains
+[50:26] these many number of records,
+[50:36] now just trying to see whether I can, you know,
+[50:39] that I can read the required partitions,
+[50:43] whether I can, you know,
+[50:45] reduce the number of partitions to be scanned,
+[50:47] so I am running one query,
+[50:49] observe this,
+[50:50] system dollar,
+[50:55] the clustering information,
+[50:58] what is the table name,
+[51:02] this is the table name,
+[51:04] and what is that column name,
+[51:09] this is the column name,
+[51:13] and system dollar,
+[51:16] clustering information,
+[51:18] and what it is saying is,
+[51:26] invalid clustering keys,
+[51:28] invalid clustering keys,
+[51:32] or the table is not clustered,
+[51:34] invalid clustering keys,
+[51:39] in case or the table is not cluster, is anybody worked on Oracle or SQLs or databases?
+[51:54] Yes, basically.
+[51:55] Okay.
+[51:56] So you have a concept of index, right?
+[52:01] So in other databases you have a concept of index.
+[52:05] So what index will do?
+[52:07] Index will help you to read the required information.
+[52:10] Not the entire table.
+[52:12] It not scan the entire table.
+[52:14] It will help you to scan only the required.
+[52:17] Partitions.
+[52:19] Not partitions are required information.
+[52:22] So let's say, so my requirement is I'm in a way of condition.
+[52:29] What is the column that I'm using?
+[52:31] I'm using this particular column.
+[52:33] So as of now, it is reading around these minute number of partitions.
+[52:39] I'm just trying to see whether I can make and able to reduce this.
+[52:43] So 8, 7, 3, 9.
+[52:50] Is it correct?
+[52:51] Yes.
+[52:52] Okay.
+[52:53] So what I'm going to do is I'm going to order the table, order table.
+[53:01] This is the table name.
+[53:02] I'm using a keyword called cluster by contrast.
+[53:10] It is saying statement executed successfully.
+[53:16] Let's run this query.
+[53:18] Now you're getting some information, right?
+[53:28] Which means the table is, I mean that particular table is clustered.
+[53:32] Clustered based on this column.
+[53:34] Now let's execute this query.
+[53:36] Okay.
+[53:39] What I will do?
+[53:40] I'll suspend the warehouse.
+[53:41] The warehouse is suspended.
+[53:53] Let's execute this query.
+[53:56] And so you're getting 7, 62 rows.
+[54:16] We call the query ID.
+[54:18] Scroll down.
+[54:31] So partitions can 7, 1, 3, 8.
+[54:46] What about earlier one?
+[54:51] 8, 7, 3, 9.
+[55:07] So out of these minute number of partitions, you're able to read only.
+[55:11] It's around 7K partitions.
+[55:19] It means it got reduced, right?
+[55:23] Early and you have different number, right?
+[55:29] 8, 7, 3, 9, right?
+[55:33] So the point is when you have the clustering key right on a particular column,
+[55:45] it will help you to improve the pruning guys.
+[55:51] It means it scans all the required partitions.
+[55:54] Okay.
+[55:58] Anyways, I'll give you another example here.
+[56:00] We'll see it practically.
+[56:02] We'll, this is having huge volume of it, right?
+[56:05] So we'll take another table and we'll see how the, you know,
+[56:09] partitions pruning is happening.
+[56:11] There is one more way to achieve this.
+[56:15] That is called search optimization service.
+[56:18] That is called SOS.
+[56:19] So we'll talk about discussing tomorrow session.
+[56:27] So I'll just find, we have five minutes right.
+[56:29] I'll just show you one requirement.
+[56:33] So from Monday, we'll, we'll talk about DVD case.
+[56:40] So we'll discuss the pending things in tomorrow session with respect to SOS.
+[56:46] Can you observe this slide?
+[57:01] So in this particular slide, right?
+[57:03] So this is where, you know, the snowflake will come in future.
+[57:07] So within SOS, you have bronze, silver and gold.
+[57:10] Anyways, gold is for the reporting team.
+[57:14] Now, we have the staging layer.
+[57:17] When I say staging layer.
+[57:19] So if I place a file in AWS, right?
+[57:24] Let's say in one of the cloud, I have placed a file.
+[57:26] So that file will come to, you know, the staging area.
+[57:29] Once you have that file.
+[57:31] So we're going to make use of DVD case.
+[57:34] So DVD, it's a transformation tool.
+[57:37] Data build tool.
+[57:39] It is only for the transformations.
+[57:43] So the source for a DVD is.
+[57:47] It's a snowflake.
+[57:49] And the target is also snowflake case.
+[57:55] You're getting it.
+[57:57] But DVD, the source is snowflake bronze layer.
+[58:01] And the target is silver layer.
+[58:04] What exactly it's going to do?
+[58:07] Let's say in the source, I have received some information.
+[58:11] Let's say it is something like this.
+[58:16] So I have received the ID first name.
+[58:20] The last name.
+[58:22] ID is for first name.
+[58:24] Let's say additional.
+[58:26] Last name.
+[58:28] But.
+[58:29] So this is the information that I'm getting from my.
+[58:32] You're raw layer.
+[58:34] Let's say this is bronze.
+[58:36] So what exactly I need to do, you know, in order to move this to the silver layer.
+[58:41] Okay.
+[58:42] So in, let's say the table name is STG and the score.
+[58:45] This is my raw information.
+[58:49] This is a raw table.
+[58:51] But when I move this information to the final layer, what I need to do is.
+[58:58] Instead of having all these problems, I need to have only one problem.
+[59:03] That is, let's say, name.
+[59:05] I don't have, you know, multiple problems for the name.
+[59:09] So I'll simply say I'll come, you know, I'll use a underscore.
+[59:14] To combine first name and last name.
+[59:16] This is one transformation.
+[59:17] What are you doing here?
+[59:18] You're combining two columns.
+[59:20] Okay.
+[59:23] This is a simple, you know, transformation.
+[59:26] The transformation which you're applying is.
+[59:28] You're combining the two columns.
+[59:30] Okay.
+[59:31] So this is called as a simple transformation.
+[59:33] So this is the raw layer.
+[59:35] This is the silver layer.
+[59:37] This is your source.
+[59:38] And this is your target.
+[59:39] So how you're moving this data to your target.
+[59:42] This is the source.
+[59:48] This is your target.
+[59:49] To move the data from source to target.
+[59:52] You're using baking use of DVD.
+[59:56] So data build.
+[59:58] So this is the most widely used to image.
+[60:01] The listing.
+[60:02] So I'll just show you the, you know, the UI.
+[60:07] How, you know, it looks like.
+[60:09] So what you need to do is just go to get dbt.co.
+[60:18] Just search for this.
+[60:20] Get dbt.co.
+[60:22] And at the right hand side, you'll find log in or create account.
+[60:26] I would like to create a new account.
+[60:29] Let's click on create a new account.
+[60:34] So you need a.
+[60:37] No email is here.
+[60:39] So if you want to go with a temporary email,
+[60:42] there is a way guys.
+[60:44] You have temp email dot org.
+[60:46] This will give you the temporary email.
+[60:57] It is the meeting first name.
+[61:09] This is simple, as simple as creating a snowflake account.
+[61:14] If you want to create a new snowflake account,
+[61:16] you have to provide the email address first name last name.
+[61:20] Provide the company bank of America.
+[61:23] Let's do the password.
+[61:25] So I'll give the same password similar to this.
+[61:34] Confirm the password.
+[61:36] And it is asking what is the reason for you to, you know,
+[61:39] creating this account, okay.
+[61:41] I would like to.
+[61:44] Anyways, they're asking.
+[61:46] So what is the source for you?
+[61:49] So let's say I got this information from mine company.
+[61:57] So create the account.
+[61:59] So let's create the account.
+[62:31] So the account is created.
+[62:36] So the dbt account which you are trying to create.
+[62:46] This is called UI.
+[62:49] You're not installing anything right?
+[62:51] You're just creating a cloud account, okay.
+[62:54] So this is called dbt cloud dbt cloud.
+[63:03] So I'll get a verification port.
+[63:05] Go back to the temp email.
+[63:06] Don't close this window.
+[63:07] Scroll down.
+[63:11] Click on this.
+[63:12] Very fine.
+[63:13] Let's say.
+[63:26] Yeah, this is the verification account.
+[63:28] Okay.
+[63:29] This is zero.
+[63:35] You're making an error.
+[63:40] I think maybe I have closed the records.
+[63:47] Let's find.
+[63:51] Okay.
+[63:52] Anyways, I'll show you this in tomorrow session.
+[63:54] So tomorrow we'll talk about the other things.
+[63:59] Search out my service and time permits.
+[64:02] We'll see how to create the dbt account.
+[64:05] And I'll, on a high level, we'll discuss this.
+[64:09] What is dbt?
+[64:10] What is the main purpose of this?
+[64:12] What exactly we're going to do with that?
+[64:14] Okay.
+[64:19] I'll be on time.
+[64:21] So tomorrow we have a session.
+[64:23] I'll be on time.
+[64:24] We'll meet in the process.
+[64:45] Sure.
+[64:46] Sure.
+[64:48] Thank you.
