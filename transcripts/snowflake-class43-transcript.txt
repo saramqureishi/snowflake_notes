@@ -1,0 +1,364 @@
+[08:15] Recording and progress.
+[08:16] Yeah. Good morning everyone.
+[08:30] Can you get me?
+[08:31] Yes, please.
+[08:35] Yeah.
+[08:36] Give me two minutes.
+[08:37] Let me get the admin access.
+[11:56] Yeah.
+[12:55] Yeah, Hi Agni.
+[13:10] Is Krishna Jairi?
+[13:12] Yes.
+[13:13] That is what I mean.
+[13:14] Yes.
+[13:15] He will be better.
+[13:17] Hello.
+[13:18] Raniak Parabhi.
+[13:20] Yes.
+[13:21] Let me share this.
+[13:56] I hope you are able to see the screen please.
+[13:59] Yes, Raniak Parabhi.
+[14:00] Yes, Krishna.
+[14:02] Later, you will come right in the last session.
+[14:28] Let me just check.
+[14:29] The account got expired.
+[14:38] Later, you will come.
+[14:52] Yes.
+[14:53] He will delete any badge.
+[14:54] Yes, right.
+[14:55] I mean, this is for your information.
+[15:00] Let me share this URL with you.
+[15:03] If I open this URL, right?
+[15:08] So these are all the, you know, free badges that you're going to get from a small flick.
+[15:14] So data version works out.
+[15:18] So you can watch these.
+[15:20] You want to.
+[15:21] The slides actually.
+[15:23] So they'll give you the complete documentation.
+[15:25] So once you complete this post you will get this badge.
+[15:29] Let me open the badge, let's say once you are completed, you will get these badges.
+[15:41] You can post this in your LinkedIn profile or you can share this link in your regiment.
+[15:50] So these are all free badges, you know need to pay any due.
+[15:54] You can get these badges, I'll share this URL, whenever you are free you can watch that.
+[16:02] And I'm creating a new account, the older account is not expired, let me create a new one.
+[16:54] My system got restarted, so let me check, it's created the account, let me switch to the UI.
+[20:49] So I'll do the one email, let me activate that one.
+[20:59] I got the email, let me activate, click on activate, let me activate, open a new file, so click on the data built-in.
+[24:29] So as of now we don't have, I mean we don't have any databases, right?
+[24:33] So these are all the databases given by Snowflake.
+[24:39] Learning is not a four databases.
+[25:05] Sir, can we recover our previous data once three trial ends?
+[25:11] Oh no, you need to add a credit card, just if you want to.
+[25:19] We have the class notes, you can read them.
+[25:21] Yes, six.
+[25:22] Now I'm running one more comment, show databases, these are all the databases, my Snowflake.
+[25:27] I'm running one more statement, show shares, look at the database name, look at the database name.
+[25:46] Snowflake and Snowflake sample data, Snowflake and Snowflake sample data.
+[25:53] These two are databases, but how you got these databases?
+[26:02] Through shares, you can, currentity showing as inbound, right, inbound.
+[26:14] So you have two inbound shares, I'll tell you what is the share rate.
+[26:19] These are all inbound shares.
+[26:24] So when I say inbound, someone has given access on this share to you, who given that actually?
+[26:37] What is this, this is the share rate.
+[26:40] This is inbound share.
+[26:41] What is the name of the share, sample data, and this is account usage, okay, I'll tell you that.
+[26:50] So just to explain this, I'll take one more example.
+[26:56] I'm creating a my own database, create database.
+[27:02] So they want us to go daily, create schema, they want us to go.
+[27:17] Just to save the time, I have the data script ready, let me see how it is currently.
+[27:55] So I'm trying to create a warehouse as well, create warehouse, let's run this, let me insert this, this is the account.
+[29:10] So I have one Snowflake account, this is my Snowflake account.
+[29:15] So the concept which you are going to talk about is share, okay.
+[29:18] So by default, you get these databases out of these Snowflake and Snowflake sampled it.
+[29:25] So these two are shares, okay.
+[29:30] These are called share databases.
+[29:34] Which means you are not the one of these account, someone has shared with you, okay.
+[29:37] These are all shared databases.
+[29:40] So how can you identify that?
+[29:41] If you run this command show share, you'll find a keyword called inbound.
+[29:45] Inbound means these are all the, you know, shares you've got from someone, okay.
+[29:51] So through this share, this is a share name list, this is a share name.
+[29:56] Through this share, you've got access to this particular database, Snowflake and Snowflake.
+[30:02] You've got access to two databases.
+[30:07] I have the database plugin, first I'll give you the requirement.
+[30:13] Let's say you have one more Snowflake account, but then let's say this is the other Snowflake
+[30:19] account.
+[30:30] Let me sign out from this.
+[30:45] So I have a new Snowflake account, let me open that, I'll wait a second, this is the
+[31:07] old account.
+[31:14] So I'll login as a visitor, so go to the projects.
+[31:57] So as of now, in this particular Snowflake account, I don't have a database called DevData,
+[32:03] right.
+[32:04] I don't have a database called DevData, I'm writing a command show, shares, by default,
+[32:13] you'll get two shares, I'm writing one more statement, select, current underscore account.
+[32:27] So this will give you the current Snowflake account name list, this is the current account
+[32:36] name.
+[32:37] I'm writing one more statement, current underscore, current organization name, and
+[32:56] current account name.
+[32:57] So if you look at the Snowflake, you are right, so the URL is something like this.
+[33:38] So the URL which we just created is this one, what is the URL that we have created?
+[33:48] The new Snowflake, yeah, this is the new Snowflake account that we have created.
+[33:57] So this is one Snowflake account, this is the other Snowflake account, these are two
+[34:00] different Snowflake accounts.
+[34:01] Now, the requirement is from one Snowflake account, how you are going to grant objects
+[34:08] to the other Snowflake account, these are all two different Snowflake accounts, so this
+[35:09] is the Snowflake account which I just created, come back to the projects, so my requirement
+[35:45] is simple, so from this Snowflake account name list, how can you verify that, how can
+[35:56] you verify the Snowflake account?
+[36:00] Current account?
+[36:01] Yes, let's run this, the current account, this is different, this Snowflake account is
+[36:07] no, let me verify this, so I'm just trying to compare these two things, see what is this,
+[36:28] when you look at the Snowflake combination, what is this organization, let's say you
+[36:31] are working for TCS, okay, so it will be something like this, when you're working for
+[36:36] a particular project, it will be something like this, let's say you're working for TCS,
+[36:41] TCS, I've got, what is the project name that you're working, let's say I'm working
+[36:46] on enterprise data, like like, okay, so this is my organization name, this is the account
+[36:59] number, okay, so combination of all these things is the Snowflake account, okay, you're
+[37:05] clear, your Snowflake account is a combination of organization name and the account number,
+[37:11] so this will, we can work with that in realness, let me come back to the other account,
+[37:28] automation name and account number, so combining these two, this is the Snowflake account,
+[37:33] so the requirement is from this Snowflake, so I would like to share the audits to do
+[37:38] the other Snowflake account, that is, to the second one, okay, so I am the provider, what
+[37:48] I'm providing, I'm providing access to a couple of audits to be consumed, see the point
+[37:57] is provider is also a Snowflake, consumer is also a Snowflake, these are all two different
+[38:02] Snowflake accounts, so I'm giving access on one database, I mean one account audits to
+[38:09] the other Snowflake account, so that is my requirement, so you can achieve this using a concept
+[38:17] called share case, what is the share, you can share the audits between one Snowflake account
+[38:24] and two other Snowflake accounts, or else you can share the accounts between one Snowflake
+[38:31] account to non-Snowflake, let's say this is non-Snowflake, let's say, I mean it's
+[38:41] in non-Snowflake, okay, he's not a, you know, Snowflake user but still, but still I can
+[38:50] share from one Snowflake account to a non-Snowflake customer, okay, we'll talk about these
+[38:57] two, okay, so when I say share, share is simple definition, it'll help us to share the objects
+[39:04] between one Snowflake account to the other Snowflake account, or else one Snowflake
+[39:09] account to the non-Snowflake users, okay, non-Snowflake users, when I say non-Snowflake
+[39:18] users, he don't have the actual Snowflake, even though he is not a user in Snowflake account,
+[39:28] still I can grant that, you're getting the point, even though he's not a user in the Snowflake
+[39:39] account, but still I can grant the access on the objects of the Snowflake, so the requirement
+[39:48] is, I hope your requirement is clear, from one Snowflake account to other Snowflake account,
+[39:52] I wanted to share the objects, so in the current database, I have close to, I have close
+[40:06] to, you know, different objects, I'll just pick only a couple of forms just to show
+[40:10] either, they're like close to 26 tables, so I'll pick only one table, okay, my requirement
+[40:17] is, I wanted to share this database, there would be, I'll let you share the dev schema,
+[40:24] and I wanted to share this, you know, this table, so that is my requirement, okay, so
+[40:34] let me run this command, show shares, so these are all the inbound shares, which are given
+[40:43] by Snowflake, if you want to see these shares, right, what you can do is, so do you see
+[41:01] anything called internal sharing is here, can you see this internal sharing, click on
+[41:07] this internal sharing, so go to data sharing, click on this external sharing, so external
+[41:28] sharing means, can you see this, these are all the direct shares, right, Snowflake and, see
+[41:34] this one, Snowflake and Snowflake, sample data, right, can you see this, this, Snowflake
+[41:44] and Snowflake sample data, so these are all the shares, by default, you will get, once
+[41:52] you create a Snowflake account, you have to hear it, once we create a database, we'll
+[41:59] get some databases, okay, how you're going to get those databases, through shares, the concept
+[42:05] is sharing, so you can see that Snowflake and Snowflake sample data, okay, okay, these
+[42:11] are inbound, right, inbound, these are all inbound, okay, not inbound, now, shared by your
+[42:18] account, shared by your account, okay, so as of now, I have not, I have not treated any
+[42:26] share actually, okay, these are all the shares, given by Snowflake, I don't have a created
+[42:33] any shares, okay, you can verify the shares, okay, okay, let me switch to the other account,
+[42:40] go back to the data sharing, external sharing, so these are all the shares given by Snowflake,
+[42:59] just write up just here, I'm switching to the other account, this is provider, this is my provider
+[43:07] account, why I'm saying this is my provider account, because I'm going to share this particular
+[43:13] database schema and a couple of objects to other Snowflake account, so that is the reason I'm
+[43:20] calling this account as a provider account, okay, so the consumer has to consume these objects, okay,
+[43:34] let's run this command, show shares, I'm going to create a share, create a share,
+[43:48] let's say I'm naming it as test understood share, so I just created one share, let's verify that,
+[43:57] so the share which you have created will be a type of outbound, the type will be outbound,
+[44:03] there are two kinds of shares, are there are two types of shares inbound on outbound share,
+[44:08] inbound means, someone has given to you, outbound means you have created this share, okay,
+[44:15] what is the share name, test to share, okay, what is this, this is your Snowflake account,
+[44:22] okay, look at the provider list, what is the account name, the combination of these two things,
+[44:31] this is the Snowflake account, so this is provider's account name, so who created this,
+[44:44] this particular account, and the name of the share is test share, the type is outbound,
+[44:51] is it associated with any of the database, no right, currently the database name is null,
+[45:01] and there is a column called two, this is also null, which means what you need to understand is
+[45:09] you have created a share, but does it associated with any of the database, no,
+[45:15] have you share this to anyone, no, okay, let me run one more comment, describe share,
+[45:28] and the share name, describe share and the share name, nothing, no results, okay,
+[45:38] which means this particular share is not associated, I mean not having any of the objects,
+[45:47] this can you tell me how to share the, you know, access or let's say if I want to
+[45:55] grant a table to other user, okay, how can I do that, if I want to give the permissions
+[46:03] or to a particular role, right, which command we have to use, use it exactly, right, grant usage,
+[46:11] usage on database, usage on schema, correct, that is what we have to use, let me even let me
+[46:18] copy the same statement, permissions like, yeah, exactly, usage at usage, so I will copy the same
+[46:29] statement, so here what you are trying to do in this example, there is a role manager,
+[46:39] and you are giving the database access, schema access, warehouse and table access, okay,
+[46:47] to you are giving, to role right, to this role you are giving the permission,
+[46:53] similarly, I have a share, so shares, but this is the share, this is the share name, what is the
+[47:02] share name, test share, okay, so to share, this is not at all, this is a share, what you're trying
+[47:14] to do, you are trying to give the database for table TV to this share, and the schema name is
+[47:22] dev schema, and the table is, let's see in the channel, okay, I'm just giving one of it,
+[47:32] before running these three statements, let me now listen, you can describe the share
+[47:42] or you can use it on it, so can you tell me yes, how can you verify the privileges of your role,
+[47:56] show grants to role correct, yes, do you remember that, show grants to role,
+[48:08] and the role in correct, let's say if I give account address, so I can verify the privileges of
+[48:14] this particular role correct, okay, it didn't cover the statement, so related to the roles
+[48:28] on the roles and plans, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no,
+[48:33] I mean I'm just saying this is the state, you remember the statement, show grants to role and the
+[48:38] role in right, so this is the, you know, statement that we have used, maybe I think the first,
+[48:42] the procession, I think I told you right, show grants to role and the role in correct,
+[48:47] so in the current scenario, this will give the privileges of the role, now what I'm saying is show
+[48:52] grants to, I'm just trying to compare, show grants to share with the share, which means I'm
+[48:59] trying to verify what are all the objects that are associated with this, with this share, okay,
+[49:08] so this is one way to verify or you can describe the share, describe share,
+[49:12] now I don't have any objects that are associated with this share, let me grant this,
+[49:23] let me describe, I can say that my share is associated with three omnis, database schema and
+[49:32] the table, there is other way to verify show grants to share and the share, so my share is
+[49:38] associated with three objects, database schema and table, okay, right, now what I'm going to do is,
+[49:47] I'm going to share this with the congeomer, sorry, with the congeomer, correct, who is the congeomer here?
+[49:57] This is the congeomer, so this is the congeomer, so the current account name is this one,
+[50:33] how can you verify this, current underscore account name is, the current account name is,
+[50:47] now my requirement is I would like to share with share this object with the congeomer,
+[50:55] so this is the congeomer account, let's see show shares, there is a column called two which is null,
+[51:09] but this particular share is associated with the database, right, earlier data database name is
+[51:15] also null, right, now it is associated with the database, okay, let me share this with the,
+[51:21] who want to, to whom I need to share this, to this right, to congeomer, correct,
+[51:29] to this congeomer I wanted to share, because the congeomer account, I'm switching to the other
+[51:35] browser, so come back to the box with this, so as of now the congeomer account is not having a database
+[51:45] for a diode DB, because on this particular database, I have working on from, let's say,
+[51:52] past two years, okay, so even the congeomer, new congeomer, okay, who recently a snowflake customer,
+[52:02] he is also into same business, okay, now I wanted to share this information, okay,
+[52:09] to this particular, the new snowflake account, so as of now I don't have any database called
+[52:20] empty V, just write them down here, I'm switching to external sharing, in the external sharing,
+[52:31] as of now I can see two shares, by default you will get these shares, okay, this is the congeomer
+[52:38] setup, let me come back to the provider, I'm writing a statement, all the share, what is the
+[52:45] share name, customer store share, add account, account, and the account name, now this is the congeomer,
+[52:57] so indirectly what I'm trying to do, I'm trying to grant this share to this apple, it shows shares
+[53:04] before running this outer statement, there is a call of two which is null, let me run, show shares,
+[53:16] you have created this share, share, this particular share is associated with this database,
+[53:22] and you have given this database access to other snowflake account, okay, this is the
+[53:30] snowflake account, to this snowflake account you have given the access on this particular share,
+[53:38] I'm switching to the congeomer set out, I'm doing a refresh, see as of now I have only two shares,
+[53:46] I'm doing a refresh, now I have one third one right, test share, yes sir, who given this,
+[53:59] who has given this, this is given by the other snowflake account, okay, what is the snowflake account,
+[54:10] so that is nothing but provider, correct, so this provider has given me access on the share,
+[54:18] okay, now I wanted to consume this, okay, there is an option is get data,
+[54:24] if you want you can change the database too, let's say you can change this too,
+[54:29] if you want a school team, you can't get data, you can't get data,
+[54:37] come back to the workspace, go to the databases, so you have this database,
+[54:58] what it is saying is this operation is not supported on shared database,
+[55:07] okay, this is a shared database, okay, let me come back to this one,
+[55:10] okay, you can see the definition right, this is a normal databases,
+[55:16] normal database which you have created, okay, for this you can see the definition,
+[55:22] but the database, if the database is a shared database, okay, you cannot see the definition,
+[55:29] okay, so there are two types of databases, one is shared database on a normal database,
+[55:35] on a shared database, it's a read only database, you can only read,
+[55:42] so let me select this database, so my role is account admin, I'll use a dev warehouse,
+[55:49] and I'm going to access a database called DevDB, and I'm accessing the dev schema,
+[55:55] now what are the others that I have access, I have access to one table,
+[56:02] it's very the table, okay, I'm able to access a three dots, let me delete these reports,
+[56:12] can I delete, no, okay, in sufficient data, which means, so provider share does not have
+[56:24] sufficient data, which means you cannot perform any of the DML operations, these are all given
+[56:30] while the other, you know, snowflake account, okay, similarly this is a shared database,
+[56:39] correct, snowflake and snowflake sample data, okay, now I'm switching to snowflake sample data,
+[56:45] snowflake sample data, select any one of the schema, let's say I'm selecting customer,
+[56:58] there is a dev cloud customer, so I'm getting around 150 k records, can I delete these records,
+[57:11] no, right, because this is a shared database, you cannot perform any of the DML operation,
+[57:17] you will have only select privilege on the shared database, you're following it,
+[57:25] so the concept which you're talking about is a share, okay, so that of this explaining to
+[57:32] the starting, but do you make that conclusion, now you've got the clarity, there are two
+[57:38] different types of databases, one is shared database, the other one is the normal database,
+[57:42] which you have created, okay, so for shared databases, you'll have only read only privilege,
+[57:48] how can you verify the shared databases, yes, from where you can verify that information,
+[57:53] you can go to the external sharing, okay, so go to the data sharing, you can want this
+[57:59] external sharing, here you can find the shares that you have access, okay, if you want to share the
+[58:07] shares that if you want to see the shares that you have created, can you see this, this is the
+[58:13] share that you have created, okay, and there is one more tab called Manage Consumers,
+[58:21] Manage Consumers, okay, so in this we will, we have one thing called reader record,
+[58:26] what is this reader record, can you see the message means, reader accounts enable providers
+[58:37] to share data with consumers who are not already snowflake customers, this is the definition given
+[58:47] by a listener, so this is what I'm trying to talk about, what is a reader record, so when you say
+[59:01] reader account, so when you will create a reader account, if the consumer who is trying to
+[59:11] access this database or access the share is not a snowflake customer, okay, that's what it is
+[59:19] like, the reader accounts enable providers to share with consumers, the provider, who is provider here,
+[59:28] the snowflake account is a provider, okay, so by using reader account, okay, from the provider
+[59:36] snowflake account, you can share the objects to consumers, this is consumer who are not already
+[59:41] snowflake customers, okay, in a simple way, without becoming a snowflake customer, still you
+[59:49] can access the database objects, so that is the meaning, okay, you'll get the clarity, you'll get
+[59:56] the understanding of this definition is enabled, so we know how to share from one snowflake account to
+[60:04] other snowflake account, correct, from one snowflake account to other snowflake account, what we
+[60:09] can do, we can create a share and we can, you know, grant the required objects to the share
+[60:15] and we can add the required, you know, consumer account, okay, how to add that consumer account,
+[60:23] alter account account name, okay, so alter account account name, and the
+[60:41] prospective account name, this is the snowflake account, okay, now what I'm saying is, we have one
+[60:50] more account called reader account, reader account is also called as managed account,
+[61:00] managed account means, if you go to the X12 sharing, right, manage the accounts, okay,
+[61:16] managed accounts is also called as reader accounts, okay, now I'm doing a statement, show
+[61:24] managed accounts, show managed accounts, we don't have any managed accounts here, which means we
+[61:32] don't have any read accounts, why I'm creating a reader account, because the consumer is not a snowflake
+[61:43] customer, okay, is not a snowflake user, okay, so let's create a reader account, how to create the
+[61:54] reader account, you can go to the X12 sharing, go to managed, um, jimma, simply call this reader account,
+[62:08] just click on view accounts, view means, as of now we don't have any account, okay, let me create
+[62:15] account, there's an option to create a account, so reader account, do you come create,
+[62:19] account name, let's say, just for the understanding, I'm giving it as a reader underscore,
+[62:26] the account name, I'll give it as a reader, comment, okay, so this is for, this is created for
+[62:37] non snowflake users or non snowflake customers, which means the consumer who is consuming this database
+[62:53] or the consumer who is using this database need not to become a snowflake customer,
+[63:04] so I'm setting a user name for the reader account, I'm giving it as something like, let's say
+[63:18] test, let me give it as a test, so I'll give the same password, click on read, it is saying the
+[63:49] pending error, the account take about 5 minutes to be created, we need to wait for a couple of
+[63:58] minutes to create the second, but let me, let me come back to the workspace, show managed
+[64:10] accounts, okay, so what I have done, I just created a reader account, why I have created this account,
+[64:16] this is for non snowflake customers, so the point is non snowflake customers can logged into
+[64:23] this URL, okay, and they can use a user name for the test, and they can log in with this password,
+[64:34] yeah, so for non snowflake customers, I have created a new, I've generated a new URL,
+[64:42] and these are all the details, and what is the account name, this is the account name,
+[64:48] this is for, this is the reader account, the reader account name, URL, user name and password,
+[64:55] okay, let us say, let's say I'm into sales business, okay, now I'm approaching snowflake,
+[65:03] so I wanted to, you know, purchase a product from your end, okay, so do you have any existing product
+[65:12] which shows sales information, okay, see if I'm okay with that product, I'll become the
+[65:21] customer for snowflake, okay, so what they will do, so they'll do a marketing, something like this,
+[65:29] okay, so what they will say, it's not what snowflake will do, they'll say that yes, we have the
+[65:34] existing product, okay, we'll give you a temporary access to, you know, to you, just go through this
+[65:39] product and, you know, you can access what are the features we have, okay, I'm just trying to give
+[65:45] an example, okay, so now I'm, now I wanted to, you know, log into this, so this is a URL that I can
+[65:54] use, because I'm not, I'm not a snowflake customer, okay, I wanted to test whether my requirements will
+[66:00] suit or not, I'm not a snowflake customer, so they have given me one URL, so let's do one thing,
+[66:09] let me use other browser, it is saying, okay, the URL is not yet activated, we'll wait for a
+[66:27] few minutes, okay, mean value, so this is the account that I have created, what is the account
+[66:34] mean base, this is the account name, account locator is the account name, let me run this
+[66:40] command show shares, my requirement is I would like to share this with, with with who, with
+[66:51] non snowflake customers, so for non snowflake customers, this is the account name, let me add this
+[66:59] alter share, share name, add account, for all the reader accounts, this is the ID, see,
+[67:13] this particular share has given to snowflake customers, now I'm giving it to non snowflake customers,
+[67:22] let's run this, show shares, so this time you'll find multiple, you know, accounts, one is
+[67:34] snowflake account, the other one is non snowflake account, that is the reader account, let me try to
+[67:42] find this, all right, okay, now the URL is activated, your URL is activated, yeah,
+[67:52] URL is activated, the user name, user name is test, and this is the password,
+[68:01] test in the password, we'll come back to the work spaces, select the database,
+[68:22] so you should be the admin of this account, you'll call SQL file, select the role as account
+[68:28] admin, select the account admin, even in the workspace also, select the account name,
+[68:38] yet, select it as account admin, now let's see the databases that you have access,
+[68:58] I think we have to get those share, right, yeah, I already given the share access,
+[69:09] so I have given the share access also, let me do all the things, yeah, by now,
+[69:20] it will be external sharing, all right, you already, okay, let me go back to the
+[69:28] external sharing, go back to the external sharing, okay now, can you see guys,
+[69:42] I have access to this particular share, click on this, you can modify this, click on down,
+[69:58] let me come back to the work spaces, click on the database, yes, now I have access
+[70:06] to this database, this is a share database, now I can, you know, test this, they'll give you,
+[70:13] you know, different queries to test, okay, or I'll say you can, you can, I mean, you see,
+[70:21] you can access these audits, so that you can test this one, so at a high level, this is for
+[70:27] non-stoplic customers, radar account is for non-stoplic customers, generally this will be done by
+[70:32] these non-stoplic admins, okay, so to get the clarity, why we have these databases, by default,
+[70:40] if you create a non-stoplic account, why you are getting access to these database access, okay,
+[70:49] so there are some important points that we need to talk about in the non-stoplic account,
+[70:53] so I'll talk to you, but you've got the clarity, what is a, you know, share database,
+[70:59] what is a share, Krishna, I have a doubt here, yeah, in what I'm going to do, what they say is
+[71:11] the provider will be charged for the consumer data, whatever it takes, so he'll be charged,
+[71:18] so consumer is, consuming a lot and it's causing a lot for this provider, how will you,
+[71:26] what is that, reduce the cost, how will you optimize it, so that was one of the questions which I got,
+[71:32] that is, that is the admin related actually, you know, admin part, I'm not sure, I'll get you the answer
+[71:47] mostly, they were, they, actually it's not a developer task, okay,
+[71:54] please, please, please, go ahead, you know, so mostly, what they're asking is from the
+[72:02] data load part, so if we are considering only AWS S3, they're not satisfied, they need something
+[72:08] more like ODA or fine-run, they need some extra things to be included, because we are not
+[72:16] totally relying on Amazon S3, that is from project perspective, so that's what
+[72:22] I felt, what they asked, and one more thing is, in what is the advanced techniques that you
+[72:30] have used instead of the extra, that was one of the questions I got, yeah, and it was part here,
+[72:37] you have seen right, we will talk about it, I don't think so, this is the admin topic,
+[72:56] so I'll share this with you, so this is the, maybe I, maybe you can create your own account,
+[73:02] don't access this, you can take your own account, yes, just for the timing, I'll keep it as it is,
+[73:15] so this is related to the three bad days, in case if you are planning, you can just go through this,
+[73:31] so I'll share this notes with you, I'll just go through that, so we'll talk about this,
+[73:37] no, the performance, we are talking about cluster right in the last session, so I'll continue that,
+[73:48] thank you, hello, yeah, well, can you please upload the interview,
+[74:02] questions and the documents that you have on the drive, yes, just give me time till 430,
+[74:08] I'll do that, okay, thank you,
