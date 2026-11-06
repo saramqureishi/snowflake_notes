@@ -1,0 +1,673 @@
+[05:31] Good morning, Rohan. Can you hear me?
+[05:33] Yes, we can.
+[05:42] Okay, each language.
+[05:44] I'm switching to the other equipment.
+[05:55] So these are all the workspaces.
+[06:29] Let me convert to the databases.
+[06:43] This is called the one that we know.
+[06:45] It isn't a different thing.
+[06:47] I'll show you a couple of things here.
+[07:54] Let me start with this.
+[09:00] So just see the opening.
+[09:02] I want to show you.
+[09:03] So they're looking for the snowflake characteristics.
+[09:07] Can you see the combinations for the combinations?
+[09:10] Snowflake, DBT, Airflow, SQL, AWS.
+[09:14] So these are all the combinations that they're looking for.
+[09:17] And if you look at the responsibilities,
+[09:19] it is generally the snowflake characteristics.
+[09:28] So snowflake, DBT, Airflow, PLD patterns.
+[09:37] Yeah, anyways, collaboration with the different stakeholders.
+[09:42] So these are all the different responsibilities.
+[09:45] They're looking for 15 plus CS of experience.
+[09:49] So in case if you, I mean, someone asked a question,
+[09:52] let me give you the last meeting I guess.
+[09:55] So can you see this case?
+[09:57] So the overall experience is 15 years out of which.
+[10:00] You should know at least, you know,
+[10:02] 5 plus experience on small plate.
+[10:06] And these are the text tag that they are looking for.
+[10:16] And in the current month,
+[10:17] at last week, only we think people got a few entry calls.
+[10:21] I just want to show you that.
+[10:23] Let's see the combination.
+[10:25] So let's start with 28th of October.
+[10:29] 28th of October.
+[10:30] And there is one entry happening.
+[10:33] So this is for HCL games.
+[10:38] So they're looking for snowflake senior data engineers.
+[10:41] Okay.
+[10:42] Snowflake senior data.
+[10:47] This is for HCL.
+[10:50] If you need any difference, just let me know this.
+[10:52] 28th itself.
+[10:53] There is one more entry that is for DCS.
+[10:55] Let me show you the October one.
+[11:06] Yeah.
+[11:07] 6th of October, 5th of October.
+[11:08] 19th of October.
+[11:10] Yeah.
+[11:11] 19th of October.
+[11:12] It is DTCC.
+[11:13] Have you heard about this company DTCC guys?
+[11:17] DTCC.
+[11:18] Yes.
+[11:25] Right.
+[11:26] So they're looking for a database engineer.
+[11:29] Also said snowflake developer.
+[11:32] Okay.
+[11:33] Snowflake developers.
+[11:34] You're only a snowflake developer or snowflake data engineers.
+[11:41] 5th of October.
+[11:42] I mean, just showing the last month updates.
+[11:45] Okay.
+[11:46] So this is for saffron digital.
+[11:48] Good.
+[11:49] The company name is saffron digit saffron digit.
+[11:51] And they're looking for a snowflake expert.
+[11:54] Okay.
+[11:56] So if you're good at snowflake and DBT, you can easily get a job.
+[12:00] Okay.
+[12:01] And those who are like.
+[12:02] Can you need any help in regiment?
+[12:03] Just being me guys.
+[12:05] Okay.
+[12:06] I'll share that.
+[12:07] And also I have uploaded a folder that is entry preparation to the Google.
+[12:10] You can go through that.
+[12:12] It'll have all the certification details under.
+[12:14] I think I have to update for few of the people.
+[12:17] So this is for cab gym.
+[12:19] Yes.
+[12:20] It have this happen on 6th of October.
+[12:22] Only in the last month I'm showing you.
+[12:24] This is for cab gym.
+[12:26] These are on a bogus.
+[12:31] It's fine.
+[12:32] This is not required.
+[12:33] Yeah.
+[12:34] So this is what I just want to show you.
+[12:37] Let's see this one cognizant.
+[12:39] Okay.
+[12:40] So for cognizant, they're looking for a snowflake job.
+[12:56] So we talked about shares right.
+[13:01] Yeah.
+[13:10] So we're talking about shares right.
+[13:12] Share is nothing but.
+[13:14] You can share from one snowflake account or the snowflake account.
+[13:18] Or for one snowflake account to.
+[13:21] The customers who are not yet a snowflake customer.
+[13:25] Two non snowflake users.
+[13:34] So I'm switching to one more thing.
+[13:37] Let's go to the warehouses.
+[13:39] I hope you have.
+[13:41] You have observed this right.
+[13:42] Once you, you know, get a snowflake account.
+[13:45] Can you see this one?
+[13:46] So you have consumed 398 right.
+[13:51] Out of 400 dollars correct.
+[13:54] So the trial I think we just created and then.
+[13:56] It's the only have created.
+[13:57] So you have consumed two credits.
+[13:59] I mean, two dollars.
+[14:01] Two dollars.
+[14:02] So let us say I wanted to set a budget.
+[14:06] But like credit correct, we used to get the alerts right.
+[14:09] Let's say the limit is let's say one lakh.
+[14:12] Okay.
+[14:15] Once you consume 50 percent.
+[14:16] I'll say if you consume 50,000.
+[14:21] He'll get one electorate.
+[14:22] 50 percent of your credits are consumed something.
+[14:25] Let's say if you consume 80 percent 80,000.
+[14:28] You get a message.
+[14:29] You'll get an electorate.
+[14:31] And if you consume let's say 100 percent is.
+[14:35] What is the message that you're going to get?
+[14:39] After this, you cannot use our credit card.
+[14:41] It'll be suspended right.
+[14:44] You cannot use our credit card.
+[14:46] So the point is why you're getting these alerts.
+[14:48] So that is the point.
+[14:49] You're getting the alerts because you can plan the budget right.
+[14:57] You can plan the things right.
+[15:01] You're getting the point.
+[15:04] Yes or no?
+[15:08] You can plan things right.
+[15:10] So that's it.
+[15:11] You're getting the alerts okay.
+[15:12] So we have different warehouses.
+[15:14] Can you see this one?
+[15:15] HDFC warehouse.
+[15:16] They have warehouse right.
+[15:18] Now I wanted to settle limit actually.
+[15:21] Let's say budget monthly budget.
+[15:25] So this is an admin topic.
+[15:27] But in one of the interior they asked actually.
+[15:30] Do you have any area on you know.
+[15:33] RM.
+[15:35] RM means resource monitor.
+[15:41] What is resource?
+[15:42] What do you mean by resource case?
+[15:49] So in the current scenario warehouse case.
+[15:51] This is one of the resource.
+[15:53] Which will provide the computer.
+[15:55] Which will give you the computer.
+[15:56] So for compute also there is a charge rate.
+[15:59] For storage there is a.
+[16:00] There is a separate cost for compute.
+[16:02] There is a separate cost.
+[16:04] Now I wanted to set a budget.
+[16:06] Let us say I have three warehouse.
+[16:08] HDFC warehouse, compute warehouse and dev warehouse.
+[16:11] So on HDFC warehouse.
+[16:14] I wanted to set a budget.
+[16:20] Let's say I'm setting you know.
+[16:22] First let me switch to what is.
+[16:28] Resource monitor.
+[16:30] So you need to go to the compute.
+[16:35] There is an often compute.
+[16:36] Click on this warehouses.
+[16:40] Once you click on the warehouse.
+[16:54] Let me run this statement show warehouses.
+[16:57] Show warehouses.
+[17:13] So do you see anything called.
+[17:15] Resource monitor here.
+[17:17] Any any any calling with the name resource monitor.
+[17:28] Yes.
+[17:30] Right.
+[17:31] There is a column at resource monitor correct.
+[17:33] So the point is.
+[17:37] Is anything monitored on this warehouse.
+[17:40] Okay.
+[17:41] It is showing us a null which means.
+[17:43] Nothing is getting monitored.
+[17:45] So I'm creating a.
+[17:47] No resource meter.
+[17:51] Let me go to the compute holes.
+[17:58] Is that resource.
+[18:04] Okay.
+[18:05] So go to the admin.
+[18:06] Go to cost management.
+[18:08] You need to switch to cost management.
+[18:10] Click on this management.
+[18:13] So once you click on the cost management.
+[18:15] You can see resource monitors.
+[18:17] Resource.
+[18:19] So in the resource monitors.
+[18:21] He's saying no resource monitors.
+[18:23] There are no resource monitor.
+[18:24] We have not created any monitors.
+[18:26] Okay.
+[18:27] So there is an often.
+[18:28] Resource monitor.
+[18:29] Right.
+[18:30] Click on this resource monitor.
+[18:32] You can give a name.
+[18:33] Okay.
+[18:34] Let's say I'm giving it as RM underscore.
+[18:36] HDFC warehouse.
+[18:38] So I'm trying to set up a resource monitor on this warehouse.
+[18:43] Okay.
+[18:44] Credit quota.
+[18:45] Number of credits.
+[18:46] A load per cycle.
+[18:47] Okay.
+[18:48] Let's say I'm setting 15.
+[18:54] Let's put 100.
+[18:56] So on this warehouse.
+[18:58] I'm putting 100 credits.
+[19:00] I'll tell you this.
+[19:01] What is the credit monitor type?
+[19:04] Account level.
+[19:05] This is very important.
+[19:06] What is the account and what is the warehouse case?
+[19:14] Account level.
+[19:15] And warehouse.
+[19:16] At all.
+[19:17] Yeah.
+[19:18] All the warehouses.
+[19:19] Exactly.
+[19:20] All the warehouses are data.
+[19:21] So let me.
+[19:22] Yeah.
+[19:23] No warehouse.
+[19:24] See.
+[19:25] A warehouse means.
+[19:27] It's an individual warehouse.
+[19:30] Account means in one snowflake account.
+[19:32] You can have multiple warehouses.
+[19:34] Okay.
+[19:35] Including all the warehouses.
+[19:37] I'm setting a limit of 100.
+[19:39] Okay.
+[19:41] So let us say.
+[19:45] Let me put 40.
+[19:48] On this warehouse.
+[19:50] I'm setting 40 credits on this warehouse.
+[19:53] That is the limit.
+[19:54] Okay.
+[19:55] What is the warehouse that you wanted to monitor?
+[20:00] I wanted to monitor this warehouse.
+[20:02] Okay.
+[20:03] On this warehouse.
+[20:04] I'm setting a.
+[20:05] A limit of 40.
+[20:07] Schedule.
+[20:12] Schedule means.
+[20:15] Immediately.
+[20:16] Starts monitoring immediately.
+[20:20] Resets monthly.
+[20:22] Okay.
+[20:23] So I'm setting this monthly.
+[20:25] Every month.
+[20:26] The limit is 40 credits.
+[20:28] Okay.
+[20:29] So just for the timing.
+[20:30] It is in like.
+[20:31] Let's say 40 dollars.
+[20:32] Just for the timing.
+[20:33] Okay.
+[20:34] So I'm setting a limit of 40 dollars on this warehouse.
+[20:37] Now.
+[20:40] So the billing team.
+[20:42] The admin team.
+[20:43] Right.
+[20:44] They should get alerts.
+[20:45] Okay.
+[20:46] Because they have to plan the budget.
+[20:48] So let's say you're working for a client.
+[20:50] Okay.
+[20:51] So from the client.
+[20:52] You need to get the billing rate.
+[20:54] So let's say let's take TCS.
+[20:56] So let's say they have a client.
+[20:58] Bank of America or JPMC or city back.
+[21:01] Right.
+[21:02] So let's say TCS is supporting these clients.
+[21:05] Okay.
+[21:06] And every month.
+[21:08] They'll get a budget.
+[21:09] Right.
+[21:10] So let's say you're using snowflake account.
+[21:12] And.
+[21:13] Motify when percentage of credits you use.
+[21:17] Let's say.
+[21:18] If I use.
+[21:19] You know, 50% of the credits.
+[21:21] Okay.
+[21:23] If I use 50% means out of 45.
+[21:26] 50 credits means 20 credits.
+[21:28] If I consume 20 credits.
+[21:32] I'll get a notification.
+[21:34] Similar to, you know, when using credit card.
+[21:37] If I use 50% of my limit.
+[21:40] I'll get a message.
+[21:42] Similarly.
+[21:43] If I use 80%.
+[21:45] Okay.
+[21:47] Which means 32.
+[21:48] In the current scenario.
+[21:50] 80% means 32.
+[21:53] What it is saying is suspend or a disabled.
+[21:57] Notify when.
+[21:59] When this percentage of credits are consumed.
+[22:02] Okay.
+[22:03] If I reach 80% of the limit.
+[22:06] What I'm saying.
+[22:07] I'm saying.
+[22:08] I'm saying suspend or a disabled.
+[22:10] Okay.
+[22:11] Which means the warehouse which you are currently using.
+[22:15] Let's say you're running a job.
+[22:17] So let's say the job is taking 15 minutes.
+[22:21] It is taking 15 minutes.
+[22:23] And let's say the limit is reached 80% you have reached.
+[22:26] Okay.
+[22:27] So in that scenario.
+[22:28] What it does is.
+[22:29] It will wait until the job completes.
+[22:31] Then it suspects.
+[22:33] Okay.
+[22:34] Let's say if I reach, you know, 90%.
+[22:38] Suspend or disabled immediately immediately means.
+[22:41] Let us say there is a job which is currently running.
+[22:44] Okay.
+[22:45] It will abort the, you know, execution.
+[22:48] And it suspends the warehouse which means.
+[22:53] The job will not complete.
+[22:55] If you reach 90% of the limit.
+[22:58] The current jobs which are running will be suspended immediately.
+[23:02] But once you reach 80% it will wait until the job completes.
+[23:08] Then it will suspend.
+[23:11] Okay.
+[23:12] So this is not for you.
+[23:13] This is for the admins.
+[23:14] So based on these alerts, right.
+[23:16] So they'll plan the budget.
+[23:17] Okay.
+[23:19] So you have to attach a credit card.
+[23:21] Okay.
+[23:22] So through this credit card, you know, you can make the payment.
+[23:25] So let me create a, I mean, sorry, resource monitor.
+[23:33] So I created one resource monitor.
+[23:37] It says how much percentage of use?
+[23:40] What is the level?
+[23:41] It's at the warehouse level frequency monthly.
+[23:44] So the monthly budget is 40.
+[23:47] Okay.
+[23:48] Let me create one more warehouse, one more resource monitor.
+[23:52] Click on create.
+[23:55] So I don't want to create on a individual warehouse.
+[23:58] I wanted to create at the account level.
+[24:01] The account is resource monitor.
+[24:03] So R and account level.
+[24:09] This is the name you can give any name.
+[24:11] But just for your understanding, I'm giving this account level.
+[24:14] Credit code.
+[24:15] Let's say I have three warehouses.
+[24:17] So for each warehouse, I'm giving 40.
+[24:19] So it will, it is 120.
+[24:21] Monitoring type, account level.
+[24:26] Not at the warehouse level.
+[24:28] I'm monitoring the complete account level.
+[24:31] So this will be on a monthly basis options.
+[24:35] In case if you want, you can add one more, you know, option.
+[24:40] Okay.
+[24:41] Let's say if I reach, you know, 30%.
+[24:43] 50%.
+[24:44] 70%.
+[24:45] Let's say 80%.
+[24:47] So it will be, it will be decided by the admins and the, you know, the top management.
+[24:57] So 30% is 50%.
+[24:59] I should be notified.
+[25:00] 70% is the running jobs should continue.
+[25:03] Let it has to suspend.
+[25:05] 80% is means it has to suspend all the running jobs.
+[25:09] Okay.
+[25:10] Anyway, the admins will check here itself.
+[25:14] Once they reach 70% is.
+[25:16] So they will maintain the sufficient budget.
+[25:21] And sometimes, right.
+[25:23] I'll give you one example.
+[25:25] So when you're writing the code, right, you need to see the cost also.
+[25:36] Okay.
+[25:37] So unnecessarily, if you are, you know, based in the credit site.
+[25:41] So they, they will monitor that.
+[25:43] Okay.
+[25:44] So let us say the admins got an email, saying that 80% is of the credits are over.
+[25:50] Okay.
+[25:51] Then they check different things actually.
+[25:53] Okay.
+[25:54] Why these many credits are consumed?
+[25:58] Okay.
+[25:59] So they need to monitor that.
+[26:00] Why these many credits are consumed?
+[26:02] Okay.
+[26:05] So now tell me, guess what are the things, you know, that you need to take care of.
+[26:12] Let's say you, you got a message stating that 80% is of your credits are consumed.
+[26:17] 80% is of your credits are consumed.
+[26:20] 80% is of your credit.
+[26:22] So what you need to verify exactly.
+[26:25] You need to verify the warehouse, right.
+[26:28] We are all using the warehouse.
+[26:29] Let's say we have our own 10 developers, who are running different queries,
+[26:35] and you know what are running different jobs.
+[26:40] Now you need to verify what are all the jobs that are taking time.
+[26:43] Okay.
+[26:44] Where exactly are the cost is, you know, getting more.
+[26:47] So, you have to verify that. So, that means it takes care of you know verifying the you know
+[26:52] the top consuming queries. And then you need to identify is there any way that I can you know
+[26:57] improve the performance ok to reduce the consumption ok. Let me down this comment show resource monitors.
+[27:13] So, as of now I have two warehouse two you know resource monitors. One is at the account level
+[27:18] warehouse level. And these are all the parameters case ok when you know
+[27:24] differ when you suspend when you want to suspend immediately ok. These are all the resource also
+[27:31] let me down one more state of show where process scroll to the right hand side. So,
+[27:45] earlier the resource monitor is showing as want null right. Now, there is a monitor here ok.
+[27:53] Which means this particular warehouse is getting monitored. So, so there are there are different ways
+[28:08] to improve the performance. But we have a resource monitor at account level as well right.
+[28:14] We will see the account level is there. I am just telling you so this is completely for admins
+[28:19] actually. So, they will get the alerts ok. They will get a they will get a notification.
+[28:26] So, based on that they will you know take the actions. It will not show in this table.
+[28:32] It will not show in the bare houses here it will not show it the warehouse level there is a
+[28:39] column here you can check that which you know which resource monitor has
+[28:44] tied up okay now let's say I have identified there is one query which is
+[28:51] taking a lot of time now we'll see how you're going to fix that okay so we'll
+[28:58] discuss that so before that do you know what are the different cost case so
+[29:07] okay for that let me ask you all yeah but tell me do you think warehouse is
+[29:18] a database object is database is warehouse is a database object no right
+[29:30] warehouse is different database is different just to explain this I'll just
+[29:39] give you one example I'm creating a user let's say I'm creating a role so
+[30:29] therefore I'm giving the permission grant for the one-score role to a user
+[30:36] now I'm logging as Vijay tell me can Vijay create a database but the user
+[31:25] who is having a role called Devon the score role can they create a database
+[31:30] the privileges are not given right just so let's say I'm selecting Devon trying
+[31:40] to run a state but create a database that's a QA underscore degree it is saying
+[31:48] create database is not granted so this particular role so runs to role what is
+[31:57] the role that I don't have any privileges let me get the performance so this
+[32:05] is to explain the difference between these two ways okay I'm running a statement
+[32:10] grant created a database on account how can you get the account name
+[32:21] current account it's current it so from this I can get the account this is my
+[32:28] question to role Devon the score you're giving the privilege to create a database
+[32:36] on this account and create a database on account you don't know it is
+[32:43] specified by default by default so that's definitely executed successfully let me
+[32:50] go back to the user let's run this statement now you have a privilege created
+[32:56] from my point is I'm able to create a database can I create a schema no yes you
+[33:08] can create see you have the database access right once you have the database
+[33:11] access you will have whatever access to all the underlying objects right you
+[33:16] can create all the objects right yes I can create a schema right so let's say
+[33:20] QA underscore schema I can create all the objects I can create a table I can create
+[33:26] all these objects right so now my part is can I create a warehouse no
+[33:34] no create a warehouse let's say QA underscore warehouse okay it is different so
+[33:42] database is different warehouses so you again you have to get the privilege
+[33:48] so the privilege is say create warehouse I got the privilege now let's create
+[33:57] the warehouse basically here so when my system is completely charged it is
+[37:15] automatically getting switched off so we were talking about the difference
+[37:36] between the database and warehouse so these are two different objects now
+[37:45] what are the you know what do you want to storage cost it is with respect to
+[37:55] the database right so whatever the data that we are storing okay so there will
+[38:01] be storage costs so I'm just switching to the databases okay so come back to
+[38:16] the I know the cost management so can you see this it is saying okay so 0.6
+[38:43] credits are used I'll tell you what is the credit 0.6 credits are used
+[38:51] number second and number third so these are all the warehouses so on this
+[38:58] warehouse so you have a consumer 0.3 credit here you consume 0.1 credit 0.2 here
+[39:04] you consume 0.1 credits okay this is what usage type is compute with respect
+[39:12] to the warehouse now usage type storage storage means database database so
+[39:23] anyways you have only what are databases you know this on all of this I'm just
+[39:31] checking all the objects anyways as of now we have not you know created any
+[39:38] objects right what is this case stage costumes internal and external
+[39:53] so whatever the five let me say whatever the worksheets okay so these worksheets
+[40:03] so these worksheets will be automatically saved right these are a lot of
+[40:13] saved right you know need to save these worksheets explicitly what is the
+[40:17] command that you are typing at these will be automatically saved where it will
+[40:22] save it stores to the interunstage so you can verify the cost what is the cost
+[40:30] with respect to database with respect to the this is database cost this is
+[40:35] warehouse cost you can verify those cost anyways you will not get a chance to
+[40:40] verify that unless you run again or else you could through queries you can do
+[40:45] that but you should have a proper privilege so I give you the queries
+[40:51] the list of queries to you know verify that and there is one more point that
+[40:56] you need to understand before we discuss about clustering is you need to
+[41:02] understand and I need to create table so I'm creating a table the table name is
+[41:29] customer I think we already have to stick I think we have a table but we don't have
+[41:44] anything so I'm using the existing schema in software sample later there is a
+[42:01] schema called dpsf10t so I'm using this table anything is why I'm unable to
+[42:41] clear this so I think the warehouse is suspended this query is taking some time
+[43:21] you know this how to verify the size of the table the people from
+[43:43] Oracle background now you have a dba db blocks right so from there you can
+[43:50] verify the table size okay but in snowflake let's say I have created this table
+[43:54] let me verify the number of records so these many number of records how many
+[44:07] records are there there 65 million like that 65 million we have 65 million
+[44:32] records so I wanted to you know know the size of this table so if you want to know
+[44:41] the size of the table you can go to you know there is a function
+[44:46] there is a table actually you can go to information schema dot tables
+[44:56] table just give the table in tns. So you will find a column called active
+[45:07] bytes right here can you see the active bytes column so this is a this is a
+[45:15] size of table okay these are out by this actually you can convert this to
+[45:22] the table in the bytes you can convert this to order you want to convert this
+[45:32] to mb study you can convert that so how can I convert this to mb it's 0 to
+[45:42] 4 and 0 to 4 into 0 to 4 so this will be the size in mb so this is the
+[45:55] mb if you want to come just to around out just to around function okay this
+[46:06] is the size of the table in mb this is the size if you want to convert this to
+[46:21] gb's also you can convert start one more 0 to 4 a 2g it means this this
+[46:41] particular table is of 2gb size now the thing is I wanted to take the
+[46:49] back up of the table tell me is how much space you need how much storage you
+[46:55] need to back up the table my requirement is to perform some email operations
+[47:00] I wanted to perform some updates and deletes but in case if something goes
+[47:07] wrong I need a I should have a backup copy so that I can restore so that is
+[47:14] my requirement base so if that is the case okay so how you're going to take
+[47:21] the backup of this table and one more part is what how much you know size
+[47:28] you require what would be the backup table size you didn't close we can take
+[47:34] backup so generally if you take generally how to take the backup so this is a
+[47:53] traditional way that we used to do not take the back up of this table yes yeah
+[48:07] we will take yeah this is the traditional way of doing that so in this scenario
+[48:11] the backup table will not be by how much space 2gb so the original table size is
+[48:18] also 2gb so it is taking time which means so total you you know you need
+[48:29] additional 2gb of space to take the backup okay so this is one way but in
+[48:35] snowflake there is a feature that is called zero copy clothing so when is why
+[48:42] I'm saying zero means if you take a backup of the table you don't need a storage
+[48:50] no storage is a point so what I'm going to I'm going to create a table let's say
+[48:55] I'm namely it has a clone clone the condescable that's it okay if you want to
+[49:07] give a different name also but I'm just giving create table table in clone
+[49:11] this particular which means you are creating a table based on the existing table
+[49:16] right you are cloning this table you are not creating a new table you are cloning
+[49:20] this table so once I clone this table so the statement is
+[49:28] executed within within one second that within a one second you were able to
+[49:33] create the clone of the table so when I clone a table it so there won't be
+[49:40] any storage box yeah both the tables will have the same number of reports
+[49:47] it's also having 6.60 million even the original table is also having 60
+[49:55] million so the part is both these tables both these tables will share the same
+[50:01] matter both these tables will share the same matter tables okay
+[50:08] they're getting the part so but in the earlier scenario when you take a backup
+[50:20] of the table so this is completely a different table this is a different table
+[50:25] this is a different table both will have their own matter data okay so same
+[50:33] matter data and also they will share the same number of micro partitions okay
+[50:37] and they share the same micro part so both these tables will point to the same
+[50:46] micro partitions so that is the reason you don't need an additional you know
+[50:51] storage they don't be any any additional storage cost so when the table is
+[51:01] deleted so the backup so what I'm trying to do is I'm trying to delete
+[51:07] for lots of reports where let me just check the columns on this table
+[51:16] described table T and a score customer so from the
+[51:43] so from the main table in the base table I'm deleting a couple of reports sorry
+[51:49] delete from the main table so I'm deleting a couple of reports you don't have any
+[51:59] reports so these many different parts got deleted from the main table
+[52:20] now tell me is what happens to your clone table it will be same but it will
+[52:32] occupy space right now no changes in clone okay so the point is you'll not so I'm
+[52:45] just checking the main table so in the main table you have deleted these
+[52:52] many reports but there won't be any change to your clone table but what happens
+[52:58] to you know these reports but there is there is there will be a storage cost list okay now
+[53:04] snowflake has to you know create new partitions for these for these
+[53:09] reports okay we're getting with one so I'll tell you what will happen if I insert
+[53:18] update delete okay what happens to the partitions will just indeed
+[53:26] so once you got some area on these partitions what what exactly is going to
+[53:30] happen once you insert a data update or delete okay so tomorrow session is very
+[53:37] important just the stimulus once you create a clone table by default there won't be any storage
+[53:45] cost okay that is the reason we are calling it as zero copy clone why we are saying zero copy
+[53:50] cloning because both these tables with the main table and the clone table will share the same
+[53:56] micro partitions okay but if the current scenario what I have done is I have deleted three
+[54:02] records from the main table so that is the reason there'll be a storage cost for the for these
+[54:10] records which you have deleted from the main table because the clone table has to maintain these
+[54:14] records right so then there will be a storage cost and one more important part is whatever the
+[54:20] changes that you are you know making to the main table or clone table is both are independent okay as
+[54:29] long as the data is not changed so there won't be any storage cost okay if you you know if you
+[54:34] delete or if you update something and there will be a storage cost I'm running one more statement
+[55:06] information is cannot talk table storage metrics table storage metrics so I'll pick only one
+[55:21] let's pick a block tables okay table underscore catalog equal to let me give the database
+[55:32] to us they have deal so there are 30 reports and let me filter the schema name table underscore schema
+[55:52] equal to that schema yeah we have 30 reports so the you need to observe ID and clone
+[56:12] can you observe these two colors the values ID and clone to buddy both are same right okay so ID
+[56:28] and clone to buddy both are same but look at the table which we just clone what is the table image
+[56:36] that we have just clone so look at this table so concentrate on the main table this is the table
+[56:54] so look at the clone table so for the clone table the ID and clone to buddy both are different
+[57:16] you can let me read one more statement ID is not equal to clone group ID so if you want to
+[57:28] identify in water all the clone tables that you have you need to run this statement if ID and
+[57:33] clone group ID are not same which means this particular table is clone from which table
+[57:42] six one four six now I wanted to identify what is the table what is the base table from which I
+[57:50] have clone the clone this table storage metrics where where ID equal to this clone group ID six one
+[58:09] two four six tell me what is the table table in P and S code so I can say that the table
+[58:24] customer clone is clone from this particular table generally in the QA environment you will
+[58:36] find these clone tables because you wanted to have a production data right in your QA environment
+[58:44] you wanted to test the you know all the scenarios based on the production data so what they will
+[58:48] do they'll take the production clone okay and they'll create the table they'll create the clone tables
+[58:54] in the QA environment okay the QA tables will will be a clone of production tables okay what is the
+[59:02] advantage is instead of creating the you know normal tables from production what if you clone these
+[59:10] tables what is the advantage that you're going to get data consistency and yeah obviously
+[59:17] all right so generally when let's let's take Oracle as an example let's say if I want to test
+[59:25] you know the scenarios I want to have the production copy okay so what they will do they have to
+[59:31] you know load the data from production to the lower environment so that I can test the real scenarios
+[59:39] but when it comes to stuff like what you can do is you can create a clone of you know the production
+[59:45] the advantage is the data mostly mostly I can say there will be there will there won't be much
+[59:53] changes right to the data so I'll have less storage cost getting the one if I use the clone tables
+[60:01] there will be very less cost okay but if we in case if I recreate those tables there will be a lot of
+[60:07] cost because I had to you know just load the entire data there will be a storage cost that is
+[60:15] once in a year and the other scenario is when you're doing the production deployments let's say I'm
+[60:20] moving I know let's say I have worked for like two months and I'm moving all the changes to production
+[60:28] early in production what they will do right so in case if something goes wrong right let's say you
+[60:33] deploy the changes and for some reason the application is not working so immediately you have to
+[60:39] roll back the entire all the changes whatever the changes that you have deployed as part of the
+[60:44] particular is you have to revert those changes right so know what they will do is you can clone the
+[60:53] database of let's say I create database they want to go DB and the store clone clone database
+[61:04] so you are loading the entire database or else you can clone a respective schema also okay now in
+[61:12] the current scenario I'm loading the database I'm taking the entire database back so in case I can
+[61:26] I can take a schema of like a box or create schema let's say bank what is that schema name
+[61:32] so I'm using DevDB or DevSql I'm just taking the backup of
+[61:41] DevDB or schema of the store clone now I'm loading the schema you can take the backup of a database
+[61:54] or a schema or you can take the clone of a table and anyways you will not have permission to
+[62:02] begin this object but you can request the admin to not take the backup of any required
+[62:08] or clone any required data so tomorrow we'll talk about this case so what is a partition
+[62:19] so what will have what exactly will happen when you insert or wait delete and let's say if the
+[62:27] query is taking lot of time what are different ways to improve the performance like creating a
+[62:33] cluster in the search automation service very acceleration service okay so yeah we'll talk about
+[62:44] these in our database there are one more table if we unfortunately delete the main table what
+[62:51] will be the clone table will be the same yeah yeah that's what you know it will be there that is
+[62:57] the advantage so let's say I'm drawing this table like all tables DNS for custom you have the
+[63:10] clone make this we have this so clone table will exist there's that's what once you clone both
+[63:30] are independent as long as the data are not changed there won't be any cost in case if there are
+[63:36] any changes there will be a storage version that's you're not able to exist here time travel will
+[63:42] help here are sorry yeah you can do it in case if you want to take the you know
+[63:47] restore the main table yes you can do with us the time travel on one question Krishna
+[63:55] what's the difference between on drop and team that's what so this is a time travel feature and drop
+[64:05] is also time travel feature so I'm creating a table let's say it's in the table names
+[64:31] thing we have the problem let's create this table as let me get the DDS I hope you know
+[64:39] how to get the DDS select get on a score DDS I wanted to take the DDS out the state
+[64:53] what the DDS in case when you're creating the table in just issues specify something else
+[65:17] so I'm creating couple of tables says one table let's say this is let me name just one
+[65:25] and this is two so the table which I'm creating I'm giving it as two days let's say this is
+[65:35] underscore zero zero means there is no attention the table is created and I'm creating one more table
+[65:45] where I'm defining the rotation as two days I'm dropping this table I'm dropping both the tables
+[65:57] so they're all table the table that table is drawn similarly I'm talking one more table
+[66:13] both the tables are dropped what is that table name can I restore this table on drop on drop is to
+[66:47] you know restore the table on drop table I'm trying to on drop this table it is saying table
+[66:56] successfully restored why it got restored because there is a time travel it two days within two days
+[67:04] you can recover this what happens to the other table can I on drop this it is saying
+[67:18] the table does not exist are first because there is no retention time you're not specific
+[67:25] for any retention time you got it okay will time travel work on
+[67:36] yeah if you enable the time travel it's you can you know on drop on drop on drop
+[67:45] okay saying what clone table right yeah clone table yeah same same by default it will be there
+[67:54] you can verify that I go to information schema or tables no no I'm clone zero table and not
+[68:01] is not what because data retention period is zero so if I use the time travel upset if I use
+[68:11] will it work on that table see yes that's what I see clone table also you can find that's see
+[68:22] generally on clone tables we we won't perform this
+[68:32] so this is the table name right what are the tables we have with clone
+[68:35] customer clone that means because you have one day right one day after retention time right
+[69:15] you can do that this one the customer clone on scope zero that is a normal table that we have
+[69:24] treated that's a normal table that is not a clone it that's a normal table normal that we have
+[69:31] for this I have not defined anything okay no time travel so you cannot reach
+[69:36] okay but from DM and see if you cannot reach
+[69:41] and by one thing is if I use if I commit so will and not will what no there is no commit it's
+[69:51] auto commit it's not like it's auto commit there won't be any rollback and it's auto
+[69:58] commit it's will will work on this things tomorrow
+[70:08] yes Rishnan able to see the uploaded document yeah I'm unable to we wait
+[70:15] can you please check the drive I already uploaded actually I've checked it it is not there
+[70:20] are there Christian or one minute we didn't get any Christian right now just tell me I'm just
+[70:26] checking that just tell me just stay on the line for two minutes I will just tell you
+[70:29] one can you tell me that drive lane with the the Google I need to say the drive from which you are
+[70:46] receiving why I think I think okay okay right I'm just checking so if you go
+[70:54] that your place now probably waiting here yeah I'm just checking that so there'll be a four
+[70:58] okay one moment I have copied the link in the chat baller you can check from there one one
+[71:52] I'm just checking here can you please check now I just created one folder that is
+[73:23] into preparation can you see that yes we can see into preparation no no I cannot
+[73:34] we visit under seven-aim batch now it's 16th September 8 AM batch one minute one
+[73:41] sorry officially in front for September it is not there okay one second it's yeah it's
+[73:47] YIT sf August 7 AM yeah just checking one one minute yeah one but I'm just checking double checking one
+[74:04] and just try it now it should be there yeah it's not now it is now yeah it's dead question
+[74:45] okay yeah yeah fine so we'll make it into more action thank you
