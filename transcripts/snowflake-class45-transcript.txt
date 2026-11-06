@@ -1,0 +1,288 @@
+[08:43] I hope you are able to see this screen, let me know what are the workspaces, so you know
+[11:40] what is synthetic data, what is synthetic data, I will give you the record, so let's say
+[11:56] you are working on a you know financial or health care, so there is some sensitive information
+[12:04] like, so like if you come to you know health care, the patient you know information okay,
+[12:14] let's say the patient insurance, let's say there is a patient who has insurance
+[12:19] and let's say he is suffering with the disease okay, so that is you know protected health
+[12:24] information, protected health information okay, P.M. means personal information, like
+[12:30] if you are in U.S., there is a sand right, if you are in India, your other card part right,
+[12:36] these are all personal information, protected health information okay, so this is you know
+[12:43] this is a sensitive information which you are not supposed to disclose with any of the other people
+[12:50] okay, so once you have this right okay, so generally to you know to generate some you know dummy
+[12:58] data, we will go with the synthetic data, so that is called synthetic data okay, so I am running
+[13:04] one select statement, this is to you know generate the synthetic data, this is what, so I am creating
+[13:14] a table because I don't want to replicate the exact data, because that may be you know
+[13:22] relative or patient okay, which I don't want to do that okay, in case if that got disclosed right,
+[13:29] so that there is some insurance, that's a data for it's someone okay, so I just created a table,
+[13:36] now I mean I am generating some synthetic data okay, so how you will generate the synthetic data,
+[13:43] you have to use these functions okay, can you see this because I am using SAQ8 or this will generate
+[13:52] the sequence okay, uniform data okay, uniform I am using a paper uniform generator okay,
+[14:00] I am using a table function called generator okay, so I am running this insert step,
+[14:05] let's run this, you can use this statement yes, if you want to generate any you know some dummy
+[14:13] data you can use this okay, so I have inserted close to how many records this how many records we have
+[14:19] in this table, close to 20 million records, we have 20 million records, I am running one select
+[14:45] statement, so Rick star from here, so I am just trying to see to store these 20 million records
+[14:56] okay, how many partitions are required okay, let me click on a query ID, let's click on the query ID
+[15:07] so how many partitions are required is 8 partitions guys okay, can you see the total partitions,
+[15:18] so don't worry about these partitions, this will be taken by snowflake, once you start inserting
+[15:24] the data, snowflake automatically stores the data in the in micro partitions okay, so in the
+[15:33] current scenario to store these 20 million records, I need 8 partitions right, but how you are
+[15:43] going to you know how snowflake decides say partitions yeah, so there is a size this 50 mb to
+[15:51] 500 mb yeah, so that is the size of the partition, so this is very between 50 mb to 500 mb
+[16:04] yes, so as per the snowflake documentation yes, it is this is the one okay, it is it is between
+[16:09] the 50 mb to 500 mb okay, so can you see this each micro partition contains between 50 mb to 500 mb
+[16:19] okay, so it will be automatically taken get by these you know snowflake, now I am running one more
+[16:27] hurry, so let's say I am just trying to find out one employee, let's say I am just giving it as one
+[16:40] number, now tell me guys to read this data how many partitions are required to read this data,
+[16:52] if we don't know right okay, we know that there are 8 partitions, out of 8 partitions,
+[16:58] I am running one select statement, so I am getting one record actually, so let me click on
+[17:05] this query, why it is saying 8 partitions is, you are just trying to find out only one single record
+[17:20] right, out of 8 partitions, I mean out of 20 million, you are trying to find out only a single record
+[17:29] okay, then why it is you know scanning all the 8 partitions, it is not a
+[17:43] primary or something, so we need to close the read okay, so the point the term which you need to
+[17:50] understand is partition pruning okay, so partition pruning okay, so basically when I say partition
+[18:03] pruning it, it avoids the unnecessary scanning okay, getting my point, what is the partition pruning
+[18:13] partition pruning means it avoids the unnecessary scanning of the partitions okay, so I need to scan
+[18:19] only those partitions where my data is available okay, then what is the advantage guys,
+[18:26] what is the advantage that you are going to get, if you have a partition pruning, query execution
+[18:31] is fast right, query execution is fast, you will scan only required partitions and you can
+[18:38] reduce the cost correct, what is the cost that you are going to reduce, compute cost correct,
+[18:44] getting my point, I am running one more query, do you have a higher rate, we have a higher rate,
+[19:00] so let me first verify the, I have already prepared the query because I have to test this,
+[19:06] okay, so I am just running one more query, let me find out the minimum and maximum partitions,
+[19:15] so the table name is EMP, now I am just trying to find out what is the minimum,
+[19:23] I did max, I did okay, mean and max case okay, so minimum, what is the minimum
+[19:30] joining it, and the maximum joining data, so let's say I wanted to find out the
+[19:40] employees who joined between these two dates, let's say from 19, so 6th right, June 1999-2,
+[19:58] let's say 2020 what okay, so I wanted to find out the employees who joined between these two dates,
+[20:08] so let's run this, click on the query area, so it is scanning all the partitions right,
+[20:36] so you are not getting the partition pruning, partition pruning means it has to scan only the required
+[20:42] partitions, so do you really think the data which is how many records are there, so 16, okay,
+[20:51] how many records takes, you know, you have 16 million, 1.6 million, okay,
+[21:02] because I will pick the dates, you know, where we have only less number of records, okay,
+[21:11] let's say I wanted to find out the employees who joined in the month, okay, in the month of June,
+[21:23] okay, 012, let's say June we have 30, 113, sorry, June we have only 30 days, June 30,
+[21:41] let's say how many employees are there, you are doing 23,000, okay, we have 23,000,
+[21:50] so for these 23,000 records, how many partitions it is scanning, it is still scanning all the
+[21:59] partitions right, which is not correct, yes or no, now I need to see, I need to improve the performance,
+[22:09] okay, so what we can do is, there is a concept race, sorry, we have clustering key, yes,
+[22:19] cluster key, I think people from Oracle background, you can understand, we have different indexes
+[22:23] right, in Oracle, beta index, beta appendix, function based index, reverse key index, right,
+[22:28] there are different types of indexes, in other databases, when it comes to Stomplich,
+[22:32] you have a concept called clustering key, okay, so the thing is I am using a column, okay,
+[22:38] in the wave condition, I am just trying to filter these records, okay,
+[22:43] so let's try to create a clustering key, before that if you want to verify whether table is
+[22:48] having cluster or not, you need to use a function system dollar clustering intuition,
+[22:56] clustering, you probably should, this will help you to verify that table is having a clustering key
+[23:02] or not, let me pass the table, it should say that the table is not clustered, okay, can you see this
+[23:09] EMB is not clustered, okay, so now I would like to create a clustered, so on which column we need to
+[23:15] create a cluster race, on the table, okay, on the table, okay, so let's alter the table,
+[23:26] alter the table, you have to specify the table in clustered by, clustered by the column,
+[23:33] higher yet, yeah, I just created a clustering key, non-extrandness, it is saying that yes,
+[23:46] there is a clustering key, okay, okay, now what I am going to do is, so let's run this query now,
+[24:01] you are doing 23, okay, before running the query, I wanted to suspend the warehouse, alter
+[24:09] the warehouse, out of your warehouse suspend, let's run this query, so we are getting 23 key
+[24:36] records and now I will see the partitions that it is going to scan, okay, still it is scanning
+[24:50] all 8 partitions, right, so we should see, okay, it has to scan only the required partitions,
+[25:14] so let me go back, yeah, so on higher data, yes, okay, it is in the standard data format only,
+[25:27] so according to snowflake, the default data format is 4, y, m, m, d, d, this is the standard
+[25:36] format only, okay, see you are using this key, right, between, right, yeah, so let me try a
+[25:44] different way, so I am running this, I am rewriting this query, I have higher data,
+[25:53] so I am just saying it is greater than or equal to the state and higher data is less than or equal
+[26:03] to the state, okay, let me see whether I can see a different, okay, so go back to the query,
+[26:27] still it is scanning the, you know, all the partitions, right, yes, okay, so which means
+[26:53] there are two things here, which means the data which you are trying to retrieve is spread across
+[27:00] all the partitions, okay, so that is one reason, okay, we are getting my point, so that could be one
+[27:10] reason, or it is not picking the cluster in key, okay, so these are the two reasons, so let me,
+[27:22] let me see the data format, okay, this is the image, this is the image,
+[27:32] your voice is very low, can you please come again, I still state, just wait for one minute,
+[28:12] we will see, so I am running one more state, do you know what is the cardinality, what is
+[28:59] cardinality, relation between the tables, while joining, let's go volume, data and
+[29:14] unit, okay, the cardinality means the number of distinct values, number of distinct values,
+[29:28] okay, so I am running one statement, select distinct, distinct, apart from respect to table,
+[29:43] you are getting 41, right, you are getting 41, right, so out of 20 million, you have only 41 records,
+[29:55] which means the cardinality is less right, correct, yes, into one, so out of 20 million, how
+[30:22] only 41, so which means that is less cardinality, I am running one more statement, distinct,
+[30:39] here 20 million, here this is a high cardinality, okay, so this is called high cardinality and,
+[30:50] you know, low cardinality, okay, let me try one more thing, or else I will increase the data,
+[31:01] so that you will get the complete question, so let me increase the number of records,
+[31:22] and just switch this to 15 million, right, generally right, so you have to create a cluster on a table,
+[31:54] which is having, you know, or you can say like a gigawatts, okay, so that's where, that's how,
+[32:03] you know, the clustering key will take them to consideration, I will try this one more time,
+[32:14] let's see how many records we have, we have 83k, but total how many, we will see that,
+[32:21] so let's click on the query I think, and let me close the rest of the waiters, so I close, okay,
+[32:35] 32 partitions are there, okay, let me run more query, so they could the job guys, I would like
+[34:00] to filter with the job, let me pick it, pick the job as, you know, let's take analyst,
+[34:13] I'm adding one more column here, so we're getting 14k records, so I'm adding one more,
+[34:35] let me, let me just drop the clustering key, and I'll create it one more time,
+[34:41] how to drop it in clustering key, so let me drop the clustering key, let's turn by and
+[35:10] this is how you can deal with the clustering key,
+[35:13] solder table table name, this is your table name, ping on a different one minute,
+[35:22] let me switch the database to dams schema, you create, even I'm inserting the data,
+[36:07] I'm inserting close to 15 million, so I'm getting 9k records, so let me create a clustering key
+[36:49] on this, if not I'll increase the number of partitions, so clustered by I'm using higher data
+[37:12] and job, okay, I'm using these two column clustering key, I have 24 network partitions,
+[37:32] okay, we'll do one thing, let's increase the table size, so this will work on and
+[37:42] no use data set, let me just wait for a couple of minutes guys, we will see,
+[39:06] it'll it has to show you the partitions, okay, less number of partitions, because it has
+[39:10] scan only required partitions, so then only we can say that we are getting the reaching the
+[39:14] partitions running, okay, let me drop and create the clustering key,
+[39:21] rock, let's re-grigate, we'll wait for a couple of minutes, so I'm running one statement,
+[40:06] so we have inserted records, so once we are starting inserting the records,
+[40:10] snowflake creates the micro partitions, right, it automatically creates the micro partitions,
+[40:14] okay, now what will happen if I perform the delete operation, insert we know that it
+[40:19] creates new micro partitions, right, it creates new micro partitions, now what will happen if I do
+[40:28] update, any guess what will happen if I do an update, who won't change, there will not be any change,
+[40:40] no, okay, see, let's say, let's assume you have, as of now you have 20 micro partitions,
+[40:46] okay, you have 20 partitions, okay, after that I have made some updates, okay,
+[41:03] so in the current scenario, it will create new partition, yes, for time-cloning we require the
+[41:23] old data, yes, so we have 64 partitions, right, we have 64 partitions,
+[41:32] generate the important partitions, partitions are immutable, so when I say partitions,
+[41:39] partitions are immutable, we cannot, you know, modify the existing partitions, okay,
+[41:51] so once you update anything, right, what it does is, it will not touch the existing partitions,
+[41:58] it creates a new micro partitions, okay, so let's say, I'm running one statement, so update,
+[42:14] let's say job equal to, so I'm writing few records, so I have updated these many number of
+[43:25] records, okay, so let's say for these records, let's say we have, we require, let's say,
+[43:33] five partitions, okay, let's assume, so the employees who are working as engineers, okay,
+[43:43] so they let's say there are like these many number of records, and to store these many number
+[43:47] of records, let's say there are five micro partitions, okay, so totally you have 20 partitions,
+[43:56] out of 20, five partitions are related to the, the engineers, okay, now what I have done,
+[44:04] I have changed that to, you know, snowflake developer, so it only what will happen is it creates,
+[44:10] creates five new micro partitions, five new micro partitions, so the old partitions,
+[44:26] which means the partitions where the data got changed, right, so those partitions will be
+[44:33] remain as it is, those are all older partitions, okay, five older partitions, because partitions
+[44:44] are immutable, you cannot change the existing partitions, so that is the reason when you are doing
+[44:48] an update, okay, so it creates a new micro partitions, and what about these five older partitions,
+[44:54] so when these will come into the picture, in case if you want to, you know, retain something,
+[45:00] if you want to restore something, let's say by mistake you have done this update, okay,
+[45:04] but how you are going to get those, you know, the previous snapshot, okay, because of this concept,
+[45:10] okay, since partitions are immutable, if something happens to the data by mistake, yes,
+[45:15] there is a way to get the data, but how you are going to get the data, you have to explain like,
+[45:19] since partitions are immutable, whenever we are performing any operations, like
+[45:25] update or, you know, the delete, right, so it gets the data from the older partitions, clear.
+[45:34] So either cloning or data retention, I mean, restoring the data back will happen because of this
+[45:41] immutable, correct, exactly, yes, so it doesn't have any response with the cash or some great
+[45:53] way, no, it has a cash actually, cash is different, that is, you know, when you are running
+[46:00] the same select stage, right, it picks from the cash, okay, so that is, that is different,
+[46:07] so the thing is, when you are inserting, it creates a new micro partitions, when you are updating,
+[46:14] it will not touch the existing partitions, it creates a new partitions, okay,
+[46:19] let's say, when you are deleting, what will happen is, it won't touch the old partitions,
+[46:28] yes, it will not touch the, so those partitions will be, you know, untouched, okay,
+[46:38] so whatever the data that you have deleted, right, so with that it creates a, you know,
+[46:44] new new new partitions, okay, what will happen if you delete all the records?
+[46:53] Still same, all the partitions are not, shouldn't be touched, so once you delete all the
+[47:05] records, you are deleted all the records, what will happen? Partitions are also, okay, so see,
+[47:27] in case if the time travel is not enabled, right, what will happen actually?
+[47:35] You want to restore the data? Yeah, you cannot able to restore the data, okay,
+[47:44] so if you delete all the records also, partitions will be untouched, right?
+[47:48] Yeah, partitions will be untouched, but it will not date any new partitions, okay,
+[47:54] right, only in case of drop table whether the partitions, no, drop is different,
+[47:59] right, right, I'm just asking, once you drop, yes, if your time travel is enabled,
+[48:05] you can do a drop and you can get that, so remember, partitions are immutable, once you insert,
+[48:15] it creates a new partitions, update, it creates a new partitions, and delete, once you delete
+[48:22] whatever the data that you have deleted, right, so those partitions will be untouched,
+[48:27] and it creates a new partitions with the, you know, the remaining data, okay, because you need
+[48:36] this, these partitions for restore, okay, okay, now let's, let me try this query, one more time,
+[48:47] we have a cluster on these two columns, let's, okay, now can you see this case?
+[49:04] You have total, how many partitions, one ten partitions, it will take some time to, you know,
+[49:10] refresh the data, okay, I mean metadata, okay, see how total, how many partitions,
+[49:17] one ten partitions, right, out of which only 64 hours can, correct, yes, let me drop the cluster,
+[49:49] again, I have to wait, wait for some time to refresh the, oh, the metadata, let's drop the,
+[49:59] let me drop the cluster, so once you drop the cluster, you have to refresh the
+[50:06] data, it will take a couple of minutes, okay, so remember this, why we are, you know, creating
+[50:15] a cluster, you can, you know, take this example, I think this is the old example, the traditional
+[50:24] example, you have a book with 100 pages, let's, let's, you have a book with, let's say 500 pages,
+[50:32] what is the advantage of index pages, the first pages index page, correct, so if you know the
+[50:39] exact page number, yes, you can directly jump to that, okay, if you don't know the exact,
+[50:44] you know, the page number, let's say, you wanted to search for a topic, you have to, you know,
+[50:49] check each and every page, okay, so in the current scenario, what you can assume, like,
+[50:55] so index is nothing but a cluster, I mean index page is nothing but a cluster, so this is nothing
+[51:00] but a table, these are all nothing but partitions, okay, so in case if I don't know the exact
+[51:09] partitions that I want to scan, I have to search each and every partitions, I have to scan each and
+[51:16] every partitions, okay, if I have a, if I create a clustering key, what Snowplate does is,
+[51:22] it will have the information about the, you know, the partitions which it has to scan, okay,
+[51:32] we are getting it, that is, that is where we, you know, we will get the partitions running, okay,
+[51:41] so the advantage is we can scan the, you know, the query time will, the query performance will improve,
+[51:47] we can reduce, you know, the compute, the compute last, right, so there is one more thing,
+[52:00] search optimization service, okay, what is this, search optimization service?
+[52:08] Krishna, but how to decide on which column we need to create cluster?
+[52:14] Yeah, see one is on the date columns, okay, mostly on the date columns, so along with the,
+[52:23] if you have a range, right, so let's say, so generally you are not supposed to create a, you know,
+[52:32] clustering key on high cardinality, okay, if you have high cardinality, high cardinality means
+[52:38] you are not supposed to create a cluster on the employment, okay, let's look at the date also,
+[52:44] date is high cardinality, low cardinality, so you need to see on which columns you are going to create,
+[52:55] okay, so it should have low cardinality and also one more important point is,
+[53:00] the table size should be used, okay, so even if you look at the documentation,
+[53:04] it is not like clustering key reports.
+[53:16] And is it something like we need to use the columns which are mentioned in the way column,
+[53:20] where condition? Yes, you, yeah, you need to use those columns, so it recommends the table to
+[53:26] meet all these requirements, a large table with a large number of micro partitions, typically
+[53:32] terabytes, okay, typically terabytes, multiples of terabytes, okay, so that is the reason here
+[53:38] I am unable to see, you know, see the effect actually. I'll do, I'll try, you know, creating a,
+[53:52] we'll see, as I can create it, you know, the TV of a date or not, I'll check that, okay,
+[54:00] you said, and date columns, probably we need to do, but if you look at the, you know, like,
+[54:05] transaction data or like start mark data, right, there for every date they will be having the data.
+[54:13] So, in that case also, date is feasible. Yeah, so in that case, what you can do is, you can,
+[54:18] you know, let's say, generally, right, you'll have 0, 1, 0, 2, 0, 3, right, correct.
+[54:25] So, what you can do is, you can, you can use a function, let's say, I wanted to,
+[54:29] let's say, see, in the current scenario, what you can do is, you can apply a function here, okay,
+[54:40] let's say, or I did what I'm doing is, say what you can do, you can use a trunk, you know,
+[54:55] you know, this function, like, date, right, from table, or let me, let me, it's current date,
+[55:44] so that will be here, it's strong, that is not data, it's very much actually what I'm doing is,
+[57:40] I'm converting everything and I'm doing this, right, can you say, I have 28 rows,
+[57:44] so when I'm applying, right, so I'll, I'll use, you know, this function, okay, so date,
+[57:50] trunk, and I'll, I'll apply that, so I'll show you this example, okay, so if I,
+[58:01] if I create a clustering, you know, based on this combination, right, so while creating a clustering,
+[58:08] instead of 5, then let me use this, let's say, it is saying a number of partitions can only two
+[58:28] partitions, okay, out of 16, I have scan only two partitions, right, you're getting my point.
+[58:51] Yes, so we'll talk about this SOS, search, optimizing service,
+[59:04] but just remember the table size should be very huge, right, so then only, you know,
+[59:10] you'll get the, you know, exact result, okay, it clustering key is,
+[59:21] so I have 391 credit settings, that's why, see how to see the number of credits also when you're
+[59:26] doing this, so in case if you want to test this third rate, create a table with, you know,
+[59:30] terabytes of data, then you can do it, you can ask any of the, you know, existing,
+[59:37] relapse, so it, morning I asked one question, I need, you know, 300 MB of data, so it,
+[59:43] what it has done is it has created a Python file, it has created a Python file, and, you know,
+[59:50] we were able to load the data, yeah, this is a Python file, so I requested 300 MB,
+[60:01] so you can, we can try that actually, but it will take time, the recommendation is the table size
+[60:10] where it should be very huge, okay, so then only you can get it, but also, so we'll talk about
+[60:15] this case, search, optimization service in tomorrow's session. You know, very, why is it very low?
+[60:35] That's what, that's what, partition, throning, you know, but it's very,
+[60:40] very tuning, very pruning, you know, telling, very pruning, that's what, that is, very pruning,
+[60:51] that is what, so unit scan will be required part, that is, you know, that is, that is, you know,
+[60:56] very good, so both are same, I'm able to see it, you know. Can you pause that question actually,
+[61:16] we will take that into one session, okay, so maybe once, once we talk about SOS, right,
+[61:23] search, software service, then you will understand, okay. Yeah, Krishna, I mean,
+[61:30] he's right, he says you explained day before yesterday class, is that done or still any,
+[61:37] which one? Which one? She says. She says done, she says, it's, it's, it's, it's, it's, it's, I mean,
+[61:43] topic actually, okay, and procedures, throat procedures, also, that, that, I'll, I'll, I'll,
+[61:52] we'll, we'll talk about that, meanwhile, so I thought of completing this, then we can take
+[61:57] that will take time actually, okay. That will take at least, you know, procedures and functions,
+[62:04] altogether, it will take complete week, okay. Okay, so meanwhile, we can complete these,
+[62:13] and how topics, okay. So tomorrow, I'll explain this, okay. How you're going to get this, you know,
+[62:22] optimization through SOS. So, Krishna, so what you are saying, queried
+[62:44] pruning and partition pruning, both are same. See, in partition pruning, what will happen is,
+[62:50] see, you are skipping the unnecessary partitions, right, in partition pruning, correct? Yeah,
+[62:58] because we are creating clusters, so it will arrange that same kind of data into that,
+[63:04] right, cluster, right, arrange it, so that's why it will reduce the number of partition needs.
+[63:12] Okay, now one more thing is, when it comes, you will see this one,
+[63:16] once we talk about search of various service, right, okay. So when I say, you know,
+[63:21] the query pruning, right. So, let's say you're running one query, right, okay. So,
+[63:28] unnecessary scanning will be reduced. I'll talk about that. So there is a slight difference between
+[63:34] that. So, you need to avoid unnecessary scanning of partition, that is called partition pruning,
+[63:41] okay. So, very pruning means, you know, you're not supposed to scan the, you know, what to say,
+[63:50] unnecessary, you know, queries, okay, queries, yeah, unnecessary queries, if you scan that, that is,
+[63:59] that can be, you know, reduced by using query pruning, okay. If we avoid unnecessary partition,
+[64:07] that is partition pruning, if you avoid unnecessary queries to be scanned, that is query pruning.
+[64:16] I'll give you the example, okay. So, let me complete search of my service, and you'll understand.
+[64:21] Okay. Okay, Krishna, I just wanted to say, so, in one of the interviews, I got question on
+[64:29] soft CA. So, soft CA of the CA. What is soft CA we asked?
+[64:39] We checked it, and it was like a particular model when you're modifying it, we were building that
+[64:46] model alone. Soft CA. Yeah. But the command was different from what we had, what we discussed.
+[64:55] Okay. I just keep, I just think, can you, can you pick me a water?
+[65:01] Yeah, sure. And also, Krishna, we had the profiles, right? Can you just update and help me to
+[65:10] update? Yeah. Today, I will do that. Yeah. So, mostly, you will get it by
+[65:20] end of today, okay. So, can you just demand one more time? I'll do that. Yeah, I have already
+[65:25] pinged you yesterday and day before yesterday. Yeah. So, yesterday, we have this one event is there,
+[65:31] so it's an equal table. I'll complete that. Yeah.
+[65:36] Fine, yes. We'll make it into first.
