@@ -14,11 +14,11 @@
 
 ---
 
-## 1. Snowsight AI assistant (demo, not exam)
+## 1. Snowsight AI assistant (demo; career-relevant)
 
 - In Snowsight's workspace he showed the built-in **AI assistant** (he called it "Cocoa"; likely Snowflake's **Cortex Code / Copilot**-style assistant). You prompt it like ChatGPT/Copilot, it can generate SQL and explain concepts, and you can pick the underlying model (default "auto").
 - He asked it for a clustering-key example and used the generated script to build the demo below.
-- Career-relevant, **not SnowPro Core content.**
+- Career-relevant. *(Relabelled 9 Nov: I first wrote "not SnowPro Core content". This is a Snowsight AI assistant, and I found no evidence it is a tested topic, but the **Cortex** concepts themselves are covered in the Class 47 notes.)*
 
 ## 2. Clustering demo (exam-relevant, but unfinished)
 

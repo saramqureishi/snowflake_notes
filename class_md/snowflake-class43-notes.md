@@ -11,7 +11,7 @@
 > - He did **not** get to clustering/scaling this class (promised from Class 42); he said he'll **continue clustering/performance next session**. So that's still owed.
 >
 > **Things he said that matter to you (flagged as you asked):**
-> - 🎓 **Free Snowflake badges:** he shared a URL to Snowflake's free learning/badge tracks ("Data Warehousing Workshop" etc.) — complete the course, get a badge, post it on LinkedIn. **Ask him to re-share that URL** and do one or two; they're free and CV-friendly.
+> - 🎓 **Free Snowflake badges:** he showed a URL to Snowflake's free badge courses (the audio is garbled, so I can't tell the course names). Complete a course, get a badge, post it on LinkedIn. *(Corrected 9 Nov: the link is in his updated SQL file under "2nd November — Free Badges": https://learn.snowflake.com/en/pages/hands-on-essentials-track/ , Snowflake's **Hands-On Essentials** badge program. I had wrongly written "Data Warehousing Workshop" as if he said it.)*
 > - 📚 **Interview questions + documents:** a student again asked him to **upload the interview questions and documents to the Drive**. He said **"by 4:30"** he'll do it. This is likely the same promised folder — **chase the Drive link.**
 > - ⚠️ The **cost-of-sharing question** (who pays when a consumer queries shared data?) he deferred as "admin, I'm not sure, I'll get back to you." See §7 for the correct exam answer so you're not left with a gap.
 
@@ -32,9 +32,9 @@ SHOW SHARES;
 ```
 - **INBOUND** = shares **given to you** by someone else (you're the consumer).
 - **OUTBOUND** = shares **you created** to give to others (you're the provider).
-- ⭐ Every brand-new Snowflake account starts with **two inbound shares** from Snowflake itself:
-  - **SNOWFLAKE** (the `SNOWFLAKE` db — ACCOUNT_USAGE / ORGANIZATION_USAGE views)
-  - **SNOWFLAKE_SAMPLE_DATA** (the TPC sample datasets, e.g. `CUSTOMER` ~150k rows)
+- ⭐ Every brand-new Snowflake account starts with **two inbound shares** from Snowflake itself. *(Corrected 9 Nov using your `SHOW SHARES` output: I had mixed up share names and database names.)*
+  - share **`ACCOUNT_USAGE`** → creates the database **`SNOWFLAKE`** (account usage / metadata views)
+  - share **`SAMPLE_DATA`** → creates the database **`SNOWFLAKE_SAMPLE_DATA`** (TPC sample datasets, e.g. `CUSTOMER` = 150,000 rows, confirmed in your lab)
 - That's *why* you get those databases for free the moment you create an account — they arrive **through inbound shares**, not because you created them.
 
 ## 3. Your Snowflake account = ORG name + ACCOUNT name ⭐
@@ -116,11 +116,19 @@ DELETE FROM <shared_table> WHERE ...;      -- ❌ fails
 
 ## 7. The "who pays?" question — the correct exam answer ⭐ (he deferred this)
 
-A student asked: if a consumer queries a lot of shared data, who is charged and how do you optimise it? He deferred it as "admin". The exam-correct answer:
+A student asked: if a consumer queries a lot of shared data, who is charged and how do you optimise it? He deferred it as "admin". The answer below comes from my knowledge of Snowflake's billing model, **not from the trainer**, and I have not re-checked it against the docs. Verify it before relying on it:
 
 - **Compute is paid by whoever runs the query, using *their own* virtual warehouse.** In a normal share between two Snowflake accounts, the **consumer runs the query on the consumer's warehouse and pays for that compute**; the provider pays only for storing the data once.
 - **Exception = reader accounts:** the reader has no billing relationship, so the **provider pays for all compute and storage the reader uses.** (That's the cost risk he was being asked about.) Mitigate it with a **resource monitor** on the reader account's warehouse(s) — which is exactly the upcoming "resource monitors" topic from the Class 42 list.
 - **No storage duplication:** sharing never copies data, so there's no extra storage cost for the shared data itself — the consumer reads the provider's single copy.
+
+## 7b. Hands-on done (9 Nov)
+
+- `CREATE SHARE hol_share`, then `GRANT USAGE` on a database and schema and `GRANT SELECT` on a table, all `TO SHARE`. `SHOW GRANTS TO SHARE` listed exactly **3 rows**.
+- `SHOW SHARES` showed your share as **OUTBOUND** (`secure_objects_only = true`) and the two **INBOUND** shares from Snowflake.
+- `SELECT COUNT(*)` on `SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER` returned **150,000**.
+- A `DELETE` on that table failed with: `Insufficient privileges to operate on table 'CUSTOMER'. Provider share does not have sufficient privileges.` That is the read-only proof.
+- **Not tested:** the consumer side and reader accounts (they need a second account).
 
 ## 8. Previewed / still owed
 
@@ -131,7 +139,7 @@ A student asked: if a consumer queries a lot of shared data, who is charged and 
 ## 9. Cheat-sheet / quick recall
 
 - **Share** = named object giving **read-only, no-copy** access to DB/schema/table across accounts. `SHOW SHARES;` ⭐
-- **INBOUND** = given *to* you; **OUTBOUND** = created *by* you. Every account starts with 2 inbound shares: **SNOWFLAKE** + **SNOWFLAKE_SAMPLE_DATA**. ⭐
+- **INBOUND** = given *to* you; **OUTBOUND** = created *by* you. Every account starts with 2 inbound shares, named **ACCOUNT_USAGE** and **SAMPLE_DATA**, which create the databases **SNOWFLAKE** and **SNOWFLAKE_SAMPLE_DATA**. ⭐
 - Account id = **ORG_NAME.ACCOUNT_NAME**. Check with `CURRENT_ACCOUNT()` / `CURRENT_ORGANIZATION_NAME()` / `CURRENT_ACCOUNT_NAME()`.
 - Provider: `CREATE SHARE s;` → `GRANT USAGE ON DATABASE/SCHEMA`, `GRANT SELECT ON TABLE … TO SHARE s;` → `ALTER SHARE s ADD ACCOUNTS=<org.acct>;`. Verify: `DESCRIBE SHARE s;` or `SHOW GRANTS TO SHARE s;`. ⭐⭐
 - Consumer: mounts the share as a **database** (Get Data / `CREATE DATABASE … FROM SHARE`).
