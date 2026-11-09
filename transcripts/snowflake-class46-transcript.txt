@@ -1,0 +1,349 @@
+[08:01] Good morning, Krishna. Yes, we can hear.
+[08:48] So, we were talking about a clustering key.
+[08:50] So, clustering key.
+[08:54] So, when you are going to create this clustering key,
+[08:56] so, both clustering key and search optimization service,
+[09:00] so, the table size should be used.
+[09:04] You have a use table.
+[09:10] So, you need to create either clustering key or search optimization service.
+[09:16] Or search optimization service.
+[09:18] So, clustering key is mostly for range operations.
+[09:21] When you are using between that,
+[09:23] when you want to know search between some values.
+[09:26] Like, example, between.
+[09:29] You will use clustering key.
+[09:31] What is the, what is the clustering key?
+[09:34] What it does actually?
+[09:40] I choose your easy delivery as a store.
+[09:44] Only scans required partitions, right?
+[09:48] What is search optimization service?
+[09:52] If the table size is very huge.
+[09:54] And you are using equal to operator.
+[09:59] The operation should be equal.
+[10:01] It is not a range.
+[10:03] So, when you are using equal to operation, what it does is.
+[10:11] So, it improves the performance when you are using the equal to operator.
+[10:17] So, the table size should be used.
+[10:21] So, it scans only the required partitions.
+[10:27] What is the required partitions will be scanned?
+[10:29] So, in both the scenarios, we will get the partition pruning.
+[10:33] What is partition pruning?
+[10:35] Scanning required partitions is called partition pruning.
+[10:44] So, what is the search optimization service?
+[10:46] So, let me run one query.
+[10:52] We have a table, right?
+[10:54] Passage, we have created a table.
+[10:56] What is a table?
+[11:06] I guess this is the table.
+[11:08] Let me see how many, the number of records.
+[11:10] So, I am running one statement.
+[11:20] Let's start from table.
+[11:22] So, I am running one statement.
+[11:54] So, here I am using equal to operator.
+[12:01] So, click on the query ID.
+[12:03] So, I need to do one statement.
+[12:20] Hit on this.
+[12:55] So, on the query ID.
+[13:04] It is saying 69 partitions are scanned.
+[13:06] Now, what I am going to do is since I am using equal to operator.
+[13:12] And one more thing is when you are using this same query frequently.
+[13:16] The same you are ready to be paying for a particular key right.
+[13:20] So, you can create a search optimization.
+[13:24] So, you can give you the syntax.
+[13:29] So, this is all you can, you know,
+[13:31] add the search optimization.
+[13:35] So, on what are the columns?
+[13:43] So, what are the table names?
+[13:45] The table names you see here.
+[13:47] This is table names given.
+[13:49] Add search optimization on the column names.
+[13:53] If you want to add on multiple columns as well.
+[13:58] But I am adding only on one column.
+[14:00] So, let me do this.
+[14:14] Let's execute the statement.
+[14:16] So, before that let me suspend the warehouse.
+[14:18] Let's execute the statement.
+[14:25] So, click on the query ID.
+[14:30] Can you see the partitions scanned guys?
+[14:41] Can you see these?
+[14:46] Partitions proved by search optimization.
+[14:48] Partitions scanned.
+[14:50] Are you able to see the difference
+[14:54] between the earlier one?
+[14:56] Partitions in total 69.
+[14:58] Partitions scanned.
+[15:00] How many partition?
+[15:02] It has scanned 16 and partitions.
+[15:06] Now, if you apply search optimization,
+[15:08] what it is saying? Partitions scanned.
+[15:10] It scan only one partition.
+[15:12] We are getting.
+[15:20] So, it avoids the unnecessary scanning of the partition states.
+[15:24] So, when you want to,
+[15:27] when you are going with this one,
+[15:29] search optimization service,
+[15:31] when you are using a equal to operator.
+[15:33] If there is a range operation,
+[15:37] you will go with clustering keys.
+[15:39] If there is a equal to operation,
+[15:41] you will go with the search optimization service.
+[15:47] So, I have given some points
+[15:49] from the snowflake documentation.
+[15:51] Maybe you can just check this one.
+[15:53] I will show this notes with you.
+[15:59] So, whenever you are using the equal to operator,
+[16:01] go with the search optimization service.
+[16:05] Search optimization service.
+[16:08] When you are using the range operations,
+[16:10] you are getting better.
+[16:12] So, you need to go with the clustering keys.
+[16:38] You are clear.
+[16:40] Any questions?
+[16:46] Why do we need to use that qualify?
+[16:48] We are doing that search optimization services.
+[16:50] You are performing equal to operator.
+[16:54] Use this one.
+[16:56] Equal to.
+[16:59] Equal to the key.
+[17:01] What is equality?
+[17:05] You can use this one.
+[17:09] It's called different.
+[17:11] It's called different.
+[17:17] It's called different.
+[17:21] It's called different.
+[17:23] The main difference is,
+[17:25] no, the operation that you are performing.
+[17:29] When you are using equal to operator,
+[17:31] you need to go with search optimization.
+[17:35] When you are using any range operations,
+[17:39] you need to go with the,
+[17:41] So let's say you need to go to the cluster is if what if what will happen if I you know
+[17:46] is a range operation right here, let's say I employ a number between some using between
+[17:52] here, between let's say seven hundred and eight very 12 so I'm running this question anyways
+[18:08] or I will demand it to pick only one record that is picking two records if you go to the
+[18:18] the query profile that is the partition turning is not applied right okay we're getting that
+[18:46] so if I use equal to it scans one is required partitions so you can you can try this I have given
+[18:58] you one more example so you can verify that before and after what exit is happening
+[19:07] so you can verify this query history by session there is one no
+[19:11] where I run this in the current you can execute this example I'll say that
+[19:26] last works with you so it's query deck is not required so you can verify that you know
+[20:11] results case here value that running so rows produce how many rows produced you can verify
+[20:38] the execution time here or else you can go to the query history so from there you can verify
+[20:43] how many partitions are getting scanned so what is the time it is getting what is the time it is
+[20:49] taking to complete that query so this is not available otherwise you can do that there is one
+[20:57] thing called analyze with co-corite so currently for the free version city is disabled let's say
+[21:04] if I say higher it will close and after that it is disabled I hope you are getting the same
+[21:11] message right yes I have other you know account let me open that maybe
+[21:35] can you try I'll share when you are in the chat window can you try to create the account
+[21:42] mostly it should work let's give it right if it works that's fine so please check your
+[22:50] chat rigs sending you that can you click on that the link which I just shared
+[23:01] and try creating the account okay it works just let me do now I am with the trial
+[23:14] session I started at 8 a.m. on just now at 8 p.m. do I join it yeah it started yeah 8 5 it's okay try
+[23:28] this one is try clicking on that link okay so once you click on that link right it opens a
+[23:37] it opens this link try creating the account do one thing I'll get it in your account
+[24:18] so are you able to create the account yes Krishna can you check whether you are able to see
+[24:44] or not okay yeah yeah it's not working right okay one minute let me open this account
+[27:58] also when I you know I told you it we had a session right so there you know they have shared
+[28:04] the same link actually one so at the time that koko was working because the examples which
+[28:18] they are showing it is mostly on koko actually let me try this you are computing
+[28:41] so here it is working I'll show you so in case if you know if this koko is working right
+[29:01] so what you can do is you can ask any requirement okay so there is a limitation right we we cannot
+[29:12] we cannot create a couple of tables in trial accounts I'll show you that one of the
+[29:20] limitations with the trial accounts so if you query the number of tables at select star from
+[29:28] schema tables so where table underscore type equal to base table so this will give you the
+[29:44] different tables so one of the tables is e's underscore hybrid do you say anything called hybrid
+[29:52] guess here correct hybrid table it is hybrid okay so I'm running a statement under e's underscore
+[30:07] hybrid it equal to yes so I wanted to find out are there any hybrid tables okay so there are no
+[30:20] hybrid tables right here so let me try with this so imagine just asking okay so
+[30:27] k self only to the same class for hybrid tables so you can prompt anything so no need to you know
+[30:43] remember the syntax or no need to type that okay it will give you the complete syntax let me copy this
+[30:56] it's copy the syntax so what you're trying to do is you're trying to know create a couple of tables
+[31:10] so these are all hybrid tables can you see the keyword is create or it is hybrid table okay
+[31:16] you're creating the hybrid table so for hybrid tables that the primary key is mandatory
+[31:26] so without a primary key you cannot create a hybrid table let me try this can I see the message
+[31:34] primary key is required without a primary key you cannot create a hybrid table it right okay
+[31:42] since it is also a triad account so yeah I think it will so you need to know link with the credit card
+[31:48] so then only you can you know create these hybrid tables so one of the main advantage with hybrid tables
+[31:54] let's say you have any you know driving tables okay let's say there is a master data
+[31:59] in case if that does not change that frequently so you can you know create the hybrid tables
+[32:08] so I'll share this syntax maybe those who wants to use in case if you are wrong if you want to
+[32:14] use my account you can use this guys I'll share this one this is the you know this in this
+[32:20] account the cocoa will work okay so I'll paste here you can try this one this is the triad account
+[32:31] I mean I mean you don't don't use this one I'll let me share this this the second
+[32:44] cocoa is anything you can use the same standard user name on password Krishna for a hybrid tables
+[32:59] primary key is required but primary we cannot enforce primary key that's what I'm telling you
+[33:08] for normal table even though if you create a primary key it'll not enforce okay but if you create
+[33:14] a hybrid table okay to create a table you know primary key is required and one more thing is
+[33:21] it enforces primary key you cannot insert any an algorithm is for duplicate values that is that
+[33:27] version so you just try it is a main purpose what is the main purpose of creating hybrid tables
+[33:35] so that is what see let's say you have any you know master data let's say dimensions okay when I say
+[33:42] dimensions right I'll just take one simple example let's say when you're dealing with any
+[33:49] hospitals right so in hospitals we have let's say let's say around 10 departments okay one is
+[33:56] cordially you're on the problem so this is master data right you are not supposed to have any
+[34:02] you know null values or duplicate values but if I create a normal table so there are chances that I
+[34:07] can know get null values or duplicate values right so for master tables I can say like at the
+[34:13] dimension same information you need to enable with the hybrid tables so that it will not allow me
+[34:20] to you know instead because this will have at any given time it will have only less number of records
+[34:25] right so the cost also will be very less these are called transactional tables okay hybrid tables
+[34:32] are mostly for transactions okay it will have only less number of tables so I'll give you the
+[34:50] URLs maybe I think if you don't have a know this one it's free right I mean because if
+[34:55] cortex is not enabled you cannot practice these sessions so they I attended one event right I'll
+[35:03] think that you are in yeah you can check this one just search for this north star event page so go
+[35:18] to this one oh you can find the I think the event which I have at minute is not available currently
+[35:26] but here you'll find the lab actually let's say if I click on this view guide right okay so how
+[35:34] you're going to build the agents from zero to hero how to build end to end pipeline agents okay
+[35:40] it'll give you the completed documentation but for this you need to have the okay I just show you
+[35:45] one simple example so they'll they'll give the complete information just scroll down
+[35:54] so the prerequisite is you should have a trial account that means scroll down
+[36:01] enablement and data loading so they have given a setup file you can download this
+[36:14] if there will give you the you know the complete setup here so you can copy this copy the content
+[36:27] let me change the language so what you require you require this role and this is a warehouse
+[36:36] you need to have these databases this schema this file format input these are all the stages
+[36:41] that you require is the GitHub integration okay we will we'll I'll tell you as we'll start creating
+[37:07] this let me use the role use hold account admin so this is how they will explain this in
+[37:15] you know in this session also so I'll open a new worksheet let me change the language to SQL
+[37:22] and so let me rename this file let's say small play demo it's a oblique event I'll copy everything
+[37:41] to remote bad the workspace I copied thing you can remove this one so I'm using a role for
+[38:01] account admin so I'm creating a role called snowflake intelligence creating a warehouse database
+[38:08] integration I mean granting the privileges okay I'm creating a role you know the right you know
+[38:17] how to grant a privilege to a role create warehouse create database create integration I'm giving
+[38:23] these privileges to this road so I'm taking the I'm setting I'm creating a variable here what is
+[38:35] this variable so this variable will have the current user information what is the current user
+[38:40] information is current user name is Christian okay so to this variable I'm assigning that now this
+[38:49] variable will contain the information okay so you know the statement is grant role to user so you
+[38:59] are giving this role to this user okay or else you can you know you can hard put it okay
+[39:07] what I'm doing grant role told him to user Christian or else you can use the identifier so this
+[39:14] is a variable like this variable holds this one like so you can use this one and you can
+[39:20] explain let's say if I use select all of current user what what it will give you it will give you
+[39:28] the user name I have stored the current user information into this variable okay you can use
+[39:35] either of these two statements like made on this so now this user is having a role called
+[39:46] snowflake intelligence or else you can create a new user let me create a new user let's
+[39:55] let it be so the current user name is Krishna and the role which I got is snowflake intelligence
+[40:02] that is what it snowflake intelligence admin yes let me select the role intelligence admin
+[40:08] and I have a yeah let me select this role now the next step what I'm saying all the user
+[40:17] so the default role I'm changing guys okay so earlier it is admin now what I'm going to do
+[40:26] I'm going to set this the default role of the user is account snowflake intelligence okay
+[40:35] okay so I already granted can you see this one default so I have set the default role as
+[40:40] account admin even I'm setting the default warehouse let me use this role I'm using this role
+[40:48] instead of manually selecting you can use this use role tool embedded so I hope you know
+[40:54] till this point right now I'm creating a database create a schema let me create a warehouse
+[41:10] so I'm creating one more database what is the snowflake intelligence and I'm creating a schema the
+[41:15] schema name is agents right and reward us create a schema created database snowflake intelligence
+[41:24] the database name is intelligence by default if you created a database you'll have public schema
+[41:29] now I'm creating a schema that is agents the schema name is agents now what is this grant create agent
+[41:37] on schema to this role which means I'm granting a privilege what is that privilege that I'm granting
+[41:46] create agent is a privilege okay let me run this even we don't have we we think I don't think
+[41:54] we have this session actually just hold the like I'll just show you the you know the agenda which
+[42:03] happened still that happened on October 24th I'm just bringing that picture for you so this is
+[43:02] the agent I guess that happened so you will you will have multiple events okay maybe they're going
+[43:15] to conduct an event in the current month also maybe maybe in December I'll let you know the dates
+[43:22] so the exercise which we are going to talk about is entering application using code can you see this
+[43:29] this happened between 2015 to 2015 building an entry and application using snowflake code
+[43:34] so that's what we are doing right let me minimize this
+[43:39] go back here now it is from 0 to 0 from 0 to agents this is a different I think this event is not
+[43:54] happened do you say anything called 0 to events it's 0 to agents no I think this event is not
+[44:10] happened but so whenever you attend any event right so they will they will share the complete
+[44:16] agent and also they will share the links okay so this is the portal where you will find all the links
+[44:24] can you see this one is not stuff okay just just save this page okay so they'll continuously post
+[44:34] the events every week or every month they will conduct different events so the previous events will
+[44:40] be they won't keep here okay they'll remove those events now so we have the setup file okay now
+[44:52] let's run this setup for years now I'm trying to run that setup file okay no need to run one
+[44:57] one you can execute a detect so this is a statement that I have executed create agent done now I'm
+[45:10] creating a database schema and the warehouse I'm using that okay I already have the database schema
+[45:17] and warehouse let me use that you know use that next I'm creating a file format I hope you know
+[45:26] this right we are creating a file format next step is we are creating a stage okay so this is the
+[45:34] you know this is public this S3 is a public okay this is the S3 bucket name folder name
+[45:44] inside that you have a sub folder okay let's run this okay so no need to create an integration
+[45:53] objects you can directly use this this is a stage right you know right how to verify the files
+[46:00] list at the right stage but that is external state external but this is bucket is public okay
+[46:10] when you are creating a bucket right you can make it as public okay so that even if I create a
+[46:16] create a bucket public public right even you can access that okay for private access
+[46:22] only we need storage integration objects yes you know no they already see they have already used
+[46:33] okay see let's say this is your your own account okay let's say that is complete
+[46:37] let's assume you are working in a company okay so when you create a snow you know
+[46:43] this one that bucket that should be private okay if any one if any other user wants to access
+[46:49] they should create an integration object okay and they have to access them if you make it as
+[46:55] public you can directly use this you or anyone can use this you are so there is a CSV file
+[47:04] all right there is a CSV file okay is there any way that I can see this file can I see this file
+[47:15] can I see the information select all of them in first schema exactly we can use in first schema
+[47:24] and we can do that right so anyways if you only can just try that I think you know this
+[47:34] select start of table of in first schema right in first schema and these are all the parameters
+[47:47] that need to pass and so fast the stage name file format the file in so I know the file in
+[48:13] this is the file in technical terms okay so there are only you know no four columns
+[48:32] simply you can run a statement what is the statement that you can run this
+[48:40] and download one thing follow one three and four correct from at the right stage name
+[48:49] and the file format if you run this you can see the data what I have given you
+[49:07] fitnessware okay somewhat fitness campaign some some videos other you have only 23 reports okay
+[49:16] if you want to conclude this one maybe you can practice later but now I know the files later what
+[49:27] I'm trying to do I'm trying to create a I wanted to derive some metrics okay so I'm creating a
+[49:34] table after that I'm loading the data into this table from the stage I'm loading the data into this
+[49:41] table okay what are the stage that I have created right okay so from this stage I'm loading the
+[49:49] data into the table okay you have four columns so let's load the data so the data is loaded
+[49:57] you have 23 records I'm loading I'm loading the data now what I'm doing I'm creating one more stage
+[50:04] which is a different bucket see earlier the bucket is different now this the folder is different
+[50:10] area the folder name is marketing now the folder name is product there is a new folder product
+[50:18] okay create the file format create the table load the data so from marketing products
+[50:32] tails one more stage create the table load the data social media there is one more table
+[50:44] personal media load the data Krishna without selector so we can load the data directly
+[50:56] to the table you can load but the thing is the structure should be safe the file structure
+[51:04] and the table structure should be safe both are same yes you can do that again I'm creating a table
+[51:17] you you're understanding it's all right so they have a public you know URL from that they are
+[51:24] creating a stage they're creating a table and they're loading the data finally still you have one
+[51:30] more stage what is this create stage stage name encryption okay semantic models
+[51:40] need others but verify the difference in the stages show stages so semantic models
+[51:58] so there is no URL here which means this is an internal stage base okay so these are all what
+[52:05] what are these stages external stage this is an internal stage okay
+[52:11] so I just created a internal stage now so this is the GitHub integration base okay so this is the
+[52:21] this is the URL that you can directly access okay even you can search for this they will give you
+[52:28] some practical examples go to the labs here you'll find all the labs here so what I'm trying to do
+[52:36] I'm trying to create a integration object yeah this is called API integration is
+[52:44] so I can access this you know so from snowflake what if I want to access this one of the GitHub URL
+[52:51] you need to create a API integration okay so the API integration is created
+[52:59] now I'm creating a repository by using this integration into the this is what this is the
+[53:24] and GitHub repository I'm going to the branches main branch okay so go to this branch
+[53:35] so there is a main branch which uh repo I'm using it have got post snowflake labs
+[53:45] snowflake labs and this is the repo name let me copy it and so take on this repository so this
+[54:20] is one of the repository so the thing is you're trying to access this repo okay so you're going to
+[54:28] branches main okay you have only one branch that is main okay now what is the file that you're
+[54:47] trying to load marketing campaign dot via multiple there is a YML file yes can you see this file
+[54:56] see from snowflake you're connecting to the GitHub and you're trying to load this file okay
+[55:02] so as of now this table is what is this copy input this is a stage base okay this is the internal
+[55:08] stage that we have created right this is the internal stage okay so what I'm trying to do from the
+[55:17] you know from the GitHub repo I'm trying to load this file into this stage okay so this is one more
+[55:27] syntax is generally how we used to load the data copy into table name from stage name but this is
+[55:33] the other way copy into stage files is also not required copy into files copy into stage name
+[55:43] from what is this is the integration okay let me tell you what it is saying
+[56:00] unexpected copy file system let me do a list see I have a file that whatever the file that is
+[56:21] available in the git I'm able to get that into one of the stage this is the file next one is
+[56:30] I'm creating a notification integration after that I'm creating it this is the procedure
+[56:45] guys this is a procedure send email okay so there is a procedure which I'm trying to create
+[57:04] so what is the email ID what is the subject and what is the message so let's create a procedure
+[57:19] so what is this case this is cortex enabled I think you if you want to run this the cocoa should be
+[57:26] enabled okay so maybe if you want you can use these credentials guys to for your practice just
+[57:32] practice one one example any one of the example take this take these credentials and try complete one
+[57:39] example let me run this so this is a block that I am creating so I'm just trying to check
+[57:50] within for a for a couple of people the procedure is not done actually maybe you may not
+[57:55] understood is that so I'm just creating one block here okay so this is the initial setup that you
+[58:07] need to do so once the setup is done right and so what gets provision okay in for such a
+[58:21] and it's nothing I think it will take some time base if I have to complete this okay so I'll do one
+[58:35] thing probably tomorrow I'll I'll try to show this guys but I'll let you know the timing is
+[58:44] always okay so once you know once you know how to you know practice by seeing this lab right then
+[58:51] you can practice any other you know things okay so they'll give you you know step-by-step
+[58:59] complete information so you just need to copy and paste and you have to execute that anyways I'll
+[59:09] let me follow these details which you can use this URL practice try to practice this
+[59:21] okay so I'll let you know the time this if you are okay we'll probably buy 430 I'll let it
+[59:31] okay tomorrow we have python stations and Krishna yes yes good guess those who are new to python
+[59:48] right you can I'll I'll not this link there is a separate link actually I'll share you that okay
+[59:55] if you're new to python you can attend those sessions okay I'll take one hour or one hour for
+[60:03] I'll let you know there are three days so by 430 even I'll post that link also
+[60:12] fine so we'll meet in tomorrow session
+[60:16] that can you post the link in the so which one or subgroup right yes yes I'll I'll do that I do it
+[60:23] of course because you see if you login right just coordinate among yourselves
+[60:31] because you are you know you're going to use the same URL right if you if it is a trial account it
+[60:35] will not work guys okay but the trial account they're not giving these features okay
+[60:44] so this event happened on 24 actually 24th of October even 31st also there is one event happened
+[60:54] so that is in anglics yeah I'll I'll post in the whatsapp what are the events that you know
+[61:05] that are available like I'll post that in the group so maybe you can register for that okay fine
+[61:18] case we'll meet in the conversation timing but I'll confirm this by I think Monday we don't have
+[61:39] a session days Monday is a holiday okay Krishna yesterday also I'll ask you to write about
+[61:49] profiling yeah I'll come to you I'll do that
