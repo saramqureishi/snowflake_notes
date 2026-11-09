@@ -3,7 +3,7 @@
 **Snowflake — Class 44 Notes**
 *Sara — SnowPro Core preparation*
 
-> ⭐⭐ **Strong, exam-relevant class.** Two big SnowPro Core topics taught with hands-on: **Resource Monitors** and **Zero-Copy Cloning**, plus the **cost model** (compute vs storage vs cloud services/stage) and a **warehouse-vs-database** privileges recap. Learn all of it.
+> ⭐⭐ **Strong, exam-relevant class.** Two big SnowPro Core topics taught with hands-on: **Resource Monitors** and **Zero-Copy Cloning**, plus the **cost model** (compute vs storage vs stage) and a **warehouse-vs-database** privileges recap. Learn all of it.
 >
 > **Honest labelling:**
 > - **§1** (job-market intro) is **career, not exam** — he showed Snowflake JD/role postings to motivate; skim it.
@@ -29,7 +29,7 @@ A **resource monitor (RM)** caps **credit consumption** and fires **alerts/actio
 - **Where:** Snowsight → **Admin → Cost Management → Resource Monitors → + Resource Monitor**. Or SQL (`CREATE RESOURCE MONITOR`).
 - **Set:** a **credit quota** (credits allowed per cycle) + a **schedule** (Starts: immediately; **Resets: monthly** / weekly / etc.).
 - ⭐⭐ **Monitoring level — two choices (exam-important):**
-  - **ACCOUNT level** → monitors **all warehouses** in the account (one account-wide budget). *Only one account-level RM can be active.*
+  - **ACCOUNT level** → monitors **all warehouses** in the account (one account-wide budget). *Only one account-level RM can be active (my knowledge of the docs, not class; verify).*
   - **WAREHOUSE level** → monitors a **specific individual warehouse** (you attach the RM to that warehouse).
 - ⭐⭐ **Threshold actions ("Notify when % of credits used"):**
   - **Notify** — just emails an alert (e.g. at 50%, 80%).
@@ -42,7 +42,7 @@ A **resource monitor (RM)** caps **credit consumption** and fires **alerts/actio
   SHOW WAREHOUSES;               -- the RESOURCE_MONITOR column: null = unmonitored, else the RM name
   ```
 - **Who it's for:** admins/billing teams planning budget — "this is for admins, not developers." But when alerts fire, **developers help investigate** which **top-consuming queries / long-running jobs** drove the cost, then tune them (see §7 next class).
-- Note (your trial): it shows ~$398 of $400 trial credits left; RM thresholds in the demo were framed as dollars for simplicity, but RMs really count **credits**.
+- Note (your trial): it shows ~$398 of $400 trial credits left; RM thresholds in the demo were framed as dollars for simplicity, but RMs really count **credits**. **Lab (6 Nov):** you created `hol_rm` (quota 20, later altered to 25), attached it to `DEV_WAREHOUSE` (`SHOW WAREHOUSES` then showed `HOL_RM`), saw `level = WAREHOUSE` with 50%/80% notify, 100% suspend and 110% suspend immediately, then detached and dropped it.
 
 ## 3. Snowflake cost types ⭐
 
@@ -52,9 +52,10 @@ Three cost buckets he pointed to in **Cost Management → consumption**:
 |---|---|---|
 | **Compute** | **Warehouses** (virtual warehouse credits) | Charged per-second while a warehouse runs; the demo showed 0.1–0.3 credits per WH |
 | **Storage** | **Databases** (the data you store) | Flat per-TB; this is where cloning savings land |
-| **Cloud services / stage** | internal + external **stages** | ⭐ Worksheets are auto-saved to the **internal stage** (you never save them explicitly) — that's a small stage cost |
+| **Stage** (his third bucket) | internal + external **stages** | He said worksheets are auto-saved to the **internal stage** and that stages have a cost |
 
 - ⭐ Key exam point: **compute and storage are billed separately**, and **warehouse (compute) ≠ database (storage)** — different objects, different costs.
+- **Added 9 Nov from Snowflake's docs (not said in class):** **cloud services** (login, query compilation, metadata) is also billed in credits, but it is charged only when the day's cloud-services use exceeds **10% of that day's warehouse credits**. Serverless features (e.g. SOS, automatic clustering) are billed separately as serverless compute.
 
 ## 4. Warehouse vs Database are different objects — with different privileges ⭐
 
@@ -73,13 +74,14 @@ GRANT CREATE WAREHOUSE ON ACCOUNT TO ROLE dev_role;
 
 Before cloning he showed how to find a table's size (Oracle devs: this replaces DBA_SEGMENTS/db blocks):
 ```sql
-SELECT table_name, active_bytes,
-       ROUND(active_bytes/1024/1024, 2)        AS size_mb,
-       ROUND(active_bytes/1024/1024/1024, 2)   AS size_gb
+SELECT table_name, bytes,
+       ROUND(bytes/1024/1024, 2)        AS size_mb,
+       ROUND(bytes/1024/1024/1024, 2)   AS size_gb
 FROM   information_schema.tables
 WHERE  table_name = 'T_CUSTOMER';
 ```
-- **`ACTIVE_BYTES`** in `INFORMATION_SCHEMA.TABLES` = the table's active storage. Divide by 1024³ for GB. His demo table: ~65M rows ≈ **2 GB**.
+- **Corrected 9 Nov.** The trainer said the column is called "active bytes" in `INFORMATION_SCHEMA.TABLES`. Snowflake's docs show that view has **`BYTES`** (bytes accessed by a scan; it excludes Time Travel and Fail-safe storage). **`ACTIVE_BYTES`** is a column of **`INFORMATION_SCHEMA.TABLE_STORAGE_METRICS`** (the billing view; needs ACCOUNTADMIN).
+- Divide by 1024³ for GB. His demo table: ~65M rows ≈ **2 GB**.
 
 ## 6. Zero-Copy Cloning ⭐⭐ (the headline topic)
 
@@ -100,7 +102,7 @@ CREATE TABLE t_customer_clone CLONE t_customer;    -- runs in ~1 second
   ```
 - **Identify clones** via `INFORMATION_SCHEMA.TABLE_STORAGE_METRICS`:
   - A **normal table:** `ID = CLONE_GROUP_ID`.
-  - A **clone:** `ID ≠ CLONE_GROUP_ID` (its `CLONE_GROUP_ID` points to the **base table's ID**).
+  - A **clone:** `ID ≠ CLONE_GROUP_ID` (its `CLONE_GROUP_ID` is the ID of the **oldest ancestor** it was cloned from; in your lab: clone `43132`, group `44034`).
   ```sql
   SELECT table_name, id, clone_group_id
   FROM   information_schema.table_storage_metrics
@@ -110,6 +112,8 @@ CREATE TABLE t_customer_clone CLONE t_customer;    -- runs in ~1 second
   1. **QA/test environments** — clone production tables into QA to test against real data with almost no storage cost (vs physically copying prod data like in Oracle).
   2. **Deployment rollback** — clone the DB/schema **before** a release; if the deploy breaks, revert to the clone.
 - **Dropping the source doesn't kill the clone:** `DROP TABLE t_customer;` → `t_customer_clone` still exists (and you can `UNDROP` the source via Time Travel). Clones are fully independent objects.
+- **Lab (6 Nov):** 1M-row table cloned in about a second; both showed 1,000,000 rows; after deleting 250,253 rows from the source the clone still had all 1,000,000; dropping the source left the clone intact; `UNDROP` restored the source with 749,747 rows (its state when dropped).
+- **Why the storage bytes stayed 0 in your lab (docs, 9 Nov):** `TABLE_STORAGE_METRICS` can lag by **1–2 hours**, so the zeros were a reporting delay, not proof. Per the docs, `RETAINED_FOR_CLONE_BYTES` = deleted bytes kept because a clone still references them, and bytes are always billed to the table where they were first added.
 
 ## 7. Time Travel + UNDROP recap (tied to retention) ⭐
 
@@ -123,7 +127,7 @@ UNDROP TABLE t_twoday;  -- ✅ "successfully restored" (within its 2-day window)
 UNDROP TABLE t_zero;    -- ❌ "table does not exist" (retention = 0, nothing to recover)
 ```
 - ⭐ **UNDROP works only if the object has Time-Travel retention left.** `DATA_RETENTION_TIME_IN_DAYS = 0` → **no recovery**.
-- Snowflake DML is **auto-commit** (no explicit COMMIT/ROLLBACK by default), which is why Time Travel/UNDROP — not a transaction rollback — is how you recover. ⭐
+- He said there is no commit/rollback here (statements auto-commit by default). *(Corrected 9 Nov: Snowflake does support explicit transactions with `BEGIN … COMMIT/ROLLBACK`; my earlier wording implied it does not. Once a statement has committed, you recover with Time Travel or `UNDROP`, not ROLLBACK.)* ⭐
 - To restore after a bad DML on a real table: use **Time Travel** (`AT/BEFORE`) to the moment before the change.
 
 ## 8. Previewed for NEXT class ("tomorrow — very important")
@@ -134,13 +138,13 @@ UNDROP TABLE t_zero;    -- ❌ "table does not exist" (retention = 0, nothing to
 ## 9. Cheat-sheet / quick recall
 
 - **Resource Monitor** = credit-budget guard. **ACCOUNT level** (all WHs, one active) vs **WAREHOUSE level** (one WH). Actions: **Notify / Suspend (let jobs finish) / Suspend Immediately (abort jobs)**. `SHOW RESOURCE MONITORS;` ⭐⭐
-- **3 cost types:** **compute** = warehouses, **storage** = databases, **cloud services/stage** = stages (worksheets auto-save to the internal stage). Compute & storage billed separately. ⭐
+- **His 3 cost buckets:** **compute** = warehouses, **storage** = databases, **stages** (worksheets auto-save to the internal stage). Compute & storage billed separately. *(Docs: cloud services is billed too, only above 10% of daily warehouse credits.)* ⭐
 - **Warehouse ≠ database.** `CREATE DATABASE` and `CREATE WAREHOUSE` are **separate** account privileges. ⭐
-- **Table size:** `INFORMATION_SCHEMA.TABLES.ACTIVE_BYTES` (÷1024³ = GB). ⭐
+- **Table size:** `INFORMATION_SCHEMA.TABLES.BYTES` (÷1024³ = GB), or `ACTIVE_BYTES` in `TABLE_STORAGE_METRICS` (billing view, ACCOUNTADMIN, can lag 1–2 h). ⭐
 - **Zero-copy clone:** `CREATE TABLE b CLONE a;` → instant, **no storage** until data diverges (copy-on-write); clone & source **share micro-partitions**, then become independent. Works on table/schema/database. ⭐⭐
 - **Spot a clone:** `TABLE_STORAGE_METRICS` where `ID <> CLONE_GROUP_ID`. ⭐
 - **Clone uses:** QA with prod data; pre-deploy rollback copy. Dropping source ≠ dropping clone.
-- **UNDROP** needs Time-Travel retention > 0; DML is **auto-commit** → recover with Time Travel, not ROLLBACK. ⭐
+- **UNDROP** needs Time-Travel retention > 0; DML auto-commits by default → recover committed changes with Time Travel. ⭐
 - 📚 Drive folder = **`Interview_Preparation`** (certification details inside) — you already have it.
 
 *End of Class 44 notes. A cost-and-recovery class: Resource Monitors (account vs warehouse, notify/suspend actions), the three cost types, warehouse-vs-database privileges, table sizing, and the headline topic — zero-copy cloning (shared micro-partitions, copy-on-write, QA/rollback uses) — plus a Time-Travel/UNDROP recap. Clustering/SOS/QAS and micro-partition DML behaviour pushed to next class.*

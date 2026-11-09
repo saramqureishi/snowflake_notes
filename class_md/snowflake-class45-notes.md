@@ -33,7 +33,7 @@
 ## 2. Micro-partitions ⭐⭐
 
 - Snowflake **automatically** splits table data into **micro-partitions** as you load it. You never create or manage them.
-- Size: he said **50 MB to 500 MB** each, quoting the documentation. (The docs' figure is for *uncompressed* data, so the stored size is smaller.)
+- Size: he said **50 MB to 500 MB** each, quoting the documentation. (Confirmed in Snowflake's docs on 9 Nov: **50–500 MB of uncompressed data**; the stored size is smaller because data is compressed. Some third-party guides say "compressed", which does not match the docs.)
 - His demo: 20 million rows needed only **8 partitions**. Check it in **Query Profile → partitions total**.
 - ⭐ Each micro-partition stores **metadata** about its columns (min/max values per column and similar). This metadata is what pruning uses (see §3).
 - Micro-partitions are **columnar** and **immutable** (see §5).
@@ -66,7 +66,7 @@ ALTER TABLE emp DROP CLUSTERING KEY;
 ```
 
 - After changing the key, the table is **re-organised in the background**. He had to **wait a couple of minutes** for the metadata to refresh before the numbers changed. (This background work is **automatic clustering**, which **uses credits**; recall Class 32.)
-- He suspended the warehouse before re-running (`ALTER WAREHOUSE ... SUSPEND`) so the **local disk cache** would not hide the result. ⭐ Good habit when benchmarking.
+- He suspended the warehouse before re-running (`ALTER WAREHOUSE ... SUSPEND`). The transcript does not give his reason; clearing the **local disk cache** is my inference. ⭐
 
 ### How to choose a clustering key ⭐ (his answer to a student's question)
 
@@ -83,7 +83,7 @@ A raw timestamp or full date can be **too high cardinality**. He clustered on an
 ```sql
 ALTER TABLE emp CLUSTER BY (DATE_TRUNC('MONTH', hire_date));
 ```
-- Result: the query scanned **2 of 16** partitions instead of all of them. This is the proof of pruning.
+- Result (as he said it): the query scanned **2 of 16** partitions instead of all of them. **Caveat (9 Nov):** the audio around [54:25–58:28] is garbled ("trunk … date"). The **month-level `DATE_TRUNC`** expression is my reading; he may have used a different truncation. Your own lab used a 20M-row table with only **4 partitions**, so you could not reproduce this.
 - **Related gotcha from Class 42:** do not wrap the *filter* column in a function in the `WHERE`. That is separate from clustering on an expression, which is allowed.
 
 ## 5. What INSERT / UPDATE / DELETE do to micro-partitions ⭐⭐ (he said this is very important)
@@ -95,7 +95,7 @@ ALTER TABLE emp CLUSTER BY (DATE_TRUNC('MONTH', hire_date));
 | **INSERT** | Creates **new** micro-partitions |
 | **UPDATE** | Does **not** modify existing partitions. It writes **new** partitions containing the changed rows; the old ones stay |
 | **DELETE** | Old partitions are left alone. Snowflake writes **new** partitions with the **remaining** data |
-| **DELETE all rows** | Per his explanation, the partitions are untouched and no new ones are created |
+| **DELETE all rows** | Per his explanation, the partitions are untouched and no new ones are created (Snowflake's docs also say deleting all rows is a metadata-only operation) |
 | **DROP TABLE** | Different: recoverable with `UNDROP` if Time Travel is on |
 
 - His UPDATE example: 20 partitions, 5 hold "engineer" rows. Changing them to "snowflake developer" makes **5 new partitions**; the 5 old ones remain.
@@ -135,9 +135,10 @@ ALTER TABLE emp CLUSTER BY (DATE_TRUNC('MONTH', hire_date));
 - **Date trick:** `CLUSTER BY (DATE_TRUNC('MONTH', date_col))` reduced cardinality and gave **2 of 16** partitions. ⭐
 - **DML on immutable partitions:** INSERT → new; UPDATE → new partitions, old kept; DELETE → remaining data written as new, old kept. ⭐⭐
 - **Old partitions enable** Time Travel, UNDROP, cloning. Retention 0 means no restore. ⭐
-- **Benchmarking tip:** suspend the warehouse to clear the local cache before re-running.
+- **Benchmarking tip (my inference, not stated by him):** suspend the warehouse to clear the local cache before re-running; the result cache can be switched off with `ALTER SESSION SET USE_CACHED_RESULT = FALSE`.
 - **Cardinality** = distinct values (`COUNT(DISTINCT)`).
 - ⚠️ Snowflake has **no indexes**; "query pruning" is not a term to rely on.
+- **Lab (9 Nov):** 20M generated rows = only **4 micro-partitions** (126 MB), so no pruning was possible. `EXPLAIN USING TEXT` shows `partitionsTotal` and `partitionsAssigned`. `SYSTEM$CLUSTERING_INFORMATION` showed `average_depth` 4.0 (unclustered) when checked straight after adding the key.
 - 🔜 Next: **SOS**.
 
 *End of Class 45 notes. A concepts-heavy performance class: micro-partitions, partition pruning, clustering keys and how to choose them, the DATE_TRUNC clustering trick, and the immutability rule that explains how INSERT/UPDATE/DELETE affect storage and make Time Travel possible. SOS was pushed to the next session.*
