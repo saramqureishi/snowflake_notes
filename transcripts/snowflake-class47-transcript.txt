@@ -1,0 +1,415 @@
+[04:17] 1 year 1, 10 year 2 minutes guys, it is calling others. Let me share this. Please I have shared
+[06:15] you this, I mean in this, I will not receive, I will share this one. So this particular
+[06:22] account, it is enabled with Coco, okay. If you want, you can use this. So, we will talk
+[06:33] about one, the topic is respect to unstructured data. We know what is the unstructured
+[06:42] data, what are the different formats of the data we have? Structured, semi-structured.
+[06:51] Yeah, structured semi-structured. And unstructured. So, when I say unstructured,
+[06:56] wait for 1 minute.
+[06:59] So, when I say unstructured, it is a, you can take an example of the PDF or image for it.
+[07:16] So, to process this unstructured data, I will show you one example.
+[07:22] Can you see this guys? So, this is one of the sample, you know, invoice, invoice number,
+[07:28] invoice date, okay. So, what is the quantity, what is the price, okay. What is the subtotal,
+[07:36] tax and total amount, okay. So, $129. So, this is a sample document, let us say the customer
+[07:45] purchase one item and this is the total amount. Now, my requirement is since it is a PDF, right.
+[07:51] So, I wanted to read this, I wanted to convert this to a, you know, structure format, okay.
+[07:58] You are getting me voted. Or maybe if you have, in case if you can convert this to JSON,
+[08:05] from JSON, we can convert to structured format, right. So, even you can process this,
+[08:12] snowflake has given some of the A functions, A complete, A parts, okay. And I will show you that.
+[08:21] So, let me put this into one of the stage case, okay. I will create a stage to place this file,
+[08:28] you can create any stage, you can create an external stage or an internal stage, okay.
+[08:32] Just for the time when I am creating this in the internal stage, let me verify the stages.
+[08:43] So, we do not have any stages, so I will quickly create a stage, create stage, let us say a PD stage.
+[08:53] So, then you know this, right. This is an internal name stage. Let me place this, how can I place
+[08:58] a file, I am using devDB dev schema, you know the navigation, right. We need to go to the database
+[09:05] explorer, okay. Select the stage, respect to stage. So, this is, yeah, this is my stage, I have only
+[09:20] one stage. Let me do upload, upload, add files, okay. Let me go back to the, I will share this file with you.
+[09:33] So, we will do it, we will save this file, save as, save this file. I know the location,
+[10:25] let me browse the file, go back. So, this is the sample PDF file that I am uploading, let me reduce the
+[10:43] size, click on upload. So, the file is uploaded, go back to the workspace, do it, let us generate
+[11:10] PDF stage, I have the file. So, my requirement is to convert this to download.
+[11:21] So, there are some many functions, okay. First, I will show you the manual,
+[11:32] then I can, I will show you, you know, how can you use cocoa to convert this, okay. For cocoa,
+[11:40] you can use this, okay. So, these are the, you know, account details where you can use to
+[11:47] convert this auto-rattling, then first log in. Okay, if you go to the co-operate, so it is enabled here,
+[12:46] and we will come back to this later, okay. Now, I will see how you are, how can I convert this to
+[12:52] capital, the readable format. So, what I am going to do is, okay. So, the thing is, first of all,
+[13:01] I need to know, have a structure, okay. So, I have created a stage. Now, let me create a table.
+[13:08] Now, creating two tables, one is the, you know, let us create these two tables, one is the
+[13:18] row, okay. What is the source file name, what is the document name, if there is any error, okay.
+[13:25] In case if I am unable to read that file, so I will, I will know, log the errors.
+[13:30] Now, I am creating a main table, so which is similar to the speedy of file, okay. What are the
+[13:36] different fields have, invoice number, invoice date, currency, description, okay. What are the field
+[13:41] that I am able to see, I am going to create a table lot of stuff. I have created these two tables.
+[13:50] Now, there is a function name, can I see this, this is a pass document, this is one of the function
+[13:56] given by Stomplik. So, it returns the JSON output case, okay. This particular function returns the
+[14:02] JSON output. See, this is a, you know, pass document. So, what is this, it is accepting two parameters,
+[14:13] one is the file name, what is the stage name, what is the file name, okay. So, what is layout,
+[14:22] we have to pass this. And from this, what you are getting, you are just giving the, you know,
+[14:28] the PDF file name, first let me run this. What is saying, a function is not available for try,
+[14:35] okay, okay. So, the thing is, can you see the message, for the trial account, they have not
+[14:40] enabled these features actually, okay. Because these are, you know, these are all costly operations,
+[14:46] okay. Even when you want to work in the real tonight, so these, these features should be enabled,
+[14:53] okay. So, I will make use of, you know, the, this particular, you can use the second,
+[14:59] we say, I already shared you the credentials, you can log in, you can work on this.
+[15:04] Okay, I need to do this. Let's create all these statements. I don't know whether I have this
+[15:15] database. It's not, I will quickly create a database. Okay, I have devDBs there, even devs, yes,
+[15:25] we have, okay. So, we have a, let's create schema, let's create schema, let's create schema,
+[15:45] create warehouse. Okay, so I'm creating a space, what I'm saying, okay, let me change the role to
+[16:08] account admin. Let's create a stage, I'm creating two tables. Okay, now next time. Let's do a list.
+[16:30] As of now, I don't have any files. Let me upload the file. In case you're following, right?
+[16:40] DevDB, go to dev schema, go to the stage, let me place the file, if there is an option upload,
+[16:55] browse the file, in voice, I mean, where you can find the option is in this browser, I'm not sure where
+[17:27] to reduce file size. To reduce the size, I'll take the convulsive to minus, control shift minus.
+[17:42] Left side by the way, setting option, bottom. Left for now, yeah, above that, yeah. Where is the
+[17:57] option? No, in setting, you just click on the three dot menu above that. Oh, set in, no, you
+[18:07] someone said the control shift minus, right? So it's not working, it's not working. We'll do one thing,
+[18:37] we should just do control minus. Yes, it's working here, control minus, it's uploading, so what I'm
+[19:28] done is I am inserting the records into the statement. What is the file name? What is the status?
+[19:44] So the function which I am using is a path stop. It takes a couple of parameters.
+[19:53] One is what is the file name? It is saying one record inserted. Let's query this table.
+[20:08] So what is the PDF file name and the path document? The second economy is path document.
+[20:21] What is this? This is a JSON, right? Yes, sir. Are there any errors? No, there are no errors.
+[20:30] When you create this, this is the date and type code. This is the file name.
+[20:38] It's taking these parameters. It's clear, right? Now, let's talk about this path document. What
+[20:52] exited contents. So if I have only one file, the path stop document. Since it is a JSON, let me
+[21:02] talk. It is to know path in the language to JSON. So a path document is a function which converts
+[21:14] the given information to JSON. So this is the content. What is the content? This is a key.
+[21:23] What are the other keys you have? The subtotal is one more key. So total is a key.
+[21:45] From this path documentation, I am taking the metadata. Where is metadata?
+[21:51] Metadata is a key rate. Metadata page code. Okay, metadata page code. As page code, content.
+[22:06] This is the content. From the content, I am okay, okay. This is a string code.
+[22:18] In a page conditional, extracted text properties. Okay, so you got the entire text, right?
+[22:42] What are you able to see in the, you know, if you got this, right?
+[22:49] All 23, everything you want, right? It has extracted the complete text, yes or no? So this is
+[23:04] an extracted text. Okay, so there is only one, there is a key called content. This is the,
+[23:11] you know, the column name, this is the key name. It is a stringent. So you got the extracted text.
+[23:20] So how you got this, there is a function which you have used that is called a parsed document.
+[23:25] The output of this function is, it is a JSON. And from the JSON, you are picking only one column
+[23:32] that is an extracted text. So the next step is what you are doing is, let me run this.
+[23:43] So you are using one more function called a complete list. A complete is one more function.
+[23:49] You know, what are different models here? These are all different models. Here, I am using Lama.
+[23:55] This is one of the models. You have different models, chat GPT-rate,
+[24:03] cloths on it. So there are different models. Maybe you can verify the models here, which means
+[24:11] to perform these operations, this Lama will help you. It gives better performance. These are
+[24:17] different models that you can verify here. Can you see? These are all different models.
+[24:23] Can graph is there, cloth, canvas, GPT will, GPT will be there. So here, I am using R2,
+[24:32] but these are all different models here. So to do this work, there is a function suggested by
+[24:38] snowflake that is Lama. So by using this model and what you are checking here, so you are passing
+[24:54] the file name. So from there, and finally, I wanted to get the result. It will run the SQL
+[25:01] statement first. Let's run the SQL. So what is the source of file name? Invoice.
+[25:35] You got the invoice number. This is the invoice number and date. Invoice date.
+[25:55] This is the name of the company or the shop name, or you can say. So this has been USD.
+[26:09] So 120 in 9 and 130 in 9 and 130. So thing is whatever the field that you require.
+[26:18] So you can get that. You are converting everything to taller format.
+[26:25] So you have used a function called a-complete. So the input is that you need to pass
+[26:35] model as 1 parameter and prompt is 1.8. So this is ending here. So a-complete how many parameters
+[27:21] you are passing. So model is 1 parameter, prompt is another parameter, response format.
+[27:30] What are the fields that you wanted to have in the response? These are all the five six fields I
+[27:35] wanted to have in my output. So this model will help you to convert everything. These are all
+[27:43] the fields. Extract invoice number. Whatever the text that you got it. So this is the one. So from this
+[27:51] text. So it is picking these values. This is the first document. Between the previous statement.
+[28:12] This is the first document. This is the one. Okay. The first document. So from this it is picking
+[28:25] the brick by values. Remember this is a-complete. It takes three parameters, model, prompt.
+[28:37] And finally what is the, what do you mean? What are the columns that you wanted to have in the
+[28:42] final output? So these are all the columns. Inwise, number, invoice data. Right? Let me query this
+[28:51] statement. I need to insert it to the table. Let me insert it. Okay. What is that? Let's run this.
+[29:06] So you wanted to have invoice, number, invoice data under main point. So finally how converted this
+[29:12] to the moment. The tabla forward. Okay. Let's say if you ask co-cook verity. Let me
+[29:21] upload a file. There is an option to upload. So all files. We'll do one thing. I'll see you that I have
+[29:35] the other PDF files. Not PDF. We'll take a different take example.
+[29:41] But correctional in real time. So they won't share the PDF file. But it's right. Mostly they will
+[30:11] share and semi-structured data on the main. No, sometimes you will get PDF also. I mean there are
+[30:18] scenarios. Okay. Maybe if you're working in, you know, or to say any already team write.
+[30:25] So you get the PDF files. Okay. Okay. Inwise sample. This is today. I have extracted.
+[30:39] I have another PDF file. Let me upload the same file. I'm opening a new worksheet.
+[31:07] You can call this a worksheet or a workspace. Earlier we used to call this worksheet. Now they change
+[31:12] to workspace. Let me upload the file. Here I'm asking you a question. It's about this tabla
+[31:36] model. Create a new database. You will have the scope. You will have the scope. You will have the scope.
+[31:53] You can have the scope. You can have the scope. You can have the scope. You can have all the
+[32:04] file tables. All things. So you're just giving a prompt. So look at this worksheet. So everything
+[32:26] will be, you know, taken by this agent in this code. I'll start the plan. Do you know GitHub
+[32:39] Copilot is anybody? Yes. So I'll give you one more suggestion.
+[32:52] If you have any lessons, you just take that and do this course.
+[33:00] Copilot. Copilot. It's certification. Yeah. DH 300. Okay. Why is that a saturation question?
+[34:04] No, I'm just telling you, mostly if you want, if you know this GitHub Copilot, right,
+[34:09] you can do the same thing over there also. Let's say they have given you license to this.
+[34:15] Once you log into widgets, right? So in Visual Studio itself, you can use Copilot.
+[34:22] This is Copilot. But this is the Copilot. Here also you can do the prompting. You can
+[34:29] use the prompt and you can get the code. But the thing is here also you can read the agents and all.
+[34:33] So now we're going for it. Most of the people will work on this Copilot only.
+[34:38] Okay. So in case if you, I mean if you're okay, you can plan this plan for this certification.
+[34:45] Okay. Maybe you can learn this since you're working, right? It's good to have this certification.
+[34:52] DH 300. First, learn this. Then you will be able to go to cloud and the things like GitHub Copilot.
+[35:03] So that you'll get to know how to create agents, how to give the prompt.
+[35:12] What is a tool and what are the models that you need to use? How to integrate with different
+[35:21] the stuff generally. Let us say this is just for your information. Let's say you join a product.
+[35:32] Let's say the project is there from 10 years. Let's say you join a little healthcare company.
+[35:42] Okay. Health GitHub. Let's say you have donated health.
+[35:53] You join this company. So their code will be available in GitHub, right? Whatever the
+[36:03] changes that they are doing. So they will check in the code to GitHub. And how the developer
+[36:09] is going to get the requirements through zero right? Correct. You will have confidence pages
+[36:17] right? Confidence pages right? Confidence. In the conference, you'll get the company documentation.
+[36:23] Let's say you join. Okay. I'll just speak one of your names. Let's say
+[36:31] this is very important. Yes, because this is why I'm telling you is I last week, I have attended
+[36:36] a anvilic event. Okay. So they have developed one, you know, one agent, multi agent, they have
+[36:43] developed. I'll give you this in a context. I'll give you. So let's say Vijay, I'm sticking here,
+[36:52] for example, so Vijay joined the company. Let's say he joined TCS. Okay. And the TCS, they have
+[36:59] a client, UHD. The thing is you need to understand the existing functionality. Let's say they have
+[37:08] given you one requirement. Okay. So you need to, you know, do some enhancement existing, you know
+[37:15] application. First of all, if you don't understand the existing functionality, right? So what you're going
+[37:20] to raise, you'll have a GitHub, you'll have a G in the conference, you have all the documents.
+[37:25] Okay. So let's say they have given you one story. Let's say the story name is, you had 6G,
+[37:33] let's say the story number is one, you need to understand the requirements. Okay. If you have
+[37:39] any questions, you need to connect with the leads and you need to get the knowledge. Instead of that,
+[37:44] what can you use? If you have a co-pilot, right? Let's say you have GitHub co-pilot.
+[37:53] In co-pilot, you can, you have MCP summons. Okay. We have MCP summons. So through this MCP,
+[38:02] what you can do, you can connect to GitHub through the MCP, you can connect to zero. So this MCP
+[38:08] is the correct way to connect. Okay. You can create a connections to go to settings.
+[38:18] Go to settings. Here you'll find extensions. You have MCPs, but yeah, MCPs. So here you'll find all
+[38:58] the MCPs. Okay. So if your company's, there are some, you know, they will allow, you know,
+[39:05] to connect to some of these MCPs. Can you see GitHub MCPs? Right? This is GitHub, you know.
+[39:12] You can connect to GitHub directly. You'll find a conference. Do you send
+[39:16] anything called conference audio? Confidence. Or if you want to, the list of MCPs that you can
+[39:29] connect, right? So you can check with the management. So the thing is, through MCPs, let's say you
+[39:36] have a conference to GitHub zero and conference. Okay. Now you can ask, you know,
+[39:43] the agent to understand this requirement. Okay. So what I'm saying is, I connect to this zero
+[39:49] and understand this requirement. Okay. And you can say that, give a prompt like in the GitHub,
+[39:54] you already have the code. In the conference, you already have the documentation. Okay. Based on
+[39:58] this understanding, read the story and help me, whatever changes that I wanted to make. Okay.
+[40:06] It will, it reads all the complete repo. It reads the complete repo. It gets the knowledge of the
+[40:11] documentation. Based on the, it gives you the exact requirement what you need to do. Okay.
+[40:19] You're getting the point. You can directly use this co-pilot. In the co-pilot, you have the
+[40:28] knowledge base. This is the knowledge base. Okay. You can connect to these three, you know,
+[40:34] I repost it. You can get the knowledge. Okay. You give it the entire code. No need to, you know,
+[40:42] worry about that. Okay. The thing is, if you know, how to use this co-pilot, it's an
+[40:46] hard to measure. Maybe if you have time, Mr. Landon's.
+[40:51] So like, do you mean it like a cloud and other, hey, it was like, sometimes,
+[40:57] literally some companies, they were, they're not allowing cloud actually because of the security
+[41:02] reasons, even we are not using cloud actually. We have some set of, you know, standard
+[41:12] models actually. We have to use only those models. They'll see the tokens are now.
+[41:20] Now, the requirement, what we are currently doing is, we are asking, you know,
+[41:29] yeah, I think it has given you the complete documentation. Okay. So what is the
+[41:33] PDF approach? Infrastructure, stage, raw tables. Okay. You need two tables.
+[41:41] It is saying, okay, proceed. What it has done is it has planned things actually. Okay. Can you see
+[41:53] this? I'll start in the plan mode. First of all, it has planned things. Okay. What exactly it has
+[42:00] to do? It has planned actually. There's a plan is it. Okay. These are all MCP
+[42:09] counters. You can connect to different MCPs. Anyways, it does automatically. In case if it has,
+[42:14] I know that the permission and these are all the different agents that it is going to use.
+[42:19] Now, it is in the plan mode. Okay. It has planned things. Now, it is asking you, do you want us to
+[42:25] proceed? Okay. Yes, you can say, let's click on this proceed. Okay. Proceed with. Let's
+[42:32] click on this proceed. Okay. Let's click on this. It has planned things. Now, you have reviewed that.
+[42:37] Now, you're asking to proceed. Now, it creates the required objects. Okay. So,
+[42:50] first of all, it is creating a warehouse. Next is creating a database. So, going forward,
+[42:59] you don't need to write any kind of code things. You can generate the code. But the important point
+[43:06] is, if you don't know what exactly it is giving, that's a difficult thing. You have to understand
+[43:13] what exactly. So, it is asking you to create a stage. Do you want to allow this? Okay.
+[43:19] What is this? Okay. That's fine. It is creating a stage. And let's click on it off.
+[43:27] If you don't know what exactly it is trying to do. Okay. So, it is the code which it is giving,
+[43:33] which it is giving, right? It's not deterministic. Okay. It it halves in itself. So, now it is loading the
+[43:39] data. Yes. Hello. So, that's the reason you need to have the basic understanding of the concept.
+[43:48] Now, it is saying it is altering the stage. Yeah. It is doing a refresh. Let it do. If you say,
+[44:02] yeah, let's create this. What it is doing? It is creating a table. Yeah. Let it create. Create a table.
+[44:14] It is creating one more table. Let's create what it is doing. It is getting the file name on the
+[44:49] extraction. Okay. It is using as plate part function. Okay. And finally, it is inserting.
+[44:59] So, it is inserting the values. Click on it. Give the complete document in whatever it is doing.
+[45:12] It will give you the complete documentation. It is inserting the data. Let me see. It is
+[46:02] build part of token, right? Can you see this is what token is? Okay. Done.
+[46:14] So, everything is done. Now, masking, you can use export.
+[46:33] Oh, you got it. You got it. You got it. You got it. You got it. It is exported.
+[47:31] Let me copy this. Let's change the language to SQL. So, anyways, we asked, you know,
+[47:43] go to create these objects database schema warehouse. It has created a stage.
+[47:49] Next, it has loaded the data. Okay. And it has created a table. Two tables. It has created.
+[48:01] Okay. That is one more table. We'll see what exactly it has done. So, the next step is,
+[48:07] can you see the function is a extract? So, it is extracting the
+[48:12] so from the stage, what it is extracting? 11th path. So, this is the response format.
+[48:24] Let me run this. Copy this. Select the role as the contract name,
+[48:41] QA warehouse. Select database as QADB and QA warehouse, QA schema. Let me run this.
+[48:58] So, this is the PDL file. So, the first step what it is doing is, let me name it as let's say
+[49:09] file name. So, we'll see what it is doing. A, what is this A extract? What exactly it is doing?
+[49:23] Let me copy the text. It is a JSON. So, currency, invoice, date, invoice number, line items.
+[49:38] Okay. When I say line items. So, let me go back to the video. Okay. What do you mean by line items?
+[49:49] What do you know? What exactly are having? Amount, description, quantity, unit price.
+[49:56] Where is the amount? This is the amount, amount, description, quantity, and unit price.
+[50:07] So, these are all with line items. Okay. So, this is the header. Correct. This is the header.
+[50:15] So, these three lines, these are all, you know, the header. So, we can have multiple products,
+[50:20] like let's say if I go to a store here, I have purchased only half the supplies that is only
+[50:25] one quantity. So, I can have, you know, multiple products. Okay. Okay. See, I'll tell you.
+[50:32] I'm asking Coco to generate multiple line items. Okay. So, please modify the
+[50:40] medium file to have multiple line items. Okay. So, understand step by step. So,
+[51:10] the anyone ask you what are the A functions that you have used.
+[51:16] So, A extract is one function. Okay. I have a new file. Let me upload this one. Okay.
+[51:53] Now, it has created a new file with five line items. Okay. Let me sort of, let me copy the file.
+[52:14] So, it is doing a refresh. It is inserting the data. Yeah. Finally, it will give you the complete
+[53:09] system. Now, I'll show you the generated file guys, the generated PDF file also.
+[53:13] Or can I say this file? So, the PDF which it has generated is, it will have five line items. Okay.
+[53:20] Which means the customer purchased five different items with the different quantities.
+[53:25] I'll show you the PDF file that has generated. Yeah. This is the PDF. Not so,
+[53:31] that we can download it. Yeah. We can download it. Okay. Let me open this one.
+[53:47] Okay. So, this PDF is having multiple lines and multiple items. Okay. These are all
+[53:52] line items. Okay. Earlier PDF, it is having only one item. Now, I have five different line items.
+[54:01] I'm asking the same question. Please export the commands. Maybe I have it from. Let me add that.
+[54:08] Okay. Okay. Let it export. It will take some time to export. Okay. Meanwhile, let me run this
+[54:33] equal statement. When it has generated the new document. So, there are two files, two PDF files.
+[55:18] This is the first file and this is the second file. Now, tell me, what is the main purpose of the
+[55:22] extract function is. So, it converts the given documentation. I mean PDF unstructured file into a
+[55:33] JSON format. Correct. If I let me, let me cover this. This is the initial file and this is the
+[55:41] multi file. Which means where you have multi line items. Clear it. Unit tries quantity.
+[55:59] Okay. Description and emote. Here I have multiple emote, but here we have only one,
+[56:04] only one line item. So, that is the reason you have only one value. Okay. So,
+[56:12] so next step. So, let me go to the next step. So, it is inserting into the
+[56:25] beddestable properties. So, from the botable, you are picking the data.
+[56:36] In case if it is already present, you are not inserting. Let's run this.
+[56:42] Needy mode is not in range. So, number one, inverse number two. Okay. So, what are the
+[57:09] invoices you have? You are inserting that. Okay. So, what is this case? What exactly you are seeing
+[57:19] here? 120, 429. So, what is this 429? Maybe this is, they are, they are rounded up. Okay. 429.
+[57:36] And this is 120. Right. You are inserting the, you know, the final values.
+[57:43] And you have created one more table where you inserted the line items.
+[57:47] This is for line items. So, this will have the line items. You are clear, right?
+[58:16] Anyways, you have to go through this. Okay. But use this account. The account time anyways,
+[58:20] I am going to share this account with you. So, I will let me copy these two statements.
+[58:28] I will share this.
+[58:38] Okay. Krishna, we have a cortex here, right? So, what it means?
+[58:45] Cortex, that's what, the cortex is to, cortex search, cortex analyst. Okay.
+[58:52] The cortex search is a different thing. In the title version, you cannot use those things.
+[59:01] Cortex analyst and cortex search. So, cortex analyst is for the structure data. This is for
+[59:11] the unstructured data. Okay. Anyway, we will discuss it on this.
+[59:23] Cortex and all, we cannot, I cannot show you that, actually, because that will not work on the trial
+[59:30] this thing. Okay.
+[59:36] Anyways, you can use this account. This is either, I don't know how much, how many days it is
+[59:40] still there, but you can use this. It's still there. But Krishna, in the description,
+[59:50] Sandal, they will mention about cortex also, right? Then, at least you need to get some knowledge,
+[59:58] not, that is a different course, actually. Not because it's a different course.
+[60:03] Krishna, getting the adjacent snowflake, will the help in job search? It will be how?
+[60:27] It will be like,
+[60:30] differently, it helps you know, let's say you're in your regime itself, right? In case if you
+[60:36] post, like, you have end these badges, right? Just post that link. What are the links that you
+[60:43] have, right? You have a couple of badges, right? Yes, yes, I have completed almost four of them.
+[60:49] That's what you can see. Let's say if you see this one, you get, you get something like this, right?
+[60:55] You get one URL where it will show you all the badges, right?
+[60:58] Yes, Krishna.
+[61:00] You have completed the first two, one, hands on it essentially.
+[61:03] These are the stride forward, you can leave and you can complete this.
+[61:08] What is the knowledge that you gain? So far, you can just try that.
+[61:14] Yeah, just both, paste this link in your resume, so it will help you not.
+[61:20] These are all three badges, but in case if you plan to complete any certification, like,
+[61:24] snow progoer or better snow, if snow progoer is enough, that is fine, actually.
+[61:30] So I'll share this document. I have one more document to show you.
+[61:49] Krishna, few things I wanted to ask.
+[61:52] Like, we are continuing here with the 7M badges, because in middle I missed a few sessions,
+[62:00] I was traveling to my home town, that's why I'm off.
+[62:03] Can you call me Wilville district? That is almost, yeah, it's almost done actually.
+[62:10] So since we have few topics pending, so I wanted to know, take that in the 80s.
+[62:18] Yeah, so that's what I was there. I was there. I was in the bad, itself, like,
+[62:23] last few two sessions I missed, so that's why I was thinking that one more thing, like,
+[62:28] you have shared that interview, like preparation document there.
+[62:36] Sorry? No, no, the folder is already uploaded about this.
+[62:40] Yeah, I've been just asking you, like, what about resume, and how can we start applying that?
+[62:46] Okay, you can share your resume to this, send your resume.
+[62:50] I'll show you one sample, if you want, I can share that as well.
+[62:57] And regarding applying that's why, because I think you one day, I think you missed that,
+[63:03] that's why I'm asking you, just be creative and I'll, I'll, I'll, we'll have a call.
+[63:08] I'll show you all some issues. How is the, I need to apply also, right? So that's why I'm asking you.
+[63:14] Yeah, you will, we'll connect, we'll connect all.
+[63:18] Okay, are we putting any sessions on that? Like, how to apply and where to apply, like that?
+[63:25] I can get you, that there won't be any session for the, but I'll, I'll get you on.
+[63:28] You just ping me, you'll connect.
+[63:31] Okay, okay, Risha, thank you.
+[63:34] When, when can I ping you, Risha?
+[63:36] Ping me, I'm, I'll connect with you, in another, I'll tell them, I'll connect.
+[63:42] Sure, sure.
+[63:49] Okay, fine, share this document.
+[63:52] Yes, that is my objection, I've done my start today, right?
+[63:58] Every start today, you will have five answers, you can, you can attend.
+[64:01] But I have pinned you further link, but I didn't get any response card.
+[64:06] I shared the link, right? The same link for you?
+[64:10] No, no, no, I didn't get any response. I pinged in the verse of to you.
+[64:16] Same Krishna, you said on Friday, I think you said you will say, you will share by four
+[64:22] evening, you said, you will share the link to join Python, but you didn't share anything.
+[64:32] And also, I have shared you one week back my profile for resume preparation.
+[64:36] Can you ping me, can you ping me, just, just a minute today?
+[64:40] I ping you a couple of times, Krishna, I said, now even I'm asking every day in call.
+[64:46] Just ping me, just ping me, you know, I have multiple messages, I'll respond to you today.
+[64:56] Yeah, Krishna, can you please update the driver also, Krishna, with all the videos?
+[65:03] Yes, yes, yes.
+[65:06] Can you, can you just ping me once?
+[65:08] Yeah, I already pinged in the group.
+[65:11] In the group, you pinged up, okay?
+[65:13] Yeah.
+[65:15] Well, we'll do that, okay?
+[65:17] Yeah, I sure, Krishna.
+[65:18] Because last Friday, I didn't attend that, so I just wanted to go through those videos once.
+[65:24] Okay, fine.
+[65:30] So, now, you are like, this topic, right?
+[65:34] Can we explain in time, you know, with the one example, the conversation?
+[65:39] Which one?
+[65:41] Total, when we placed in the previous stage two, we come through the transformations,
+[65:48] it's one example, it's complete flow.
+[65:50] Maybe like, no, it's topic, maybe it's complete flow.
+[65:58] You need a complete flow, I think we will discuss that, right?
+[66:01] The complete flow.
+[66:03] Oh, they are discussing like topic, maybe, maybe, maybe, maybe, maybe, maybe, maybe, maybe, maybe.
+[66:07] You're, you're a, maybe, maybe, maybe, maybe, maybe, maybe, maybe, maybe.
+[66:11] I'm still going to end this, yeah.
+[66:14] We, we already covered, right, it's complete flow.
+[66:18] You want me to create all the updates at once from starting to ending, that will be
+[66:41] too.
+[66:42] That's what we discussed, right?
+[66:55] So see, to place a file in S3, you need to create a AWS account, then you have to create a
+[67:01] stage, then you have to get a degradation of it.
+[67:03] Then you have to create a stream, then you have to create a task, right?
+[67:07] Finally, you have to load it to the final table, to load it to the final table, you need
+[67:11] to do dot of validations, right?
+[67:13] What are the validations?
+[67:15] Full load, incremental load, you have to check that, right?
+[67:17] Actually, type 1, type 2.
+[67:19] That, that we, the complete flow we discussed, right?
+[67:24] If I have to explain everything, then I have to create all the updates again.
+[67:27] You're asking to, you know, repeat the entire flow.
+[67:35] That's what you're asking.
+[67:37] Yes, sir.
+[67:38] Yes.
+[67:39] Okay.
+[67:40] Anyways, we'll see, okay.
+[67:43] Because that, that end and flow is already discussed.
+[67:46] Yeah, Krishna.
+[67:49] I think, still we need to discuss the S, C, D, type 1 and type 2 related things.
+[67:55] You're talking about procedural point of view, right?
+[68:02] Say, type 1.
+[68:03] Yes, yes, yes.
+[68:04] So, I think it will cover what he is asking, right?
+[68:10] And you're talking about the ATM management.
+[68:13] I ATM.
+[68:14] No, no.
+[68:15] With that, that we are not talking about.
+[68:17] We will talk here.
+[68:18] Then, for few people, John from 7 AM, which is for them, it is done, actually.
+[68:22] Okay, okay.
+[68:23] Then, for you, I'll list this.
+[68:26] Okay.
+[68:27] So, the pending things, I'll share it with you immediately.
+[68:30] It's just within half an hour, you'll get everything.
+[68:32] Okay.
+[68:33] Just guys, guys, who are out waiting for the resume?
+[68:35] You know, waiting to get the updated videos.
+[68:39] Just ping me right away.
+[68:41] I'll do that immediately.
+[68:42] Okay.
+[68:43] Within another 40 minutes, I'll do that.
+[68:45] Okay.
+[68:46] Just ping me.
+[68:47] Yeah.
+[68:48] Yeah.
+[68:49] Yeah.
+[68:50] Give me ATM batch.
+[68:51] I already pinged.
+[68:52] I got the video sub date.
+[68:54] Can you just ping me right one more time?
+[68:57] I'll just, I'm just checking my.
+[68:59] Yeah.
+[69:00] Sure question.
+[69:01] Yeah.
+[69:04] Find it.
+[69:05] So, I'll upload everything.
+[69:06] Just give me one hour time.
+[69:07] I'll list all all the issues.
+[69:14] And we'll meet in tomorrow.
